@@ -3,20 +3,20 @@ package cn.javass.dp.flyweight.example5;
 import java.util.Collection;
 
 /**
- * ·â×°ÊÚÈ¨Êı¾İÖĞÖØ¸´³öÏÖ²¿·ÖµÄÏíÔª¶ÔÏó
+ * å°è£…æˆæƒæ•°æ®ä¸­é‡å¤å‡ºç°éƒ¨åˆ†çš„äº«å…ƒå¯¹è±¡
  */
 public class AuthorizationFlyweight implements Flyweight{
 	/**
-	 * ÄÚ²¿×´Ì¬£¬°²È«ÊµÌå
+	 * å†…éƒ¨çŠ¶æ€ï¼Œå®‰å…¨å®ä½“
 	 */
 	private String securityEntity;
 	/**
-	 * ÄÚ²¿×´Ì¬£¬È¨ÏŞ
+	 * å†…éƒ¨çŠ¶æ€ï¼Œæƒé™
 	 */
 	private String permit;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë×´Ì¬Êı¾İ
-	 * @param state ×´Ì¬Êı¾İ£¬°üº¬°²È«ÊµÌåºÍÈ¨ÏŞµÄÊı¾İ£¬ÓÃ","·Ö¸ô
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥çŠ¶æ€æ•°æ®
+	 * @param state çŠ¶æ€æ•°æ®ï¼ŒåŒ…å«å®‰å…¨å®ä½“å’Œæƒé™çš„æ•°æ®ï¼Œç”¨","åˆ†éš”
 	 */
 	public AuthorizationFlyweight(String state){
 		String ss[] = state.split(",");
@@ -40,6 +40,6 @@ public class AuthorizationFlyweight implements Flyweight{
 	}
 
 	public void add(Flyweight f) {
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 	}
 }

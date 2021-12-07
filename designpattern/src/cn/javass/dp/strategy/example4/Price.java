@@ -1,23 +1,23 @@
 package cn.javass.dp.strategy.example4;
 /**
- * ¼Û¸ñ¹ÜÀí£¬Ö÷ÒªÍê³É¼ÆËãÏò¿Í»§Ëù±¨¼Û¸ñµÄ¹¦ÄÜ
+ * ä»·æ ¼ç®¡ç†ï¼Œä¸»è¦å®Œæˆè®¡ç®—å‘å®¢æˆ·æ‰€æŠ¥ä»·æ ¼çš„åŠŸèƒ½
  */
 public class Price {
 	/**
-	 * ³ÖÓĞÒ»¸ö¾ßÌåµÄ²ßÂÔ¶ÔÏó
+	 * æŒæœ‰ä¸€ä¸ªå…·ä½“çš„ç­–ç•¥å¯¹è±¡
 	 */
 	private Strategy strategy = null;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÒ»¸ö¾ßÌåµÄ²ßÂÔ¶ÔÏó
-	 * @param aStrategy ¾ßÌåµÄ²ßÂÔ¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥ä¸€ä¸ªå…·ä½“çš„ç­–ç•¥å¯¹è±¡
+	 * @param aStrategy å…·ä½“çš„ç­–ç•¥å¯¹è±¡
 	 */
 	public Price(Strategy aStrategy){
 		this.strategy = aStrategy;
 	}	
 	/**
-	 * ±¨¼Û£¬¼ÆËã¶Ô¿Í»§µÄ±¨¼Û
-	 * @param goodsPrice ÉÌÆ·ÏúÊÛÔ­¼Û
-	 * @return ¼ÆËã³öÀ´µÄ£¬Ó¦¸Ã¸ø¿Í»§±¨µÄ¼Û¸ñ
+	 * æŠ¥ä»·ï¼Œè®¡ç®—å¯¹å®¢æˆ·çš„æŠ¥ä»·
+	 * @param goodsPrice å•†å“é”€å”®åŸä»·
+	 * @return è®¡ç®—å‡ºæ¥çš„ï¼Œåº”è¯¥ç»™å®¢æˆ·æŠ¥çš„ä»·æ ¼
 	 */
 	public double quote(double goodsPrice){
 		return this.strategy.calcPrice(goodsPrice);

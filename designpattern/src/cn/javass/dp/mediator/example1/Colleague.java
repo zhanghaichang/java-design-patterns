@@ -1,22 +1,22 @@
 package cn.javass.dp.mediator.example1;
 /**
- * Í¬ÊÂÀàµÄ³éÏó¸¸Àà
+ * åŒäº‹ç±»çš„æŠ½è±¡çˆ¶ç±»
  */
 public abstract class Colleague {
 	/**
-	 * ³ÖÓĞÖĞ½éÕß¶ÔÏó£¬Ã¿Ò»¸öÍ¬ÊÂÀà¶¼ÖªµÀËüµÄÖĞ½éÕß¶ÔÏó
+	 * æŒæœ‰ä¸­ä»‹è€…å¯¹è±¡ï¼Œæ¯ä¸€ä¸ªåŒäº‹ç±»éƒ½çŸ¥é“å®ƒçš„ä¸­ä»‹è€…å¯¹è±¡
 	 */
 	private Mediator mediator;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÖĞ½éÕß¶ÔÏó
-	 * @param mediator ÖĞ½éÕß¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥ä¸­ä»‹è€…å¯¹è±¡
+	 * @param mediator ä¸­ä»‹è€…å¯¹è±¡
 	 */
 	public Colleague(Mediator mediator) {
 		this.mediator = mediator;
 	}
 	/**
-	 * »ñÈ¡µ±Ç°Í¬ÊÂÀà¶ÔÓ¦µÄÖĞ½éÕß¶ÔÏó
-	 * @return ¶ÔÓ¦µÄÖĞ½éÕß¶ÔÏó
+	 * è·å–å½“å‰åŒäº‹ç±»å¯¹åº”çš„ä¸­ä»‹è€…å¯¹è±¡
+	 * @return å¯¹åº”çš„ä¸­ä»‹è€…å¯¹è±¡
 	 */
 	public Mediator getMediator() {
 		return mediator;

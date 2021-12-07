@@ -1,14 +1,14 @@
 package cn.javass.dp.visitor.example2;
 /**
- * ¸öÈË¿Í»§
+ * ä¸ªäººå®¢æˆ·
  */
 public class PersonalCustomer extends Customer{
 	/**
-	 * ÁªÏµµç»°
+	 * è”ç³»ç”µè¯
 	 */
 	private String telephone;
 	/**
-	 * ÄêÁä
+	 * å¹´é¾„
 	 */
 	private int age;
 	
@@ -30,22 +30,22 @@ public class PersonalCustomer extends Customer{
 
 	
 	/**
-	 * ¸öÈË¿Í»§Ìá³ö·şÎñÇëÇóµÄ·½·¨£¬Ê¾ÒâÒ»ÏÂ
+	 * ä¸ªäººå®¢æˆ·æå‡ºæœåŠ¡è¯·æ±‚çš„æ–¹æ³•ï¼Œç¤ºæ„ä¸€ä¸‹
 	 */
 	public void serviceRequest(){
-		//¸öÈË¿Í»§Ìá³öµÄ¾ßÌå·şÎñÇëÇó
-		System.out.println("¿Í»§"+this.getName()+"Ìá³ö·şÎñÇëÇó");
+		//ä¸ªäººå®¢æˆ·æå‡ºçš„å…·ä½“æœåŠ¡è¯·æ±‚
+		System.out.println("å®¢æˆ·"+this.getName()+"æå‡ºæœåŠ¡è¯·æ±‚");
 	}
 	/**
-	 * ¸öÈË¿Í»§¶Ô¹«Ë¾²úÆ·µÄÆ«ºÃ·ÖÎö£¬Ê¾ÒâÒ»ÏÂ
+	 * ä¸ªäººå®¢æˆ·å¯¹å…¬å¸äº§å“çš„åå¥½åˆ†æï¼Œç¤ºæ„ä¸€ä¸‹
 	 */
 	public void predilectionAnalyze(){
-		System.out.println("ÏÖÔÚ¶Ô¸öÈË¿Í»§"+this.getName()+"½øĞĞ²úÆ·Æ«ºÃ·ÖÎö");
+		System.out.println("ç°åœ¨å¯¹ä¸ªäººå®¢æˆ·"+this.getName()+"è¿›è¡Œäº§å“åå¥½åˆ†æ");
 	}
 	/**
-	 * ¸öÈË¿Í»§¼ÛÖµ·ÖÎö£¬Ê¾ÒâÒ»ÏÂ
+	 * ä¸ªäººå®¢æˆ·ä»·å€¼åˆ†æï¼Œç¤ºæ„ä¸€ä¸‹
 	 */
 	public void worthAnalyze(){
-		System.out.println("ÏÖÔÚ¶Ô¸öÈË¿Í»§"+this.getName()+"½øĞĞ¼ÛÖµ·ÖÎö");
+		System.out.println("ç°åœ¨å¯¹ä¸ªäººå®¢æˆ·"+this.getName()+"è¿›è¡Œä»·å€¼åˆ†æ");
 	}
 }

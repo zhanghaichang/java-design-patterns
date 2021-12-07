@@ -1,24 +1,24 @@
 package cn.javass.dp.command.example1;
 /**
- * µ÷ÓÃÕß
+ * è°ƒç”¨è€…
  */
 public class Invoker {
 	/**
-	 * ³ÖÓĞÃüÁî¶ÔÏó
+	 * æŒæœ‰å‘½ä»¤å¯¹è±¡
 	 */
 	private Command command = null;
 	/**
-	 * ÉèÖÃµ÷ÓÃÕß³ÖÓĞµÄÃüÁî¶ÔÏó
-	 * @param command ÃüÁî¶ÔÏó
+	 * è®¾ç½®è°ƒç”¨è€…æŒæœ‰çš„å‘½ä»¤å¯¹è±¡
+	 * @param command å‘½ä»¤å¯¹è±¡
 	 */
 	public void setCommand(Command command) {
 		this.command = command;
 	}
 	/**
-	 * Ê¾Òâ·½·¨£¬ÒªÇóÃüÁîÖ´ĞĞÇëÇó
+	 * ç¤ºæ„æ–¹æ³•ï¼Œè¦æ±‚å‘½ä»¤æ‰§è¡Œè¯·æ±‚
 	 */
 	public void runCommand() {
-		//µ÷ÓÃÃüÁî¶ÔÏóµÄÖ´ĞĞ·½·¨
+		//è°ƒç”¨å‘½ä»¤å¯¹è±¡çš„æ‰§è¡Œæ–¹æ³•
 		command.execute();
 	}
 }

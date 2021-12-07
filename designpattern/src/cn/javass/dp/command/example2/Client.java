@@ -2,15 +2,15 @@ package cn.javass.dp.command.example2;
 
 public class Client {
 	public static void main(String[] args) {
-		//1£º°ÑÃüÁîºÍÕæÕıµÄÊµÏÖ×éºÏÆğÀ´£¬Ïàµ±ÓÚÔÚ×é×°»úÆ÷£¬
-		//°Ñ»úÏäÉÏ°´Å¥µÄÁ¬½ÓÏß²å½Óµ½Ö÷°åÉÏ¡£
+		//1ï¼šæŠŠå‘½ä»¤å’ŒçœŸæ­£çš„å®ç°ç»„åˆèµ·æ¥ï¼Œç›¸å½“äºåœ¨ç»„è£…æœºå™¨ï¼Œ
+		//æŠŠæœºç®±ä¸ŠæŒ‰é’®çš„è¿æ¥çº¿æ’æ¥åˆ°ä¸»æ¿ä¸Šã€‚
 		MainBoardApi mainBoard = new GigaMainBoard();
 		OpenCommand openCommand = new OpenCommand(mainBoard);
-		//2£ºÎª»úÏäÉÏµÄ°´Å¥ÉèÖÃ¶ÔÓ¦µÄÃüÁî£¬ÈÃ°´Å¥ÖªµÀ¸Ã¸ÉÊ²Ã´
+		//2ï¼šä¸ºæœºç®±ä¸Šçš„æŒ‰é’®è®¾ç½®å¯¹åº”çš„å‘½ä»¤ï¼Œè®©æŒ‰é’®çŸ¥é“è¯¥å¹²ä»€ä¹ˆ
 		Box box = new Box();
 		box.setOpenCommand(openCommand);
 		
-		//3£ºÈ»ºóÄ£Äâ°´ÏÂ»úÏäÉÏµÄ°´Å¥
+		//3ï¼šç„¶åæ¨¡æ‹ŸæŒ‰ä¸‹æœºç®±ä¸Šçš„æŒ‰é’®
 		box.openButtonPressed();
 	}
 }

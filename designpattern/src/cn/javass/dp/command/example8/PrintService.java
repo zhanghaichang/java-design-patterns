@@ -2,18 +2,18 @@ package cn.javass.dp.command.example8;
 
 public class PrintService implements Command{
 	/**
-	 * 要输出的内容
+	 * 瑕佽緭鍑虹殑鍐呭
 	 */
 	private String str = "";
 	/**
-	 * 构造方法，传入要输出的内容
-	 * @param s 要输出的内容
+	 * 鏋勯�犳柟娉曪紝浼犲叆瑕佽緭鍑虹殑鍐呭
+	 * @param s 瑕佽緭鍑虹殑鍐呭
 	 */
 	public PrintService(String s){
 		str = s;
 	}
 	
 	public void execute() {
-		System.out.println("打印的内容为="+str);
+		System.out.println("鎵撳嵃鐨勫唴瀹逛负="+str);
 	}
 }

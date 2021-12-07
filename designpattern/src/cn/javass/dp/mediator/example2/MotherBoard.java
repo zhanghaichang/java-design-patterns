@@ -1,22 +1,22 @@
 package cn.javass.dp.mediator.example2;
 /**
- * Ö÷°åÀà£¬ÊµÏÖÖĞ½éÕß½Ó¿Ú
+ * ä¸»æ¿ç±»ï¼Œå®ç°ä¸­ä»‹è€…æ¥å£
  */
 public class MotherBoard implements Mediator{
 	/**
-	 * ĞèÒªÖªµÀÒª½»»¥µÄÍ¬ÊÂÀà¡ª¡ª¹âÇıÀà
+	 * éœ€è¦çŸ¥é“è¦äº¤äº’çš„åŒäº‹ç±»â€”â€”å…‰é©±ç±»
 	 */
 	private CDDriver cdDriver = null;
 	/**
-	 * ĞèÒªÖªµÀÒª½»»¥µÄÍ¬ÊÂÀà¡ª¡ªCPUÀà
+	 * éœ€è¦çŸ¥é“è¦äº¤äº’çš„åŒäº‹ç±»â€”â€”CPUç±»
 	 */
 	private CPU cpu = null;
 	/**
-	 * ĞèÒªÖªµÀÒª½»»¥µÄÍ¬ÊÂÀà¡ª¡ªÏÔ¿¨Àà
+	 * éœ€è¦çŸ¥é“è¦äº¤äº’çš„åŒäº‹ç±»â€”â€”æ˜¾å¡ç±»
 	 */
 	private VideoCard videoCard = null;
 	/**
-	 * ĞèÒªÖªµÀÒª½»»¥µÄÍ¬ÊÂÀà¡ª¡ªÉù¿¨Àà
+	 * éœ€è¦çŸ¥é“è¦äº¤äº’çš„åŒäº‹ç±»â€”â€”å£°å¡ç±»
 	 */
 	private SoundCard soundCard = null;
 
@@ -35,32 +35,32 @@ public class MotherBoard implements Mediator{
 	
 	public void changed(Colleague colleague) {
 		if(colleague == cdDriver){
-			//±íÊ¾¹âÇı¶ÁÈ¡Êı¾İÁË
+			//è¡¨ç¤ºå…‰é©±è¯»å–æ•°æ®äº†
 			this.opeCDDriverReadData((CDDriver)colleague);
 		}else if(colleague == cpu){
-			//±íÊ¾CPU´¦ÀíÍêÁË
+			//è¡¨ç¤ºCPUå¤„ç†å®Œäº†
 			this.opeCPU((CPU)colleague);
 		}
 	}
 	/**
-	 * ´¦Àí¹âÇı¶ÁÈ¡Êı¾İ¹ıºóÓëÆäËû¶ÔÏóµÄ½»»¥
-	 * @param cd ¹âÇıÍ¬ÊÂ¶ÔÏó
+	 * å¤„ç†å…‰é©±è¯»å–æ•°æ®è¿‡åä¸å…¶ä»–å¯¹è±¡çš„äº¤äº’
+	 * @param cd å…‰é©±åŒäº‹å¯¹è±¡
 	 */
 	private void opeCDDriverReadData(CDDriver cd){
-		//1£ºÏÈ»ñÈ¡¹âÇı¶ÁÈ¡µÄÊı¾İ
+		//1ï¼šå…ˆè·å–å…‰é©±è¯»å–çš„æ•°æ®
 		String data = cd.getData();
-		//2£º°ÑÕâĞ©Êı¾İ´«µİ¸øCPU½øĞĞ´¦Àí
+		//2ï¼šæŠŠè¿™äº›æ•°æ®ä¼ é€’ç»™CPUè¿›è¡Œå¤„ç†
 		this.cpu.executeData(data);
 	}
 	/**
-	 * ´¦ÀíCPU´¦ÀíÍêÊı¾İºóÓëÆäËû¶ÔÏóµÄ½»»¥
-	 * @param cpu CPUÍ¬ÊÂÀà
+	 * å¤„ç†CPUå¤„ç†å®Œæ•°æ®åä¸å…¶ä»–å¯¹è±¡çš„äº¤äº’
+	 * @param cpu CPUåŒäº‹ç±»
 	 */
 	private void opeCPU(CPU cpu){
-		//1£ºÏÈ»ñÈ¡CPU´¦Àí¹ıºóµÄÊı¾İ
+		//1ï¼šå…ˆè·å–CPUå¤„ç†è¿‡åçš„æ•°æ®
 		String videoData = cpu.getVideoData();
 		String soundData = cpu.getSoundData();
-		//2£º°ÑÕâĞ©Êı¾İ´«µİ¸øÏÔ¿¨ºÍÉù¿¨Õ¹Ê¾³öÀ´
+		//2ï¼šæŠŠè¿™äº›æ•°æ®ä¼ é€’ç»™æ˜¾å¡å’Œå£°å¡å±•ç¤ºå‡ºæ¥
 		this.videoCard.showData(videoData);
 		this.soundCard.soundData(soundData);
 	}

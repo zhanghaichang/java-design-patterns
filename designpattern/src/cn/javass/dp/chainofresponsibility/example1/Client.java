@@ -4,20 +4,20 @@ public class Client {
 	public static void main(String[] args) {
 		FeeRequest request = new FeeRequest();
 		
-		//¿ªÊ¼²âÊÔ
-		String ret1 = request.requestToProjectManager("Ğ¡Àî", 300);
+		//å¼€å§‹æµ‹è¯•
+		String ret1 = request.requestToProjectManager("å°æ", 300);
 		System.out.println("the ret1="+ret1);		
-		String ret2 = request.requestToProjectManager("Ğ¡ÕÅ", 300);
+		String ret2 = request.requestToProjectManager("å°å¼ ", 300);
 		System.out.println("the ret2="+ret2);
 		
-		String ret3 = request.requestToProjectManager("Ğ¡Àî", 600);
+		String ret3 = request.requestToProjectManager("å°æ", 600);
 		System.out.println("the ret3="+ret3);		
-		String ret4 = request.requestToProjectManager("Ğ¡ÕÅ", 600);
+		String ret4 = request.requestToProjectManager("å°å¼ ", 600);
 		System.out.println("the ret4="+ret4);
 		
-		String ret5 = request.requestToProjectManager("Ğ¡Àî", 1200);
+		String ret5 = request.requestToProjectManager("å°æ", 1200);
 		System.out.println("the ret5="+ret5);		
-		String ret6 = request.requestToProjectManager("Ğ¡ÕÅ", 1200);
+		String ret6 = request.requestToProjectManager("å°å¼ ", 1200);
 		System.out.println("the ret6="+ret6);
 	}
 }

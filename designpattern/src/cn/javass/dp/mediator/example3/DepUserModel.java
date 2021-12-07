@@ -1,18 +1,18 @@
 package cn.javass.dp.mediator.example3;
 /**
- *	ÃèÊö²¿ÃÅºÍÈËÔ±¹ØÏµµÄÀà
+ *	æè¿°éƒ¨é—¨å’Œäººå‘˜å…³ç³»çš„ç±»
  */
 public class DepUserModel {
 	/**
-	 * ÓÃÓÚ²¿ÃÅºÍÈËÔ±¹ØÏµµÄ±àºÅ£¬ÓÃ×öÖ÷¼ü
+	 * ç”¨äºéƒ¨é—¨å’Œäººå‘˜å…³ç³»çš„ç¼–å·ï¼Œç”¨åšä¸»é”®
 	 */
 	private String depUserId;
 	/**
-	 * ²¿ÃÅµÄ±àºÅ
+	 * éƒ¨é—¨çš„ç¼–å·
 	 */
 	private String depId;
 	/**
-	 * ÈËÔ±µÄ±àºÅ
+	 * äººå‘˜çš„ç¼–å·
 	 */
 	private String userId;
 	public String getDepUserId() {

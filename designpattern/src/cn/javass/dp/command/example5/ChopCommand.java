@@ -1,21 +1,21 @@
 package cn.javass.dp.command.example5;
 /**
- * ÃüÁî¶ÔÏó£¬ÂÌ¶¹ÅÅ¹ÇìÒ
+ * å‘½ä»¤å¯¹è±¡ï¼Œç»¿è±†æ’éª¨ç…²
  */
 public class ChopCommand implements Command{
 	/**
-	 * ³ÖÓĞ¾ßÌå×ö²ËµÄ³øÊ¦µÄ¶ÔÏó
+	 * æŒæœ‰å…·ä½“åšèœçš„å¨å¸ˆçš„å¯¹è±¡
 	 */
 	private CookApi cookApi = null;
 	/**
-	 * ÉèÖÃ¾ßÌå×ö²ËµÄ³øÊ¦µÄ¶ÔÏó
-	 * @param cookApi ¾ßÌå×ö²ËµÄ³øÊ¦µÄ¶ÔÏó
+	 * è®¾ç½®å…·ä½“åšèœçš„å¨å¸ˆçš„å¯¹è±¡
+	 * @param cookApi å…·ä½“åšèœçš„å¨å¸ˆçš„å¯¹è±¡
 	 */
 	public void setCookApi(CookApi cookApi) {
 		this.cookApi = cookApi;
 	}
 	
 	public void execute() {
-		this.cookApi.cook("ÂÌ¶¹ÅÅ¹ÇìÒ");
+		this.cookApi.cook("ç»¿è±†æ’éª¨ç…²");
 	}
 }

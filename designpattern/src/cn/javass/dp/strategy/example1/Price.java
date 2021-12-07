@@ -1,26 +1,26 @@
 package cn.javass.dp.strategy.example1;
 /**
- * ¼Û¸ñ¹ÜÀí£¬Ö÷ÒªÍê³É¼ÆËãÏò¿Í»§Ëù±¨¼Û¸ñµÄ¹¦ÄÜ
+ * ä»·æ ¼ç®¡ç†ï¼Œä¸»è¦å®Œæˆè®¡ç®—å‘å®¢æˆ·æ‰€æŠ¥ä»·æ ¼çš„åŠŸèƒ½
  */
 public class Price {
 	/**
-	 * ±¨¼Û£¬¶Ô²»Í¬ÀàĞÍµÄ£¬¼ÆËã²»Í¬µÄ¼Û¸ñ
-	 * @param goodsPrice ÉÌÆ·ÏúÊÛÔ­¼Û
-	 * @param customerType ¿Í»§ÀàĞÍ
-	 * @return ¼ÆËã³öÀ´µÄ£¬Ó¦¸Ã¸ø¿Í»§±¨µÄ¼Û¸ñ
+	 * æŠ¥ä»·ï¼Œå¯¹ä¸åŒç±»å‹çš„ï¼Œè®¡ç®—ä¸åŒçš„ä»·æ ¼
+	 * @param goodsPrice å•†å“é”€å”®åŸä»·
+	 * @param customerType å®¢æˆ·ç±»å‹
+	 * @return è®¡ç®—å‡ºæ¥çš„ï¼Œåº”è¯¥ç»™å®¢æˆ·æŠ¥çš„ä»·æ ¼
 	 */
 	public double quote(double goodsPrice,String customerType){
-		if("ÆÕÍ¨¿Í»§".equals(customerType)){
-			System.out.println("¶ÔÓÚĞÂ¿Í»§»òÕßÊÇÆÕÍ¨¿Í»§£¬Ã»ÓĞÕÛ¿Û");
+		if("æ™®é€šå®¢æˆ·".equals(customerType)){
+			System.out.println("å¯¹äºæ–°å®¢æˆ·æˆ–è€…æ˜¯æ™®é€šå®¢æˆ·ï¼Œæ²¡æœ‰æŠ˜æ‰£");
 			return goodsPrice;
-		}else if("ÀÏ¿Í»§".equals(customerType)){
-			System.out.println("¶ÔÓÚÀÏ¿Í»§£¬Í³Ò»ÕÛ¿Û5%");
+		}else if("è€å®¢æˆ·".equals(customerType)){
+			System.out.println("å¯¹äºè€å®¢æˆ·ï¼Œç»Ÿä¸€æŠ˜æ‰£5%");
 			return goodsPrice*(1-0.05);
-		}else if("´ó¿Í»§".equals(customerType)){
-			System.out.println("¶ÔÓÚ´ó¿Í»§£¬Í³Ò»ÕÛ¿Û10%");
+		}else if("å¤§å®¢æˆ·".equals(customerType)){
+			System.out.println("å¯¹äºå¤§å®¢æˆ·ï¼Œç»Ÿä¸€æŠ˜æ‰£10%");
 			return goodsPrice*(1-0.1);			
 		}
-		//ÆäÓàÈËÔ±¶¼ÊÇ±¨Ô­¼Û
+		//å…¶ä½™äººå‘˜éƒ½æ˜¯æŠ¥åŸä»·
 		return goodsPrice;
 	}
 }

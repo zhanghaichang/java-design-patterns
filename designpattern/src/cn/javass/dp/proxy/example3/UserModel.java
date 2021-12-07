@@ -1,22 +1,22 @@
 package cn.javass.dp.proxy.example3;
 /**
- * ÃèÊöÓÃ»§Êı¾İµÄ¶ÔÏó
+ * æè¿°ç”¨æˆ·æ•°æ®çš„å¯¹è±¡
  */
 public class UserModel implements UserModelApi{	
 	/**
-	 * ÓÃ»§±àºÅ
+	 * ç”¨æˆ·ç¼–å·
 	 */
 	private String userId;
 	/**
-	 * ÓÃ»§ĞÕÃû
+	 * ç”¨æˆ·å§“å
 	 */
 	private String name;
 	/**
-	 * ²¿ÃÅ±àºÅ
+	 * éƒ¨é—¨ç¼–å·
 	 */
 	private String depId;
 	/**
-	 * ĞÔ±ğ
+	 * æ€§åˆ«
 	 */
 	private String sex;
 	

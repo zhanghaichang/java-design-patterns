@@ -1,11 +1,11 @@
 package cn.javass.dp.observer.example2;
 /**
- * ¹Û²ìÕß£¬±ÈÈç±¨Ö½µÄ¶ÁÕß
+ * è§‚å¯Ÿè€…ï¼Œæ¯”å¦‚æŠ¥çº¸çš„è¯»è€…
  */
 public interface Observer {
 	/**
-	 * ±»Í¨ÖªµÄ·½·¨
-	 * @param subject ¾ßÌåµÄÄ¿±ê¶ÔÏó£¬¿ÉÒÔ»ñÈ¡±¨Ö½µÄÄÚÈİ
+	 * è¢«é€šçŸ¥çš„æ–¹æ³•
+	 * @param subject å…·ä½“çš„ç›®æ ‡å¯¹è±¡ï¼Œå¯ä»¥è·å–æŠ¥çº¸çš„å†…å®¹
 	 */
 	public void update(Subject subject);
 }

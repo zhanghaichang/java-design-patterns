@@ -5,18 +5,18 @@ public class DepManager extends Handler{
 	
 	public String handleFeeRequest(String user, double fee) {
 		String str = "";
-		//²¿ÃÅ¾­ÀíµÄÈ¨ÏŞÖ»ÄÜÔÚ1000ÒÔÄÚ
+		//éƒ¨é—¨ç»ç†çš„æƒé™åªèƒ½åœ¨1000ä»¥å†…
 		if(fee < 1000){
-			//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâĞ¡ÀîÉêÇëµÄ
-			if("Ğ¡Àî".equals(user)){
-				str = "²¿ÃÅ¾­ÀíÍ¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
+			//ä¸ºäº†æµ‹è¯•ï¼Œç®€å•ç‚¹ï¼ŒåªåŒæ„å°æç”³è¯·çš„
+			if("å°æ".equals(user)){
+				str = "éƒ¨é—¨ç»ç†åŒæ„"+user+"èšé¤è´¹ç”¨"+fee+"å…ƒçš„è¯·æ±‚";
 			}else{
-				//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
-				str = "²¿ÃÅ¾­Àí²»Í¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
+				//å…¶ä»–äººä¸€å¾‹ä¸åŒæ„
+				str = "éƒ¨é—¨ç»ç†ä¸åŒæ„"+user+"èšé¤è´¹ç”¨"+fee+"å…ƒçš„è¯·æ±‚";
 			}
 			return str;
 		}else{
-			//³¬¹ı1000£¬¼ÌĞø´«µİ¸ø¼¶±ğ¸ü¸ßµÄÈË´¦Àí
+			//è¶…è¿‡1000ï¼Œç»§ç»­ä¼ é€’ç»™çº§åˆ«æ›´é«˜çš„äººå¤„ç†
 			if(this.successor!=null){
 				return this.successor.handleFeeRequest(user, fee);
 			}
@@ -25,13 +25,13 @@ public class DepManager extends Handler{
 	}
 	
 	public boolean handlePreFeeRequest(String user, double requestNum) {
-		//²¿ÃÅ¾­ÀíµÄÈ¨ÏŞ±È½ÏĞ¡£¬Ö»ÄÜÔÚ20000ÒÔÄÚ
+		//éƒ¨é—¨ç»ç†çš„æƒé™æ¯”è¾ƒå°ï¼Œåªèƒ½åœ¨20000ä»¥å†…
 		if(requestNum < 20000){
-			//¹¤×÷ĞèÒªÂï£¬Í³Í³Í¬Òâ
-			System.out.println("²¿ÃÅ¾­ÀíÍ¬Òâ"+user+"Ô¤Ö§²îÂÃ·ÑÓÃ"+requestNum+"ÔªµÄÇëÇó");
+			//å·¥ä½œéœ€è¦å˜›ï¼Œç»Ÿç»ŸåŒæ„
+			System.out.println("éƒ¨é—¨ç»ç†åŒæ„"+user+"é¢„æ”¯å·®æ—…è´¹ç”¨"+requestNum+"å…ƒçš„è¯·æ±‚");
 			return true;
 		}else{
-			//³¬¹ı20000£¬¼ÌĞø´«µİ¸ø¼¶±ğ¸ü¸ßµÄÈË´¦Àí
+			//è¶…è¿‡20000ï¼Œç»§ç»­ä¼ é€’ç»™çº§åˆ«æ›´é«˜çš„äººå¤„ç†
 			if(this.successor!=null){
 				return this.successor.handlePreFeeRequest(user, requestNum);
 			}

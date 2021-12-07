@@ -1,10 +1,10 @@
 package cn.javass.dp.command.example4;
 /**
- * ÔËËãÀà£¬ÕæÕıÊµÏÖ¼Ó¼õ·¨ÔËËã
+ * è¿ç®—ç±»ï¼ŒçœŸæ­£å®ç°åŠ å‡æ³•è¿ç®—
  */
 public class Operation implements OperationApi{
 	/**
-	 * ¼ÇÂ¼ÔËËãµÄ½á¹û
+	 * è®°å½•è¿ç®—çš„ç»“æœ
 	 */
 	private int result;
 	public int getResult() {
@@ -15,11 +15,11 @@ public class Operation implements OperationApi{
 	}
 	
 	public void add(int num){
-		//ÊµÏÖ¼Ó·¨¹¦ÄÜ
+		//å®ç°åŠ æ³•åŠŸèƒ½
 		result += num;
 	}
 	public void substract(int num){
-		//ÊµÏÖ¼õ·¨¹¦ÄÜ
+		//å®ç°å‡æ³•åŠŸèƒ½
 		result -= num;
 	}
 }

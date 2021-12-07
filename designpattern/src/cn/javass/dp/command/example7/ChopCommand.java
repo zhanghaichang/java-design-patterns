@@ -4,27 +4,27 @@ import java.io.Serializable;
 
 
 /**
- * ÃüÁî¶ÔÏó£¬ÂÌ¶¹ÅÅ¹ÇìÒ
+ * å‘½ä»¤å¯¹è±¡ï¼Œç»¿è±†æ’éª¨ç…²
  */
 public class ChopCommand implements Command,Serializable{
 	/**
-	 * ³ÖÓĞ¾ßÌå×ö²ËµÄ³øÊ¦µÄ¶ÔÏó
+	 * æŒæœ‰å…·ä½“åšèœçš„å¨å¸ˆçš„å¯¹è±¡
 	 */
 	private CookApi cookApi = null;
 	/**
-	 * ÉèÖÃ¾ßÌå×ö²ËµÄ³øÊ¦µÄ¶ÔÏó
-	 * @param cookApi ¾ßÌå×ö²ËµÄ³øÊ¦µÄ¶ÔÏó
+	 * è®¾ç½®å…·ä½“åšèœçš„å¨å¸ˆçš„å¯¹è±¡
+	 * @param cookApi å…·ä½“åšèœçš„å¨å¸ˆçš„å¯¹è±¡
 	 */
 	public void setCookApi(CookApi cookApi) {
 		this.cookApi = cookApi;
 	}
 	/**
-	 * µã²ËµÄ×ÀºÅ
+	 * ç‚¹èœçš„æ¡Œå·
 	 */
 	private int tableNum;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èëµã²ËµÄ×ÀºÅ
-	 * @param tableNum µã²ËµÄ×ÀºÅ
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥ç‚¹èœçš„æ¡Œå·
+	 * @param tableNum ç‚¹èœçš„æ¡Œå·
 	 */
 	public ChopCommand(int tableNum){
 		this.tableNum = tableNum;
@@ -34,6 +34,6 @@ public class ChopCommand implements Command,Serializable{
 	}
 	
 	public void execute() {
-		this.cookApi.cook(tableNum,"ÂÌ¶¹ÅÅ¹ÇìÒ");
+		this.cookApi.cook(tableNum,"ç»¿è±†æ’éª¨ç…²");
 	}
 }

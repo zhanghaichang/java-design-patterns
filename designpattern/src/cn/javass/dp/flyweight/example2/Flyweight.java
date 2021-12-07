@@ -1,11 +1,11 @@
 package cn.javass.dp.flyweight.example2;
 /***
- * ÏíÔª½Ó¿Ú£¬Í¨¹ıÕâ¸ö½Ó¿ÚÏíÔª¿ÉÒÔ½ÓÊÜ²¢×÷ÓÃÓÚÍâ²¿×´Ì¬
+ * äº«å…ƒæ¥å£ï¼Œé€šè¿‡è¿™ä¸ªæ¥å£äº«å…ƒå¯ä»¥æ¥å—å¹¶ä½œç”¨äºå¤–éƒ¨çŠ¶æ€
  */
 public interface Flyweight {
 	/**
-	 * Ê¾Àı²Ù×÷£¬´«ÈëÍâ²¿×´Ì¬
-	 * @param extrinsicState Ê¾Àı²ÎÊı£¬Íâ²¿×´Ì¬
+	 * ç¤ºä¾‹æ“ä½œï¼Œä¼ å…¥å¤–éƒ¨çŠ¶æ€
+	 * @param extrinsicState ç¤ºä¾‹å‚æ•°ï¼Œå¤–éƒ¨çŠ¶æ€
 	 */
 	public void operation(String extrinsicState);
 }

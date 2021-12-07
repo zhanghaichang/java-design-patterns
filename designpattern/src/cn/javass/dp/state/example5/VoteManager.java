@@ -1,53 +1,53 @@
 package cn.javass.dp.state.example5;
 import java.util.*;
 /**
- * Í¶Æ±¹ÜÀí
+ * æŠ•ç¥¨ç®¡ç†
  */
 public class VoteManager {
 	/**
-	 * ¼ÇÂ¼µ±Ç°Ã¿¸öÓÃ»§¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏó£¬Ã¿¸öÓÃ»§µ±Ç°µÄ×´Ì¬ÊÇ²»Í¬µÄ
-	 * Map<String,VoteState>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,µ±Ç°¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏó>
+	 * è®°å½•å½“å‰æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„çŠ¶æ€å¤„ç†å¯¹è±¡ï¼Œæ¯ä¸ªç”¨æˆ·å½“å‰çš„çŠ¶æ€æ˜¯ä¸åŒçš„
+	 * Map<String,VoteState>å¯¹åº”Map<ç”¨æˆ·åç§°,å½“å‰å¯¹åº”çš„çŠ¶æ€å¤„ç†å¯¹è±¡>
 	 */
 	private Map<String,VoteState> mapState = new HashMap<String,VoteState>();
 	/**
-	 * »ñÈ¡¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏóµÄMap
-	 * @return ¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏóµÄMap
+	 * è·å–è®°å½•æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„çŠ¶æ€å¤„ç†å¯¹è±¡çš„Map
+	 * @return è®°å½•æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„çŠ¶æ€å¤„ç†å¯¹è±¡çš„Map
 	 */
 	public Map<String, VoteState> getMapState() {
 		return mapState;
 	}
 	/**
-	 * ¼ÇÂ¼ÓÃ»§Í¶Æ±µÄ½á¹û,Map<String,String>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,Í¶Æ±µÄÑ¡Ïî>
+	 * è®°å½•ç”¨æˆ·æŠ•ç¥¨çš„ç»“æœ,Map<String,String>å¯¹åº”Map<ç”¨æˆ·åç§°,æŠ•ç¥¨çš„é€‰é¡¹>
 	 */
 	private Map<String,String> mapVote = new HashMap<String,String>();
 	/**
-	 * ¼ÇÂ¼ÓÃ»§Í¶Æ±´ÎÊı,Map<String,Integer>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,Í¶Æ±µÄ´ÎÊı>
+	 * è®°å½•ç”¨æˆ·æŠ•ç¥¨æ¬¡æ•°,Map<String,Integer>å¯¹åº”Map<ç”¨æˆ·åç§°,æŠ•ç¥¨çš„æ¬¡æ•°>
 	 */
 	private Map<String,Integer> mapVoteCount = new HashMap<String,Integer>();
 	
 	/**
-	 * »ñÈ¡¼ÇÂ¼ÓÃ»§Í¶Æ±½á¹ûµÄMap
-	 * @return ¼ÇÂ¼ÓÃ»§Í¶Æ±½á¹ûµÄMap
+	 * è·å–è®°å½•ç”¨æˆ·æŠ•ç¥¨ç»“æœçš„Map
+	 * @return è®°å½•ç”¨æˆ·æŠ•ç¥¨ç»“æœçš„Map
 	 */
 	public Map<String, String> getMapVote() {
 		return mapVote;
 	}
 
 	/**
-	 * »ñÈ¡¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄÍ¶Æ±´ÎÊıµÄMap
-	 * @return ¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄÍ¶Æ±´ÎÊıµÄMap
+	 * è·å–è®°å½•æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„æŠ•ç¥¨æ¬¡æ•°çš„Map
+	 * @return è®°å½•æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„æŠ•ç¥¨æ¬¡æ•°çš„Map
 	 */
 	public Map<String, Integer> getMapVoteCount() {
 		return mapVoteCount;
 	}
 	/**
-	 * Í¶Æ±
-	 * @param user Í¶Æ±ÈË£¬ÎªÁË¼òµ¥£¬¾ÍÊÇÓÃ»§Ãû³Æ
-	 * @param voteItem Í¶Æ±µÄÑ¡Ïî
+	 * æŠ•ç¥¨
+	 * @param user æŠ•ç¥¨äººï¼Œä¸ºäº†ç®€å•ï¼Œå°±æ˜¯ç”¨æˆ·åç§°
+	 * @param voteItem æŠ•ç¥¨çš„é€‰é¡¹
 	 */
 	public void vote(String user,String voteItem)throws Exception{
-		//1£ºÏÈÎª¸ÃÓÃ»§Ôö¼ÓÍ¶Æ±µÄ´ÎÊı
-		//ÏÈ´Ó¼ÇÂ¼ÖĞÈ¡³öÒÑÓĞµÄÍ¶Æ±´ÎÊı
+		//1ï¼šå…ˆä¸ºè¯¥ç”¨æˆ·å¢åŠ æŠ•ç¥¨çš„æ¬¡æ•°
+		//å…ˆä»è®°å½•ä¸­å–å‡ºå·²æœ‰çš„æŠ•ç¥¨æ¬¡æ•°
 		Integer oldVoteCount = mapVoteCount.get(user);
 		if(oldVoteCount==null){
 			oldVoteCount = 0;
@@ -56,26 +56,26 @@ public class VoteManager {
 		mapVoteCount.put(user, oldVoteCount);
 
 		VoteState state = null;
-		//2£ºÖ±½Ó´ÓÊı¾İ¿â»ñÈ¡¸ÃÓÃ»§¶ÔÓ¦µÄÏÂÒ»¸ö×´Ì¬µÄ×´Ì¬±àÂë
-		String stateId = "´ÓÊı¾İ¿âÖĞ»ñÈ¡Õâ¸öÖµ";
-		//¿ªÊ¼¸ù¾İ×´Ì¬±àÂëÀ´´´½¨ĞèÓÃµÄ×´Ì¬¶ÔÏó
+		//2ï¼šç›´æ¥ä»æ•°æ®åº“è·å–è¯¥ç”¨æˆ·å¯¹åº”çš„ä¸‹ä¸€ä¸ªçŠ¶æ€çš„çŠ¶æ€ç¼–ç 
+		String stateId = "ä»æ•°æ®åº“ä¸­è·å–è¿™ä¸ªå€¼";
+		//å¼€å§‹æ ¹æ®çŠ¶æ€ç¼–ç æ¥åˆ›å»ºéœ€ç”¨çš„çŠ¶æ€å¯¹è±¡
 		
-		//¸ù¾İ×´Ì¬±àÂëÈ¥»ñÈ¡ÏàÓ¦µÄÀà
-		String className = "¸ù¾İ×´Ì¬±àÂëÈ¥»ñÈ¡ÏàÓ¦µÄÀà";
-		//Ê¹ÓÃ·´Éä´´½¨¶ÔÏóÊµÀı£¬¼òµ¥Ê¾ÒâÒ»ÏÂ
+		//æ ¹æ®çŠ¶æ€ç¼–ç å»è·å–ç›¸åº”çš„ç±»
+		String className = "æ ¹æ®çŠ¶æ€ç¼–ç å»è·å–ç›¸åº”çš„ç±»";
+		//ä½¿ç”¨åå°„åˆ›å»ºå¯¹è±¡å®ä¾‹ï¼Œç®€å•ç¤ºæ„ä¸€ä¸‹
 		Class c = Class.forName(className);
 		state = (VoteState)c.newInstance();
 		
-		if("Õı³£Í¶Æ±".equals(stateId)){
+		if("æ­£å¸¸æŠ•ç¥¨".equals(stateId)){
 			state = new NormalVoteState();
-		}else if("ÖØ¸´Í¶Æ±".equals(stateId)){
+		}else if("é‡å¤æŠ•ç¥¨".equals(stateId)){
 			state = new RepeatVoteState(); 
-		}else if("¶ñÒâÍ¶Æ±".equals(stateId)){
+		}else if("æ¶æ„æŠ•ç¥¨".equals(stateId)){
 			state = new SpiteVoteState(); 
-		}else if("ºÚÃûµ¥".equals(stateId)){
+		}else if("é»‘åå•".equals(stateId)){
 			state = new BlackVoteState(); 
 		}
-		//È»ºó×ªµ÷×´Ì¬¶ÔÏóÀ´½øĞĞÏàÓ¦µÄ²Ù×÷
+		//ç„¶åè½¬è°ƒçŠ¶æ€å¯¹è±¡æ¥è¿›è¡Œç›¸åº”çš„æ“ä½œ
 		state.vote(user, voteItem, this);
 	}
 }

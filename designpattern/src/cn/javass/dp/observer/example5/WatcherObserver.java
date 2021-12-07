@@ -1,21 +1,21 @@
 package cn.javass.dp.observer.example5;
 /**
- * Ë®ÖÊ¹Û²ìÕß½Ó¿Ú¶¨Òå
+ * æ°´è´¨è§‚å¯Ÿè€…æ¥å£å®šä¹‰
  */
 public interface WatcherObserver {
 	/**
-	 * ±»Í¨ÖªµÄ·½·¨
-	 * @param subject ´«Èë±»¹Û²ìµÄÄ¿±ê¶ÔÏó
+	 * è¢«é€šçŸ¥çš„æ–¹æ³•
+	 * @param subject ä¼ å…¥è¢«è§‚å¯Ÿçš„ç›®æ ‡å¯¹è±¡
 	 */
 	public void update(WaterQualitySubject subject);
 	/**
-	 * ÉèÖÃ¹Û²ìÈËÔ±µÄÖ°Îñ
-	 * @param job ¹Û²ìÈËÔ±µÄÖ°Îñ
+	 * è®¾ç½®è§‚å¯Ÿäººå‘˜çš„èŒåŠ¡
+	 * @param job è§‚å¯Ÿäººå‘˜çš„èŒåŠ¡
 	 */
 	public void setJob(String job);
 	/**
-	 * »ñÈ¡¹Û²ìÈËÔ±µÄÖ°Îñ
-	 * @return ¹Û²ìÈËÔ±µÄÖ°Îñ
+	 * è·å–è§‚å¯Ÿäººå‘˜çš„èŒåŠ¡
+	 * @return è§‚å¯Ÿäººå‘˜çš„èŒåŠ¡
 	 */
 	public String getJob();
 }

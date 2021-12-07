@@ -1,10 +1,10 @@
 package cn.javass.dp.interpreter.example2;
 /**
- * 终结符表达式
+ * 缁堢粨绗﹁〃杈惧紡
  */
 public class TerminalExpression extends AbstractExpression{
 	
 	public void interpret(Context ctx) {
-		//实现与语法规则中的终结符相关联的解释操作
+		//瀹炵幇涓庤娉曡鍒欎腑鐨勭粓缁撶鐩稿叧鑱旂殑瑙ｉ噴鎿嶄綔
 	}
 }

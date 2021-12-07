@@ -1,11 +1,11 @@
 package cn.javass.dp.proxy.example2;
 /**
- * ¾ßÌåµÄÄ¿±ê¶ÔÏó£¬ÊÇÕæÕı±»´úÀíµÄ¶ÔÏó
+ * å…·ä½“çš„ç›®æ ‡å¯¹è±¡ï¼Œæ˜¯çœŸæ­£è¢«ä»£ç†çš„å¯¹è±¡
  */
 public class RealSubject implements Subject{
 
 	public void request() {
-		//Ö´ĞĞ¾ßÌåµÄ¹¦ÄÜ´¦Àí
+		//æ‰§è¡Œå…·ä½“çš„åŠŸèƒ½å¤„ç†
 	}
 
 }

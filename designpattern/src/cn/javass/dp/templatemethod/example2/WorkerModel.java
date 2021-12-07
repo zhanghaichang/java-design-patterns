@@ -1,6 +1,6 @@
 package cn.javass.dp.templatemethod.example2;
 /**
- * ÃèÊö¹¤×÷ÈËÔ±ĞÅÏ¢µÄÊı¾İÄ£ĞÍ
+ * æè¿°å·¥ä½œäººå‘˜ä¿¡æ¯çš„æ•°æ®æ¨¡å‹
  */
 public class WorkerModel {
 	private String uuid,workerId,pwd,name;

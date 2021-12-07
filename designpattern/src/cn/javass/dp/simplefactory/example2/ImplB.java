@@ -1,10 +1,10 @@
 package cn.javass.dp.simplefactory.example2;
 /**
- * ½Ó¿ÚµÄ¾ßÌåÊµÏÖ¶ÔÏóB 
+ * æ¥å£çš„å…·ä½“å®ç°å¯¹è±¡B 
  */
 public class ImplB implements Api{
 	public void operation(String s) {
-		//ÊµÏÖ¹¦ÄÜµÄ´úÂë£¬Ê¾ÒâÒ»ÏÂ
+		//å®ç°åŠŸèƒ½çš„ä»£ç ï¼Œç¤ºæ„ä¸€ä¸‹
 		System.out.println("ImplB s=="+s);
 	}
 }

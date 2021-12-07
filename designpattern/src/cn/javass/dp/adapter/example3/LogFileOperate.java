@@ -4,20 +4,20 @@ import java.io.*;
 import java.util.*;
 
 /**
- * ÊµÏÖ¶ÔÈÕÖ¾ÎÄ¼þµÄ²Ù×÷
+ * å®žçŽ°å¯¹æ—¥å¿—æ–‡ä»¶çš„æ“ä½œ
  */
 public class LogFileOperate implements LogFileOperateApi{
 	/**
-	 * ÈÕÖ¾ÎÄ¼þµÄÂ·¾¶ºÍÎÄ¼þÃû³Æ£¬Ä¬ÈÏÊÇµ±Ç°classpathÏÂµÄAdapterLog.log
+	 * æ—¥å¿—æ–‡ä»¶çš„è·¯å¾„å’Œæ–‡ä»¶åç§°ï¼Œé»˜è®¤æ˜¯å½“å‰classpathä¸‹çš„AdapterLog.log
 	 */
 	private String logFilePathName = "AdapterLog.log";	
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÎÄ¼þµÄÂ·¾¶ºÍÃû³Æ
-	 * @param logFilePathName ÎÄ¼þµÄÂ·¾¶ºÍÃû³Æ
+	 * æž„é€ æ–¹æ³•ï¼Œä¼ å…¥æ–‡ä»¶çš„è·¯å¾„å’Œåç§°
+	 * @param logFilePathName æ–‡ä»¶çš„è·¯å¾„å’Œåç§°
 	 */
 	public LogFileOperate(String logFilePathName) {
-		//ÏÈÅÐ¶ÏÊÇ·ñ´«ÈëÁËÎÄ¼þµÄÂ·¾¶ºÍÃû³Æ£¬Èç¹ûÊÇ£¬
-		//¾ÍÖØÐÂÉèÖÃ²Ù×÷µÄÈÕÖ¾ÎÄ¼þµÄÂ·¾¶ºÍÃû³Æ
+		//å…ˆåˆ¤æ–­æ˜¯å¦ä¼ å…¥äº†æ–‡ä»¶çš„è·¯å¾„å’Œåç§°ï¼Œå¦‚æžœæ˜¯ï¼Œ
+		//å°±é‡æ–°è®¾ç½®æ“ä½œçš„æ—¥å¿—æ–‡ä»¶çš„è·¯å¾„å’Œåç§°
 		if(logFilePathName!=null && logFilePathName.trim().length()>0){
 			this.logFilePathName = logFilePathName;
 		}

@@ -1,10 +1,10 @@
 package cn.javass.dp.builder.example3;
 /**
- * ÃèÊöÊä³öµ½ÎÄ¼şÎ²µÄÄÚÈİµÄ¶ÔÏó
+ * æè¿°è¾“å‡ºåˆ°æ–‡ä»¶å°¾çš„å†…å®¹çš„å¯¹è±¡
  */
 public class ExportFooterModel {
 	/**
-	 * Êä³öÈË
+	 * è¾“å‡ºäºº
 	 */
 	private String exportUser;
 

@@ -1,21 +1,21 @@
 package cn.javass.dp.factorymethod.example3;
 /**
- * ÊµÏÖµ¼³öÊı¾İµÄÒµÎñ¹¦ÄÜ¶ÔÏó
+ * å®ç°å¯¼å‡ºæ•°æ®çš„ä¸šåŠ¡åŠŸèƒ½å¯¹è±¡
  */
 public abstract class ExportOperate {
 	/**
-	 * µ¼³öÎÄ¼ş
-	 * @param data ĞèÒª±£´æµÄÊı¾İ
-	 * @return ÊÇ·ñ³É¹¦µ¼³öÎÄ¼ş
+	 * å¯¼å‡ºæ–‡ä»¶
+	 * @param data éœ€è¦ä¿å­˜çš„æ•°æ®
+	 * @return æ˜¯å¦æˆåŠŸå¯¼å‡ºæ–‡ä»¶
 	 */
 	public boolean export(String data){
-		//Ê¹ÓÃ¹¤³§·½·¨
+		//ä½¿ç”¨å·¥å‚æ–¹æ³•
 		ExportFileApi api = factoryMethod();
 		return api.export(data);
 	}
 	/**
-	 * ¹¤³§·½·¨£¬´´½¨µ¼³öµÄÎÄ¼ş¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
-	 * @return µ¼³öµÄÎÄ¼ş¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
+	 * å·¥å‚æ–¹æ³•ï¼Œåˆ›å»ºå¯¼å‡ºçš„æ–‡ä»¶å¯¹è±¡çš„æ¥å£å¯¹è±¡
+	 * @return å¯¼å‡ºçš„æ–‡ä»¶å¯¹è±¡çš„æ¥å£å¯¹è±¡
 	 */
 	protected abstract ExportFileApi factoryMethod();
 }

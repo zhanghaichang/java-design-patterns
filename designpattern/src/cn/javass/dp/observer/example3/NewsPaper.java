@@ -1,27 +1,27 @@
 package cn.javass.dp.observer.example3;
 import java.util.*;
 /**
- * ±¨Ö½¶ÔÏó£¬¾ßÌåµÄÄ¿±êÊµÏÖ
+ * æŠ¥çº¸å¯¹è±¡ï¼Œå…·ä½“çš„ç›®æ ‡å®ç°
  */
 public class NewsPaper extends Subject{
 	/**
-	 * ±¨Ö½µÄ¾ßÌåÄÚÈİ
+	 * æŠ¥çº¸çš„å…·ä½“å†…å®¹
 	 */
 	private String content;
 	/**
-	 * »ñÈ¡±¨Ö½µÄ¾ßÌåÄÚÈİ
-	 * @return ±¨Ö½µÄ¾ßÌåÄÚÈİ
+	 * è·å–æŠ¥çº¸çš„å…·ä½“å†…å®¹
+	 * @return æŠ¥çº¸çš„å…·ä½“å†…å®¹
 	 */
 	public String getContent() {
 		return content;
 	}
 	/**
-	 * Ê¾Òâ£¬ÉèÖÃ±¨Ö½µÄ¾ßÌåÄÚÈİ£¬Ïàµ±ÓÚÒª³ö°æ±¨Ö½ÁË
-	 * @param content ±¨Ö½µÄ¾ßÌåÄÚÈİ
+	 * ç¤ºæ„ï¼Œè®¾ç½®æŠ¥çº¸çš„å…·ä½“å†…å®¹ï¼Œç›¸å½“äºè¦å‡ºç‰ˆæŠ¥çº¸äº†
+	 * @param content æŠ¥çº¸çš„å…·ä½“å†…å®¹
 	 */
 	public void setContent(String content) {
 		this.content = content;
-		//ÄÚÈİÓĞÁË£¬ËµÃ÷ÓÖ³ö±¨Ö½ÁË£¬ÄÇ¾ÍÍ¨ÖªËùÓĞµÄ¶ÁÕß
+		//å†…å®¹æœ‰äº†ï¼Œè¯´æ˜åˆå‡ºæŠ¥çº¸äº†ï¼Œé‚£å°±é€šçŸ¥æ‰€æœ‰çš„è¯»è€…
 		notifyObservers(content);
 	}
 }

@@ -1,40 +1,40 @@
 package cn.javass.dp.templatemethod.example7;
 /**
- *	µÇÂ¼¿ØÖÆµÄÄ£°å
+ *	ç™»å½•æ§åˆ¶çš„æ¨¡æ¿
  */
 public class LoginTemplate {
 	/**
-	 * ÅĞ¶ÏµÇÂ¼Êı¾İÊÇ·ñÕıÈ·£¬Ò²¾ÍÊÇÊÇ·ñÄÜµÇÂ¼³É¹¦
-	 * @param lm ·â×°µÇÂ¼Êı¾İµÄModel
-	 * @param callback LoginCallback¶ÔÏó
-	 * @return true±íÊ¾µÇÂ¼³É¹¦£¬false±íÊ¾µÇÂ¼Ê§°Ü
+	 * åˆ¤æ–­ç™»å½•æ•°æ®æ˜¯å¦æ­£ç¡®ï¼Œä¹Ÿå°±æ˜¯æ˜¯å¦èƒ½ç™»å½•æˆåŠŸ
+	 * @param lm å°è£…ç™»å½•æ•°æ®çš„Model
+	 * @param callback LoginCallbackå¯¹è±¡
+	 * @return trueè¡¨ç¤ºç™»å½•æˆåŠŸï¼Œfalseè¡¨ç¤ºç™»å½•å¤±è´¥
 	 */
 	public final boolean login(LoginModel lm,LoginCallback callback){
-		//1£º¸ù¾İµÇÂ¼ÈËÔ±µÄ±àºÅÈ¥»ñÈ¡ÏàÓ¦µÄÊı¾İ
+		//1ï¼šæ ¹æ®ç™»å½•äººå‘˜çš„ç¼–å·å»è·å–ç›¸åº”çš„æ•°æ®
 		LoginModel dbLm = callback.findLoginUser(lm.getLoginId());
 		if(dbLm!=null){
-			//2£º¶ÔÃÜÂë½øĞĞ¼ÓÃÜ
+			//2ï¼šå¯¹å¯†ç è¿›è¡ŒåŠ å¯†
 			String encryptPwd = callback.encryptPwd(lm.getPwd(),this);
-			//°Ñ¼ÓÃÜºóµÄÃÜÂëÉèÖÃ»Øµ½µÇÂ¼Êı¾İÄ£ĞÍÀïÃæ
+			//æŠŠåŠ å¯†åçš„å¯†ç è®¾ç½®å›åˆ°ç™»å½•æ•°æ®æ¨¡å‹é‡Œé¢
 			lm.setPwd(encryptPwd);
-			//3£ºÅĞ¶ÏÊÇ·ñÆ¥Åä
+			//3ï¼šåˆ¤æ–­æ˜¯å¦åŒ¹é…
 			return callback.match(lm, dbLm,this);
 		}
 		return false;
 	}
 	/**
-	 * ¶ÔÃÜÂëÊı¾İ½øĞĞ¼ÓÃÜ
-	 * @param pwd ÃÜÂëÊı¾İ
-	 * @return ¼ÓÃÜºóµÄÃÜÂëÊı¾İ
+	 * å¯¹å¯†ç æ•°æ®è¿›è¡ŒåŠ å¯†
+	 * @param pwd å¯†ç æ•°æ®
+	 * @return åŠ å¯†åçš„å¯†ç æ•°æ®
 	 */
 	public String encryptPwd(String pwd){
 		return pwd;
 	}
 	/**
-	 * ÅĞ¶ÏÓÃ»§ÌîĞ´µÄµÇÂ¼Êı¾İºÍ´æ´¢ÖĞ¶ÔÓ¦µÄÊı¾İÊÇ·ñÆ¥ÅäµÃÉÏ
-	 * @param lm ÓÃ»§ÌîĞ´µÄµÇÂ¼Êı¾İ
-	 * @param dbLm ÔÚ´æ´¢ÖĞ¶ÔÓ¦µÄÊı¾İ
-	 * @return true±íÊ¾Æ¥Åä³É¹¦£¬false±íÊ¾Æ¥ÅäÊ§°Ü
+	 * åˆ¤æ–­ç”¨æˆ·å¡«å†™çš„ç™»å½•æ•°æ®å’Œå­˜å‚¨ä¸­å¯¹åº”çš„æ•°æ®æ˜¯å¦åŒ¹é…å¾—ä¸Š
+	 * @param lm ç”¨æˆ·å¡«å†™çš„ç™»å½•æ•°æ®
+	 * @param dbLm åœ¨å­˜å‚¨ä¸­å¯¹åº”çš„æ•°æ®
+	 * @return trueè¡¨ç¤ºåŒ¹é…æˆåŠŸï¼Œfalseè¡¨ç¤ºåŒ¹é…å¤±è´¥
 	 */
 	public boolean match(LoginModel lm,LoginModel dbLm){
 		if(lm.getLoginId().equals(dbLm.getLoginId()) 

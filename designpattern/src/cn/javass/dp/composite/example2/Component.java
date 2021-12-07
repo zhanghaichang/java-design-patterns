@@ -2,40 +2,40 @@ package cn.javass.dp.composite.example2;
 
 import java.util.Iterator;
 /**
- * ³éÏóµÄ×é¼þ¶ÔÏó£¬Îª×éºÏÖÐµÄ¶ÔÏóÉùÃ÷½Ó¿Ú£¬ÊµÏÖ½Ó¿ÚµÄÈ±Ê¡ÐÐÎª
+ * æŠ½è±¡çš„ç»„ä»¶å¯¹è±¡ï¼Œä¸ºç»„åˆä¸­çš„å¯¹è±¡å£°æ˜ŽæŽ¥å£ï¼Œå®žçŽ°æŽ¥å£çš„ç¼ºçœè¡Œä¸º
  */
 public abstract class Component {
 	/**
-	 * Ê¾Òâ·½·¨£¬×Ó×é¼þ¶ÔÏó¿ÉÄÜÓÐµÄ¹¦ÄÜ·½·¨
+	 * ç¤ºæ„æ–¹æ³•ï¼Œå­ç»„ä»¶å¯¹è±¡å¯èƒ½æœ‰çš„åŠŸèƒ½æ–¹æ³•
 	 */
 	public abstract void someOperation();
 
 	/**
-	 * Ïò×éºÏ¶ÔÏóÖÐ¼ÓÈë×é¼þ¶ÔÏó 
-	 * @param child ±»¼ÓÈë×éºÏ¶ÔÏóÖÐµÄ×é¼þ¶ÔÏó
+	 * å‘ç»„åˆå¯¹è±¡ä¸­åŠ å…¥ç»„ä»¶å¯¹è±¡ 
+	 * @param child è¢«åŠ å…¥ç»„åˆå¯¹è±¡ä¸­çš„ç»„ä»¶å¯¹è±¡
 	 */
 	public void addChild(Component child) {
-		// È±Ê¡µÄÊµÏÖ£¬Å×³öÀýÍâ£¬ÒòÎªÒ¶×Ó¶ÔÏóÃ»ÓÐÕâ¸ö¹¦ÄÜ£¬»òÕß×Ó×é¼þÃ»ÓÐÊµÏÖÕâ¸ö¹¦ÄÜ
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		// ç¼ºçœçš„å®žçŽ°ï¼ŒæŠ›å‡ºä¾‹å¤–ï¼Œå› ä¸ºå¶å­å¯¹è±¡æ²¡æœ‰è¿™ä¸ªåŠŸèƒ½ï¼Œæˆ–è€…å­ç»„ä»¶æ²¡æœ‰å®žçŽ°è¿™ä¸ªåŠŸèƒ½
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 	}
 
 	/**
-	 * ´Ó×éºÏ¶ÔÏóÖÐÒÆ³öÄ³¸ö×é¼þ¶ÔÏó
-	 * @param child ±»ÒÆ³öµÄ×é¼þ¶ÔÏó
+	 * ä»Žç»„åˆå¯¹è±¡ä¸­ç§»å‡ºæŸä¸ªç»„ä»¶å¯¹è±¡
+	 * @param child è¢«ç§»å‡ºçš„ç»„ä»¶å¯¹è±¡
 	 */
 	public void removeChild(Component child) {
-		// È±Ê¡µÄÊµÏÖ£¬Å×³öÀýÍâ£¬ÒòÎªÒ¶×Ó¶ÔÏóÃ»ÓÐÕâ¸ö¹¦ÄÜ£¬»òÕß×Ó×é¼þÃ»ÓÐÊµÏÖÕâ¸ö¹¦ÄÜ
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		// ç¼ºçœçš„å®žçŽ°ï¼ŒæŠ›å‡ºä¾‹å¤–ï¼Œå› ä¸ºå¶å­å¯¹è±¡æ²¡æœ‰è¿™ä¸ªåŠŸèƒ½ï¼Œæˆ–è€…å­ç»„ä»¶æ²¡æœ‰å®žçŽ°è¿™ä¸ªåŠŸèƒ½
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 	}
 
 	/**
-	 * ·µ»ØÄ³¸öË÷Òý¶ÔÓ¦µÄ×é¼þ¶ÔÏó
-	 * @param index ÐèÒª»ñÈ¡µÄ×é¼þ¶ÔÏóµÄË÷Òý£¬Ë÷Òý´Ó0¿ªÊ¼
-	 * @return Ë÷Òý¶ÔÓ¦µÄ×é¼þ¶ÔÏó
+	 * è¿”å›žæŸä¸ªç´¢å¼•å¯¹åº”çš„ç»„ä»¶å¯¹è±¡
+	 * @param index éœ€è¦èŽ·å–çš„ç»„ä»¶å¯¹è±¡çš„ç´¢å¼•ï¼Œç´¢å¼•ä»Ž0å¼€å§‹
+	 * @return ç´¢å¼•å¯¹åº”çš„ç»„ä»¶å¯¹è±¡
 	 */
 	public Component getChildren(int index) {
-		// È±Ê¡µÄÊµÏÖ£¬Å×³öÀýÍâ£¬ÒòÎªÒ¶×Ó¶ÔÏóÃ»ÓÐÕâ¸ö¹¦ÄÜ£¬»òÕß×Ó×é¼þÃ»ÓÐÊµÏÖÕâ¸ö¹¦ÄÜ
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		// ç¼ºçœçš„å®žçŽ°ï¼ŒæŠ›å‡ºä¾‹å¤–ï¼Œå› ä¸ºå¶å­å¯¹è±¡æ²¡æœ‰è¿™ä¸ªåŠŸèƒ½ï¼Œæˆ–è€…å­ç»„ä»¶æ²¡æœ‰å®žçŽ°è¿™ä¸ªåŠŸèƒ½
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 	}
 }
 

@@ -3,28 +3,28 @@ package cn.javass.dp.composite.example2;
 import java.util.*;
 
 /**
- * ×éºÏ¶ÔÏó£¬Í¨³£ĞèÒª´æ´¢×Ó¶ÔÏó£¬¶¨ÒåÓĞ×Ó²¿¼şµÄ²¿¼şĞĞÎª£¬
- * ²¢ÊµÏÖÔÚComponentÀïÃæ¶¨ÒåµÄÓë×Ó²¿¼şÓĞ¹ØµÄ²Ù×÷
+ * ç»„åˆå¯¹è±¡ï¼Œé€šå¸¸éœ€è¦å­˜å‚¨å­å¯¹è±¡ï¼Œå®šä¹‰æœ‰å­éƒ¨ä»¶çš„éƒ¨ä»¶è¡Œä¸ºï¼Œ
+ * å¹¶å®ç°åœ¨Componenté‡Œé¢å®šä¹‰çš„ä¸å­éƒ¨ä»¶æœ‰å…³çš„æ“ä½œ
  */
 public class Composite extends Component {
 	/**
-	 * ÓÃÀ´´æ´¢×éºÏ¶ÔÏóÖĞ°üº¬µÄ×Ó×é¼ş¶ÔÏó
+	 * ç”¨æ¥å­˜å‚¨ç»„åˆå¯¹è±¡ä¸­åŒ…å«çš„å­ç»„ä»¶å¯¹è±¡
 	 */
 	private List<Component> childComponents = null;
 
 	/**
-	 * Ê¾Òâ·½·¨£¬Í¨³£ÔÚÀïÃæĞèÒªÊµÏÖµİ¹éµÄµ÷ÓÃ
+	 * ç¤ºæ„æ–¹æ³•ï¼Œé€šå¸¸åœ¨é‡Œé¢éœ€è¦å®ç°é€’å½’çš„è°ƒç”¨
 	 */
 	public void someOperation() {		
 		if (childComponents != null){
 			for(Component c : childComponents){
-				//µİ¹éµÄ½øĞĞ×Ó×é¼şÏàÓ¦·½·¨µÄµ÷ÓÃ
+				//é€’å½’çš„è¿›è¡Œå­ç»„ä»¶ç›¸åº”æ–¹æ³•çš„è°ƒç”¨
 				c.someOperation();
 			}
 		}
 	}
 	public void addChild(Component child) {
-		//ÑÓ³Ù³õÊ¼»¯
+		//å»¶è¿Ÿåˆå§‹åŒ–
 		if (childComponents == null) {
 			childComponents = new ArrayList<Component>();
 		}

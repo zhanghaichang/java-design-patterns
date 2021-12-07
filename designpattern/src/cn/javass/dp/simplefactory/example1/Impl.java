@@ -1,6 +1,6 @@
 package cn.javass.dp.simplefactory.example1;
 /**
- * 对接口的实现 
+ * 瀵规帴鍙ｇ殑瀹炵幇 
  */
 public class Impl implements Api{
 	

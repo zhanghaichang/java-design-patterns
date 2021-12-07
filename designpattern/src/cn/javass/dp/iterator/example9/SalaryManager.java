@@ -1,46 +1,46 @@
 package cn.javass.dp.iterator.example9;
 
 /**
- * ±»¿Í»§·½ÊÕ¹ºµÄÄÇ¸ö¹«Ë¾µÄ¹¤×Ê¹ÜÀíÀà
+ * è¢«å®¢æˆ·æ–¹æ”¶è´­çš„é‚£ä¸ªå…¬å¸çš„å·¥èµ„ç®¡ç†ç±»
  */
 public class SalaryManager{
 	/**
-	 * ÓÃÊı×é¹ÜÀí
+	 * ç”¨æ•°ç»„ç®¡ç†
 	 */
 	private PayModel[] pms = null;
 	/**
-	 * »ñÈ¡¹¤×ÊÁĞ±í
-	 * @return ¹¤×ÊÁĞ±í
+	 * è·å–å·¥èµ„åˆ—è¡¨
+	 * @return å·¥èµ„åˆ—è¡¨
 	 */
 	public PayModel[] getPays(){
 		return pms;
 	}
 	
 	/**
-	 * ¼ÆËã¹¤×Ê£¬ÆäÊµÓ¦¸ÃÓĞºÜ¶à²ÎÊı£¬ÎªÁËÑİÊ¾´Ó¼ò
+	 * è®¡ç®—å·¥èµ„ï¼Œå…¶å®åº”è¯¥æœ‰å¾ˆå¤šå‚æ•°ï¼Œä¸ºäº†æ¼”ç¤ºä»ç®€
 	 */
 	public void calcSalary(){
-		//¼ÆËã¹¤×Ê£¬²¢°Ñ¹¤×ÊĞÅÏ¢Ìî³äµ½¹¤×ÊÁĞ±íÀïÃæ
-		//ÎªÁË²âÊÔ£¬×öµã¼ÙÊı¾İ½øÈ¥
+		//è®¡ç®—å·¥èµ„ï¼Œå¹¶æŠŠå·¥èµ„ä¿¡æ¯å¡«å……åˆ°å·¥èµ„åˆ—è¡¨é‡Œé¢
+		//ä¸ºäº†æµ‹è¯•ï¼Œåšç‚¹å‡æ•°æ®è¿›å»
 		PayModel pm1 = new PayModel();
 		pm1.setPay(2200);
-		pm1.setUserName("ÍõÎå");
+		pm1.setUserName("ç‹äº”");
 		
 		PayModel pm2 = new PayModel();
 		pm2.setPay(3600);
-		pm2.setUserName("ÕÔÁù");
+		pm2.setUserName("èµµå…­");
 		
 		PayModel pm3 = new PayModel();
 		pm3.setPay(2200);
-		pm3.setUserName("ÍõÎå¶şºÅ");
+		pm3.setUserName("ç‹äº”äºŒå·");
 		
 		PayModel pm4 = new PayModel();
 		pm4.setPay(3600);
-		pm4.setUserName("ÕÔÁù¶şºÅ");
+		pm4.setUserName("èµµå…­äºŒå·");
 		
 		PayModel pm5 = new PayModel();
 		pm5.setPay(2200);
-		pm5.setUserName("ÍõÎåÈıºÅ");
+		pm5.setUserName("ç‹äº”ä¸‰å·");
 		
 		pms = new PayModel[5];
 		pms[0] = pm1;

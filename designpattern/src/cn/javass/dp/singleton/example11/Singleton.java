@@ -3,17 +3,17 @@ package cn.javass.dp.singleton.example11;
 
 public class Singleton {
 	/**
-	 * �༶���ڲ��࣬Ҳ���Ǿ�̬�ĳ�Աʽ�ڲ��࣬���ڲ����ʵ�����ⲿ���ʵ��û�а󶨹�ϵ��
-	 * ����ֻ�б����õ��Ż�װ�أ��Ӷ�ʵ�����ӳټ���
+	 * 类级的内部类，也就是静态的成员式内部类，该内部类的实例与外部类的实例没有绑定关系，
+	 * 而且只有被调用到才会装载，从而实现了延迟加载
 	 */
 	private static class SingletonHolder{
 		/**
-		 * ��̬��ʼ��������JVM����֤�̰߳�ȫ
+		 * 静态初始化器，由JVM来保证线程安全
 		 */
 		private static Singleton instance = new Singleton();
 	}
 	/**
-	 * ˽�л����췽��
+	 * 私有化构造方法
 	 */
 	private Singleton(){
 	}

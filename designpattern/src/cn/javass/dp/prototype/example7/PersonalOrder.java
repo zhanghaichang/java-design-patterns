@@ -1,18 +1,18 @@
 package cn.javass.dp.prototype.example7;
 /**
- * ¸öÈË¶©µ¥¶ÔÏó
+ * ä¸ªäººè®¢å•å¯¹è±¡
  */
 public class PersonalOrder implements Cloneable , OrderApi{
 	/**
-	 * ¶©¹ºÈËÔ±ĞÕÃû
+	 * è®¢è´­äººå‘˜å§“å
 	 */
 	private String customerName;
 	/**
-	 * ²úÆ·¶ÔÏó
+	 * äº§å“å¯¹è±¡
 	 */
 	private Product product = null;
 	/**
-	 * ¶©µ¥²úÆ·ÊıÁ¿
+	 * è®¢å•äº§å“æ•°é‡
 	 */
 	private int orderProductNum = 0;
 	
@@ -36,15 +36,15 @@ public class PersonalOrder implements Cloneable , OrderApi{
 	}
 	
 	public String toString(){
-		//¼òµ¥µãÊä³ö
-		return "¶©¹º²úÆ·ÊÇ="+this.product.getName()+"£¬¶©¹ºÊıÁ¿Îª="+this.orderProductNum;
+		//ç®€å•ç‚¹è¾“å‡º
+		return "è®¢è´­äº§å“æ˜¯="+this.product.getName()+"ï¼Œè®¢è´­æ•°é‡ä¸º="+this.orderProductNum;
 	}
 	
 	public Object clone(){
 		PersonalOrder obj=null;
 		try {
 			obj =(PersonalOrder)super.clone();
-			//ÕâÒ»¾ä»°²»¿ÉÉÙ
+			//è¿™ä¸€å¥è¯ä¸å¯å°‘
 //			obj.setProduct((Product)this.product.clone());
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();

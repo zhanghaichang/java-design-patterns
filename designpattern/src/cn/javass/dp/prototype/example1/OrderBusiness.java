@@ -1,75 +1,75 @@
 package cn.javass.dp.prototype.example1;
 /**
- * ´¦Àí¶©µ¥µÄÒµÎñ¶ÔÏó
+ * å¤„ç†è®¢å•çš„ä¸šåŠ¡å¯¹è±¡
  */
 public class OrderBusiness {
 	/**
-	 * ´´½¨¶©µ¥µÄ·½·¨
-	 * @param order ¶©µ¥µÄ½Ó¿Ú¶ÔÏó
+	 * åˆ›å»ºè®¢å•çš„æ–¹æ³•
+	 * @param order è®¢å•çš„æ¥å£å¯¹è±¡
 	 */
 	public void saveOrder(OrderApi order){
-		//¸ù¾İÒµÎñÒªÇó£¬µ±¶©µ¥µÄÔ¤¶¨µÄ²úÆ·ÊıÁ¿³¬¹ı1000µÄÊ±ºò£¬¾ÍĞèÒª°Ñ¶©µ¥²ğ³ÉÁ½·İ¶©µ¥
-		//µ±È»Èç¹ûÒª×öºÃ£¬ÕâÀïµÄ1000Ó¦¸Ã×ö³É³£Á¿£¬ÕâÃ´×öÊÇÎªÁËÑİÊ¾¼òµ¥
+		//æ ¹æ®ä¸šåŠ¡è¦æ±‚ï¼Œå½“è®¢å•çš„é¢„å®šçš„äº§å“æ•°é‡è¶…è¿‡1000çš„æ—¶å€™ï¼Œå°±éœ€è¦æŠŠè®¢å•æ‹†æˆä¸¤ä»½è®¢å•
+		//å½“ç„¶å¦‚æœè¦åšå¥½ï¼Œè¿™é‡Œçš„1000åº”è¯¥åšæˆå¸¸é‡ï¼Œè¿™ä¹ˆåšæ˜¯ä¸ºäº†æ¼”ç¤ºç®€å•
 		
-		//1£ºÅĞ¶Ïµ±Ç°µÄÔ¤¶¨²úÆ·ÊıÁ¿ÊÇ·ñ´óÓÚ1000
+		//1ï¼šåˆ¤æ–­å½“å‰çš„é¢„å®šäº§å“æ•°é‡æ˜¯å¦å¤§äº1000
 		while(order.getOrderProductNum() > 1000){
-			//2£ºÈç¹û´óÓÚ£¬»¹ĞèÒª¼ÌĞø²ğ·Ö
-			//2.1ÔÙĞÂ½¨Ò»·İ¶©µ¥£¬¸ú´«ÈëµÄ¶©µ¥³ıÁËÊıÁ¿²»Ò»ÑùÍâ£¬ÆäËû¶¼ÏàÍ¬
+			//2ï¼šå¦‚æœå¤§äºï¼Œè¿˜éœ€è¦ç»§ç»­æ‹†åˆ†
+			//2.1å†æ–°å»ºä¸€ä»½è®¢å•ï¼Œè·Ÿä¼ å…¥çš„è®¢å•é™¤äº†æ•°é‡ä¸ä¸€æ ·å¤–ï¼Œå…¶ä»–éƒ½ç›¸åŒ
 			OrderApi newOrder = null;
 			if(order instanceof PersonalOrder){
-				//´´½¨ÏàÓ¦µÄĞÂµÄ¶©µ¥¶ÔÏó
+				//åˆ›å»ºç›¸åº”çš„æ–°çš„è®¢å•å¯¹è±¡
 				PersonalOrder p2 = new PersonalOrder();
-				//È»ºó½øĞĞ¸³Öµ£¬µ«ÊÇ²úÆ·ÊıÁ¿Îª1000
+				//ç„¶åè¿›è¡Œèµ‹å€¼ï¼Œä½†æ˜¯äº§å“æ•°é‡ä¸º1000
 				PersonalOrder p1 = (PersonalOrder)order;
 				p2.setCustomerName(p1.getCustomerName());
 				p2.setProductId(p1.getProductId());			
 				p2.setOrderProductNum(1000);
-				//È»ºóÔÙÉèÖÃ¸ønewOrder
+				//ç„¶åå†è®¾ç½®ç»™newOrder
 				newOrder = p2;
 			}else if(order instanceof EnterpriseOrder){
-				//´´½¨ÏàÓ¦µÄ¶©µ¥¶ÔÏó
+				//åˆ›å»ºç›¸åº”çš„è®¢å•å¯¹è±¡
 				EnterpriseOrder e2 = new EnterpriseOrder();
-				//È»ºó½øĞĞ¸³Öµ£¬µ«ÊÇ²úÆ·ÊıÁ¿Îª1000
+				//ç„¶åè¿›è¡Œèµ‹å€¼ï¼Œä½†æ˜¯äº§å“æ•°é‡ä¸º1000
 				EnterpriseOrder e1 = (EnterpriseOrder)order;
 				e2.setEnterpriseName(e1.getEnterpriseName());
 				e2.setProductId(e1.getProductId());
 				e2.setOrderProductNum(1000);
-				//È»ºóÔÙÉèÖÃ¸ønewOrder
+				//ç„¶åå†è®¾ç½®ç»™newOrder
 				newOrder = e2;
 			}			
 			
-			//2.2Ô­À´µÄ¶©µ¥±£Áô£¬°ÑÊıÁ¿ÉèÖÃ³É¼õÉÙ1000
+			//2.2åŸæ¥çš„è®¢å•ä¿ç•™ï¼ŒæŠŠæ•°é‡è®¾ç½®æˆå‡å°‘1000
 			order.setOrderProductNum(order.getOrderProductNum()-1000);
 			
-			//È»ºóÊÇÒµÎñ¹¦ÄÜ´¦Àí£¬Ê¡ÂÔÁË£¬´òÓ¡Êä³ö£¬¿´Ò»ÏÂ
-			System.out.println("²ğ·ÖÉú³É¶©µ¥=="+newOrder);
+			//ç„¶åæ˜¯ä¸šåŠ¡åŠŸèƒ½å¤„ç†ï¼Œçœç•¥äº†ï¼Œæ‰“å°è¾“å‡ºï¼Œçœ‹ä¸€ä¸‹
+			System.out.println("æ‹†åˆ†ç”Ÿæˆè®¢å•=="+newOrder);
 		}
 		
-		//3£º²»³¬¹ı£¬ÄÇ¾ÍÖ±½ÓÒµÎñ¹¦ÄÜ´¦Àí£¬Ê¡ÂÔÁË£¬´òÓ¡Êä³ö£¬¿´Ò»ÏÂ
-		System.out.println("¶©µ¥=="+order);
+		//3ï¼šä¸è¶…è¿‡ï¼Œé‚£å°±ç›´æ¥ä¸šåŠ¡åŠŸèƒ½å¤„ç†ï¼Œçœç•¥äº†ï¼Œæ‰“å°è¾“å‡ºï¼Œçœ‹ä¸€ä¸‹
+		System.out.println("è®¢å•=="+order);
 		
 	}
 	
 //	public void saveOrder2(OrderApi order){
 //		int oldNum = order.getOrderProductNum();
 //		while(oldNum > 1000){
-//			//¶¨ÒåÒ»¸ö±íÊ¾±»²ğ·Ö³öÀ´µÄĞÂ¶©µ¥¶ÔÏó
+//			//å®šä¹‰ä¸€ä¸ªè¡¨ç¤ºè¢«æ‹†åˆ†å‡ºæ¥çš„æ–°è®¢å•å¯¹è±¡
 //			OrderApi newOrder = null;
 //			
 //			if(order instanceof PersonalOrder){
-//				//´´½¨ÏàÓ¦µÄ¶©µ¥¶ÔÏó
+//				//åˆ›å»ºç›¸åº”çš„è®¢å•å¯¹è±¡
 //				PersonalOrder p2 = new PersonalOrder();
-//				//È»ºó½øĞĞ¸³ÖµµÈ£¬Ê¡ÂÔÁË
-//				//È»ºóÔÙÉèÖÃ¸ønewOrder
+//				//ç„¶åè¿›è¡Œèµ‹å€¼ç­‰ï¼Œçœç•¥äº†
+//				//ç„¶åå†è®¾ç½®ç»™newOrder
 //				newOrder = p2;
 //			}else if(order instanceof EnterpriseOrder){
-//				//´´½¨ÏàÓ¦µÄ¶©µ¥¶ÔÏó
+//				//åˆ›å»ºç›¸åº”çš„è®¢å•å¯¹è±¡
 //				EnterpriseOrder e2 = new EnterpriseOrder();
-//				//È»ºó½øĞĞ¸³ÖµµÈ£¬Ê¡ÂÔÁË
-//				//È»ºóÔÙÉèÖÃ¸ønewOrder
+//				//ç„¶åè¿›è¡Œèµ‹å€¼ç­‰ï¼Œçœç•¥äº†
+//				//ç„¶åå†è®¾ç½®ç»™newOrder
 //				newOrder = e2;
 //			}			
-//			//È»ºó½øĞĞ²ğ·ÖºÍÆäËûÒµÎñ¹¦ÄÜ´¦Àí£¬Ê¡ÂÔÁË
+//			//ç„¶åè¿›è¡Œæ‹†åˆ†å’Œå…¶ä»–ä¸šåŠ¡åŠŸèƒ½å¤„ç†ï¼Œçœç•¥äº†
 //		}		
 //	}
 }

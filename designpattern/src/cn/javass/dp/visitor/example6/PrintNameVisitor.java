@@ -1,15 +1,15 @@
 package cn.javass.dp.visitor.example6;
 /**
- * ¾ßÌåµÄ·ÃÎÊÕß£¬ÊµÏÖ£ºÊä³ö¶ÔÏóµÄÃû³Æ£¬ÔÚ×éºÏ¶ÔÏóµÄÃû³ÆÇ°ÃæÌí¼Ó"½Úµã£º"£¬
- * ÔÚÒ¶×Ó¶ÔÏóµÄÃû³ÆÇ°ÃæÌí¼Ó"Ò¶×Ó£º"
+ * å…·ä½“çš„è®¿é—®è€…ï¼Œå®ç°ï¼šè¾“å‡ºå¯¹è±¡çš„åç§°ï¼Œåœ¨ç»„åˆå¯¹è±¡çš„åç§°å‰é¢æ·»åŠ "èŠ‚ç‚¹ï¼š"ï¼Œ
+ * åœ¨å¶å­å¯¹è±¡çš„åç§°å‰é¢æ·»åŠ "å¶å­ï¼š"
 */
 public class PrintNameVisitor implements Visitor {
 	public void visitComposite(Composite composite) {
-		//·ÃÎÊµ½×éºÏ¶ÔÏóµÄÊı¾İ
-		System.out.println("½Úµã£º"+composite.getName());
+		//è®¿é—®åˆ°ç»„åˆå¯¹è±¡çš„æ•°æ®
+		System.out.println("èŠ‚ç‚¹ï¼š"+composite.getName());
 	}
 	public void visitLeaf(Leaf leaf) {
-		//·ÃÎÊµ½Ò¶×Ó¶ÔÏóµÄÊı¾İ		
-		System.out.println("Ò¶×Ó£º"+leaf.getName());
+		//è®¿é—®åˆ°å¶å­å¯¹è±¡çš„æ•°æ®		
+		System.out.println("å¶å­ï¼š"+leaf.getName());
 	}
 }

@@ -1,14 +1,14 @@
 package cn.javass.dp.command.example3;
 /**
- * Ö÷°åµÄ½Ó¿Ú
+ * ä¸»æ¿çš„æ¥å£
  */
 public interface MainBoardApi {
 	/**
-	 * Ö÷°å¾ßÓĞÄÜ¿ª»úµÄ¹¦ÄÜ
+	 * ä¸»æ¿å…·æœ‰èƒ½å¼€æœºçš„åŠŸèƒ½
 	 */
 	public void open();
 	/**
-	 * Ö÷°å¾ßÓĞÊµÏÖÖØÆôµÄ¹¦ÄÜ
+	 * ä¸»æ¿å…·æœ‰å®ç°é‡å¯çš„åŠŸèƒ½
 	 */
 	public void reset();
 }

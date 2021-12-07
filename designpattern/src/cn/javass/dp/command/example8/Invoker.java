@@ -2,21 +2,21 @@ package cn.javass.dp.command.example8;
 
 public class Invoker {
 	/**
-	 * ³ÖÓĞÃüÁî¶ÔÏó
+	 * æŒæœ‰å‘½ä»¤å¯¹è±¡
 	 */
 	private Command cmd = null;
 	/**
-	 * ÉèÖÃÃüÁî¶ÔÏó
-	 * @param cmd ÃüÁî¶ÔÏó
+	 * è®¾ç½®å‘½ä»¤å¯¹è±¡
+	 * @param cmd å‘½ä»¤å¯¹è±¡
 	 */
 	public void setCmd(Command cmd){
 		this.cmd = cmd;
 	}
 	/**
-	 * ¿ªÊ¼´òÓ¡
+	 * å¼€å§‹æ‰“å°
 	 */
 	public void startPrint(){
-		//Ö´ĞĞÃüÁîµÄ¹¦ÄÜ
+		//æ‰§è¡Œå‘½ä»¤çš„åŠŸèƒ½
 		this.cmd.execute();
 	}
 }

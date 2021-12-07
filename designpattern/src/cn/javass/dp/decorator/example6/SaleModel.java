@@ -1,14 +1,14 @@
 package cn.javass.dp.decorator.example6;
 /**
- * ·â×°ÏúÊÛµ¥µÄÊı¾İ£¬¼òµ¥µÄÊ¾ÒâÒ»Ğ©
+ * å°è£…é”€å”®å•çš„æ•°æ®ï¼Œç®€å•çš„ç¤ºæ„ä¸€äº›
  */
 public class SaleModel {
 	/**
-	 * ÏúÊÛµÄÉÌÆ·
+	 * é”€å”®çš„å•†å“
 	 */
 	private String goods;
 	/**
-	 * ÏúÊÛµÄÊıÁ¿
+	 * é”€å”®çš„æ•°é‡
 	 */
 	private int saleNum;
 	public String getGoods() {
@@ -25,6 +25,6 @@ public class SaleModel {
 	}
 	
 	public String toString(){
-		return "ÉÌÆ·Ãû³Æ="+goods+",¹ºÂòÊıÁ¿="+saleNum;
+		return "å•†å“åç§°="+goods+",è´­ä¹°æ•°é‡="+saleNum;
 	}
 }

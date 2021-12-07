@@ -3,31 +3,31 @@ package cn.javass.dp.builder.example1;
 import java.util.Collection;
 import java.util.Map;
 /**
- * µ¼³öÊı¾İµ½XMLÎÄ¼şµÄ¶ÔÏó
+ * å¯¼å‡ºæ•°æ®åˆ°XMLæ–‡ä»¶çš„å¯¹è±¡
  */
 public class ExportToXml {
 	/**
-	 * µ¼³öÊı¾İµ½XMLÎÄ¼ş
-	 * @param ehm ÎÄ¼şÍ·µÄÄÚÈİ
-	 * @param mapData Êı¾İµÄÄÚÈİ
-	 * @param efm ÎÄ¼şÎ²µÄÄÚÈİ
+	 * å¯¼å‡ºæ•°æ®åˆ°XMLæ–‡ä»¶
+	 * @param ehm æ–‡ä»¶å¤´çš„å†…å®¹
+	 * @param mapData æ•°æ®çš„å†…å®¹
+	 * @param efm æ–‡ä»¶å°¾çš„å†…å®¹
 	 */
 	public void export(ExportHeaderModel ehm,Map<String,Collection<ExportDataModel>> mapData,ExportFooterModel efm){
-		//ÓÃÀ´¼ÇÂ¼×îÖÕÊä³öµÄÎÄ¼şÄÚÈİ
+		//ç”¨æ¥è®°å½•æœ€ç»ˆè¾“å‡ºçš„æ–‡ä»¶å†…å®¹
 		StringBuffer buffer = new StringBuffer();
-		//1£ºÏÈÀ´Æ´½ÓÎÄ¼şÍ·µÄÄÚÈİ
+		//1ï¼šå…ˆæ¥æ‹¼æ¥æ–‡ä»¶å¤´çš„å†…å®¹
 		buffer.append("<?xml version='1.0' encoding='gb2312'?>\n");
 		buffer.append("<Report>\n");
 		buffer.append("  <Header>\n");
 		buffer.append("    <DepId>"+ehm.getDepId()+"</DepId>\n");
 		buffer.append("    <ExportDate>"+ehm.getExportDate()+"</ExportDate>\n");
 		buffer.append("  </Header>\n");
-		//2£º½Ó×ÅÀ´Æ´½ÓÎÄ¼şÌåµÄÄÚÈİ
+		//2ï¼šæ¥ç€æ¥æ‹¼æ¥æ–‡ä»¶ä½“çš„å†…å®¹
 		buffer.append("  <Body>\n");
 		for(String tblName : mapData.keySet()){
-			//ÏÈÆ´½Ó±íÃû³Æ
+			//å…ˆæ‹¼æ¥è¡¨åç§°
 			buffer.append("    <Datas TableName=\""+tblName+"\">\n");
-			//È»ºóÑ­»·Æ´½Ó¾ßÌåÊı¾İ
+			//ç„¶åå¾ªç¯æ‹¼æ¥å…·ä½“æ•°æ®
 			for(ExportDataModel edm : mapData.get(tblName)){
 				buffer.append("      <Data>\n");
 				buffer.append("        <ProductId>"+edm.getProductId()+"</ProductId>\n");
@@ -38,14 +38,14 @@ public class ExportToXml {
 			buffer.append("    </Datas>\n");
 		}
 		buffer.append("  </Body>\n");
-		//3£º½Ó×ÅÀ´Æ´½ÓÎÄ¼şÎ²µÄÄÚÈİ
+		//3ï¼šæ¥ç€æ¥æ‹¼æ¥æ–‡ä»¶å°¾çš„å†…å®¹
 		buffer.append("  <Footer>\n");
 		buffer.append("    <ExportUser>"+efm.getExportUser()+"</ExportUser>\n");
 		buffer.append("  </Footer>\n");
 		buffer.append("</Report>\n");
 		
-		//ÎªÁËÑİÊ¾¼ò½àĞÔ£¬ÕâÀï¾Í²»È¥Ğ´Êä³öÎÄ¼şµÄ´úÂëÁË
-		//°ÑÒªÊä³öµÄÄÚÈİÊä³öµ½¿ØÖÆÌ¨¿´¿´
-		System.out.println("Êä³öµ½XMLÎÄ¼şµÄÄÚÈİ£º\n"+buffer);
+		//ä¸ºäº†æ¼”ç¤ºç®€æ´æ€§ï¼Œè¿™é‡Œå°±ä¸å»å†™è¾“å‡ºæ–‡ä»¶çš„ä»£ç äº†
+		//æŠŠè¦è¾“å‡ºçš„å†…å®¹è¾“å‡ºåˆ°æ§åˆ¶å°çœ‹çœ‹
+		System.out.println("è¾“å‡ºåˆ°XMLæ–‡ä»¶çš„å†…å®¹ï¼š\n"+buffer);
 	}
 }

@@ -1,10 +1,10 @@
 package cn.javass.dp.command.example2;
 /**
- * ÃüÁî½Ó¿Ú£¬ÉùÃ÷Ö´ĞĞµÄ²Ù×÷
+ * å‘½ä»¤æ¥å£ï¼Œå£°æ˜æ‰§è¡Œçš„æ“ä½œ
  */
 public interface Command {
 	/**
-	 * Ö´ĞĞÃüÁî¶ÔÓ¦µÄ²Ù×÷
+	 * æ‰§è¡Œå‘½ä»¤å¯¹åº”çš„æ“ä½œ
 	 */
 	public void execute();
 }

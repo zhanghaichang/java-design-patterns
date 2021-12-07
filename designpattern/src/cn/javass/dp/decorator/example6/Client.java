@@ -2,14 +2,14 @@ package cn.javass.dp.decorator.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//µÃµ½ÒµÎñ½Ó¿Ú,×éºÏ×°ÊÎÆ÷
+		//å¾—åˆ°ä¸šåŠ¡æ¥å£,ç»„åˆè£…é¥°å™¨
 		GoodsSaleEbi ebi = new CheckDecorator(new LogDecorator(new GoodsSaleEbo()));
-		//×¼±¸²âÊÔÊı¾İ
+		//å‡†å¤‡æµ‹è¯•æ•°æ®
 		SaleModel saleModel = new SaleModel();
-		saleModel.setGoods("MotoÊÖ»ú");
+		saleModel.setGoods("Motoæ‰‹æœº");
 		saleModel.setSaleNum(2);
-		//µ÷ÓÃÒµÎñ¹¦ÄÜ
-		ebi.sale("ÕÅÈı","ÕÅÈı·á", saleModel);
-		ebi.sale("ÀîËÄ","ÕÅÈı·á", saleModel);
+		//è°ƒç”¨ä¸šåŠ¡åŠŸèƒ½
+		ebi.sale("å¼ ä¸‰","å¼ ä¸‰ä¸°", saleModel);
+		ebi.sale("æå››","å¼ ä¸‰ä¸°", saleModel);
 	}
 }

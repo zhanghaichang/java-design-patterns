@@ -1,7 +1,7 @@
 package cn.javass.dp.prototype.example8;
 
 /**
- * ¿ËÂ¡µÄ¾ßÌåÊµÏÖ¶ÔÏó
+ * å…‹éš†çš„å…·ä½“å®žçŽ°å¯¹è±¡
  */
 public class ConcretePrototype2 implements Prototype {
 	private String name;
@@ -19,6 +19,6 @@ public class ConcretePrototype2 implements Prototype {
 	}
 	
 	public String toString(){
-		return "Now in Prototype2£¬name="+name;
+		return "Now in Prototype2ï¼Œname="+name;
 	}
 }

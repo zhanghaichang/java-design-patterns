@@ -1,43 +1,43 @@
 package cn.javass.dp.mediator.example2;
 /**
- * CPUÀà£¬Ò»¸öÍ¬ÊÂÀà
+ * CPUç±»ï¼Œä¸€ä¸ªåŒäº‹ç±»
  */
 public class CPU extends Colleague{
 	public CPU(Mediator mediator) {
 		super(mediator);
 	}
 	/**
-	 * ·Ö½â³öÀ´µÄÊÓÆµÊı¾İ
+	 * åˆ†è§£å‡ºæ¥çš„è§†é¢‘æ•°æ®
 	 */
 	private String videoData = "";
 	/**
-	 * ·Ö½â³öÀ´µÄÉùÒôÊı¾İ
+	 * åˆ†è§£å‡ºæ¥çš„å£°éŸ³æ•°æ®
 	 */
 	private String soundData = "";
 	/**
-	 * »ñÈ¡·Ö½â³öÀ´µÄÊÓÆµÊı¾İ
-	 * @return ·Ö½â³öÀ´µÄÊÓÆµÊı¾İ
+	 * è·å–åˆ†è§£å‡ºæ¥çš„è§†é¢‘æ•°æ®
+	 * @return åˆ†è§£å‡ºæ¥çš„è§†é¢‘æ•°æ®
 	 */
 	public String getVideoData() {
 		return videoData;
 	}
 	/**
-	 * »ñÈ¡·Ö½â³öÀ´µÄÉùÒôÊı¾İ
-	 * @return ·Ö½â³öÀ´µÄÉùÒôÊı¾İ
+	 * è·å–åˆ†è§£å‡ºæ¥çš„å£°éŸ³æ•°æ®
+	 * @return åˆ†è§£å‡ºæ¥çš„å£°éŸ³æ•°æ®
 	 */
 	public String getSoundData() {
 		return soundData;
 	}
 	/**
-	 * ´¦ÀíÊı¾İ£¬°ÑÊı¾İ·Ö³ÉÒôÆµºÍÊÓÆµµÄÊı¾İ
-	 * @param data ±»´¦ÀíµÄÊı¾İ
+	 * å¤„ç†æ•°æ®ï¼ŒæŠŠæ•°æ®åˆ†æˆéŸ³é¢‘å’Œè§†é¢‘çš„æ•°æ®
+	 * @param data è¢«å¤„ç†çš„æ•°æ®
 	 */
 	public void executeData(String data){
-		//°ÑÊı¾İ·Ö½â¿ª£¬Ç°ÃæµÄÊÇÊÓÆµÊı¾İ£¬ºóÃæµÄÊÇÒôÆµÊı¾İ
+		//æŠŠæ•°æ®åˆ†è§£å¼€ï¼Œå‰é¢çš„æ˜¯è§†é¢‘æ•°æ®ï¼Œåé¢çš„æ˜¯éŸ³é¢‘æ•°æ®
 		String [] ss = data.split(",");
 		this.videoData = ss[0];
 		this.soundData = ss[1];
-		//Í¨ÖªÖ÷°å£¬CPUµÄ¹¤×÷Íê³É
+		//é€šçŸ¥ä¸»æ¿ï¼ŒCPUçš„å·¥ä½œå®Œæˆ
 		this.getMediator().changed(this);
 	}
 	

@@ -1,49 +1,49 @@
 package cn.javass.dp.abstractfactory.example4;
 
 /**
- * ×°»ú¹¤³ÌÊ¦µÄÀà
+ * è£…æœºå·¥ç¨‹å¸ˆçš„ç±»
  */
 public  class ComputerEngineer {
 	/**
-	 * ¶¨Òå×é×°»úÆ÷ĞèÒªµÄCPU
+	 * å®šä¹‰ç»„è£…æœºå™¨éœ€è¦çš„CPU
 	 */
 	private CPUApi cpu= null;
 	/**
-	 * ¶¨Òå×é×°»úÆ÷ĞèÒªµÄÖ÷°å
+	 * å®šä¹‰ç»„è£…æœºå™¨éœ€è¦çš„ä¸»æ¿
 	 */
 	private MainboardApi mainboard = null;
 	/**
-	 * ¶¨Òå×é×°»úÆ÷ĞèÒªµÄÄÚ´æ
+	 * å®šä¹‰ç»„è£…æœºå™¨éœ€è¦çš„å†…å­˜
 	 */
 	private MemoryApi memory = null;
 
 	/**
-	 * ×°»ú¹ı³Ì
-	 * @param schema ¿Í»§Ñ¡ÔñµÄ×°»ú·½°¸
+	 * è£…æœºè¿‡ç¨‹
+	 * @param schema å®¢æˆ·é€‰æ‹©çš„è£…æœºæ–¹æ¡ˆ
 	 */
 	public void makeComputer(AbstractFactory schema){
-		//1£ºÊ×ÏÈ×¼±¸ºÃ×°»úËùĞèÒªµÄÅä¼ş
+		//1ï¼šé¦–å…ˆå‡†å¤‡å¥½è£…æœºæ‰€éœ€è¦çš„é…ä»¶
 		prepareHardwares(schema);
-		//2£º×é×°»úÆ÷
+		//2ï¼šç»„è£…æœºå™¨
 		
-		//3£º²âÊÔ»úÆ÷
+		//3ï¼šæµ‹è¯•æœºå™¨
 		
-		//4£º½»¸¶¿Í»§
+		//4ï¼šäº¤ä»˜å®¢æˆ·
 	}
 	/**
-	 * ×¼±¸×°»úËùĞèÒªµÄÅä¼ş
-	 * @param schema ¿Í»§Ñ¡ÔñµÄ×°»ú·½°¸
+	 * å‡†å¤‡è£…æœºæ‰€éœ€è¦çš„é…ä»¶
+	 * @param schema å®¢æˆ·é€‰æ‹©çš„è£…æœºæ–¹æ¡ˆ
 	 */
 	private void prepareHardwares(AbstractFactory schema){
-		//ÕâÀïÒªÈ¥×¼±¸CPUºÍÖ÷°åµÄ¾ßÌåÊµÏÖ£¬ÎªÁËÊ¾Àı¼òµ¥£¬ÕâÀïÖ»×¼±¸ÕâÁ½¸ö
-		//¿ÉÊÇ£¬×°»ú¹¤³ÌÊ¦²¢²»ÖªµÀÈçºÎÈ¥´´½¨£¬ÔõÃ´°ìÄØ£¿
+		//è¿™é‡Œè¦å»å‡†å¤‡CPUå’Œä¸»æ¿çš„å…·ä½“å®ç°ï¼Œä¸ºäº†ç¤ºä¾‹ç®€å•ï¼Œè¿™é‡Œåªå‡†å¤‡è¿™ä¸¤ä¸ª
+		//å¯æ˜¯ï¼Œè£…æœºå·¥ç¨‹å¸ˆå¹¶ä¸çŸ¥é“å¦‚ä½•å»åˆ›å»ºï¼Œæ€ä¹ˆåŠå‘¢ï¼Ÿ
 		
-		//Ê¹ÓÃ³éÏó¹¤³§À´»ñÈ¡ÏàÓ¦µÄ½Ó¿Ú¶ÔÏó
+		//ä½¿ç”¨æŠ½è±¡å·¥å‚æ¥è·å–ç›¸åº”çš„æ¥å£å¯¹è±¡
 		this.cpu = (CPUApi)schema.createProduct(1);
 		this.mainboard = (MainboardApi)schema.createProduct(2);
 		this.memory = (MemoryApi)schema.createProduct(3);
 		
-		//²âÊÔÒ»ÏÂÅä¼şÊÇ·ñºÃÓÃ
+		//æµ‹è¯•ä¸€ä¸‹é…ä»¶æ˜¯å¦å¥½ç”¨
 		this.cpu.calculate();
 		this.mainboard.installCPU();
 		if(memory!=null){

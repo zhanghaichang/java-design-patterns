@@ -1,10 +1,10 @@
 package cn.javass.dp.bridge.example5;
 
 /**
- * ÕæÕıµÄ¾ßÌåÊµÏÖ¶ÔÏó
+ * çœŸæ­£çš„å…·ä½“å®ç°å¯¹è±¡
  */
 public class ConcreteImplementorB implements Implementor {
 	public void operationImpl() { 
-		//ÕæÕıµÄÊµÏÖ
+		//çœŸæ­£çš„å®ç°
 	}
 }

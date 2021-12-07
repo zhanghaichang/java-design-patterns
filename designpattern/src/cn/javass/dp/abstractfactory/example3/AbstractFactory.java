@@ -1,16 +1,16 @@
 package cn.javass.dp.abstractfactory.example3;
 /**
- * ³éÏó¹¤³§µÄ½Ó¿Ú£¬ÉùÃ÷´´½¨³éÏó²úÆ·¶ÔÏóµÄ²Ù×÷
+ * æŠ½è±¡å·¥å‚çš„æ¥å£ï¼Œå£°æ˜åˆ›å»ºæŠ½è±¡äº§å“å¯¹è±¡çš„æ“ä½œ
  */
 public interface AbstractFactory {
 	/**
-	 * ´´½¨CPUµÄ¶ÔÏó
-	 * @return CPUµÄ¶ÔÏó
+	 * åˆ›å»ºCPUçš„å¯¹è±¡
+	 * @return CPUçš„å¯¹è±¡
 	 */
 	public CPUApi createCPUApi();
 	/**
-	 * ´´½¨Ö÷°åµÄ¶ÔÏó
-	 * @return Ö÷°åµÄ¶ÔÏó
+	 * åˆ›å»ºä¸»æ¿çš„å¯¹è±¡
+	 * @return ä¸»æ¿çš„å¯¹è±¡
 	 */
 	public MainboardApi createMainboardApi();
 }

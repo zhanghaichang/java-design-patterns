@@ -1,10 +1,10 @@
 package cn.javass.dp.facade.example4;
 
 public interface BModuleApi {
-	//╤твсо╣мЁмБ╡©
+	//Е╞╧Е╜░ГЁ╩Г╩÷Е╓√И┐╗
 	public void b1();
-	//всо╣мЁдз╡©й╧сц
+	//Е╜░ГЁ╩Г╩÷Е├┘И┐╗Д╫©Г■╗
 	public void b2();
-	//всо╣мЁдз╡©й╧сц
+	//Е╜░ГЁ╩Г╩÷Е├┘И┐╗Д╫©Г■╗
 	public void b3();
 }

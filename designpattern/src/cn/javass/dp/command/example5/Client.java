@@ -2,21 +2,21 @@ package cn.javass.dp.command.example5;
 
 public class Client {
 	public static void main(String[] args) {
-		//Ö»ÊÇ¸ºÔğÏò·şÎñÔ±µã²Ë¾ÍºÃÁË
-		//´´½¨·şÎñÔ±
+		//åªæ˜¯è´Ÿè´£å‘æœåŠ¡å‘˜ç‚¹èœå°±å¥½äº†
+		//åˆ›å»ºæœåŠ¡å‘˜
 		Waiter waiter = new Waiter();
 		
-		//´´½¨ÃüÁî¶ÔÏó£¬¾ÍÊÇÒªµãµÄ²Ë
+		//åˆ›å»ºå‘½ä»¤å¯¹è±¡ï¼Œå°±æ˜¯è¦ç‚¹çš„èœ
 		Command chop = new ChopCommand();
 		Command duck = new DuckCommand();
 		Command pork = new PorkCommand();
 		
-		//µã²Ë£¬¾ÍÊÇ°ÑÕâĞ©²ËÈÃ·şÎñÔ±¼ÇÂ¼ÏÂÀ´
+		//ç‚¹èœï¼Œå°±æ˜¯æŠŠè¿™äº›èœè®©æœåŠ¡å‘˜è®°å½•ä¸‹æ¥
 		waiter.orderDish(chop);
 		waiter.orderDish(duck);
 		waiter.orderDish(pork);
 		
-		//µã²ËÍê±Ï
+		//ç‚¹èœå®Œæ¯•
 		waiter.orderOver();
 	}
 }

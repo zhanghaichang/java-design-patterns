@@ -1,11 +1,11 @@
 package cn.javass.dp.state.example8;
 /**
- * ¹«¹²×´Ì¬½Ó¿Ú
+ * å…¬å…±çŠ¶æ€æ¥å£
  */
 public interface State {
 	/**
-	 * Ö´ĞĞ×´Ì¬¶ÔÓ¦µÄ¹¦ÄÜ´¦Àí
-	 * @param ctx ÉÏÏÂÎÄµÄÊµÀı¶ÔÏó
+	 * æ‰§è¡ŒçŠ¶æ€å¯¹åº”çš„åŠŸèƒ½å¤„ç†
+	 * @param ctx ä¸Šä¸‹æ–‡çš„å®ä¾‹å¯¹è±¡
 	 */
 	public void doWork(StateMachine ctx);
 }

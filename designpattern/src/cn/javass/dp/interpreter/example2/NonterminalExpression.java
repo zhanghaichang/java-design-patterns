@@ -3,10 +3,10 @@ package cn.javass.dp.interpreter.example2;
 import java.util.Collection;
 
 /**
- * ·ÇÖÕ½á·û±í´ïÊ½
+ * éç»ˆç»“ç¬¦è¡¨è¾¾å¼
  */
 public class NonterminalExpression extends AbstractExpression{
 	public void interpret(Context ctx) {
-		//ÊµÏÖÓëÓï·¨¹æÔòÖĞµÄ·ÇÖÕ½á·ûÏà¹ØÁªµÄ½âÊÍ²Ù×÷
+		//å®ç°ä¸è¯­æ³•è§„åˆ™ä¸­çš„éç»ˆç»“ç¬¦ç›¸å…³è”çš„è§£é‡Šæ“ä½œ
 	}
 }

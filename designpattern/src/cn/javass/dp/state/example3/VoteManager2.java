@@ -1,38 +1,38 @@
 package cn.javass.dp.state.example3;
 import java.util.*;
 /**
- * Í¶Æ±¹ÜÀí
+ * æŠ•ç¥¨ç®¡ç†
  */
 public class VoteManager2 {
 	/**
-	 * ³ÖÓĞ×´Ì¬´¦Àí¶ÔÏó
+	 * æŒæœ‰çŠ¶æ€å¤„ç†å¯¹è±¡
 	 */
 	private VoteState state = null;
 	/**
-	 * ¼ÇÂ¼ÓÃ»§Í¶Æ±µÄ½á¹û,Map<String,String>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,Í¶Æ±µÄÑ¡Ïî>
+	 * è®°å½•ç”¨æˆ·æŠ•ç¥¨çš„ç»“æœ,Map<String,String>å¯¹åº”Map<ç”¨æˆ·åç§°,æŠ•ç¥¨çš„é€‰é¡¹>
 	 */
 	private Map<String,String> mapVote = new HashMap<String,String>();
 	/**
-	 * ¼ÇÂ¼ÓÃ»§Í¶Æ±´ÎÊı,Map<String,Integer>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,Í¶Æ±µÄ´ÎÊı>
+	 * è®°å½•ç”¨æˆ·æŠ•ç¥¨æ¬¡æ•°,Map<String,Integer>å¯¹åº”Map<ç”¨æˆ·åç§°,æŠ•ç¥¨çš„æ¬¡æ•°>
 	 */
 	private Map<String,Integer> mapVoteCount = new HashMap<String,Integer>();
 	
 	/**
-	 * »ñÈ¡¼ÇÂ¼ÓÃ»§Í¶Æ±½á¹ûµÄMap
-	 * @return ¼ÇÂ¼ÓÃ»§Í¶Æ±½á¹ûµÄMap
+	 * è·å–è®°å½•ç”¨æˆ·æŠ•ç¥¨ç»“æœçš„Map
+	 * @return è®°å½•ç”¨æˆ·æŠ•ç¥¨ç»“æœçš„Map
 	 */
 	public Map<String, String> getMapVote() {
 		return mapVote;
 	}
 	
 	/**
-	 * Í¶Æ±
-	 * @param user Í¶Æ±ÈË£¬ÎªÁË¼òµ¥£¬¾ÍÊÇÓÃ»§Ãû³Æ
-	 * @param voteItem Í¶Æ±µÄÑ¡Ïî
+	 * æŠ•ç¥¨
+	 * @param user æŠ•ç¥¨äººï¼Œä¸ºäº†ç®€å•ï¼Œå°±æ˜¯ç”¨æˆ·åç§°
+	 * @param voteItem æŠ•ç¥¨çš„é€‰é¡¹
 	 */
 	public void vote(String user,String voteItem){
-		//1£ºÏÈÎª¸ÃÓÃ»§Ôö¼ÓÍ¶Æ±µÄ´ÎÊı
-		//ÏÈ´Ó¼ÇÂ¼ÖĞÈ¡³öÒÑÓĞµÄÍ¶Æ±´ÎÊı
+		//1ï¼šå…ˆä¸ºè¯¥ç”¨æˆ·å¢åŠ æŠ•ç¥¨çš„æ¬¡æ•°
+		//å…ˆä»è®°å½•ä¸­å–å‡ºå·²æœ‰çš„æŠ•ç¥¨æ¬¡æ•°
 		Integer oldVoteCount = mapVoteCount.get(user);
 		if(oldVoteCount==null){
 			oldVoteCount = 0;
@@ -40,8 +40,8 @@ public class VoteManager2 {
 		oldVoteCount = oldVoteCount + 1;
 		mapVoteCount.put(user, oldVoteCount);
 		
-		//2£ºÅĞ¶Ï¸ÃÓÃ»§Í¶Æ±µÄÀàĞÍ£¬¾ÍÏàµ±ÓÚÊÇÅĞ¶Ï¶ÔÓ¦µÄ×´Ì¬
-		//µ½µ×ÊÇÕı³£Í¶Æ±¡¢ÖØ¸´Í¶Æ±¡¢¶ñÒâÍ¶Æ±»¹ÊÇÉÏºÚÃûµ¥µÄ×´Ì¬
+		//2ï¼šåˆ¤æ–­è¯¥ç”¨æˆ·æŠ•ç¥¨çš„ç±»å‹ï¼Œå°±ç›¸å½“äºæ˜¯åˆ¤æ–­å¯¹åº”çš„çŠ¶æ€
+		//åˆ°åº•æ˜¯æ­£å¸¸æŠ•ç¥¨ã€é‡å¤æŠ•ç¥¨ã€æ¶æ„æŠ•ç¥¨è¿˜æ˜¯ä¸Šé»‘åå•çš„çŠ¶æ€
 		if(oldVoteCount==1){
 			state = new NormalVoteState();
 		}else if(oldVoteCount>1 && oldVoteCount<5){
@@ -53,7 +53,7 @@ public class VoteManager2 {
 		}else if(oldVoteCount>10){
 			state = new BlackVoteState();
 		}
-		//È»ºó×ªµ÷×´Ì¬¶ÔÏóÀ´½øĞĞÏàÓ¦µÄ²Ù×÷
+		//ç„¶åè½¬è°ƒçŠ¶æ€å¯¹è±¡æ¥è¿›è¡Œç›¸åº”çš„æ“ä½œ
 //		state.vote(user, voteItem, this);
 	}
 }

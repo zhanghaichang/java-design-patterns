@@ -2,14 +2,14 @@ package cn.javass.dp.factorymethod.example7;
 
 public class Client {
 	public static void main(String[] args) {
-//		//´´½¨ĞèÒªÊ¹ÓÃµÄCreator¶ÔÏó
+//		//åˆ›å»ºéœ€è¦ä½¿ç”¨çš„Creatorå¯¹è±¡
 //		ExportOperate operate = new ExportOperate();
-//		//µ÷ÓÃÊä³öÊı¾İµÄ¹¦ÄÜ·½·¨£¬´«ÈëÑ¡Ôñµ½´¦ÀàĞÍµÄ²ÎÊı
-//		operate.export(1,"²âÊÔÊı¾İ");
+//		//è°ƒç”¨è¾“å‡ºæ•°æ®çš„åŠŸèƒ½æ–¹æ³•ï¼Œä¼ å…¥é€‰æ‹©åˆ°å¤„ç±»å‹çš„å‚æ•°
+//		operate.export(1,"æµ‹è¯•æ•°æ®");
 		
-		//´´½¨ĞèÒªÊ¹ÓÃµÄCreator¶ÔÏó
+		//åˆ›å»ºéœ€è¦ä½¿ç”¨çš„Creatorå¯¹è±¡
 		ExportOperate operate = new ExportOperate2();
-		//ÏÂÃæ±ä»»´«ÈëµÄ²ÎÊıÀ´²âÊÔ²ÎÊı»¯¹¤³§·½·¨
+		//ä¸‹é¢å˜æ¢ä¼ å…¥çš„å‚æ•°æ¥æµ‹è¯•å‚æ•°åŒ–å·¥å‚æ–¹æ³•
 		operate.export(1,"Test1");
 		operate.export(2,"Test2");
 		operate.export(3,"Test3");

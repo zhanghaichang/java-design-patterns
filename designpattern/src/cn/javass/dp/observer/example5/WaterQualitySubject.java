@@ -4,34 +4,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ¶¨ÒåË®ÖÊ¼à²âµÄÄ¿±ê¶ÔÏó
+ * å®šä¹‰æ°´è´¨ç›‘æµ‹çš„ç›®æ ‡å¯¹è±¡
  */
 public abstract class WaterQualitySubject {
 	/**
-	 * ÓÃÀ´±£´æ×¢²áµÄ¹Û²ìÕß¶ÔÏó
+	 * ç”¨æ¥ä¿å­˜æ³¨å†Œçš„è§‚å¯Ÿè€…å¯¹è±¡
 	 */
 	protected List<WatcherObserver> observers = new ArrayList<WatcherObserver>();
 	/**
-	 * ×¢²á¹Û²ìÕß¶ÔÏó
-	 * @param observer ¹Û²ìÕß¶ÔÏó
+	 * æ³¨å†Œè§‚å¯Ÿè€…å¯¹è±¡
+	 * @param observer è§‚å¯Ÿè€…å¯¹è±¡
 	 */
 	public void attach(WatcherObserver observer) {
 		observers.add(observer);
 	}
 	/**
-	 * É¾³ı¹Û²ìÕß¶ÔÏó
-	 * @param observer ¹Û²ìÕß¶ÔÏó
+	 * åˆ é™¤è§‚å¯Ÿè€…å¯¹è±¡
+	 * @param observer è§‚å¯Ÿè€…å¯¹è±¡
 	 */
 	public void detach(WatcherObserver observer) {
 		observers.remove(observer);
 	}
 	/**
-	 * Í¨ÖªÏàÓ¦µÄ¹Û²ìÕß¶ÔÏó
+	 * é€šçŸ¥ç›¸åº”çš„è§‚å¯Ÿè€…å¯¹è±¡
 	 */
 	public abstract void notifyWatchers();
 	/**
-	 * »ñÈ¡Ë®ÖÊÎÛÈ¾µÄ¼¶±ğ
-	 * @return Ë®ÖÊÎÛÈ¾µÄ¼¶±ğ
+	 * è·å–æ°´è´¨æ±¡æŸ“çš„çº§åˆ«
+	 * @return æ°´è´¨æ±¡æŸ“çš„çº§åˆ«
 	 */
 	public abstract int getPolluteLevel();
 }

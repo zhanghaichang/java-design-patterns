@@ -1,14 +1,14 @@
 package cn.javass.dp.iterator.example3;
 /**
- * ¹¤×ÊÃèÊöÄ£ĞÍ¶ÔÏó
+ * å·¥èµ„æè¿°æ¨¡å‹å¯¹è±¡
  */
 public class PayModel {
 	/**
-	 * Ö§¸¶¹¤×ÊµÄÈËÔ±
+	 * æ”¯ä»˜å·¥èµ„çš„äººå‘˜
 	 */
 	private String userName;
 	/**
-	 * Ö§¸¶µÄ¹¤×ÊÊı¶î
+	 * æ”¯ä»˜çš„å·¥èµ„æ•°é¢
 	 */
 	private double pay;
 	public String getUserName() {

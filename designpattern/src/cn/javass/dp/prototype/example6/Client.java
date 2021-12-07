@@ -2,26 +2,26 @@ package cn.javass.dp.prototype.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//ÏÈ´´½¨Ô­ĞÍÊµÀı
+		//å…ˆåˆ›å»ºåŸå‹å®ä¾‹
 		PersonalOrder oa1 = new PersonalOrder();
 		
-		//ÉèÖÃÔ­ĞÍÊµÀıµÄÖµ
+		//è®¾ç½®åŸå‹å®ä¾‹çš„å€¼
 		Product product = new Product();
-		product.setName("²úÆ·1");
+		product.setName("äº§å“1");
 		oa1.setProduct(product);
 		oa1.setOrderProductNum(100);
 		
-	    System.out.println("ÕâÊÇµÚÒ»´Î»ñÈ¡µÄ¶ÔÏóÊµÀı="+oa1);
+	    System.out.println("è¿™æ˜¯ç¬¬ä¸€æ¬¡è·å–çš„å¯¹è±¡å®ä¾‹="+oa1);
 	    
-		//Í¨¹ı¿ËÂ¡À´»ñÈ¡ĞÂµÄÊµÀı
+		//é€šè¿‡å…‹éš†æ¥è·å–æ–°çš„å®ä¾‹
 	    PersonalOrder oa2 = (PersonalOrder)oa1.cloneOrder();
-		//ĞŞ¸ÄËüµÄÖµ
-	    oa2.getProduct().setName("²úÆ·2");
+		//ä¿®æ”¹å®ƒçš„å€¼
+	    oa2.getProduct().setName("äº§å“2");
 		oa2.setOrderProductNum(80);
-		//Êä³ö¿ËÂ¡³öÀ´µÄ¶ÔÏóµÄÖµ
-		System.out.println("Êä³ö¿ËÂ¡³öÀ´µÄÊµÀı="+oa2);
+		//è¾“å‡ºå…‹éš†å‡ºæ¥çš„å¯¹è±¡çš„å€¼
+		System.out.println("è¾“å‡ºå…‹éš†å‡ºæ¥çš„å®ä¾‹="+oa2);
 		
-		//ÔÙ´ÎÊä³öÔ­ĞÍÊµÀıµÄÖµ
-		System.out.println("ÔÙ´ÎÊä³öÔ­ĞÍÊµÀı="+oa1);	
+		//å†æ¬¡è¾“å‡ºåŸå‹å®ä¾‹çš„å€¼
+		System.out.println("å†æ¬¡è¾“å‡ºåŸå‹å®ä¾‹="+oa1);	
 	}
 }

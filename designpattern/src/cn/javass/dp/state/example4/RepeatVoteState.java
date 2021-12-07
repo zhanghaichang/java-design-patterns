@@ -2,13 +2,13 @@ package cn.javass.dp.state.example4;
 
 public class RepeatVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//ÖØ¸´Í¶Æ±
-		//ÔÝÊ±²»×ö´¦Àí
-		System.out.println("Çë²»ÒªÖØ¸´Í¶Æ±");
+		//é‡å¤æŠ•ç¥¨
+		//æš‚æ—¶ä¸åšå¤„ç†
+		System.out.println("è¯·ä¸è¦é‡å¤æŠ•ç¥¨");
 		
-		//ÖØ¸´Í¶Æ±Íê³É£¬Î¬»¤ÏÂÒ»¸ö×´Ì¬£¬ÖØ¸´Í¶Æ±µ½5´Î£¬¾ÍËã¶ñÒâÍ¶Æ±ÁË
-		//×¢ÒâÕâÀïÊÇÅÐ¶Ï´óÓÚµÈÓÚ4£¬ÒòÎªÕâÀïÉèÖÃµÄÊÇÏÂÒ»¸ö×´Ì¬
-		//ÏÂÒ»¸ö²Ù×÷´ÎÊý¾ÍÊÇ5ÁË£¬¾ÍÓ¦¸ÃËãÊÇ¶ñÒâÍ¶Æ±ÁË
+		//é‡å¤æŠ•ç¥¨å®Œæˆï¼Œç»´æŠ¤ä¸‹ä¸€ä¸ªçŠ¶æ€ï¼Œé‡å¤æŠ•ç¥¨åˆ°5æ¬¡ï¼Œå°±ç®—æ¶æ„æŠ•ç¥¨äº†
+		//æ³¨æ„è¿™é‡Œæ˜¯åˆ¤æ–­å¤§äºŽç­‰äºŽ4ï¼Œå› ä¸ºè¿™é‡Œè®¾ç½®çš„æ˜¯ä¸‹ä¸€ä¸ªçŠ¶æ€
+		//ä¸‹ä¸€ä¸ªæ“ä½œæ¬¡æ•°å°±æ˜¯5äº†ï¼Œå°±åº”è¯¥ç®—æ˜¯æ¶æ„æŠ•ç¥¨äº†
 		if(voteManager.getMapVoteCount().get(user) >= 4){
 			voteManager.getMapState().put(user, new SpiteVoteState());
 		}

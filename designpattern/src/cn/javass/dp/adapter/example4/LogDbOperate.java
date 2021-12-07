@@ -2,7 +2,7 @@ package cn.javass.dp.adapter.example4;
 
 import java.util.List;
 /**
- * DB´æ´¢ÈÕÖ¾µÄÊµÏÖ£¬ÎªÁË¼òµ¥£¬ÕâÀï¾Í²»È¥ÕæµÄÊµÏÖºÍÊı¾İ¿â½»»¥ÁË£¬Ê¾ÒâÒ»ÏÂ
+ * DBå­˜å‚¨æ—¥å¿—çš„å®ç°ï¼Œä¸ºäº†ç®€å•ï¼Œè¿™é‡Œå°±ä¸å»çœŸçš„å®ç°å’Œæ•°æ®åº“äº¤äº’äº†ï¼Œç¤ºæ„ä¸€ä¸‹
  */
 public class LogDbOperate implements LogDbOperateApi{
 

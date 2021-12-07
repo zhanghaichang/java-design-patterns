@@ -2,12 +2,12 @@ package cn.javass.dp.state.example3;
 
 public class SpiteVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//¶ñÒâÍ¶Æ±
-		//È¡ÏûÓÃ»§µÄÍ¶Æ±×Ê¸ñ£¬²¢È¡ÏûÍ¶Æ±¼ÇÂ¼
+		//æ¶æ„æŠ•ç¥¨
+		//å–æ¶ˆç”¨æˆ·çš„æŠ•ç¥¨èµ„æ ¼ï¼Œå¹¶å–æ¶ˆæŠ•ç¥¨è®°å½•
 		String s = voteManager.getMapVote().get(user);
 		if(s!=null){
 			voteManager.getMapVote().remove(user);
 		}
-		System.out.println("ÄãÓĞ¶ñÒâË¢Æ±ĞĞÎª£¬È¡ÏûÍ¶Æ±×Ê¸ñ");
+		System.out.println("ä½ æœ‰æ¶æ„åˆ·ç¥¨è¡Œä¸ºï¼Œå–æ¶ˆæŠ•ç¥¨èµ„æ ¼");
 	}
 }

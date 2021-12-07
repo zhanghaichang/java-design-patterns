@@ -1,15 +1,15 @@
 package cn.javass.dp.command.example4;
 import java.util.*;
 /**
- * ¼ÆËãÆ÷Àà£¬¼ÆËãÆ÷ÉÏÓĞ¼Ó·¨°´Å¥¡¢¼õ·¨°´Å¥£¬»¹ÓĞ³·ÏúºÍ»Ö¸´µÄ°´Å¥
+ * è®¡ç®—å™¨ç±»ï¼Œè®¡ç®—å™¨ä¸Šæœ‰åŠ æ³•æŒ‰é’®ã€å‡æ³•æŒ‰é’®ï¼Œè¿˜æœ‰æ’¤é”€å’Œæ¢å¤çš„æŒ‰é’®
  */
 public class Calculator {
 	/**
-	 * ÃüÁîµÄ²Ù×÷µÄÀúÊ·¼ÇÂ¼£¬ÔÚ³·ÏúÊ±ºòÓÃ
+	 * å‘½ä»¤çš„æ“ä½œçš„å†å²è®°å½•ï¼Œåœ¨æ’¤é”€æ—¶å€™ç”¨
 	 */
 	private List<Command> undoCmds = new ArrayList<Command>();
 	/**
-	 * ÃüÁî±»³·ÏúµÄÀúÊ·¼ÇÂ¼£¬ÔÚ»Ö¸´Ê±ºòÓÃ
+	 * å‘½ä»¤è¢«æ’¤é”€çš„å†å²è®°å½•ï¼Œåœ¨æ¢å¤æ—¶å€™ç”¨
 	 */
 	private List<Command> redoCmds = new ArrayList<Command>();
 	
@@ -23,38 +23,38 @@ public class Calculator {
 	}	
 	public void addPressed(){
 		this.addCmd.execute();
-		//°Ñ²Ù×÷¼ÇÂ¼µ½ÀúÊ·¼ÇÂ¼ÀïÃæ
+		//æŠŠæ“ä½œè®°å½•åˆ°å†å²è®°å½•é‡Œé¢
 		undoCmds.add(this.addCmd);
 	}
 	public void substractPressed(){
 		this.substractCmd.execute();
-		//°Ñ²Ù×÷¼ÇÂ¼µ½ÀúÊ·¼ÇÂ¼ÀïÃæ
+		//æŠŠæ“ä½œè®°å½•åˆ°å†å²è®°å½•é‡Œé¢
 		undoCmds.add(this.substractCmd);
 	}
 	public void undoPressed(){
 		if(this.undoCmds.size()>0){
-			//È¡³ö×îºóÒ»¸öÃüÁîÀ´³·Ïú
+			//å–å‡ºæœ€åä¸€ä¸ªå‘½ä»¤æ¥æ’¤é”€
 			Command cmd = this.undoCmds.get(this.undoCmds.size()-1);
 			cmd.undo();
-			//Èç¹û»¹ÓĞ»Ö¸´µÄ¹¦ÄÜ£¬ÄÇ¾Í°ÑÕâ¸öÃüÁî¼ÇÂ¼µ½»Ö¸´µÄÀúÊ·¼ÇÂ¼ÀïÃæ
+			//å¦‚æœè¿˜æœ‰æ¢å¤çš„åŠŸèƒ½ï¼Œé‚£å°±æŠŠè¿™ä¸ªå‘½ä»¤è®°å½•åˆ°æ¢å¤çš„å†å²è®°å½•é‡Œé¢
 			this.redoCmds.add(cmd );
-			//È»ºó°Ñ×îºóÒ»¸öÃüÁîÉ¾³ıµô£¬
+			//ç„¶åæŠŠæœ€åä¸€ä¸ªå‘½ä»¤åˆ é™¤æ‰ï¼Œ
 			this.undoCmds.remove(cmd);
 		}else{
-			System.out.println("ºÜ±§Ç¸£¬Ã»ÓĞ¿É³·ÏúµÄÃüÁî");
+			System.out.println("å¾ˆæŠ±æ­‰ï¼Œæ²¡æœ‰å¯æ’¤é”€çš„å‘½ä»¤");
 		}
 	}
 	public void redoPressed(){
 		if(this.redoCmds.size()>0){
-			//È¡³ö×îºóÒ»¸öÃüÁîÀ´ÖØ×ö
+			//å–å‡ºæœ€åä¸€ä¸ªå‘½ä»¤æ¥é‡åš
 			Command cmd = this.redoCmds.get(this.redoCmds.size()-1);
 			cmd.execute();		
-			//°ÑÕâ¸öÃüÁî¼ÇÂ¼µ½¿É³·ÏúµÄÀúÊ·¼ÇÂ¼ÀïÃæ
+			//æŠŠè¿™ä¸ªå‘½ä»¤è®°å½•åˆ°å¯æ’¤é”€çš„å†å²è®°å½•é‡Œé¢
 			this.undoCmds.add(cmd);
-			//È»ºó°Ñ×îºóÒ»¸öÃüÁîÉ¾³ıµô
+			//ç„¶åæŠŠæœ€åä¸€ä¸ªå‘½ä»¤åˆ é™¤æ‰
 			this.redoCmds.remove(cmd);
 		}else{
-			System.out.println("ºÜ±§Ç¸£¬Ã»ÓĞ¿É»Ö¸´µÄÃüÁî");
+			System.out.println("å¾ˆæŠ±æ­‰ï¼Œæ²¡æœ‰å¯æ¢å¤çš„å‘½ä»¤");
 		}
 	}
 }

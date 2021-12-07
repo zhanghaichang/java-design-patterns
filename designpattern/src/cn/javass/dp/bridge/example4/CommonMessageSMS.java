@@ -1,10 +1,10 @@
 package cn.javass.dp.bridge.example4;
 /**
- * ÒÔÕ¾ÄÚ¶ÌÏûÏ¢µÄ·½Ê½·¢ËÍÆÕÍ¨ÏûÏ¢
+ * ä»¥ç«™å†…çŸ­æ¶ˆæ¯çš„æ–¹å¼å‘é€æ™®é€šæ¶ˆæ¯
  */
 public  class CommonMessageSMS implements Message{
 
 	public void send(String message, String toUser) {
-		System.out.println("Ê¹ÓÃÕ¾ÄÚ¶ÌÏûÏ¢µÄ·½Ê½£¬·¢ËÍÏûÏ¢'"+message+"'¸ø"+toUser);
+		System.out.println("ä½¿ç”¨ç«™å†…çŸ­æ¶ˆæ¯çš„æ–¹å¼ï¼Œå‘é€æ¶ˆæ¯'"+message+"'ç»™"+toUser);
 	}
 }

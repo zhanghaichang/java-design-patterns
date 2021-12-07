@@ -3,40 +3,40 @@ package cn.javass.dp.visitor.example5;
 import java.util.Iterator;
 
 /**
- * ³éÏóµÄ×é¼ş¶ÔÏó£¬Ïàµ±ÓÚ·ÃÎÊÕßÄ£Ê½ÖĞµÄÔªËØ¶ÔÏó
+ * æŠ½è±¡çš„ç»„ä»¶å¯¹è±¡ï¼Œç›¸å½“äºè®¿é—®è€…æ¨¡å¼ä¸­çš„å…ƒç´ å¯¹è±¡
  */
 public abstract class Component {
 	/**
-	 * ½ÓÊÜ·ÃÎÊÕßµÄ·ÃÎÊ
-	 * @param visitor ·ÃÎÊÕß¶ÔÏó
+	 * æ¥å—è®¿é—®è€…çš„è®¿é—®
+	 * @param visitor è®¿é—®è€…å¯¹è±¡
 	 */
 	public abstract void accept(Visitor visitor);
 
 	/**
-	 * Ïò×éºÏ¶ÔÏóÖĞ¼ÓÈë×é¼ş¶ÔÏó 
-	 * @param child ±»¼ÓÈë×éºÏ¶ÔÏóÖĞµÄ×é¼ş¶ÔÏó
+	 * å‘ç»„åˆå¯¹è±¡ä¸­åŠ å…¥ç»„ä»¶å¯¹è±¡ 
+	 * @param child è¢«åŠ å…¥ç»„åˆå¯¹è±¡ä¸­çš„ç»„ä»¶å¯¹è±¡
 	 */
 	public void addChild(Component child) {
-		// È±Ê¡µÄÊµÏÖ£¬Å×³öÀıÍâ£¬ÒòÎªÒ¶×Ó¶ÔÏóÃ»ÓĞÕâ¸ö¹¦ÄÜ£¬»òÕß×Ó×é¼şÃ»ÓĞÊµÏÖÕâ¸ö¹¦ÄÜ
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		// ç¼ºçœçš„å®ç°ï¼ŒæŠ›å‡ºä¾‹å¤–ï¼Œå› ä¸ºå¶å­å¯¹è±¡æ²¡æœ‰è¿™ä¸ªåŠŸèƒ½ï¼Œæˆ–è€…å­ç»„ä»¶æ²¡æœ‰å®ç°è¿™ä¸ªåŠŸèƒ½
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 
 	}
 	/**
-	 * ´Ó×éºÏ¶ÔÏóÖĞÒÆ³öÄ³¸ö×é¼ş¶ÔÏó
-	 * @param child ±»ÒÆ³öµÄ×é¼ş¶ÔÏó
+	 * ä»ç»„åˆå¯¹è±¡ä¸­ç§»å‡ºæŸä¸ªç»„ä»¶å¯¹è±¡
+	 * @param child è¢«ç§»å‡ºçš„ç»„ä»¶å¯¹è±¡
 	 */
 	public void removeChild(Component child) {
-		// È±Ê¡µÄÊµÏÖ£¬Å×³öÀıÍâ£¬ÒòÎªÒ¶×Ó¶ÔÏóÃ»ÓĞÕâ¸ö¹¦ÄÜ£¬»òÕß×Ó×é¼şÃ»ÓĞÊµÏÖÕâ¸ö¹¦ÄÜ
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		// ç¼ºçœçš„å®ç°ï¼ŒæŠ›å‡ºä¾‹å¤–ï¼Œå› ä¸ºå¶å­å¯¹è±¡æ²¡æœ‰è¿™ä¸ªåŠŸèƒ½ï¼Œæˆ–è€…å­ç»„ä»¶æ²¡æœ‰å®ç°è¿™ä¸ªåŠŸèƒ½
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 
 	}
 	/**
-	 * ·µ»ØÄ³¸öË÷Òı¶ÔÓ¦µÄ×é¼ş¶ÔÏó
-	 * @param index ĞèÒª»ñÈ¡µÄ×é¼ş¶ÔÏóµÄË÷Òı£¬Ë÷Òı´Ó0¿ªÊ¼
-	 * @return Ë÷Òı¶ÔÓ¦µÄ×é¼ş¶ÔÏó
+	 * è¿”å›æŸä¸ªç´¢å¼•å¯¹åº”çš„ç»„ä»¶å¯¹è±¡
+	 * @param index éœ€è¦è·å–çš„ç»„ä»¶å¯¹è±¡çš„ç´¢å¼•ï¼Œç´¢å¼•ä»0å¼€å§‹
+	 * @return ç´¢å¼•å¯¹åº”çš„ç»„ä»¶å¯¹è±¡
 	 */
 	public Component getChildren(int index) {
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 	}
 }
 

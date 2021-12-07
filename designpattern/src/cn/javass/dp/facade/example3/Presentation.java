@@ -1,14 +1,14 @@
 package cn.javass.dp.facade.example3;
 /**
- * Ê¾ÒâÉú³É±íÏÖ²ãµÄÄ£¿é
+ * ç¤ºæ„ç”Ÿæˆè¡¨ç°å±‚çš„æ¨¡å—
  */
 public class Presentation {
 	public void generate(){
-		//1£º´ÓÅäÖÃ¹ÜÀíÀïÃæ»ñÈ¡ÏàÓ¦µÄÅäÖÃĞÅÏ¢
+		//1ï¼šä»é…ç½®ç®¡ç†é‡Œé¢è·å–ç›¸åº”çš„é…ç½®ä¿¡æ¯
 		ConfigModel cm = ConfigManager.getInstance().getConfigData();
 		if(cm.isNeedGenPresentation()){
-			//2£º°´ÕÕÒªÇóÈ¥Éú³ÉÏàÓ¦µÄ´úÂë£¬²¢±£´æ³ÉÎÄ¼ş
-			System.out.println("ÕıÔÚÉú³É±íÏÖ²ã´úÂëÎÄ¼ş");
+			//2ï¼šæŒ‰ç…§è¦æ±‚å»ç”Ÿæˆç›¸åº”çš„ä»£ç ï¼Œå¹¶ä¿å­˜æˆæ–‡ä»¶
+			System.out.println("æ­£åœ¨ç”Ÿæˆè¡¨ç°å±‚ä»£ç æ–‡ä»¶");
 		}
 	}
 }

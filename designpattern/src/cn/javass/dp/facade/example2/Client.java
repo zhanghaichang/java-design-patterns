@@ -2,7 +2,7 @@ package cn.javass.dp.facade.example2;
 
 public class Client {
 	public static void main(String[] args) {
-//		//²»ÓÃFacade£¬ĞèÒª×Ô¼º¸ú¶à¸öÄ£¿é½»»¥
+//		//ä¸ç”¨Facadeï¼Œéœ€è¦è‡ªå·±è·Ÿå¤šä¸ªæ¨¡å—äº¤äº’
 //		AModuleApi a = new AModuleImpl();
 //		a.testA();
 //		BModuleApi b = new BModuleImpl();
@@ -10,8 +10,8 @@ public class Client {
 //		CModuleApi c = new CModuleImpl();
 //		c.testC();
 //		
-//		System.out.println("Ê¹ÓÃFacade----------------------¡µ");
-		//Ê¹ÓÃÁËFacade
+//		System.out.println("ä½¿ç”¨Facade----------------------ã€‰");
+		//ä½¿ç”¨äº†Facade
 		new Facade().test();		
 	}
 }

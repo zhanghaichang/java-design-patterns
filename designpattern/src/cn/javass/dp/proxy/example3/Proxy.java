@@ -4,22 +4,22 @@ import java.sql.*;
 import java.util.*;
 
 /**
- * ´úÀí¶ÔÏó,´úÀíÓÃ»§Êı¾İ¶ÔÏó
+ * ä»£ç†å¯¹è±¡,ä»£ç†ç”¨æˆ·æ•°æ®å¯¹è±¡
  */
 public class Proxy implements UserModelApi{
 	/**
-	 * ³ÖÓĞ±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
+	 * æŒæœ‰è¢«ä»£ç†çš„å…·ä½“çš„ç›®æ ‡å¯¹è±¡
 	 */
 	private UserModel realSubject=null;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
-	 * @param realSubject ±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥è¢«ä»£ç†çš„å…·ä½“çš„ç›®æ ‡å¯¹è±¡
+	 * @param realSubject è¢«ä»£ç†çš„å…·ä½“çš„ç›®æ ‡å¯¹è±¡
 	 */
 	public Proxy(UserModel realSubject){
 		this.realSubject = realSubject;
 	}
 	/**
-	 * ±êÊ¾ÊÇ·ñÒÑ¾­ÖØĞÂ×°ÔØ¹ıÊı¾İÁË
+	 * æ ‡ç¤ºæ˜¯å¦å·²ç»é‡æ–°è£…è½½è¿‡æ•°æ®äº†
 	 */
 	private boolean loaded = false;
 	
@@ -46,11 +46,11 @@ public class Proxy implements UserModelApi{
 	}
 	
 	public String getDepId() {
-		//ĞèÒªÅĞ¶ÏÊÇ·ñÒÑ¾­×°ÔØ¹ıÁË
+		//éœ€è¦åˆ¤æ–­æ˜¯å¦å·²ç»è£…è½½è¿‡äº†
 		if(!this.loaded){
-			//´ÓÊı¾İ¿âÖĞÖØĞÂ×°ÔØ
+			//ä»æ•°æ®åº“ä¸­é‡æ–°è£…è½½
 			reload();
-			//ÉèÖÃÖØĞÂ×°ÔØµÄ±êÖ¾Îªtrue
+			//è®¾ç½®é‡æ–°è£…è½½çš„æ ‡å¿—ä¸ºtrue
 			this.loaded = true;
 		}
 		return realSubject.getDepId();
@@ -64,10 +64,10 @@ public class Proxy implements UserModelApi{
 	}
 	
 	/**
-	 * ÖØĞÂ²éÑ¯Êı¾İ¿âÒÔ»ñÈ¡ÍêÕûµÄÓÃ»§Êı¾İ
+	 * é‡æ–°æŸ¥è¯¢æ•°æ®åº“ä»¥è·å–å®Œæ•´çš„ç”¨æˆ·æ•°æ®
 	 */
 	private void reload(){
-		System.out.println("ÖØĞÂ²éÑ¯Êı¾İ¿â»ñÈ¡ÍêÕûµÄÓÃ»§Êı¾İ£¬userId=="+realSubject.getUserId());
+		System.out.println("é‡æ–°æŸ¥è¯¢æ•°æ®åº“è·å–å®Œæ•´çš„ç”¨æˆ·æ•°æ®ï¼ŒuserId=="+realSubject.getUserId());
 		Connection conn = null;
 		try{
 			conn = this.getConnection();
@@ -78,7 +78,7 @@ public class Proxy implements UserModelApi{
 			
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()){
-				//Ö»ĞèÒªÖØĞÂ»ñÈ¡³ıÁËuserIdºÍnameÍâµÄÊı¾İ
+				//åªéœ€è¦é‡æ–°è·å–é™¤äº†userIdå’Œnameå¤–çš„æ•°æ®
 				realSubject.setDepId(rs.getString("depId"));
 				realSubject.setSex(rs.getString("sex"));
 			}

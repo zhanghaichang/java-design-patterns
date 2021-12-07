@@ -1,26 +1,26 @@
 package cn.javass.dp.command.example4;
 /**
- * ²Ù×÷ÔËËãµÄ½Ó¿Ú
+ * æ“ä½œè¿ç®—çš„æ¥å£
  */
 public interface OperationApi {
 	/**
-	 * »ñÈ¡¼ÆËãÍê³ÉºóµÄ½á¹û
-	 * @return ¼ÆËãÍê³ÉºóµÄ½á¹û
+	 * è·å–è®¡ç®—å®Œæˆåçš„ç»“æœ
+	 * @return è®¡ç®—å®Œæˆåçš„ç»“æœ
 	 */
 	public int getResult();
 	/**
-	 * ÉèÖÃ¼ÆËã¿ªÊ¼µÄ³õÊ¼Öµ
-	 * @param result ¼ÆËã¿ªÊ¼µÄ³õÊ¼Öµ
+	 * è®¾ç½®è®¡ç®—å¼€å§‹çš„åˆå§‹å€¼
+	 * @param result è®¡ç®—å¼€å§‹çš„åˆå§‹å€¼
 	 */
 	public void setResult(int result);
 	/**
-	 * Ö´ĞĞ¼Ó·¨
-	 * @param num ĞèÒª¼ÓµÄÊı
+	 * æ‰§è¡ŒåŠ æ³•
+	 * @param num éœ€è¦åŠ çš„æ•°
 	 */
 	public void add(int num);
 	/**
-	 * Ö´ĞĞ¼õ·¨
-	 * @param num ĞèÒª¼õµÄÊı
+	 * æ‰§è¡Œå‡æ³•
+	 * @param num éœ€è¦å‡çš„æ•°
 	 */
 	public void substract(int num);
 }

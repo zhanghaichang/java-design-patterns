@@ -1,36 +1,36 @@
 package cn.javass.dp.builder.example5;
 /**
- * ±£ÏÕºÏÍ¬µÄ¶ÔÏó
+ * ä¿é™©åˆåŒçš„å¯¹è±¡
  */
 public class InsuranceContract {
 	/**
-	 * ±£ÏÕºÏÍ¬±àºÅ
+	 * ä¿é™©åˆåŒç¼–å·
 	 */
 	private String contractId;
 	/**
-	 * ±»±£ÏÕÈËÔ±µÄÃû³Æ£¬Í¬Ò»·İ±£ÏÕºÏÍ¬£¬ÒªÃ´¸úÈËÔ±Ç©¶©£¬ÒªÃ´¸ú¹«Ë¾Ç©¶©£¬
-	 * Ò²¾ÍÊÇËµ£¬"±»±£ÏÕÈËÔ±"ºÍ"±»±£ÏÕ¹«Ë¾"ÕâÁ½¸öÊôĞÔ£¬²»¿ÉÄÜÍ¬Ê±ÓĞÖµ
+	 * è¢«ä¿é™©äººå‘˜çš„åç§°ï¼ŒåŒä¸€ä»½ä¿é™©åˆåŒï¼Œè¦ä¹ˆè·Ÿäººå‘˜ç­¾è®¢ï¼Œè¦ä¹ˆè·Ÿå…¬å¸ç­¾è®¢ï¼Œ
+	 * ä¹Ÿå°±æ˜¯è¯´ï¼Œ"è¢«ä¿é™©äººå‘˜"å’Œ"è¢«ä¿é™©å…¬å¸"è¿™ä¸¤ä¸ªå±æ€§ï¼Œä¸å¯èƒ½åŒæ—¶æœ‰å€¼
 	 */
 	private String personName;
 	/**
-	 * ±»±£ÏÕ¹«Ë¾µÄÃû³Æ
+	 * è¢«ä¿é™©å…¬å¸çš„åç§°
 	 */
 	private String companyName;
 	/**
-	 * ±£ÏÕ¿ªÊ¼ÉúĞ§µÄÈÕÆÚ
+	 * ä¿é™©å¼€å§‹ç”Ÿæ•ˆçš„æ—¥æœŸ
 	 */
 	private long beginDate;
 	/**
-	 * ±£ÏÕÊ§Ğ§µÄÈÕÆÚ£¬Ò»¶¨»á´óÓÚ±£ÏÕ¿ªÊ¼ÉúĞ§µÄÈÕÆÚ
+	 * ä¿é™©å¤±æ•ˆçš„æ—¥æœŸï¼Œä¸€å®šä¼šå¤§äºä¿é™©å¼€å§‹ç”Ÿæ•ˆçš„æ—¥æœŸ
 	 */
 	private long endDate;
 	/**
-	 * Ê¾Àı£ºÆäËüÊı¾İ
+	 * ç¤ºä¾‹ï¼šå…¶å®ƒæ•°æ®
 	 */
 	private String otherData;
 	
 	/**
-	 * ¹¹Ôì·½·¨£¬·ÃÎÊ¼¶±ğÊÇÍ¬°üÄÜ·ÃÎÊ
+	 * æ„é€ æ–¹æ³•ï¼Œè®¿é—®çº§åˆ«æ˜¯åŒåŒ…èƒ½è®¿é—®
 	 */
 	InsuranceContract(ConcreteBuilder builder){
 		this.contractId = builder.getContractId();
@@ -42,7 +42,7 @@ public class InsuranceContract {
 	}
 	
 	/**
-	 * Ê¾Òâ£º±£ÏÕºÏÍ¬µÄÄ³Ğ©²Ù×÷
+	 * ç¤ºæ„ï¼šä¿é™©åˆåŒçš„æŸäº›æ“ä½œ
 	 */
 	public void someOperation(){
 		System.out.println("Now in Insurance Contract someOperation=="+this.contractId);

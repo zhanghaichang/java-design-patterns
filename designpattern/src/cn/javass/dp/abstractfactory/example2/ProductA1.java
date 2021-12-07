@@ -1,8 +1,8 @@
 package cn.javass.dp.abstractfactory.example2;
 /**
- * ²úÆ·AµÄ¾ßÌåÊµÏÖ
+ * äº§å“Açš„å…·ä½“å®ç°
  */
 public class ProductA1 implements AbstractProductA {
-	//ÊµÏÖ²úÆ·AµÄ½Ó¿ÚÖĞ¶¨ÒåµÄ²Ù×÷
+	//å®ç°äº§å“Açš„æ¥å£ä¸­å®šä¹‰çš„æ“ä½œ
 }
 

@@ -1,6 +1,6 @@
 package cn.javass.dp.templatemethod.example8;
 /**
- * 用户数据模型
+ * 鐢ㄦ埛鏁版嵁妯″瀷
  */
 public class UserModel {
 	private String userId,name;

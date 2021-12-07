@@ -1,18 +1,18 @@
 package cn.javass.dp.flyweight.example1;
 /**
- * 描述授权数据的数据model
+ * 鎻忚堪鎺堟潈鏁版嵁鐨勬暟鎹甿odel
  */
 public class AuthorizationModel {
 	/**
-	 * 人员
+	 * 浜哄憳
 	 */
 	private String user;
 	/**
-	 * 安全实体
+	 * 瀹夊叏瀹炰綋
 	 */
 	private String securityEntity;
 	/**
-	 * 权限
+	 * 鏉冮檺
 	 */
 	private String permit;
 	

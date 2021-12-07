@@ -1,20 +1,20 @@
 package cn.javass.dp.builder.example2;
 /**
- * ¾ßÌåµÄ¹¹½¨Æ÷ÊµÏÖ¶ÔÏó
+ * å…·ä½“çš„æ„å»ºå™¨å®ç°å¯¹è±¡
  */
 public class ConcreteBuilder implements Builder {
 	/**
-	 * ¹¹½¨Æ÷×îÖÕ¹¹½¨µÄ²úÆ·¶ÔÏó
+	 * æ„å»ºå™¨æœ€ç»ˆæ„å»ºçš„äº§å“å¯¹è±¡
 	 */
 	private Product resultProduct;
 	/**
-	 * »ñÈ¡¹¹½¨Æ÷×îÖÕ¹¹½¨µÄ²úÆ·¶ÔÏó
-	 * @return ¹¹½¨Æ÷×îÖÕ¹¹½¨µÄ²úÆ·¶ÔÏó
+	 * è·å–æ„å»ºå™¨æœ€ç»ˆæ„å»ºçš„äº§å“å¯¹è±¡
+	 * @return æ„å»ºå™¨æœ€ç»ˆæ„å»ºçš„äº§å“å¯¹è±¡
 	 */
 	public Product getResult() {
 		return resultProduct;
 	}
 	public void buildPart() {
-		//¹¹½¨Ä³¸ö²¿¼şµÄ¹¦ÄÜ´¦Àí
+		//æ„å»ºæŸä¸ªéƒ¨ä»¶çš„åŠŸèƒ½å¤„ç†
 	}
 }

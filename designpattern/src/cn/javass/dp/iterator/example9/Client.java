@@ -2,28 +2,28 @@ package cn.javass.dp.iterator.example9;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//·ÃÎÊĞÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁĞ±í
+		//è®¿é—®æ–°æ”¶è´­å…¬å¸çš„å·¥èµ„åˆ—è¡¨
 		SalaryManager salaryManager = new SalaryManager();
-		//ÏÈ¼ÆËãÔÙ»ñÈ¡
+		//å…ˆè®¡ç®—å†è·å–
 		salaryManager.calcSalary();
-		//µÃµ½·­Ò³µü´úÆ÷
+		//å¾—åˆ°ç¿»é¡µè¿­ä»£å™¨
 		AggregationIterator it = salaryManager.createIterator();
 		
-		//»ñÈ¡µÚÒ»Ò³£¬Ã¿Ò³ÏÔÊ¾2Ìõ
+		//è·å–ç¬¬ä¸€é¡µï¼Œæ¯é¡µæ˜¾ç¤º2æ¡
 		Collection col = it.getPage(1,2);
-		System.out.println("µÚÒ»Ò³Êı¾İ£º");
+		System.out.println("ç¬¬ä¸€é¡µæ•°æ®ï¼š");
 		print(col);
-		//»ñÈ¡µÚ¶şÒ³£¬Ã¿Ò³ÏÔÊ¾2Ìõ
+		//è·å–ç¬¬äºŒé¡µï¼Œæ¯é¡µæ˜¾ç¤º2æ¡
 		Collection col2 = it.getPage(2,2);
-		System.out.println("µÚ¶şÒ³Êı¾İ£º");
+		System.out.println("ç¬¬äºŒé¡µæ•°æ®ï¼š");
 		print(col2);
-		//ÔÙ´Î»ñÈ¡µÚÒ»Ò³
+		//å†æ¬¡è·å–ç¬¬ä¸€é¡µ
 		Collection col3 = it.getPage(1,2);
-		System.out.println("ÔÙ´Î»ñÈ¡µÚÒ»Ò³Êı¾İ£º");
+		System.out.println("å†æ¬¡è·å–ç¬¬ä¸€é¡µæ•°æ®ï¼š");
 		print(col3);
-		//»ñÈ¡µÚÈıÒ³
+		//è·å–ç¬¬ä¸‰é¡µ
 		Collection col4 = it.getPage(3,2);
-		System.out.println("»ñÈ¡µÚÈıÒ³Êı¾İ£º");
+		System.out.println("è·å–ç¬¬ä¸‰é¡µæ•°æ®ï¼š");
 		print(col4);
 	}
 	private static void print(Collection col){

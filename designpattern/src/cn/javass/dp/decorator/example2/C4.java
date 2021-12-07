@@ -1,19 +1,19 @@
 package cn.javass.dp.decorator.example2;
 
 public class C4 {
-	//Ê¾ÀıÖ±½ÓÔÚÊôĞÔÉÏ´´½¨ĞèÒª×éºÏµÄ¶ÔÏó
+	//ç¤ºä¾‹ç›´æ¥åœ¨å±æ€§ä¸Šåˆ›å»ºéœ€è¦ç»„åˆçš„å¯¹è±¡
 	private A a = new A();
-	//Ê¾ÀıÍ¨¹ıÍâ²¿´«ÈëĞèÒª×éºÏµÄ¶ÔÏó
+	//ç¤ºä¾‹é€šè¿‡å¤–éƒ¨ä¼ å…¥éœ€è¦ç»„åˆçš„å¯¹è±¡
 	private B b = null;
 	public void setB(B b){
 		this.b = b;
 	}
 	public void a1(){
-		//×ªµ÷A¶ÔÏóµÄ¹¦ÄÜ
+		//è½¬è°ƒAå¯¹è±¡çš„åŠŸèƒ½
 		a.a1();
 	}
 	public void b1(){
-		//×ªµ÷B¶ÔÏóµÄ¹¦ÄÜ
+		//è½¬è°ƒBå¯¹è±¡çš„åŠŸèƒ½
 		b.b1();
 	}
 	public void c11(){

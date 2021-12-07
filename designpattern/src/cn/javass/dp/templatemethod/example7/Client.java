@@ -3,21 +3,21 @@ package cn.javass.dp.templatemethod.example7;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼±¸µÇÂ¼ÈËµÄĞÅÏ¢
+		//å‡†å¤‡ç™»å½•äººçš„ä¿¡æ¯
 		LoginModel lm = new LoginModel();
 		lm.setLoginId("admin");
 		lm.setPwd("workerpwd");
-		//×¼±¸ÓÃÀ´½øĞĞÅĞ¶ÏµÄ¶ÔÏó
+		//å‡†å¤‡ç”¨æ¥è¿›è¡Œåˆ¤æ–­çš„å¯¹è±¡
 		LoginTemplate lt = new LoginTemplate();
 		
-		//½øĞĞµÇÂ¼²âÊÔ£¬ÏÈ²âÊÔÆÕÍ¨ÈËÔ±µÇÂ¼
+		//è¿›è¡Œç™»å½•æµ‹è¯•ï¼Œå…ˆæµ‹è¯•æ™®é€šäººå‘˜ç™»å½•
 		boolean flag = lt.login(lm,new LoginCallback(){
 			public String encryptPwd(String pwd, LoginTemplate template) {
-				//×Ô¼º²»ĞèÒª£¬Ö±½Ó×ªµ÷Ä£°åÖĞµÄÄ¬ÈÏÊµÏÖ
+				//è‡ªå·±ä¸éœ€è¦ï¼Œç›´æ¥è½¬è°ƒæ¨¡æ¿ä¸­çš„é»˜è®¤å®ç°
 				return template.encryptPwd(pwd);
 			}
 			public LoginModel findLoginUser(String loginId) {
-				// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓĞÄ¬ÈÏÊı¾İµÄ¶ÔÏó
+				// è¿™é‡Œçœç•¥å…·ä½“çš„å¤„ç†ï¼Œä»…åšç¤ºæ„ï¼Œè¿”å›ä¸€ä¸ªæœ‰é»˜è®¤æ•°æ®çš„å¯¹è±¡
 				LoginModel lm = new LoginModel();
 				lm.setLoginId(loginId);
 				lm.setPwd("testpwd");
@@ -25,23 +25,23 @@ public class Client {
 			}
 			public boolean match(LoginModel lm, LoginModel dbLm,
 					LoginTemplate template) {
-				//×Ô¼º²»ĞèÒª¸²¸Ç£¬Ö±½Ó×ªµ÷Ä£°åÖĞµÄÄ¬ÈÏÊµÏÖ
+				//è‡ªå·±ä¸éœ€è¦è¦†ç›–ï¼Œç›´æ¥è½¬è°ƒæ¨¡æ¿ä¸­çš„é»˜è®¤å®ç°
 				return template.match(lm, dbLm);
 			}
 			
 		});
-		System.out.println("¿ÉÒÔ½øĞĞÆÕÍ¨ÈËÔ±µÇÂ¼="+flag);
+		System.out.println("å¯ä»¥è¿›è¡Œæ™®é€šäººå‘˜ç™»å½•="+flag);
 
-		//²âÊÔ¹¤×÷ÈËÔ±µÇÂ¼
+		//æµ‹è¯•å·¥ä½œäººå‘˜ç™»å½•
 		boolean flag2 = lt.login(lm,new LoginCallback(){
 			public String encryptPwd(String pwd, LoginTemplate template) {
-				//¸²¸Ç¸¸ÀàµÄ·½·¨£¬Ìá¹©ÕæÕıµÄ¼ÓÃÜÊµÏÖ
-				//ÕâÀï¶ÔÃÜÂë½øĞĞ¼ÓÃÜ£¬±ÈÈçÊ¹ÓÃ£ºMD5¡¢3DESµÈµÈ£¬Ê¡ÂÔÁË
-				System.out.println("Ê¹ÓÃMD5½øĞĞÃÜÂë¼ÓÃÜ");
+				//è¦†ç›–çˆ¶ç±»çš„æ–¹æ³•ï¼Œæä¾›çœŸæ­£çš„åŠ å¯†å®ç°
+				//è¿™é‡Œå¯¹å¯†ç è¿›è¡ŒåŠ å¯†ï¼Œæ¯”å¦‚ä½¿ç”¨ï¼šMD5ã€3DESç­‰ç­‰ï¼Œçœç•¥äº†
+				System.out.println("ä½¿ç”¨MD5è¿›è¡Œå¯†ç åŠ å¯†");
 				return pwd;
 			}
 			public LoginModel findLoginUser(String loginId) {
-				// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓĞÄ¬ÈÏÊı¾İµÄ¶ÔÏó
+				// è¿™é‡Œçœç•¥å…·ä½“çš„å¤„ç†ï¼Œä»…åšç¤ºæ„ï¼Œè¿”å›ä¸€ä¸ªæœ‰é»˜è®¤æ•°æ®çš„å¯¹è±¡
 				LoginModel lm = new LoginModel();
 				lm.setLoginId(loginId);
 				lm.setPwd("workerpwd");
@@ -49,11 +49,11 @@ public class Client {
 			}
 			public boolean match(LoginModel lm, LoginModel dbLm,
 					LoginTemplate template) {
-				//×Ô¼º²»ĞèÒª¸²¸Ç£¬Ö±½Ó×ªµ÷Ä£°åÖĞµÄÄ¬ÈÏÊµÏÖ
+				//è‡ªå·±ä¸éœ€è¦è¦†ç›–ï¼Œç›´æ¥è½¬è°ƒæ¨¡æ¿ä¸­çš„é»˜è®¤å®ç°
 				return template.match(lm, dbLm);
 			}
 			
 		});		
-		System.out.println("¿ÉÒÔµÇÂ¼¹¤×÷Æ½Ì¨="+flag2);
+		System.out.println("å¯ä»¥ç™»å½•å·¥ä½œå¹³å°="+flag2);
 	}
 }

@@ -1,18 +1,18 @@
 package cn.javass.dp.interpreter.example5;
 /**
- * ÓÃÀ´·â×°Ã¿Ò»¸ö½âÎö³öÀ´µÄÔªËØ¶ÔÓ¦µÄÊôĞÔ
+ * ç”¨æ¥å°è£…æ¯ä¸€ä¸ªè§£æå‡ºæ¥çš„å…ƒç´ å¯¹åº”çš„å±æ€§
  */
 public class ParserModel {
 	/**
-	 * ÊÇ·ñµ¥¸öÖµ
+	 * æ˜¯å¦å•ä¸ªå€¼
 	 */
 	private boolean singleVlaue;
 	/**
-	 * ÊÇ·ñÊôĞÔ£¬²»ÊÇÊôĞÔ¾ÍÊÇÔªËØ
+	 * æ˜¯å¦å±æ€§ï¼Œä¸æ˜¯å±æ€§å°±æ˜¯å…ƒç´ 
 	 */
 	private boolean propertyValue;
 	/**
-	 * ÊÇ·ñÖÕ½á·û
+	 * æ˜¯å¦ç»ˆç»“ç¬¦
 	 */
 	private boolean end;
 	public boolean isEnd() {

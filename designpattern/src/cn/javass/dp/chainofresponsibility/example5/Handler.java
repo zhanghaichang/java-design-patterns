@@ -1,30 +1,30 @@
 package cn.javass.dp.chainofresponsibility.example5;
 /**
- * ¶¨ÒåÖ°Ôğ¶ÔÏóµÄ½Ó¿Ú
+ * å®šä¹‰èŒè´£å¯¹è±¡çš„æ¥å£
  */
 public abstract class Handler {
 	/**
-	 * ³ÖÓĞÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
+	 * æŒæœ‰ä¸‹ä¸€ä¸ªå¤„ç†è¯·æ±‚çš„å¯¹è±¡
 	 */
 	protected Handler successor = null;
 	/**
-	 * ÉèÖÃÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
-	 * @param successor ÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
+	 * è®¾ç½®ä¸‹ä¸€ä¸ªå¤„ç†è¯·æ±‚çš„å¯¹è±¡
+	 * @param successor ä¸‹ä¸€ä¸ªå¤„ç†è¯·æ±‚çš„å¯¹è±¡
 	 */
 	public void setSuccessor(Handler successor){
 		this.successor = successor;
 	}
 	/**
-	 * Í¨ÓÃµÄÇëÇó´¦Àí·½·¨
-	 * @param rm Í¨ÓÃµÄÇëÇó¶ÔÏó
-	 * @return ´¦ÀíºóĞèÒª·µ»ØµÄ¶ÔÏó
+	 * é€šç”¨çš„è¯·æ±‚å¤„ç†æ–¹æ³•
+	 * @param rm é€šç”¨çš„è¯·æ±‚å¯¹è±¡
+	 * @return å¤„ç†åéœ€è¦è¿”å›çš„å¯¹è±¡
 	 */
 	public Object handleRequest(RequestModel rm){
 		if(successor != null){
-			//Õâ¸öÊÇÄ¬ÈÏµÄÊµÏÖ£¬Èç¹û×ÓÀà²»Ô¸Òâ´¦ÀíÕâ¸öÇëÇó£¬ÄÇ¾Í´«µİµ½ÏÂÒ»¸öÖ°Ôğ¶ÔÏóÈ¥´¦Àí
+			//è¿™ä¸ªæ˜¯é»˜è®¤çš„å®ç°ï¼Œå¦‚æœå­ç±»ä¸æ„¿æ„å¤„ç†è¿™ä¸ªè¯·æ±‚ï¼Œé‚£å°±ä¼ é€’åˆ°ä¸‹ä¸€ä¸ªèŒè´£å¯¹è±¡å»å¤„ç†
 			return this.successor.handleRequest(rm);
 		}else{
-			System.out.println("Ã»ÓĞºóĞø´¦Àí»òÕßÔİÊ±²»Ö§³ÖÕâÑùµÄ¹¦ÄÜ´¦Àí");
+			System.out.println("æ²¡æœ‰åç»­å¤„ç†æˆ–è€…æš‚æ—¶ä¸æ”¯æŒè¿™æ ·çš„åŠŸèƒ½å¤„ç†");
 			return false;
 		}
 	}

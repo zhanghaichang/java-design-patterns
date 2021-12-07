@@ -1,10 +1,10 @@
 package cn.javass.dp.facade.example2;
 /**
- * AÄ£¿éµÄ½Ó¿Ú
+ * Aæ¨¡å—çš„æ¥å£
  */
 public interface AModuleApi {
 	/**
-	 * Ê¾Òâ·½·¨£¬AÄ£¿é¶ÔÍâµÄÒ»¸ö¹¦ÄÜ·½·¨
+	 * ç¤ºæ„æ–¹æ³•ï¼ŒAæ¨¡å—å¯¹å¤–çš„ä¸€ä¸ªåŠŸèƒ½æ–¹æ³•
 	 */
 	public void testA();
 }

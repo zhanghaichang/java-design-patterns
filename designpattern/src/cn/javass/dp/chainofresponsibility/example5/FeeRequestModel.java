@@ -1,21 +1,21 @@
 package cn.javass.dp.chainofresponsibility.example5;
 /**
- * ·â×°¸ú¾Û²Í·ÑÓÃÉêÇëÒµÎñÏà¹ØµÄÇëÇóÊı¾İ
+ * å°è£…è·Ÿèšé¤è´¹ç”¨ç”³è¯·ä¸šåŠ¡ç›¸å…³çš„è¯·æ±‚æ•°æ®
  */
 public class FeeRequestModel extends RequestModel{
 	/**
-	 * Ô¼¶¨¾ßÌåµÄÒµÎñÀàĞÍ
+	 * çº¦å®šå…·ä½“çš„ä¸šåŠ¡ç±»å‹
 	 */
 	public final static String FEE_TYPE = "fee";
 	public FeeRequestModel() {
 		super(FEE_TYPE);
 	}
 	/**
-	 * ÉêÇëÈË
+	 * ç”³è¯·äºº
 	 */
 	private String user;
 	/**
-	 * ÉêÇë½ğ¶î
+	 * ç”³è¯·é‡‘é¢
 	 */
 	private double fee;
 	public String getUser() {

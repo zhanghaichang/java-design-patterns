@@ -1,18 +1,18 @@
 package cn.javass.dp.visitor.example1;
 /**
- * ÆóÒµ¿Í»§
+ * ä¼ä¸šå®¢æˆ·
  */
 public class EnterpriseCustomer extends Customer{
 	/**
-	 * ÁªÏµÈË
+	 * è”ç³»äºº
 	 */
 	private String linkman;
 	/**
-	 * ÁªÏµµç»°
+	 * è”ç³»ç”µè¯
 	 */
 	private String linkTelephone;
 	/**
-	 * ÆóÒµ×¢²áµØÖ·
+	 * ä¼ä¸šæ³¨å†Œåœ°å€
 	 */
 	private String registerAddress;
 	
@@ -42,10 +42,10 @@ public class EnterpriseCustomer extends Customer{
 	}
 	
 	/**
-	 * ÆóÒµ¿Í»§Ìá³ö·şÎñÇëÇóµÄ·½·¨£¬Ê¾ÒâÒ»ÏÂ
+	 * ä¼ä¸šå®¢æˆ·æå‡ºæœåŠ¡è¯·æ±‚çš„æ–¹æ³•ï¼Œç¤ºæ„ä¸€ä¸‹
 	 */
 	public void serviceRequest(){
-		//ÆóÒµ¿Í»§Ìá³öµÄ¾ßÌå·şÎñÇëÇó
-		System.out.println(this.getName()+"ÆóÒµÌá³ö·şÎñÇëÇó");
+		//ä¼ä¸šå®¢æˆ·æå‡ºçš„å…·ä½“æœåŠ¡è¯·æ±‚
+		System.out.println(this.getName()+"ä¼ä¸šæå‡ºæœåŠ¡è¯·æ±‚");
 	}
 }

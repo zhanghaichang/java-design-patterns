@@ -1,14 +1,14 @@
 package cn.javass.dp.prototype.example6;
 /**
- * ²úÆ·¶ÔÏó
+ * äº§å“å¯¹è±¡
  */
 public class Product implements ProductPrototype{
 	/**
-	 * ²úÆ·±àºÅ
+	 * äº§å“ç¼–å·
 	 */
 	private String productId;	
 	/**
-	 * ²úÆ·Ãû³Æ
+	 * äº§å“åç§°
 	 */
 	private String name;
 	
@@ -26,10 +26,10 @@ public class Product implements ProductPrototype{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "²úÆ·±àºÅ="+this.productId+"£¬²úÆ·Ãû³Æ="+this.name;
+		return "äº§å“ç¼–å·="+this.productId+"ï¼Œäº§å“åç§°="+this.name;
 	}
 	public ProductPrototype cloneProduct() {
-		//´´½¨Ò»¸öĞÂµÄ¶©µ¥£¬È»ºó°Ñ±¾ÊµÀıµÄÊı¾İ¸´ÖÆ¹ıÈ¥
+		//åˆ›å»ºä¸€ä¸ªæ–°çš„è®¢å•ï¼Œç„¶åæŠŠæœ¬å®ä¾‹çš„æ•°æ®å¤åˆ¶è¿‡å»
 		Product product = new Product();
 		product.setProductId(this.productId);
 		product.setName(this.name);		

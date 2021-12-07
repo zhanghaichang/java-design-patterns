@@ -1,20 +1,20 @@
 package cn.javass.dp.flyweight.example2;
 /**
- * ÏíÔª¶ÔÏó
+ * äº«å…ƒå¯¹è±¡
  */
 public class ConcreteFlyweight implements Flyweight{
 	/**
-	 * Ê¾Àı£¬ÃèÊöÄÚ²¿×´Ì¬
+	 * ç¤ºä¾‹ï¼Œæè¿°å†…éƒ¨çŠ¶æ€
 	 */
 	private String intrinsicState;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÏíÔª¶ÔÏóµÄÄÚ²¿×´Ì¬µÄÊı¾İ
-	 * @param state ÏíÔª¶ÔÏóµÄÄÚ²¿×´Ì¬µÄÊı¾İ
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥äº«å…ƒå¯¹è±¡çš„å†…éƒ¨çŠ¶æ€çš„æ•°æ®
+	 * @param state äº«å…ƒå¯¹è±¡çš„å†…éƒ¨çŠ¶æ€çš„æ•°æ®
 	 */
 	public ConcreteFlyweight(String state){
 		this.intrinsicState = state;
 	}
 	public void operation(String extrinsicState) {
-		//¾ßÌåµÄ¹¦ÄÜ´¦Àí£¬¿ÉÄÜ»áÓÃµ½ÏíÔªÄÚ²¿¡¢Íâ²¿µÄ×´Ì¬
+		//å…·ä½“çš„åŠŸèƒ½å¤„ç†ï¼Œå¯èƒ½ä¼šç”¨åˆ°äº«å…ƒå†…éƒ¨ã€å¤–éƒ¨çš„çŠ¶æ€
 	}	
 }

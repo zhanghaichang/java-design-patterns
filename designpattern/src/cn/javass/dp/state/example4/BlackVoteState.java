@@ -2,9 +2,9 @@ package cn.javass.dp.state.example4;
 
 public class BlackVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//ºÚÃûµ¥
-		//¼ÇÈëºÚÃûµ¥ÖĞ£¬½ûÖ¹µÇÂ¼ÏµÍ³ÁË
-		System.out.println("½øÈëºÚÃûµ¥£¬½«½ûÖ¹µÇÂ¼ºÍÊ¹ÓÃ±¾ÏµÍ³");
+		//é»‘åå•
+		//è®°å…¥é»‘åå•ä¸­ï¼Œç¦æ­¢ç™»å½•ç³»ç»Ÿäº†
+		System.out.println("è¿›å…¥é»‘åå•ï¼Œå°†ç¦æ­¢ç™»å½•å’Œä½¿ç”¨æœ¬ç³»ç»Ÿ");
 				
 	}
 }

@@ -2,16 +2,16 @@ package cn.javass.dp.prototype.example1;
 
 public class OrderClient {
 	public static void main(String[] args) {
-		//´´½¨¶©µ¥¶ÔÏó£¬ÕâÀïÎªÁËÑİÊ¾¼òµ¥£¬Ö±½ÓnewÁË
+		//åˆ›å»ºè®¢å•å¯¹è±¡ï¼Œè¿™é‡Œä¸ºäº†æ¼”ç¤ºç®€å•ï¼Œç›´æ¥newäº†
 		PersonalOrder op = new PersonalOrder();
-		//ÉèÖÃ¶©µ¥Êı¾İ
+		//è®¾ç½®è®¢å•æ•°æ®
 		op.setOrderProductNum(2925);
-		op.setCustomerName("ÕÅÈı");
+		op.setCustomerName("å¼ ä¸‰");
 		op.setProductId("P0001");
 		
-		//ÕâÀï»ñÈ¡ÒµÎñ´¦ÀíµÄÀà£¬Ò²Ö±½ÓnewÁË£¬ÎªÁË¼òµ¥£¬Á¬ÒµÎñ½Ó¿Ú¶¼Ã»ÓĞ×ö
+		//è¿™é‡Œè·å–ä¸šåŠ¡å¤„ç†çš„ç±»ï¼Œä¹Ÿç›´æ¥newäº†ï¼Œä¸ºäº†ç®€å•ï¼Œè¿ä¸šåŠ¡æ¥å£éƒ½æ²¡æœ‰åš
 		OrderBusiness ob = new OrderBusiness();
-		//µ÷ÓÃÒµÎñÀ´±£´æ¶©µ¥¶ÔÏó
+		//è°ƒç”¨ä¸šåŠ¡æ¥ä¿å­˜è®¢å•å¯¹è±¡
 		ob.saveOrder(op);
 	}
 }

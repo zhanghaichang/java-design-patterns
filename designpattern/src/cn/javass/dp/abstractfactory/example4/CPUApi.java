@@ -1,10 +1,10 @@
 package cn.javass.dp.abstractfactory.example4;
 /**
- * CPUµÄ½Ó¿Ú
+ * CPUçš„æ¥å£
  */
 public interface CPUApi {
 	/**
-	 * Ê¾Òâ·½·¨£¬CPU¾ßÓĞÔËËãµÄ¹¦ÄÜ
+	 * ç¤ºæ„æ–¹æ³•ï¼ŒCPUå…·æœ‰è¿ç®—çš„åŠŸèƒ½
 	 */
 	public void calculate();
 }

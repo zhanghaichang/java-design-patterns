@@ -1,16 +1,16 @@
 package cn.javass.dp.observer.example3;
 /**
- * ÕæÕıµÄ¶ÁÕß£¬ÎªÁË¼òµ¥¾ÍÃèÊöÒ»ÏÂĞÕÃû
+ * çœŸæ­£çš„è¯»è€…ï¼Œä¸ºäº†ç®€å•å°±æè¿°ä¸€ä¸‹å§“å
  */
 public class Reader implements Observer{
 	/**
-	 * ¶ÁÕßµÄĞÕÃû
+	 * è¯»è€…çš„å§“å
 	 */
 	private String name;
 
 	public void update(String content) {
-		//ÕâÊÇ²ÉÓÃÍÆµÄ·½Ê½
-		System.out.println(name+"ÊÕµ½±¨Ö½ÁË£¬ÔÄ¶ÁÏÈ¡£ÄÚÈİÊÇ==="+content);
+		//è¿™æ˜¯é‡‡ç”¨æ¨çš„æ–¹å¼
+		System.out.println(name+"æ”¶åˆ°æŠ¥çº¸äº†ï¼Œé˜…è¯»å…ˆã€‚å†…å®¹æ˜¯==="+content);
 	}
 	public String getName() {
 		return name;

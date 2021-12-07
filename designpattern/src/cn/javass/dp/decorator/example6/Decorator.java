@@ -1,15 +1,15 @@
 package cn.javass.dp.decorator.example6;
 /**
- * ×°ÊÎÆ÷µÄ½Ó¿Ú£¬ĞèÒª¸ú±»×°ÊÎµÄ¶ÔÏóÊµÏÖÍ¬ÑùµÄ½Ó¿Ú
+ * è£…é¥°å™¨çš„æ¥å£ï¼Œéœ€è¦è·Ÿè¢«è£…é¥°çš„å¯¹è±¡å®ç°åŒæ ·çš„æ¥å£
  */
 public abstract class Decorator implements GoodsSaleEbi{
 	/**
-	 * ³ÖÓĞ±»×°ÊÎµÄ×é¼ş¶ÔÏó
+	 * æŒæœ‰è¢«è£…é¥°çš„ç»„ä»¶å¯¹è±¡
 	 */
 	protected GoodsSaleEbi ebi;
 	/**
-	 * Í¨¹ı¹¹Ôì·½·¨´«Èë±»×°ÊÎµÄ¶ÔÏó
-	 * @param ebi±»×°ÊÎµÄ¶ÔÏó
+	 * é€šè¿‡æ„é€ æ–¹æ³•ä¼ å…¥è¢«è£…é¥°çš„å¯¹è±¡
+	 * @param ebiè¢«è£…é¥°çš„å¯¹è±¡
 	 */
 	public Decorator(GoodsSaleEbi ebi){
 		this.ebi = ebi;

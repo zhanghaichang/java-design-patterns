@@ -3,27 +3,27 @@ package cn.javass.dp.adapter.example3;
 import java.util.List;
 
 /**
- * ÊÊÅäÆ÷¶ÔÏó£¬°Ñ¼ÇÂ¼ÈÕÖ¾µ½ÎÄ¼şµÄ¹¦ÄÜÊÊÅä³ÉµÚ¶ş°æĞèÒªµÄÔöÉ¾¸Ä²éµÄ¹¦ÄÜ
+ * é€‚é…å™¨å¯¹è±¡ï¼ŒæŠŠè®°å½•æ—¥å¿—åˆ°æ–‡ä»¶çš„åŠŸèƒ½é€‚é…æˆç¬¬äºŒç‰ˆéœ€è¦çš„å¢åˆ æ”¹æŸ¥çš„åŠŸèƒ½
  */
 public class Adapter implements LogDbOperateApi{
 	/**
-	 * ³ÖÓĞĞèÒª±»ÊÊÅäµÄ½Ó¿Ú¶ÔÏó
+	 * æŒæœ‰éœ€è¦è¢«é€‚é…çš„æ¥å£å¯¹è±¡
 	 */
 	private LogFileOperateApi adaptee;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëĞèÒª±»ÊÊÅäµÄ¶ÔÏó
-	 * @param adaptee ĞèÒª±»ÊÊÅäµÄ¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥éœ€è¦è¢«é€‚é…çš„å¯¹è±¡
+	 * @param adaptee éœ€è¦è¢«é€‚é…çš„å¯¹è±¡
 	 */
 	public Adapter(LogFileOperateApi adaptee) {
 		this.adaptee = adaptee;
 	}
 	
 	public void createLog(LogModel lm) {
-		//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
+		//1ï¼šå…ˆè¯»å–æ–‡ä»¶çš„å†…å®¹
 		List<LogModel> list = adaptee.readLogFile();
-		//2£º¼ÓÈëĞÂµÄÈÕÖ¾¶ÔÏó
+		//2ï¼šåŠ å…¥æ–°çš„æ—¥å¿—å¯¹è±¡
 		list.add(lm);
-		//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
+		//3ï¼šé‡æ–°å†™å…¥æ–‡ä»¶
 		adaptee.writeLogFile(list);
 	}
 
@@ -32,25 +32,25 @@ public class Adapter implements LogDbOperateApi{
 	}
 
 	public void removeLog(LogModel lm) {
-		//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
+		//1ï¼šå…ˆè¯»å–æ–‡ä»¶çš„å†…å®¹
 		List<LogModel> list = adaptee.readLogFile();
-		//2£ºÉ¾³ıÏàÓ¦µÄÈÕÖ¾¶ÔÏó
+		//2ï¼šåˆ é™¤ç›¸åº”çš„æ—¥å¿—å¯¹è±¡
 		list.remove(lm);
-		//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
+		//3ï¼šé‡æ–°å†™å…¥æ–‡ä»¶
 		adaptee.writeLogFile(list);
 	}
 
 	public void updateLog(LogModel lm) {
-		//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
+		//1ï¼šå…ˆè¯»å–æ–‡ä»¶çš„å†…å®¹
 		List<LogModel> list = adaptee.readLogFile();
-		//2£ºĞŞ¸ÄÏàÓ¦µÄÈÕÖ¾¶ÔÏó
+		//2ï¼šä¿®æ”¹ç›¸åº”çš„æ—¥å¿—å¯¹è±¡
 		for(int i=0;i<list.size();i++){
 			if(list.get(i).getLogId().equals(lm.getLogId())){
 				list.set(i, lm);
 				break;
 			}
 		}
-		//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
+		//3ï¼šé‡æ–°å†™å…¥æ–‡ä»¶
 		adaptee.writeLogFile(list);
 	}
 }

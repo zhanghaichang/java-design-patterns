@@ -2,12 +2,12 @@ package cn.javass.dp.state.example5;
 
 public class NormalVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//Õı³£Í¶Æ±
-		//¼ÇÂ¼µ½Í¶Æ±¼ÇÂ¼ÖĞ
+		//æ­£å¸¸æŠ•ç¥¨
+		//è®°å½•åˆ°æŠ•ç¥¨è®°å½•ä¸­
 		voteManager.getMapVote().put(user, voteItem);
-		System.out.println("¹§Ï²ÄãÍ¶Æ±³É¹¦");
+		System.out.println("æ­å–œä½ æŠ•ç¥¨æˆåŠŸ");
 		
-		//Õı³£Í¶Æ±Íê³É£¬Î¬»¤ÏÂÒ»¸ö×´Ì¬£¬Í¬Ò»¸öÈËÔÙÍ¶Æ±¾ÍÖØ¸´ÁË
+		//æ­£å¸¸æŠ•ç¥¨å®Œæˆï¼Œç»´æŠ¤ä¸‹ä¸€ä¸ªçŠ¶æ€ï¼ŒåŒä¸€ä¸ªäººå†æŠ•ç¥¨å°±é‡å¤äº†
 		voteManager.getMapState().put(user, new RepeatVoteState());
 	}
 }

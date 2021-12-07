@@ -5,11 +5,11 @@ import java.util.List;
 
 import org.w3c.dom.Element;
 /**
- * ÒÔ¶à¸öÔªËØ×÷ÎªÖÕ½á·ûµÄ½âÊÍ´¦Àí¶ÔÏó
+ * ä»¥å¤šä¸ªå…ƒç´ ä½œä¸ºç»ˆç»“ç¬¦çš„è§£é‡Šå¤„ç†å¯¹è±¡
  */
 public class ElementsTerminalExpression  extends ReadXmlExpression{
 	/**
-	 * ÔªËØµÄÃû³Æ
+	 * å…ƒç´ çš„åç§°
 	 */
 	private String eleName = "";
 	public ElementsTerminalExpression(String name){
@@ -17,16 +17,16 @@ public class ElementsTerminalExpression  extends ReadXmlExpression{
 	}
 	
 	public String[] interpret(Context c) {
-		//ÏÈÈ¡³öÉÏÏÂÎÄÀïµÄ¸¸¼¶ÔªËØ
+		//å…ˆå–å‡ºä¸Šä¸‹æ–‡é‡Œçš„çˆ¶çº§å…ƒç´ 
 		List<Element> pEles = c.getPreEles();
-		//»ñÈ¡µ±Ç°µÄ¶à¸öÔªËØ
+		//è·å–å½“å‰çš„å¤šä¸ªå…ƒç´ 
 		List<Element> nowEles = new ArrayList<Element>();
 		
 		for(Element ele : pEles){
 			nowEles.addAll(c.getNowEles(ele, eleName));
 		}
 
-		//È»ºóĞèÒªÈ¥»ñÈ¡ÕâĞ©ÔªËØµÄÖµ
+		//ç„¶åéœ€è¦å»è·å–è¿™äº›å…ƒç´ çš„å€¼
 		String[] ss = new String[nowEles.size()];
 		for(int i=0;i<ss.length;i++){
 			ss[i] = nowEles.get(i).getFirstChild().getNodeValue();

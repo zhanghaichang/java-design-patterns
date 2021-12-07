@@ -2,26 +2,26 @@ package cn.javass.dp.observer.example5;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨Ë®ÖÊÖ÷Ìâ¶ÔÏó
+		//åˆ›å»ºæ°´è´¨ä¸»é¢˜å¯¹è±¡
 		WaterQuality subject = new WaterQuality();
-		//´´½¨¼¸¸ö¹Û²ìÕß
+		//åˆ›å»ºå‡ ä¸ªè§‚å¯Ÿè€…
 		WatcherObserver watcher1 = new Watcher();
-		watcher1.setJob("¼à²âÈËÔ±");
+		watcher1.setJob("ç›‘æµ‹äººå‘˜");
 		WatcherObserver watcher2 = new Watcher();
-		watcher2.setJob("Ô¤¾¯ÈËÔ±");
+		watcher2.setJob("é¢„è­¦äººå‘˜");
 		WatcherObserver watcher3 = new Watcher();
-		watcher3.setJob("¼à²â²¿ÃÅÁìµ¼");
-		//×¢²á¹Û²ìÕß
+		watcher3.setJob("ç›‘æµ‹éƒ¨é—¨é¢†å¯¼");
+		//æ³¨å†Œè§‚å¯Ÿè€…
 		subject.attach(watcher1);
 		subject.attach(watcher2);
 		subject.attach(watcher3);
 		
-		//ÌîĞ´Ë®ÖÊ±¨¸æ
-		System.out.println("µ±Ë®ÖÊÎªÕı³£µÄÊ±ºò------------------¡µ");
+		//å¡«å†™æ°´è´¨æŠ¥å‘Š
+		System.out.println("å½“æ°´è´¨ä¸ºæ­£å¸¸çš„æ—¶å€™------------------ã€‰");
 		subject.setPolluteLevel(0);
-		System.out.println("µ±Ë®ÖÊÎªÇá¶ÈÎÛÈ¾µÄÊ±ºò---------------¡µ");
+		System.out.println("å½“æ°´è´¨ä¸ºè½»åº¦æ±¡æŸ“çš„æ—¶å€™---------------ã€‰");
 		subject.setPolluteLevel(1);
-		System.out.println("µ±Ë®ÖÊÎªÖĞ¶ÈÎÛÈ¾µÄÊ±ºò---------------¡µ");
+		System.out.println("å½“æ°´è´¨ä¸ºä¸­åº¦æ±¡æŸ“çš„æ—¶å€™---------------ã€‰");
 		subject.setPolluteLevel(2);
 	}
 }

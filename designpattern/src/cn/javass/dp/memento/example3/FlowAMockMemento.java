@@ -1,8 +1,8 @@
 package cn.javass.dp.memento.example3;
 import java.io.*;
 /**
- * Ä£ÄâÔËĞĞÁ÷³ÌAµÄ¶ÔÏóµÄ±¸ÍüÂ¼½Ó¿Ú£¬ÊÇ¸öÕ­½Ó¿Ú
+ * æ¨¡æ‹Ÿè¿è¡Œæµç¨‹Açš„å¯¹è±¡çš„å¤‡å¿˜å½•æ¥å£ï¼Œæ˜¯ä¸ªçª„æ¥å£
  */
 public interface FlowAMockMemento extends Serializable{
-	//¿ÕµÄ
+	//ç©ºçš„
 }

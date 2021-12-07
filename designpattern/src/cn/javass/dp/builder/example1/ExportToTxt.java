@@ -1,34 +1,34 @@
 package cn.javass.dp.builder.example1;
 import java.util.*;
 /**
- * µ¼³öÊı¾İµ½ÎÄ±¾ÎÄ¼şµÄ¶ÔÏó
+ * å¯¼å‡ºæ•°æ®åˆ°æ–‡æœ¬æ–‡ä»¶çš„å¯¹è±¡
  */
 public class ExportToTxt {
 	/**
-	 * µ¼³öÊı¾İµ½ÎÄ±¾ÎÄ¼ş
-	 * @param ehm ÎÄ¼şÍ·µÄÄÚÈİ
-	 * @param mapData Êı¾İµÄÄÚÈİ
-	 * @param efm ÎÄ¼şÎ²µÄÄÚÈİ
+	 * å¯¼å‡ºæ•°æ®åˆ°æ–‡æœ¬æ–‡ä»¶
+	 * @param ehm æ–‡ä»¶å¤´çš„å†…å®¹
+	 * @param mapData æ•°æ®çš„å†…å®¹
+	 * @param efm æ–‡ä»¶å°¾çš„å†…å®¹
 	 */
 	public void export(ExportHeaderModel ehm,Map<String,Collection<ExportDataModel>> mapData,ExportFooterModel efm){
-		//ÓÃÀ´¼ÇÂ¼×îÖÕÊä³öµÄÎÄ¼şÄÚÈİ
+		//ç”¨æ¥è®°å½•æœ€ç»ˆè¾“å‡ºçš„æ–‡ä»¶å†…å®¹
 		StringBuffer buffer = new StringBuffer();
-		//1£ºÏÈÀ´Æ´½ÓÎÄ¼şÍ·µÄÄÚÈİ
+		//1ï¼šå…ˆæ¥æ‹¼æ¥æ–‡ä»¶å¤´çš„å†…å®¹
 		buffer.append(ehm.getDepId()+","+ehm.getExportDate()+"\n");
-		//2£º½Ó×ÅÀ´Æ´½ÓÎÄ¼şÌåµÄÄÚÈİ
+		//2ï¼šæ¥ç€æ¥æ‹¼æ¥æ–‡ä»¶ä½“çš„å†…å®¹
 		for(String tblName : mapData.keySet()){
-			//ÏÈÆ´½Ó±íÃû³Æ
+			//å…ˆæ‹¼æ¥è¡¨åç§°
 			buffer.append(tblName+"\n");
-			//È»ºóÑ­»·Æ´½Ó¾ßÌåÊı¾İ
+			//ç„¶åå¾ªç¯æ‹¼æ¥å…·ä½“æ•°æ®
 			for(ExportDataModel edm : mapData.get(tblName)){
 				buffer.append(edm.getProductId()+","+edm.getPrice()+","+edm.getAmount()+"\n");
 			}
 		}
-		//3£º½Ó×ÅÀ´Æ´½ÓÎÄ¼şÎ²µÄÄÚÈİ
+		//3ï¼šæ¥ç€æ¥æ‹¼æ¥æ–‡ä»¶å°¾çš„å†…å®¹
 		buffer.append(efm.getExportUser());
 		
-		//ÎªÁËÑİÊ¾¼ò½àĞÔ£¬ÕâÀï¾Í²»È¥Ğ´Êä³öÎÄ¼şµÄ´úÂëÁË
-		//°ÑÒªÊä³öµÄÄÚÈİÊä³öµ½¿ØÖÆÌ¨¿´¿´
-		System.out.println("Êä³öµ½ÎÄ±¾ÎÄ¼şµÄÄÚÈİ£º\n"+buffer);
+		//ä¸ºäº†æ¼”ç¤ºç®€æ´æ€§ï¼Œè¿™é‡Œå°±ä¸å»å†™è¾“å‡ºæ–‡ä»¶çš„ä»£ç äº†
+		//æŠŠè¦è¾“å‡ºçš„å†…å®¹è¾“å‡ºåˆ°æ§åˆ¶å°çœ‹çœ‹
+		System.out.println("è¾“å‡ºåˆ°æ–‡æœ¬æ–‡ä»¶çš„å†…å®¹ï¼š\n"+buffer);
 	}
 }

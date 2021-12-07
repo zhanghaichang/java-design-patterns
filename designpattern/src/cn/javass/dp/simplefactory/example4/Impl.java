@@ -1,6 +1,6 @@
 package cn.javass.dp.simplefactory.example4;
 /**
- * ¶ÔÄ³¸ö½Ó¿ÚµÄÒ»ÖÖÊµÏÖ 
+ * å¯¹æŸä¸ªæ¥å£çš„ä¸€ç§å®ç° 
  */
 public class Impl implements Api{
 	

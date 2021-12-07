@@ -1,36 +1,36 @@
 package cn.javass.dp.mediator.example1;
 /**
- * ¾ßÌåµÄÖĞ½éÕßÊµÏÖ
+ * å…·ä½“çš„ä¸­ä»‹è€…å®ç°
  */
 public class ConcreteMediator implements Mediator {
 	
 	/**
-	 * ³ÖÓĞ²¢Î¬»¤Í¬ÊÂA
+	 * æŒæœ‰å¹¶ç»´æŠ¤åŒäº‹A
 	 */
 	private ConcreteColleagueA colleagueA;
 	/**
-	 * ³ÖÓĞ²¢Î¬»¤Í¬ÊÂB
+	 * æŒæœ‰å¹¶ç»´æŠ¤åŒäº‹B
 	 */
 	private ConcreteColleagueB colleagueB;
 	
 	/**
-	 * ÉèÖÃÖĞ½éÕßĞèÒªÁË½â²¢Î¬»¤µÄÍ¬ÊÂA¶ÔÏó
-	 * @param colleague Í¬ÊÂA¶ÔÏó
+	 * è®¾ç½®ä¸­ä»‹è€…éœ€è¦äº†è§£å¹¶ç»´æŠ¤çš„åŒäº‹Aå¯¹è±¡
+	 * @param colleague åŒäº‹Aå¯¹è±¡
 	 */
 	public void setConcreteColleagueA(ConcreteColleagueA colleague) {
 		colleagueA = colleague;
 	}
 	/**
-	 * ÉèÖÃÖĞ½éÕßĞèÒªÁË½â²¢Î¬»¤µÄÍ¬ÊÂB¶ÔÏó
-	 * @param colleague Í¬ÊÂB¶ÔÏó
+	 * è®¾ç½®ä¸­ä»‹è€…éœ€è¦äº†è§£å¹¶ç»´æŠ¤çš„åŒäº‹Bå¯¹è±¡
+	 * @param colleague åŒäº‹Bå¯¹è±¡
 	 */
 	public void setConcreteColleagueB(ConcreteColleagueB colleague) {
 		colleagueB = colleague;
 	}
 	
 	public void changed(Colleague colleague) {
-		//Ä³¸öÍ¬ÊÂÀà·¢ÉúÁË±ä»¯£¬Í¨³£ĞèÒªÓëÆäËûÍ¬ÊÂ½»»§
-		//¾ßÌåĞ­µ÷ÏàÓ¦µÄÍ¬ÊÂ¶ÔÏóÀ´ÊµÏÖĞ­×÷ĞĞÎª
+		//æŸä¸ªåŒäº‹ç±»å‘ç”Ÿäº†å˜åŒ–ï¼Œé€šå¸¸éœ€è¦ä¸å…¶ä»–åŒäº‹äº¤æˆ·
+		//å…·ä½“åè°ƒç›¸åº”çš„åŒäº‹å¯¹è±¡æ¥å®ç°åä½œè¡Œä¸º
 	}
 
 }

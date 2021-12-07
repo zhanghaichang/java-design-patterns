@@ -1,11 +1,11 @@
 package cn.javass.dp.factorymethod.example1;
 /**
- * µ¼³ö³ÉÊı¾İ¿â±¸·İÎÄ¼şĞÎÊ½µÄ¶ÔÏó
+ * å¯¼å‡ºæˆæ•°æ®åº“å¤‡ä»½æ–‡ä»¶å½¢å¼çš„å¯¹è±¡
  */
 public class ExportDB implements ExportFileApi{
 	public boolean export(String data) {
-		//¼òµ¥Ê¾ÒâÒ»ÏÂ£¬ÕâÀïĞèÒª²Ù×÷Êı¾İ¿âºÍÎÄ¼ş
-		System.out.println("µ¼³öÊı¾İ"+data+"µ½Êı¾İ¿â±¸·İÎÄ¼ş");
+		//ç®€å•ç¤ºæ„ä¸€ä¸‹ï¼Œè¿™é‡Œéœ€è¦æ“ä½œæ•°æ®åº“å’Œæ–‡ä»¶
+		System.out.println("å¯¼å‡ºæ•°æ®"+data+"åˆ°æ•°æ®åº“å¤‡ä»½æ–‡ä»¶");
 		return true;
 	}
 }

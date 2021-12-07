@@ -3,33 +3,33 @@ import java.util.*;
 
 public class Client {
 	public static void main(String[] args) {
-		//·ÃÎÊ¼¯ÍÅµÄ¹¤×ÊÁĞ±í
+		//è®¿é—®é›†å›¢çš„å·¥èµ„åˆ—è¡¨
 		PayManager payManager= new PayManager();
-		//ÏÈ¼ÆËãÔÙ»ñÈ¡
+		//å…ˆè®¡ç®—å†è·å–
 		payManager.calcPay();
-		System.out.println("¼¯ÍÅ¹¤×ÊÁĞ±í£º");
+		System.out.println("é›†å›¢å·¥èµ„åˆ—è¡¨ï¼š");
 		test(payManager.createIterator());
 		
-		//·ÃÎÊĞÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁĞ±í
+		//è®¿é—®æ–°æ”¶è´­å…¬å¸çš„å·¥èµ„åˆ—è¡¨
 		SalaryManager salaryManager = new SalaryManager();
-		//ÏÈ¼ÆËãÔÙ»ñÈ¡
+		//å…ˆè®¡ç®—å†è·å–
 		salaryManager.calcSalary();
-		System.out.println("ĞÂÊÕ¹ºµÄ¹«Ë¾¹¤×ÊÁĞ±í£º");
+		System.out.println("æ–°æ”¶è´­çš„å…¬å¸å·¥èµ„åˆ—è¡¨ï¼š");
 		test(salaryManager.createIterator());
 	}
 	/**
-	 * ²âÊÔÍ¨¹ı·ÃÎÊ¾ÛºÏ¶ÔÏóµÄµü´úÆ÷£¬ÊÇ·ñÄÜÕı³£·ÃÎÊ¾ÛºÏ¶ÔÏó
-	 * @param it ¾ÛºÏ¶ÔÏóµÄµü´úÆ÷
+	 * æµ‹è¯•é€šè¿‡è®¿é—®èšåˆå¯¹è±¡çš„è¿­ä»£å™¨ï¼Œæ˜¯å¦èƒ½æ­£å¸¸è®¿é—®èšåˆå¯¹è±¡
+	 * @param it èšåˆå¯¹è±¡çš„è¿­ä»£å™¨
 	 */
 	private static void test(Iterator it){
-		//Ñ­»·Êä³ö¾ÛºÏ¶ÔÏóÖĞµÄÖµ
-		//Ê×ÏÈÉèÖÃµü´úÆ÷µ½µÚÒ»¸öÔªËØ
+		//å¾ªç¯è¾“å‡ºèšåˆå¯¹è±¡ä¸­çš„å€¼
+		//é¦–å…ˆè®¾ç½®è¿­ä»£å™¨åˆ°ç¬¬ä¸€ä¸ªå…ƒç´ 
 		it.first();
 		while(!it.isDone()){
-			//È¡³öµ±Ç°µÄÔªËØÀ´
+			//å–å‡ºå½“å‰çš„å…ƒç´ æ¥
 			Object obj = it.currentItem();
 			System.out.println("the obj=="+obj);
-			//Èç¹û»¹Ã»ÓĞµü´úµ½×îºó£¬ÄÇÃ´¾ÍÏòÏÂµü´úÒ»¸ö
+			//å¦‚æœè¿˜æ²¡æœ‰è¿­ä»£åˆ°æœ€åï¼Œé‚£ä¹ˆå°±å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 			it.next();
 		}
 	}

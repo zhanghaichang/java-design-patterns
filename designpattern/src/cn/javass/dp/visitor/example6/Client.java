@@ -2,16 +2,16 @@ package cn.javass.dp.visitor.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//¶¨ÒåËùÓĞµÄ×éºÏ¶ÔÏó
-		Component root = new Composite("·ş×°");
-		Component c1 = new Composite("ÄĞ×°");
-		Component c2 = new Composite("Å®×°");
-		//¶¨ÒåËùÓĞµÄÒ¶×Ó¶ÔÏó
-		Component leaf1 = new Leaf("³ÄÒÂ");
-		Component leaf2 = new Leaf("¼Ğ¿Ë");
-		Component leaf3 = new Leaf("È¹×Ó");
-		Component leaf4 = new Leaf("Ì××°");
-		//°´ÕÕÊ÷µÄ½á¹¹À´×éºÏ×éºÏ¶ÔÏóºÍÒ¶×Ó¶ÔÏó
+		//å®šä¹‰æ‰€æœ‰çš„ç»„åˆå¯¹è±¡
+		Component root = new Composite("æœè£…");
+		Component c1 = new Composite("ç”·è£…");
+		Component c2 = new Composite("å¥³è£…");
+		//å®šä¹‰æ‰€æœ‰çš„å¶å­å¯¹è±¡
+		Component leaf1 = new Leaf("è¡¬è¡£");
+		Component leaf2 = new Leaf("å¤¹å…‹");
+		Component leaf3 = new Leaf("è£™å­");
+		Component leaf4 = new Leaf("å¥—è£…");
+		//æŒ‰ç…§æ ‘çš„ç»“æ„æ¥ç»„åˆç»„åˆå¯¹è±¡å’Œå¶å­å¯¹è±¡
 		root.addChild(c1);
 		root.addChild(c2);
 		
@@ -22,7 +22,7 @@ public class Client {
 		c2.addChild(leaf4);
 		
 		
-		//µ÷ÓÃ¸ùÔªËØµÄ·½·¨À´½ÓÊÜÇëÇó¹¦ÄÜ
+		//è°ƒç”¨æ ¹å…ƒç´ çš„æ–¹æ³•æ¥æ¥å—è¯·æ±‚åŠŸèƒ½
 		Visitor psVisitor = new PrintStructVisitor(); 
 		root.accept(psVisitor);
 	}

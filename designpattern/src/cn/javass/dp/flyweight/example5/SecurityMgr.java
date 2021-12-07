@@ -1,7 +1,7 @@
 package cn.javass.dp.flyweight.example5;
 import java.util.*;
 /**
- * °²È«¹ÜÀí£¬ÊµÏÖ³Éµ¥Àı
+ * å®‰å…¨ç®¡ç†ï¼Œå®ç°æˆå•ä¾‹
  */
 public class SecurityMgr {
 	private static SecurityMgr securityMgr = new SecurityMgr();
@@ -11,16 +11,16 @@ public class SecurityMgr {
 		return securityMgr;
 	}
 	/**
-	 * ÅĞ¶ÏÄ³ÓÃ»§¶ÔÄ³¸ö°²È«ÊµÌåÊÇ·ñÓµÓĞÄ³È¨ÏŞ
-	 * @param user ±»¼ì²âÈ¨ÏŞµÄÓÃ»§ 
-	 * @param securityEntity °²È«ÊµÌå
-	 * @param permit È¨ÏŞ
-	 * @return true±íÊ¾ÓµÓĞÏàÓ¦È¨ÏŞ£¬false±íÊ¾Ã»ÓĞÏàÓ¦È¨ÏŞ
+	 * åˆ¤æ–­æŸç”¨æˆ·å¯¹æŸä¸ªå®‰å…¨å®ä½“æ˜¯å¦æ‹¥æœ‰æŸæƒé™
+	 * @param user è¢«æ£€æµ‹æƒé™çš„ç”¨æˆ· 
+	 * @param securityEntity å®‰å…¨å®ä½“
+	 * @param permit æƒé™
+	 * @return trueè¡¨ç¤ºæ‹¥æœ‰ç›¸åº”æƒé™ï¼Œfalseè¡¨ç¤ºæ²¡æœ‰ç›¸åº”æƒé™
 	 */
 	public boolean hasPermit(String user,String securityEntity,String permit){
 		Collection<Flyweight> col = this.queryByUser(user);
 		if(col==null || col.size()==0){
-			System.out.println(user+"Ã»ÓĞµÇÂ¼»òÊÇÃ»ÓĞ±»·ÖÅäÈÎºÎÈ¨ÏŞ");
+			System.out.println(user+"æ²¡æœ‰ç™»å½•æˆ–æ˜¯æ²¡æœ‰è¢«åˆ†é…ä»»ä½•æƒé™");
 			return false;
 		}
 		for(Flyweight fm : col){
@@ -31,9 +31,9 @@ public class SecurityMgr {
 		return false;
 	}
 	/**
-	 * ´ÓÊı¾İ¿âÖĞ»ñÈ¡Ä³ÈËËùÓµÓĞµÄÈ¨ÏŞ
-	 * @param user ĞèÒª»ñÈ¡ËùÓµÓĞµÄÈ¨ÏŞµÄÈËÔ±
-	 * @return Ä³ÈËËùÓµÓĞµÄÈ¨ÏŞ
+	 * ä»æ•°æ®åº“ä¸­è·å–æŸäººæ‰€æ‹¥æœ‰çš„æƒé™
+	 * @param user éœ€è¦è·å–æ‰€æ‹¥æœ‰çš„æƒé™çš„äººå‘˜
+	 * @return æŸäººæ‰€æ‹¥æœ‰çš„æƒé™
 	 */
 	private Collection<Flyweight> queryByUser(String user){
 		Collection<Flyweight> col = new ArrayList<Flyweight>();
@@ -43,13 +43,13 @@ public class SecurityMgr {
 			if(ss[0].equals(user)){
 				Flyweight fm = null;
 				if(ss[3].equals("2")){
-					//±íÊ¾ÊÇ×éºÏ
+					//è¡¨ç¤ºæ˜¯ç»„åˆ
 					fm = new UnsharedConcreteFlyweight();
-					//»ñÈ¡ĞèÒª×éºÏµÄÊı¾İ
+					//è·å–éœ€è¦ç»„åˆçš„æ•°æ®
 					String tempSs[] = TestDB.mapDB.get(ss[1]);
 					for(String tempS : tempSs){
 						Flyweight tempFm = FlyweightFactory.getInstance().getFlyweight(tempS);
-						//°ÑÕâ¸ö¶ÔÏó¼ÓÈëµ½×éºÏ¶ÔÏóÖĞ
+						//æŠŠè¿™ä¸ªå¯¹è±¡åŠ å…¥åˆ°ç»„åˆå¯¹è±¡ä¸­
 						fm.add(tempFm);
 					}
 				}else{

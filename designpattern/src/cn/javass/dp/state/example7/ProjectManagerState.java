@@ -1,33 +1,33 @@
 package cn.javass.dp.state.example7;
 
 /**
- * ´¦ÀíÏîÄ¿¾­ÀíµÄÉóºË£¬´¦Àíºó¿ÉÄÜ¶ÔÓ¦²¿ÃÅ¾­ÀíÉóºË¡¢ÉóºË½áÊøÖ®ÖÐµÄÒ»ÖÖ
+ * å¤„ç†é¡¹ç›®ç»ç†çš„å®¡æ ¸ï¼Œå¤„ç†åŽå¯èƒ½å¯¹åº”éƒ¨é—¨ç»ç†å®¡æ ¸ã€å®¡æ ¸ç»“æŸä¹‹ä¸­çš„ä¸€ç§
  */
 public class ProjectManagerState implements LeaveRequestState{	
 	public void doWork(StateMachine request) {
-		//ÏÈ°ÑÒµÎñ¶ÔÏóÔìÐÍ»ØÀ´
+		//å…ˆæŠŠä¸šåŠ¡å¯¹è±¡é€ åž‹å›žæ¥
 		LeaveRequestModel lrm = (LeaveRequestModel)request.getBusinessVO();
 
-		//ÒµÎñ´¦Àí£¬°ÑÉóºË½á¹û±£´æµ½Êý¾Ý¿âÖÐ
+		//ä¸šåŠ¡å¤„ç†ï¼ŒæŠŠå®¡æ ¸ç»“æžœä¿å­˜åˆ°æ•°æ®åº“ä¸­
 		
-		//¸ù¾ÝÑ¡ÔñµÄ½á¹ûºÍÌõ¼þÀ´ÉèÖÃÏÂÒ»²½
-		if("Í¬Òâ".equals(lrm.getResult())){
+		//æ ¹æ®é€‰æ‹©çš„ç»“æžœå’Œæ¡ä»¶æ¥è®¾ç½®ä¸‹ä¸€æ­¥
+		if("åŒæ„".equals(lrm.getResult())){
 			if(lrm.getLeaveDays() > 3){
-				//Èç¹ûÇë¼ÙÌìÊý´óÓÚ3Ìì£¬¶øÇÒÏîÄ¿¾­ÀíÍ¬ÒâÁË£¬¾ÍÌá½»¸ø²¿ÃÅ¾­Àí
+				//å¦‚æžœè¯·å‡å¤©æ•°å¤§äºŽ3å¤©ï¼Œè€Œä¸”é¡¹ç›®ç»ç†åŒæ„äº†ï¼Œå°±æäº¤ç»™éƒ¨é—¨ç»ç†
 				request.setState(new DepManagerState());
 				
-				//Îª²¿ÃÅ¾­ÀíÔö¼ÓÒ»¸ö¹¤×÷				
+				//ä¸ºéƒ¨é—¨ç»ç†å¢žåŠ ä¸€ä¸ªå·¥ä½œ				
 			}else{	
-				//3ÌìÒÔÄÚµÄÇë¼Ù£¬ÓÉÏîÄ¿¾­Àí×öÖ÷,¾Í²»ÓÃÌá½»¸ø²¿ÃÅ¾­ÀíÁË£¬×ªÏòÉóºË½áÊø×´Ì¬
+				//3å¤©ä»¥å†…çš„è¯·å‡ï¼Œç”±é¡¹ç›®ç»ç†åšä¸»,å°±ä¸ç”¨æäº¤ç»™éƒ¨é—¨ç»ç†äº†ï¼Œè½¬å‘å®¡æ ¸ç»“æŸçŠ¶æ€
 				request.setState(new  AuditOverState());
 				
-				//¸øÉêÇëÈËÔö¼ÓÒ»¸ö¹¤×÷£¬ÈÃËû²ì¿´ÉóºË½á¹û
+				//ç»™ç”³è¯·äººå¢žåŠ ä¸€ä¸ªå·¥ä½œï¼Œè®©ä»–å¯Ÿçœ‹å®¡æ ¸ç»“æžœ
 			}			
 		}else{
-			//ÏîÄ¿¾­ÀíÒªÊÇ²»Í¬ÒâµÄ»°£¬Ò²¾Í²»ÓÃÌá½»¸ø²¿ÃÅ¾­ÀíÁË£¬×ªÏòÉóºË½áÊø×´Ì¬
+			//é¡¹ç›®ç»ç†è¦æ˜¯ä¸åŒæ„çš„è¯ï¼Œä¹Ÿå°±ä¸ç”¨æäº¤ç»™éƒ¨é—¨ç»ç†äº†ï¼Œè½¬å‘å®¡æ ¸ç»“æŸçŠ¶æ€
 			request.setState(new  AuditOverState());
 			
-			//¸øÉêÇëÈËÔö¼ÓÒ»¸ö¹¤×÷£¬ÈÃËû²ì¿´ÉóºË½á¹û
+			//ç»™ç”³è¯·äººå¢žåŠ ä¸€ä¸ªå·¥ä½œï¼Œè®©ä»–å¯Ÿçœ‹å®¡æ ¸ç»“æžœ
 		}
 	}	
 }

@@ -2,13 +2,13 @@ package cn.javass.dp.command.example8;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼±¸Òª·¢³öµÄÃüÁî
-		Command cmd = new PrintService("ÍË»¯µÄÃüÁîÄ£Ê½Ê¾Àı");
-		//ÉèÖÃÃüÁî¸ø³ÖÓĞÕß
+		//å‡†å¤‡è¦å‘å‡ºçš„å‘½ä»¤
+		Command cmd = new PrintService("é€€åŒ–çš„å‘½ä»¤æ¨¡å¼ç¤ºä¾‹");
+		//è®¾ç½®å‘½ä»¤ç»™æŒæœ‰è€…
 		Invoker invoker = new Invoker();
 		invoker.setCmd(cmd);
 		
-		//°´ÏÂ°´Å¥£¬ÕæÕıÆô¶¯Ö´ĞĞÃüÁî
+		//æŒ‰ä¸‹æŒ‰é’®ï¼ŒçœŸæ­£å¯åŠ¨æ‰§è¡Œå‘½ä»¤
 		invoker.startPrint();
 	}
 }

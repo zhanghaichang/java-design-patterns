@@ -1,10 +1,10 @@
 package cn.javass.dp.simplefactory.example1;
 /**
- * ¿Í»§¶Ë£º²âÊÔÊ¹ÓÃApi½Ó¿Ú
+ * å®¢æˆ·ç«¯ï¼šæµ‹è¯•ä½¿ç”¨Apiæ¥å£
  */
 public class Client {
 	public static void main(String[] args) {
 		Api api = new Impl();
-		api.test1("¹ş¹ş£¬²»Òª½ôÕÅ£¬Ö»ÊÇ¸ö²âÊÔ¶øÒÑ£¡");
+		api.test1("å“ˆå“ˆï¼Œä¸è¦ç´§å¼ ï¼Œåªæ˜¯ä¸ªæµ‹è¯•è€Œå·²ï¼");
 	}
 }

@@ -1,16 +1,16 @@
 package cn.javass.dp.singleton.example6;
 
 public class Singleton {
-	//4£º¶¨ÒåÒ»¸ö¾²Ì¬±äÁ¿À´´æ´¢´´½¨ºÃµÄÀàÊµÀý
-	//Ö±½ÓÔÚÕâÀï´´½¨ÀàÊµÀý£¬Ö»»á´´½¨Ò»´Î
+	//4ï¼šå®šä¹‰ä¸€ä¸ªé™æ€å˜é‡æ¥å­˜å‚¨åˆ›å»ºå¥½çš„ç±»å®žä¾‹
+	//ç›´æŽ¥åœ¨è¿™é‡Œåˆ›å»ºç±»å®žä¾‹ï¼Œåªä¼šåˆ›å»ºä¸€æ¬¡
 	private static Singleton instance = new Singleton();
-	//1£ºË½ÓÐ»¯¹¹Ôì·½·¨£¬ºÃÔÚÄÚ²¿¿ØÖÆ´´½¨ÊµÀýµÄÊýÄ¿
+	//1ï¼šç§æœ‰åŒ–æž„é€ æ–¹æ³•ï¼Œå¥½åœ¨å†…éƒ¨æŽ§åˆ¶åˆ›å»ºå®žä¾‹çš„æ•°ç›®
 	private Singleton(){		
 	}
-	//2£º¶¨ÒåÒ»¸ö·½·¨À´Îª¿Í»§¶ËÌá¹©ÀàÊµÀý
-	//3£ºÕâ¸ö·½·¨ÐèÒª¶¨Òå³ÉÀà·½·¨£¬Ò²¾ÍÊÇÒª¼Óstatic
+	//2ï¼šå®šä¹‰ä¸€ä¸ªæ–¹æ³•æ¥ä¸ºå®¢æˆ·ç«¯æä¾›ç±»å®žä¾‹
+	//3ï¼šè¿™ä¸ªæ–¹æ³•éœ€è¦å®šä¹‰æˆç±»æ–¹æ³•ï¼Œä¹Ÿå°±æ˜¯è¦åŠ static
 	public static Singleton getInstance(){
-		//5£ºÖ±½ÓÊ¹ÓÃÒÑ¾­´´½¨ºÃµÄÊµÀý
+		//5ï¼šç›´æŽ¥ä½¿ç”¨å·²ç»åˆ›å»ºå¥½çš„å®žä¾‹
 		return instance;
 	}
 }

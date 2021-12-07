@@ -1,6 +1,6 @@
 package cn.javass.dp.command.example5;
 /**
- * ÃüÁî¶ÔÏó£¬±±¾©¿¾Ñ¼
+ * å‘½ä»¤å¯¹è±¡ï¼ŒåŒ—äº¬çƒ¤é¸­
  */
 public class DuckCommand implements Command{
 	private CookApi cookApi = null;
@@ -9,6 +9,6 @@ public class DuckCommand implements Command{
 	}
 	
 	public void execute() {
-		this.cookApi.cook("±±¾©¿¾Ñ¼");
+		this.cookApi.cook("åŒ—äº¬çƒ¤é¸­");
 	}
 }

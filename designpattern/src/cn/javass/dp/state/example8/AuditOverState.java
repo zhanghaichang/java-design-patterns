@@ -1,12 +1,12 @@
 package cn.javass.dp.state.example8;
 
 /**
- * 处理审核结束的类
+ * 澶勭悊瀹℃牳缁撴潫鐨勭被
  */
 public class AuditOverState implements LeaveRequestState{
 	public void doWork(StateMachine request) {
-		//先把业务对象造型回来
+		//鍏堟妸涓氬姟瀵硅薄閫犲瀷鍥炴潵
 		LeaveRequestModel lrm = (LeaveRequestModel)request.getBusinessVO();
-		System.out.println(lrm.getUser()+"，你的请假申请已经审核结束，结果是："+lrm.getResult());
+		System.out.println(lrm.getUser()+"锛屼綘鐨勮鍋囩敵璇峰凡缁忓鏍哥粨鏉燂紝缁撴灉鏄細"+lrm.getResult());
 	}
 }

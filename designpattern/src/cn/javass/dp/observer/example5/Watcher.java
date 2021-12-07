@@ -1,16 +1,16 @@
 package cn.javass.dp.observer.example5;
 /**
- * ¾ßÌåµÄ¹Û²ìÕßÊµÏÖ
+ * å…·ä½“çš„è§‚å¯Ÿè€…å®ç°
  */
 public class Watcher implements WatcherObserver{
 	/**
-	 * Ö°Îñ
+	 * èŒåŠ¡
 	 */
 	private String job;
 	
 	public void update(WaterQualitySubject subject) {
-		//ÕâÀï²ÉÓÃµÄÊÇÀ­µÄ·½Ê½
-		System.out.println(job+"»ñÈ¡µ½Í¨Öª£¬µ±Ç°ÎÛÈ¾¼¶±ğÎª£º"+subject.getPolluteLevel());
+		//è¿™é‡Œé‡‡ç”¨çš„æ˜¯æ‹‰çš„æ–¹å¼
+		System.out.println(job+"è·å–åˆ°é€šçŸ¥ï¼Œå½“å‰æ±¡æŸ“çº§åˆ«ä¸ºï¼š"+subject.getPolluteLevel());
 	}
 	
 	public String getJob() {

@@ -2,15 +2,15 @@ package cn.javass.dp.iterator.example5;
 
 import java.util.Iterator;
 /**
- * ÓÃÀ´ÊµÏÖ·ÃÎÊÊı×éµÄµü´ú½Ó¿Ú
+ * ç”¨æ¥å®ç°è®¿é—®æ•°ç»„çš„è¿­ä»£æ¥å£
  */
 public class ArrayIteratorImpl implements Iterator{
 	/**
-	 * ÓÃÀ´´æ·Å±»µü´úµÄ¾ÛºÏ¶ÔÏó
+	 * ç”¨æ¥å­˜æ”¾è¢«è¿­ä»£çš„èšåˆå¯¹è±¡
 	 */
 	private SalaryManager aggregate = null;
 	/**
-	 * ÓÃÀ´¼ÇÂ¼µ±Ç°µü´úµ½µÄÎ»ÖÃË÷Òı
+	 * ç”¨æ¥è®°å½•å½“å‰è¿­ä»£åˆ°çš„ä½ç½®ç´¢å¼•
 	 */
 	private int index = 0;
 	
@@ -20,7 +20,7 @@ public class ArrayIteratorImpl implements Iterator{
 	
 	
 	public boolean hasNext() {
-		//ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÔªËØ
+		//åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä¸ªå…ƒç´ 
 		if(aggregate!=null && index<aggregate.size()){
 			return true;
 		}
@@ -32,7 +32,7 @@ public class ArrayIteratorImpl implements Iterator{
 		Object retObj = null;
 		if(hasNext()){
 			retObj = aggregate.get(index);
-			//Ã¿È¡×ßÒ»¸öÖµ£¬¾Í°ÑÒÑ·ÃÎÊË÷Òı¼Ó1
+			//æ¯å–èµ°ä¸€ä¸ªå€¼ï¼Œå°±æŠŠå·²è®¿é—®ç´¢å¼•åŠ 1
 			index++;
 		}
 		return retObj;
@@ -40,6 +40,6 @@ public class ArrayIteratorImpl implements Iterator{
 
 	
 	public void remove() {
-		//ÔİÊ±¿ÉÒÔ²»ÊµÏÖ		
+		//æš‚æ—¶å¯ä»¥ä¸å®ç°		
 	}
 }

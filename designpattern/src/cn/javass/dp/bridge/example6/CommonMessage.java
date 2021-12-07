@@ -1,6 +1,6 @@
 package cn.javass.dp.bridge.example6;
 /**
- * ÆÕÍ¨ÏûÏ¢
+ * æ™®é€šæ¶ˆæ¯
  */
 public class CommonMessage extends AbstractMessage{
 	public CommonMessage(MessageImplementor impl) {
@@ -8,7 +8,7 @@ public class CommonMessage extends AbstractMessage{
 	}
 
 	public void sendMessage(String message, String toUser) {
-		//¶ÔÓÚÆÕÍ¨ÏûÏ¢£¬Ê²Ã´¶¼²»¸É£¬Ö±½Óµ÷ÓÃ¸¸ÀàµÄ·½·¨£¬°ÑÏûÏ¢·¢ËÍ³öÈ¥¾Í¿ÉÒÔÁË
+		//å¯¹äºæ™®é€šæ¶ˆæ¯ï¼Œä»€ä¹ˆéƒ½ä¸å¹²ï¼Œç›´æ¥è°ƒç”¨çˆ¶ç±»çš„æ–¹æ³•ï¼ŒæŠŠæ¶ˆæ¯å‘é€å‡ºå»å°±å¯ä»¥äº†
 		super.sendMessage(message, toUser);
 	}	
 }

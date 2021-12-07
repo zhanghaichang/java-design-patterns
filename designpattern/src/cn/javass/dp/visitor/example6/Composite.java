@@ -1,35 +1,35 @@
 package cn.javass.dp.visitor.example6;
 import java.util.*;
 /**
- * ×éºÏ¶ÔÏó£¬¿ÉÒÔ°üº¬ÆäËü×éºÏ¶ÔÏó»òÕßÒ¶×Ó¶ÔÏó£¬
- * Ïàµ±ÓÚ·ÃÎÊÕßÄ£Ê½µÄ¾ßÌåElementÊµÏÖ¶ÔÏó
+ * ç»„åˆå¯¹è±¡ï¼Œå¯ä»¥åŒ…å«å…¶å®ƒç»„åˆå¯¹è±¡æˆ–è€…å¶å­å¯¹è±¡ï¼Œ
+ * ç›¸å½“äºè®¿é—®è€…æ¨¡å¼çš„å…·ä½“Elementå®ç°å¯¹è±¡
  */
 public class Composite extends Component{
 	public void accept(Visitor visitor) {
-		//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
+		//å›è°ƒè®¿é—®è€…å¯¹è±¡çš„ç›¸åº”æ–¹æ³•
 		visitor.visitComposite(this);
 	}
 	/**
-	 * ÓÃÀ´´æ´¢×éºÏ¶ÔÏóÖĞ°üº¬µÄ×Ó×é¼ş¶ÔÏó
+	 * ç”¨æ¥å­˜å‚¨ç»„åˆå¯¹è±¡ä¸­åŒ…å«çš„å­ç»„ä»¶å¯¹è±¡
 	 */
 	private List<Component> childComponents = new ArrayList<Component>();
 	public List<Component> getChildComponents() {
 		return childComponents;
 	}
 	/**
-	 * ×éºÏ¶ÔÏóµÄÃû×Ö
+	 * ç»„åˆå¯¹è±¡çš„åå­—
 	 */
 	private String name = "";
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë×éºÏ¶ÔÏóµÄÃû×Ö
-	 * @param name ×éºÏ¶ÔÏóµÄÃû×Ö
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥ç»„åˆå¯¹è±¡çš„åå­—
+	 * @param name ç»„åˆå¯¹è±¡çš„åå­—
 	 */
 	public Composite(String name){
 		this.name = name;
 	}
 	
 	public void addChild(Component child) {
-		//ÑÓ³Ù³õÊ¼»¯
+		//å»¶è¿Ÿåˆå§‹åŒ–
 		if (childComponents == null) {
 			childComponents = new ArrayList<Component>();
 		}

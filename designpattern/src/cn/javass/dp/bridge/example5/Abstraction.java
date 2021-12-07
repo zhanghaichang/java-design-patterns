@@ -1,22 +1,22 @@
 package cn.javass.dp.bridge.example5;
 
 /**
- * ¶¨Òå³éÏó²¿·ÖµÄ½Ó¿Ú
+ * å®šä¹‰æŠ½è±¡éƒ¨åˆ†çš„æ¥å£
  */
 public abstract class Abstraction {
 	/**
-	 * ³ÖÓĞÒ»¸öÊµÏÖ²¿·ÖµÄ¶ÔÏó
+	 * æŒæœ‰ä¸€ä¸ªå®ç°éƒ¨åˆ†çš„å¯¹è±¡
 	 */
 	protected Implementor impl;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÊµÏÖ²¿·ÖµÄ¶ÔÏó 
-	 * @param impl ÊµÏÖ²¿·ÖµÄ¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥å®ç°éƒ¨åˆ†çš„å¯¹è±¡ 
+	 * @param impl å®ç°éƒ¨åˆ†çš„å¯¹è±¡
 	 */
 	public Abstraction(Implementor impl){
 		this.impl = impl;
 	}
 	/**
-	 * Ê¾Àı²Ù×÷£¬ÊµÏÖÒ»¶¨µÄ¹¦ÄÜ£¬¿ÉÄÜĞèÒª×ªµ÷ÊµÏÖ²¿·ÖµÄ¾ßÌåÊµÏÖ·½·¨
+	 * ç¤ºä¾‹æ“ä½œï¼Œå®ç°ä¸€å®šçš„åŠŸèƒ½ï¼Œå¯èƒ½éœ€è¦è½¬è°ƒå®ç°éƒ¨åˆ†çš„å…·ä½“å®ç°æ–¹æ³•
 	 */
 	public void operation() {
 		impl.operationImpl();

@@ -1,31 +1,31 @@
 package cn.javass.dp.visitor.example6;
 
 /**
- * ¾ßÌåµÄ·ÃÎÊÕß£¬ÊµÏÖ£ºÊä³ö×éºÏ¶ÔÏó×ÔÉíµÄ½á¹¹
+ * å…·ä½“çš„è®¿é—®è€…ï¼Œå®ç°ï¼šè¾“å‡ºç»„åˆå¯¹è±¡è‡ªèº«çš„ç»“æ„
 */
 public class PrintStructVisitor implements Visitor {
 	/**
-	 * ÓÃÀ´ÀÛ¼Æ¼ÇÂ¼¶ÔÏóĞèÒªÏòºóÍËµÄ¸ñ
+	 * ç”¨æ¥ç´¯è®¡è®°å½•å¯¹è±¡éœ€è¦å‘åé€€çš„æ ¼
 	 */
 	private String preStr = "";
 	public void visitComposite(Composite composite) {
-		//ÏÈ°Ñ×Ô¼ºÊä³öÈ¥
+		//å…ˆæŠŠè‡ªå·±è¾“å‡ºå»
 		System.out.println(preStr+"+"+composite.getName());
-		//Èç¹û»¹°üº¬ÓĞ×Ó×é¼ş£¬ÄÇÃ´¾ÍÊä³öÕâĞ©×Ó×é¼ş¶ÔÏó
+		//å¦‚æœè¿˜åŒ…å«æœ‰å­ç»„ä»¶ï¼Œé‚£ä¹ˆå°±è¾“å‡ºè¿™äº›å­ç»„ä»¶å¯¹è±¡
 		if(composite.getChildComponents()!=null){
-			//È»ºóÌí¼ÓÒ»¸ö¿Õ¸ñ£¬±íÊ¾ÏòºóËõ½øÒ»¸ö¿Õ¸ñ
+			//ç„¶åæ·»åŠ ä¸€ä¸ªç©ºæ ¼ï¼Œè¡¨ç¤ºå‘åç¼©è¿›ä¸€ä¸ªç©ºæ ¼
 			preStr+=" ";		
-			//Êä³öµ±Ç°¶ÔÏóµÄ×Ó¶ÔÏóÁË
+			//è¾“å‡ºå½“å‰å¯¹è±¡çš„å­å¯¹è±¡äº†
 			for(Component c : composite.getChildComponents()){
-				//µİ¹éÊä³öÃ¿¸ö×Ó¶ÔÏó
+				//é€’å½’è¾“å‡ºæ¯ä¸ªå­å¯¹è±¡
 				c.accept(this);
 			}
-			//°ÑÑ­»·×Ó¶ÔÏóËù¶à¼ÓÈëµÄÒ»¸öÍË¸ñ¸øÈ¥µô
+			//æŠŠå¾ªç¯å­å¯¹è±¡æ‰€å¤šåŠ å…¥çš„ä¸€ä¸ªé€€æ ¼ç»™å»æ‰
 			preStr = preStr.substring(0,preStr.length()-1);
 		}
 	}
 	public void visitLeaf(Leaf leaf) {
-		//·ÃÎÊµ½Ò¶×Ó¶ÔÏóµÄÊı¾İ		
+		//è®¿é—®åˆ°å¶å­å¯¹è±¡çš„æ•°æ®		
 		System.out.println(preStr+"-"+leaf.getName());
 	}
 }

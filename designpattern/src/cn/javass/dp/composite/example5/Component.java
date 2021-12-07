@@ -2,11 +2,11 @@ package cn.javass.dp.composite.example5;
 
 import java.util.Iterator;
 /**
- * ³éÏóµÄ×é¼ş¶ÔÏó£¬°²È«ĞÔµÄÊµÏÖ·½Ê½
+ * æŠ½è±¡çš„ç»„ä»¶å¯¹è±¡ï¼Œå®‰å…¨æ€§çš„å®ç°æ–¹å¼
  */
 public abstract class Component {
 	/**
-	 * Êä³ö×é¼ş×ÔÉíµÄÃû³Æ
+	 * è¾“å‡ºç»„ä»¶è‡ªèº«çš„åç§°
 	 */
 	public abstract void printStruct(String preStr);
 }

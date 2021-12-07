@@ -2,7 +2,7 @@ package cn.javass.dp.singleton.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨¶ÁÈ¡Ó¦ÓÃÅäÖÃµÄ¶ÔÏó
+		//åˆ›å»ºè¯»å–åº”ç”¨é…ç½®çš„å¯¹è±¡
 		AppConfig config = AppConfig.getInstance();
 		
 		String paramA = config.getParameterA();

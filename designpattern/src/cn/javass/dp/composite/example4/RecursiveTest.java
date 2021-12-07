@@ -2,11 +2,11 @@ package cn.javass.dp.composite.example4;
 
 public class RecursiveTest {
 	/**
-	 * Ê¾Òâµİ¹éËã·¨£¬Çó½×³Ë¡£ÕâÀïÖ»ÊÇ¼òµ¥µÄÊµÏÖ£¬Ö»ÄÜÊµÏÖÇóÊıÖµ½ÏĞ¡µÄ½×³Ë£¬
-	 * ¶ÔÓÚÊı¾İ±È½Ï´óµÄ½×³Ë£¬±ÈÈçÇó100µÄ½×³ËÓ¦¸Ã²ÉÓÃjava.math.BigDecimal
-	 * »òÊÇjava.math.BigInteger
-	 * @param a Çó½×³ËµÄÊıÖµ
-	 * @return ¸ÃÊıÖµµÄ½×³ËÖµ
+	 * ç¤ºæ„é€’å½’ç®—æ³•ï¼Œæ±‚é˜¶ä¹˜ã€‚è¿™é‡Œåªæ˜¯ç®€å•çš„å®ç°ï¼Œåªèƒ½å®ç°æ±‚æ•°å€¼è¾ƒå°çš„é˜¶ä¹˜ï¼Œ
+	 * å¯¹äºæ•°æ®æ¯”è¾ƒå¤§çš„é˜¶ä¹˜ï¼Œæ¯”å¦‚æ±‚100çš„é˜¶ä¹˜åº”è¯¥é‡‡ç”¨java.math.BigDecimal
+	 * æˆ–æ˜¯java.math.BigInteger
+	 * @param a æ±‚é˜¶ä¹˜çš„æ•°å€¼
+	 * @return è¯¥æ•°å€¼çš„é˜¶ä¹˜å€¼
 	 */
 	public int recursive(int a){
 		if(a==1){
@@ -18,6 +18,6 @@ public class RecursiveTest {
 	public static void main(String[] args) {
 		RecursiveTest test = new RecursiveTest();
 		int result = test.recursive(5);
-		System.out.println("5µÄ½×³Ë="+result);
+		System.out.println("5çš„é˜¶ä¹˜="+result);
 	}
 }

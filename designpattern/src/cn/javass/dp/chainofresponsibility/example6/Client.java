@@ -2,15 +2,15 @@ package cn.javass.dp.chainofresponsibility.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨ÒµÎñ¶ÔÏó
+		//åˆ›å»ºä¸šåŠ¡å¯¹è±¡
 		GoodsSaleEbo ebo = new GoodsSaleEbo();
-		//×¼±¸²âÊÔÊı¾İ
+		//å‡†å¤‡æµ‹è¯•æ•°æ®
 		SaleModel saleModel = new SaleModel();
-		saleModel.setGoods("ÕÅÑ§ÓÑ»³¾É¾­µä");
+		saleModel.setGoods("å¼ å­¦å‹æ€€æ—§ç»å…¸");
 		saleModel.setSaleNum(10);
 		
-		//µ÷ÓÃÒµÎñ¹¦ÄÜ
-		ebo.sale("Ğ¡Àî", "ÕÅÈı", saleModel);
-		ebo.sale("Ğ¡ÕÅ", "ÀîËÄ", saleModel);
+		//è°ƒç”¨ä¸šåŠ¡åŠŸèƒ½
+		ebo.sale("å°æ", "å¼ ä¸‰", saleModel);
+		ebo.sale("å°å¼ ", "æå››", saleModel);
 	}
 }

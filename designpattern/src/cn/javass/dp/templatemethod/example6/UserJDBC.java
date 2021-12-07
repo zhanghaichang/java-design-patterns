@@ -6,11 +6,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 /**
- * ¾ßÌåµÄÊµÏÖÓÃ»§¹ÜÀíµÄÔöÉ¾¸Ä²é¹¦ÄÜ
+ * å…·ä½“çš„å®žçŽ°ç”¨æˆ·ç®¡ç†çš„å¢žåˆ æ”¹æŸ¥åŠŸèƒ½
  */
 public class UserJDBC extends JDBCTemplate{	
 	protected String getMainSql(int type) {
-		//¸ù¾Ý²Ù×÷ÀàÐÍ£¬·µ»ØÏàÓ¦µÄÖ÷¸ÉsqlÓï¾ä
+		//æ ¹æ®æ“ä½œç±»åž‹ï¼Œè¿”å›žç›¸åº”çš„ä¸»å¹²sqlè¯­å¥
 		String sql = "";
 		if(type == TYPE_CREATE){
 			sql = "insert into tbl_testuser values(?,?,?)";
@@ -25,7 +25,7 @@ public class UserJDBC extends JDBCTemplate{
 	}
 	protected void setUpdateSqlValue(int type, PreparedStatement pstmt,
 			Object obj) throws Exception{
-		//ÉèÖÃÔö¡¢É¾¡¢¸Ä²Ù×÷µÄsqlÖÐ"?"¶ÔÓ¦µÄÖµ
+		//è®¾ç½®å¢žã€åˆ ã€æ”¹æ“ä½œçš„sqlä¸­"?"å¯¹åº”çš„å€¼
 		if(type == TYPE_CREATE){
 			this.setCreateValue(pstmt, (UserModel)obj);
 		}else if(type == TYPE_DELETE){
@@ -50,15 +50,15 @@ public class UserJDBC extends JDBCTemplate{
 		UserQueryModel uqm = (UserQueryModel)qm;
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(sql);
-		//¾ø¶ÔÆ¥Åä
+		//ç»å¯¹åŒ¹é…
 		if(uqm.getUuid()!=null && uqm.getUuid().trim().length()>0){
 			buffer.append(" and uuid=? ");
 		}
-		//Ä£ºýÆ¥Åä
+		//æ¨¡ç³ŠåŒ¹é…
 		if(uqm.getName()!=null && uqm.getName().trim().length()>0){
 			buffer.append(" and name like ? ");
 		}
-		//Çø¼äÆ¥Åä
+		//åŒºé—´åŒ¹é…
 		if(uqm.getAge() > 0){
 			buffer.append(" and age >=? ");
 		}

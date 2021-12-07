@@ -2,25 +2,25 @@ package cn.javass.dp.observer.example3;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨Ò»¸ö±¨Ö½£¬×÷Îª±»¹Û²ìÕß
+		//åˆ›å»ºä¸€ä¸ªæŠ¥çº¸ï¼Œä½œä¸ºè¢«è§‚å¯Ÿè€…
 		NewsPaper subject = new NewsPaper();
 		
-		//´´½¨ÔÄ¶ÁÕß£¬Ò²¾ÍÊÇ¹Û²ìÕß
+		//åˆ›å»ºé˜…è¯»è€…ï¼Œä¹Ÿå°±æ˜¯è§‚å¯Ÿè€…
 		Reader reader1 = new Reader();
-		reader1.setName("ÕÅÈı");
+		reader1.setName("å¼ ä¸‰");
 		
 		Reader reader2 = new Reader();
-		reader2.setName("ÀîËÄ");
+		reader2.setName("æå››");
 		
 		Reader reader3 = new Reader();
-		reader3.setName("ÍõÎå");
+		reader3.setName("ç‹äº”");
 		
-		//×¢²áÔÄ¶ÁÕß
+		//æ³¨å†Œé˜…è¯»è€…
 		subject.attach(reader1);
 		subject.attach(reader2);
 		subject.attach(reader3);
 		
-		//Òª³ö±¨Ö½À²
-		subject.setContent("±¾ÆÚÄÚÈİÊÇ¹Û²ìÕßÄ£Ê½");
+		//è¦å‡ºæŠ¥çº¸å•¦
+		subject.setContent("æœ¬æœŸå†…å®¹æ˜¯è§‚å¯Ÿè€…æ¨¡å¼");
 	}
 }

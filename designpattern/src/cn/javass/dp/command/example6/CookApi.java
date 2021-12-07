@@ -1,12 +1,12 @@
 package cn.javass.dp.command.example6;
 /**
- * ³øÊ¦µÄ½Ó¿Ú
+ * å¨å¸ˆçš„æ¥å£
  */
 public interface CookApi {
 	/**
-	 * Ê¾Òâ£¬×ö²ËµÄ·½·¨
-	 * @param tableNum µã²ËµÄ×ÀºÅ
-	 * @param name ²ËÃû
+	 * ç¤ºæ„ï¼Œåšèœçš„æ–¹æ³•
+	 * @param tableNum ç‚¹èœçš„æ¡Œå·
+	 * @param name èœå
 	 */
 	public void cook(int tableNum,String name);
 }

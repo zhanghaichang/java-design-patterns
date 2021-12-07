@@ -5,15 +5,15 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * ÓÃÀ´ÊµÏÖ·­Ò³·ÃÎÊ¾ÛºÏÔªËØµÄµü´ú½Ó¿Ú
+ * ç”¨æ¥å®ç°ç¿»é¡µè®¿é—®èšåˆå…ƒç´ çš„è¿­ä»£æ¥å£
  */
 public class ArrayIteratorImpl implements AggregationIterator{
 	/**
-	 * ÓÃÀ´´æ·Å±»µü´úµÄÊı×é
+	 * ç”¨æ¥å­˜æ”¾è¢«è¿­ä»£çš„æ•°ç»„
 	 */
 	private PayModel[] pms = null;
 	/**
-	 * ÓÃÀ´¼ÇÂ¼µ±Ç°µü´úµ½µÄÎ»ÖÃË÷Òı
+	 * ç”¨æ¥è®°å½•å½“å‰è¿­ä»£åˆ°çš„ä½ç½®ç´¢å¼•
 	 */
 	private int index = 0;
 	
@@ -22,7 +22,7 @@ public class ArrayIteratorImpl implements AggregationIterator{
 	}
 	
 	public boolean hasNext() {
-		//ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÔªËØ
+		//åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä¸ªå…ƒç´ 
 		if(pms!=null && index<=(pms.length-1)){
 			return true;
 		}
@@ -35,7 +35,7 @@ public class ArrayIteratorImpl implements AggregationIterator{
 		int count=0;
 		while(hasNext() && count<num){
 			col.add(pms[index]);
-			//Ã¿È¡×ßÒ»¸öÖµ£¬¾Í°ÑÒÑ·ÃÎÊË÷Òı¼Ó1
+			//æ¯å–èµ°ä¸€ä¸ªå€¼ï¼Œå°±æŠŠå·²è®¿é—®ç´¢å¼•åŠ 1
 			index++;
 			count++;
 		}
@@ -54,9 +54,9 @@ public class ArrayIteratorImpl implements AggregationIterator{
 	public Collection previous(int num){
 		Collection col = new ArrayList();
 		int count=0;
-		//¼òµ¥µÄÊµÏÖ¾ÍÊÇ°ÑË÷ÒıÍË»ØÈ¥num¸ö£¬È»ºóÔÙÈ¡Öµ¡£
-		//µ«ÊÂÊµÉÏÕâÖÖÊµÏÖÊÇÓĞ¿ÉÄÜ¶àÍË»ØÈ¥Êı¾İµÄ£¬±ÈÈç£ºÒÑ¾­µ½ÁË×îºóÒ»Ò³£¬¶øÇÒ×îºóÒ»Ò³µÄÊı¾İ²»¹»Ò»Ò³µÄÊı¾İ£¬ÄÇÃ´ÍË»ØÈ¥num¸öË÷Òı¾ÍÍË¶àÁË
-		//ÎªÁËÊ¾ÀıµÄ¼ò½àĞÔ£¬ÕâÀï¾Í²»È¥´¦ÀíÁË
+		//ç®€å•çš„å®ç°å°±æ˜¯æŠŠç´¢å¼•é€€å›å»numä¸ªï¼Œç„¶åå†å–å€¼ã€‚
+		//ä½†äº‹å®ä¸Šè¿™ç§å®ç°æ˜¯æœ‰å¯èƒ½å¤šé€€å›å»æ•°æ®çš„ï¼Œæ¯”å¦‚ï¼šå·²ç»åˆ°äº†æœ€åä¸€é¡µï¼Œè€Œä¸”æœ€åä¸€é¡µçš„æ•°æ®ä¸å¤Ÿä¸€é¡µçš„æ•°æ®ï¼Œé‚£ä¹ˆé€€å›å»numä¸ªç´¢å¼•å°±é€€å¤šäº†
+		//ä¸ºäº†ç¤ºä¾‹çš„ç®€æ´æ€§ï¼Œè¿™é‡Œå°±ä¸å»å¤„ç†äº†
 		index = index - num;
 		while(hasPrevious() && count<num){
 			col.add(pms[index]);

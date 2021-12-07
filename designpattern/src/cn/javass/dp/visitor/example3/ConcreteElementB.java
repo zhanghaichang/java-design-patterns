@@ -1,17 +1,17 @@
 package cn.javass.dp.visitor.example3;
 /**
- * ¾ßÌåÔªËØµÄÊµÏÖ¶ÔÏó
+ * å…·ä½“å…ƒç´ çš„å®ç°å¯¹è±¡
  */
 public class ConcreteElementB extends Element {
 	public void accept(Visitor visitor) {
-		//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
+		//å›è°ƒè®¿é—®è€…å¯¹è±¡çš„ç›¸åº”æ–¹æ³•
 		visitor.visitConcreteElementB(this);
 	}
 	/**
-	 * Ê¾Àı·½·¨£¬±íÊ¾ÔªËØÒÑÓĞµÄ¹¦ÄÜÊµÏÖ
+	 * ç¤ºä¾‹æ–¹æ³•ï¼Œè¡¨ç¤ºå…ƒç´ å·²æœ‰çš„åŠŸèƒ½å®ç°
 	 */
 	public void opertionB(){
-		//ÒÑÓĞµÄ¹¦ÄÜÊµÏÖ
+		//å·²æœ‰çš„åŠŸèƒ½å®ç°
 	}
 }
 

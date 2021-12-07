@@ -1,14 +1,14 @@
 package cn.javass.dp.prototype.example7;
 /**
- * ²úÆ·¶ÔÏó
+ * äº§å“å¯¹è±¡
  */
 public class Product implements Cloneable{
 	/**
-	 * ²úÆ·±àºÅ
+	 * äº§å“ç¼–å·
 	 */
 	private String productId;	
 	/**
-	 * ²úÆ·Ãû³Æ
+	 * äº§å“åç§°
 	 */
 	private String name;
 	
@@ -26,7 +26,7 @@ public class Product implements Cloneable{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "²úÆ·±àºÅ="+this.productId+"£¬²úÆ·Ãû³Æ="+this.name;
+		return "äº§å“ç¼–å·="+this.productId+"ï¼Œäº§å“åç§°="+this.name;
 	}
 	public Object clone() {
 		Object obj = null;

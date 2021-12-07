@@ -1,14 +1,14 @@
 package cn.javass.dp.decorator.example3;
 
 /**
- * ×°ÊÎÆ÷µÄ¾ßÌåÊµÏÖ¶ÔÏó£¬Ïò×é¼ş¶ÔÏóÌí¼ÓÖ°Ôğ
+ * è£…é¥°å™¨çš„å…·ä½“å®ç°å¯¹è±¡ï¼Œå‘ç»„ä»¶å¯¹è±¡æ·»åŠ èŒè´£
  */
 public class ConcreteDecoratorA extends Decorator {
 	public ConcreteDecoratorA(Component component) {
 		super(component);
 	}
 	/**
-	 * Ìí¼ÓµÄ×´Ì¬
+	 * æ·»åŠ çš„çŠ¶æ€
 	 */
 	private String addedState;
 	
@@ -21,8 +21,8 @@ public class ConcreteDecoratorA extends Decorator {
 	}
 
 	public void operation() {
-		//µ÷ÓÃ¸¸ÀàµÄ·½·¨£¬¿ÉÒÔÔÚµ÷ÓÃÇ°ºóÖ´ĞĞÒ»Ğ©¸½¼Ó¶¯×÷
-		//ÔÚÕâÀï½øĞĞ´¦ÀíµÄÊ±ºò£¬¿ÉÒÔÊ¹ÓÃÌí¼ÓµÄ×´Ì¬
+		//è°ƒç”¨çˆ¶ç±»çš„æ–¹æ³•ï¼Œå¯ä»¥åœ¨è°ƒç”¨å‰åæ‰§è¡Œä¸€äº›é™„åŠ åŠ¨ä½œ
+		//åœ¨è¿™é‡Œè¿›è¡Œå¤„ç†çš„æ—¶å€™ï¼Œå¯ä»¥ä½¿ç”¨æ·»åŠ çš„çŠ¶æ€
 		super.operation();
 	}
 }

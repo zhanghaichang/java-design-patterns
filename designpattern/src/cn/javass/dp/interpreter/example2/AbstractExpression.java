@@ -1,12 +1,12 @@
 package cn.javass.dp.interpreter.example2;
 
 /**
- * ³éÏó±í´ïÊ½
+ * æŠ½è±¡è¡¨è¾¾å¼
  */
 public abstract class AbstractExpression {
 	/**
-	 * ½âÊÍµÄ²Ù×÷
-	 * @param ctx ÉÏÏÂÎÄ¶ÔÏó
+	 * è§£é‡Šçš„æ“ä½œ
+	 * @param ctx ä¸Šä¸‹æ–‡å¯¹è±¡
 	 */
 	public abstract void interpret(Context ctx);
 }

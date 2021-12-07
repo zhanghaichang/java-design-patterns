@@ -1,6 +1,6 @@
 package cn.javass.dp.chainofresponsibility.example5;
 /**
- * ÊµÏÖ×Ü¾­Àí´¦Àí¾Û²Í·ÑÓÃÉêÇëµÄ¶ÔÏó 
+ * å®ç°æ€»ç»ç†å¤„ç†èšé¤è´¹ç”¨ç”³è¯·çš„å¯¹è±¡ 
  */
 public class GeneralManager extends Handler{
 	public Object handleRequest(RequestModel rm){
@@ -11,21 +11,21 @@ public class GeneralManager extends Handler{
 		}
 	}
 	private Object handleFeeRequest(RequestModel rm) {
-		//ÏÈ°ÑÍ¨ÓÃµÄ¶ÔÏóÔìĞÍ»ØÀ´
+		//å…ˆæŠŠé€šç”¨çš„å¯¹è±¡é€ å‹å›æ¥
 		FeeRequestModel frm = (FeeRequestModel)rm;
 		String str = "";
-		//×Ü¾­ÀíµÄÈ¨ÏŞºÜ´ó£¬Ö»ÒªÇëÇóµ½ÁËÕâÀï£¬Ëû¶¼¿ÉÒÔ´¦Àí
+		//æ€»ç»ç†çš„æƒé™å¾ˆå¤§ï¼Œåªè¦è¯·æ±‚åˆ°äº†è¿™é‡Œï¼Œä»–éƒ½å¯ä»¥å¤„ç†
 		if(frm.getFee() >= 1000){
-			//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâĞ¡ÀîµÄ
-			if("Ğ¡Àî".equals(frm.getUser())){
-				str = "×Ü¾­ÀíÍ¬Òâ"+frm.getUser()+"¾Û²Í·ÑÓÃ"+frm.getFee()+"ÔªµÄÇëÇó";
+			//ä¸ºäº†æµ‹è¯•ï¼Œç®€å•ç‚¹ï¼ŒåªåŒæ„å°æçš„
+			if("å°æ".equals(frm.getUser())){
+				str = "æ€»ç»ç†åŒæ„"+frm.getUser()+"èšé¤è´¹ç”¨"+frm.getFee()+"å…ƒçš„è¯·æ±‚";
 			}else{
-				//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
-				str = "×Ü¾­Àí²»Í¬Òâ"+frm.getUser()+"¾Û²Í·ÑÓÃ"+frm.getFee()+"ÔªµÄÇëÇó";
+				//å…¶ä»–äººä¸€å¾‹ä¸åŒæ„
+				str = "æ€»ç»ç†ä¸åŒæ„"+frm.getUser()+"èšé¤è´¹ç”¨"+frm.getFee()+"å…ƒçš„è¯·æ±‚";
 			}
 			return str;
 		}else{
-			//Èç¹û»¹ÓĞºó¼ÌµÄ´¦Àí¶ÔÏó£¬¼ÌĞø´«µİ
+			//å¦‚æœè¿˜æœ‰åç»§çš„å¤„ç†å¯¹è±¡ï¼Œç»§ç»­ä¼ é€’
 			if(this.successor!=null){
 				return successor.handleRequest(rm);
 			}

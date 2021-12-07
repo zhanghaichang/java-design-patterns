@@ -1,13 +1,13 @@
 package cn.javass.dp.strategy.example5;
 /**
- * Ö§¸¶µ½ÒøĞĞ¿¨
+ * æ”¯ä»˜åˆ°é“¶è¡Œå¡
  */
 public class Card implements PaymentStrategy{
 	
 	public void pay(PaymentContext ctx) {
-		//Õâ¸öĞÂµÄËã·¨×Ô¼ºÖªµÀÒªÊ¹ÓÃÀ©Õ¹µÄÖ§¸¶ÉÏÏÂÎÄ£¬ËùÒÔÇ¿ÖÆÔìĞÍÒ»ÏÂ
+		//è¿™ä¸ªæ–°çš„ç®—æ³•è‡ªå·±çŸ¥é“è¦ä½¿ç”¨æ‰©å±•çš„æ”¯ä»˜ä¸Šä¸‹æ–‡ï¼Œæ‰€ä»¥å¼ºåˆ¶é€ å‹ä¸€ä¸‹
 		PaymentContext2 ctx2 = (PaymentContext2)ctx;
-		System.out.println("ÏÖÔÚ¸ø"+ctx2.getUserName()+"µÄ"+ctx2.getAccount()+"ÕÊºÅÖ§¸¶ÁË"+ctx2.getMoney()+"Ôª");
-		//Á¬½ÓÒøĞĞ£¬½øĞĞ×ªÕÊ£¬¾Í²»È¥¹ÜÁË
+		System.out.println("ç°åœ¨ç»™"+ctx2.getUserName()+"çš„"+ctx2.getAccount()+"å¸å·æ”¯ä»˜äº†"+ctx2.getMoney()+"å…ƒ");
+		//è¿æ¥é“¶è¡Œï¼Œè¿›è¡Œè½¬å¸ï¼Œå°±ä¸å»ç®¡äº†
 	}
 }

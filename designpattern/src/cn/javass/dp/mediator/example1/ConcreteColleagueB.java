@@ -1,16 +1,16 @@
 package cn.javass.dp.mediator.example1;
 /**
- * ¾ßÌåµÄÍ¬ÊÂÀàB
+ * å…·ä½“çš„åŒäº‹ç±»B
  */
 public class ConcreteColleagueB extends Colleague {
 	public ConcreteColleagueB(Mediator mediator) {
 		super(mediator);
 	}
 	/**
-	 * Ê¾Òâ·½·¨£¬Ö´ĞĞÄ³Ğ©ÒµÎñ¹¦ÄÜ
+	 * ç¤ºæ„æ–¹æ³•ï¼Œæ‰§è¡ŒæŸäº›ä¸šåŠ¡åŠŸèƒ½
 	 */
 	public void someOperation() {
-		//ÔÚĞèÒª¸úÆäËûÍ¬ÊÂÍ¨ĞÅµÄÊ±ºò£¬Í¨ÖªÖĞ½éÕß¶ÔÏó
+		//åœ¨éœ€è¦è·Ÿå…¶ä»–åŒäº‹é€šä¿¡çš„æ—¶å€™ï¼Œé€šçŸ¥ä¸­ä»‹è€…å¯¹è±¡
 		getMediator().changed(this);
 	}
 }

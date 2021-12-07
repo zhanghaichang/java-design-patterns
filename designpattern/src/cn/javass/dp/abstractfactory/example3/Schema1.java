@@ -1,8 +1,8 @@
 package cn.javass.dp.abstractfactory.example3;
 
 /**
- * ×°»ú·½°¸Ò»£ºIntel µÄCPU + ¼¼¼ÎµÄÖ÷°å
- * ÕâÀï´´½¨CPUºÍÖ÷°å¶ÔÏóµÄÊ±ºò£¬ÊÇ¶ÔÓ¦µÄ£¬ÄÜÆ¥ÅäÉÏµÄ
+ * è£…æœºæ–¹æ¡ˆä¸€ï¼šIntel çš„CPU + æŠ€å˜‰çš„ä¸»æ¿
+ * è¿™é‡Œåˆ›å»ºCPUå’Œä¸»æ¿å¯¹è±¡çš„æ—¶å€™ï¼Œæ˜¯å¯¹åº”çš„ï¼Œèƒ½åŒ¹é…ä¸Šçš„
  */
 public class Schema1 implements AbstractFactory{
 	public CPUApi createCPUApi() {

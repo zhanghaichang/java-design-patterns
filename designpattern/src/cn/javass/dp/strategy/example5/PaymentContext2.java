@@ -1,18 +1,18 @@
 package cn.javass.dp.strategy.example5;
 /**
- * À©Õ¹µÄÖ§¸¶ÉÏÏÂÎÄ¶ÔÏó
+ * æ‰©å±•çš„æ”¯ä»˜ä¸Šä¸‹æ–‡å¯¹è±¡
  */
 public class PaymentContext2 extends PaymentContext {
 	/**
-	 * ÒøĞĞÕÊºÅ
+	 * é“¶è¡Œå¸å·
 	 */
 	private String account = null;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë±»Ö§¸¶¹¤×ÊµÄÈËÔ±£¬Ó¦Ö§¸¶µÄ½ğ¶îºÍ¾ßÌåµÄÖ§¸¶²ßÂÔ
-	 * @param userName ±»Ö§¸¶¹¤×ÊµÄÈËÔ±
-	 * @param money Ó¦Ö§¸¶µÄ½ğ¶î
-	 * @param account Ö§¸¶µ½µÄÒøĞĞÕÊºÅ
-	 * @param strategy ¾ßÌåµÄÖ§¸¶²ßÂÔ
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥è¢«æ”¯ä»˜å·¥èµ„çš„äººå‘˜ï¼Œåº”æ”¯ä»˜çš„é‡‘é¢å’Œå…·ä½“çš„æ”¯ä»˜ç­–ç•¥
+	 * @param userName è¢«æ”¯ä»˜å·¥èµ„çš„äººå‘˜
+	 * @param money åº”æ”¯ä»˜çš„é‡‘é¢
+	 * @param account æ”¯ä»˜åˆ°çš„é“¶è¡Œå¸å·
+	 * @param strategy å…·ä½“çš„æ”¯ä»˜ç­–ç•¥
 	 */
 	public PaymentContext2(String userName,double money,String account,PaymentStrategy strategy){
 		super(userName,money,strategy);

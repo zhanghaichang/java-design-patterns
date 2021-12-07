@@ -1,8 +1,8 @@
 package cn.javass.dp.abstractfactory.example2;
 /**
- * ³éÏó²úÆ·BµÄ½Ó¿Ú
+ * æŠ½è±¡äº§å“Bçš„æ¥å£
  */
 public interface AbstractProductB {
-	//¶¨Òå³éÏó²úÆ·BÏà¹ØµÄ²Ù×÷
+	//å®šä¹‰æŠ½è±¡äº§å“Bç›¸å…³çš„æ“ä½œ
 }
 

@@ -2,7 +2,7 @@ package cn.javass.dp.decorator.example4;
 
 import java.util.Date;
 /**
- * ×°ÊÎÆ÷¶ÔÏó£¬¼ÆËãµ±ÔÂÍÅ¶ÓÒµÎñ½±½ğ
+ * è£…é¥°å™¨å¯¹è±¡ï¼Œè®¡ç®—å½“æœˆå›¢é˜Ÿä¸šåŠ¡å¥–é‡‘
  */
 public class GroupPrizeDecorator extends Decorator{
 	public GroupPrizeDecorator(Component c){
@@ -10,16 +10,16 @@ public class GroupPrizeDecorator extends Decorator{
 	}
 	
 	public double calcPrize(String user, Date begin, Date end) {
-		//1£ºÏÈ»ñÈ¡Ç°ÃæÔËËã³öÀ´µÄ½±½ğ
+		//1ï¼šå…ˆè·å–å‰é¢è¿ç®—å‡ºæ¥çš„å¥–é‡‘
 		double money = super.calcPrize(user, begin, end);
-		//2£ºÈ»ºó¼ÆËãµ±ÔÂÍÅ¶ÓÒµÎñ½±½ğ£¬ÏÈ¼ÆËã³öÍÅ¶Ó×ÜµÄÒµÎñ¶î£¬È»ºóÔÙ³ËÒÔ1%
-		//¼ÙÉè¶¼ÊÇÒ»¸öÍÅ¶ÓµÄ
+		//2ï¼šç„¶åè®¡ç®—å½“æœˆå›¢é˜Ÿä¸šåŠ¡å¥–é‡‘ï¼Œå…ˆè®¡ç®—å‡ºå›¢é˜Ÿæ€»çš„ä¸šåŠ¡é¢ï¼Œç„¶åå†ä¹˜ä»¥1%
+		//å‡è®¾éƒ½æ˜¯ä¸€ä¸ªå›¢é˜Ÿçš„
 		double group = 0.0;
 		for(double d : TempDB.mapMonthSaleMoney.values()){
 			group += d;
 		}
 		double prize = group * 0.01;
-		System.out.println(user+"µ±ÔÂÍÅ¶ÓÒµÎñ½±½ğ"+prize);
+		System.out.println(user+"å½“æœˆå›¢é˜Ÿä¸šåŠ¡å¥–é‡‘"+prize);
 		return money + prize;
 	}
 

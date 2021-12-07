@@ -1,10 +1,10 @@
 package cn.javass.dp.abstractfactory.example4;
 /**
- * ÄÚ´æµÄ½Ó¿Ú
+ * å†…å­˜çš„æ¥å£
  */
 public interface MemoryApi {
 	/**
-	 * Ê¾Òâ·½·¨£¬ÄÚ´æ¾ßÓĞ»º´æÊı¾İµÄÄÜÁ¦
+	 * ç¤ºæ„æ–¹æ³•ï¼Œå†…å­˜å…·æœ‰ç¼“å­˜æ•°æ®çš„èƒ½åŠ›
 	 */
 	public void cacheData();
 }

@@ -1,19 +1,19 @@
 package cn.javass.dp.visitor.example6;
 /**
- * Ò¶×Ó¶ÔÏó£¬Ïàµ±ÓÚ·ÃÎÊÕßÄ£Ê½µÄ¾ßÌåElementÊµÏÖ¶ÔÏó
+ * å¶å­å¯¹è±¡ï¼Œç›¸å½“äºè®¿é—®è€…æ¨¡å¼çš„å…·ä½“Elementå®ç°å¯¹è±¡
  */
 public class Leaf extends Component{
 	public void accept(Visitor visitor) {
-		//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
+		//å›è°ƒè®¿é—®è€…å¯¹è±¡çš„ç›¸åº”æ–¹æ³•
 		visitor.visitLeaf(this);
 	}
 	/**
-	 * Ò¶×Ó¶ÔÏóµÄÃû×Ö
+	 * å¶å­å¯¹è±¡çš„åå­—
 	 */
 	private String name = "";
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÒ¶×Ó¶ÔÏóµÄÃû×Ö
-	 * @param name Ò¶×Ó¶ÔÏóµÄÃû×Ö
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥å¶å­å¯¹è±¡çš„åå­—
+	 * @param name å¶å­å¯¹è±¡çš„åå­—
 	 */
 	public Leaf(String name){
 		this.name = name;

@@ -1,18 +1,18 @@
 package cn.javass.dp.prototype.example1;
 /**
- * 个人订单对象
+ * 涓汉璁㈠崟瀵硅薄
  */
 public class PersonalOrder implements OrderApi{
 	/**
-	 * 订购人员姓名
+	 * 璁㈣喘浜哄憳濮撳悕
 	 */
 	private String customerName;
 	/**
-	 * 产品编号
+	 * 浜у搧缂栧彿
 	 */
 	private String productId;
 	/**
-	 * 订单产品数量
+	 * 璁㈠崟浜у搧鏁伴噺
 	 */
 	private int orderProductNum = 0;
 	
@@ -35,6 +35,6 @@ public class PersonalOrder implements OrderApi{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "本个人订单的订购人是="+this.customerName+"，订购产品是="+this.productId+"，订购数量为="+this.orderProductNum;
+		return "鏈釜浜鸿鍗曠殑璁㈣喘浜烘槸="+this.customerName+"锛岃璐骇鍝佹槸="+this.productId+"锛岃璐暟閲忎负="+this.orderProductNum;
 	}
 }

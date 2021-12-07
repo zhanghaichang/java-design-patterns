@@ -3,7 +3,7 @@ package cn.javass.dp.strategy.example6;
 public class Client {
 	public static void main(String[] args) {
 		LogContext log = new LogContext();
-		log.log("记录日志");
-		log.log("再次记录日志");
+		log.log("璁板綍鏃ュ織");
+		log.log("鍐嶆璁板綍鏃ュ織");
 	}
 }

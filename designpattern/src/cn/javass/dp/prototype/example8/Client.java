@@ -3,31 +3,31 @@ package cn.javass.dp.prototype.example8;
 public class Client {
 	public static void main(String[] args) {
 		try {
-			// ³õÊ¼»¯Ô­ĞÍ¹ÜÀíÆ÷
+			// åˆå§‹åŒ–åŸå‹ç®¡ç†å™¨
 			Prototype p1 = new ConcretePrototype1();
 			PrototypeManager.setPrototype("Prototype1", p1);
 
-			// »ñÈ¡Ô­ĞÍÀ´´´½¨¶ÔÏó
+			// è·å–åŸå‹æ¥åˆ›å»ºå¯¹è±¡
 			Prototype p3 = PrototypeManager.getPrototype("Prototype1").clone();
-			p3.setName("ÕÅÈı");
-			System.out.println("µÚÒ»¸öÊµÀı£º" + p3);
+			p3.setName("å¼ ä¸‰");
+			System.out.println("ç¬¬ä¸€ä¸ªå®ä¾‹ï¼š" + p3);
 
-			// ÓĞÈË¶¯Ì¬µÄÇĞ»»ÁËÊµÏÖ
+			// æœ‰äººåŠ¨æ€çš„åˆ‡æ¢äº†å®ç°
 			Prototype p2 = new ConcretePrototype2();
 			PrototypeManager.setPrototype("Prototype1", p2);
 
-			// ÖØĞÂ»ñÈ¡Ô­ĞÍÀ´´´½¨¶ÔÏó
+			// é‡æ–°è·å–åŸå‹æ¥åˆ›å»ºå¯¹è±¡
 			Prototype p4 = PrototypeManager.getPrototype("Prototype1").clone();
-			p4.setName("ÀîËÄ");
-			System.out.println("µÚ¶ş¸öÊµÀı£º" + p4);
+			p4.setName("æå››");
+			System.out.println("ç¬¬äºŒä¸ªå®ä¾‹ï¼š" + p4);
 
-			// ÓĞÈË×¢ÏúÁËÕâ¸öÔ­ĞÍ
+			// æœ‰äººæ³¨é”€äº†è¿™ä¸ªåŸå‹
 			PrototypeManager.removePrototype("Prototype1");
 
-			// ÔÙ´Î»ñÈ¡Ô­ĞÍÀ´´´½¨¶ÔÏó
+			// å†æ¬¡è·å–åŸå‹æ¥åˆ›å»ºå¯¹è±¡
 			Prototype p5 = PrototypeManager.getPrototype("Prototype1").clone();
-			p5.setName("ÍõÎå");
-			System.out.println("µÚÈı¸öÊµÀı£º" + p5);
+			p5.setName("ç‹äº”");
+			System.out.println("ç¬¬ä¸‰ä¸ªå®ä¾‹ï¼š" + p5);
 		} catch (Exception err) {
 			System.err.println(err.getMessage());
 		}

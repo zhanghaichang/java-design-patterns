@@ -1,16 +1,16 @@
 package cn.javass.dp.visitor.example3;
 /**
- * ·ÃÎÊÕß½Ó¿Ú
+ * è®¿é—®è€…æ¥å£
  */
 public interface Visitor {
 	/**
-	 * ·ÃÎÊÔªËØA£¬Ïàµ±ÓÚ¸øÔªËØAÌí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
-	 * @param elementA ÔªËØAµÄ¶ÔÏó
+	 * è®¿é—®å…ƒç´ Aï¼Œç›¸å½“äºç»™å…ƒç´ Aæ·»åŠ è®¿é—®è€…çš„åŠŸèƒ½
+	 * @param elementA å…ƒç´ Açš„å¯¹è±¡
 	 */
 	public void visitConcreteElementA(ConcreteElementA elementA);
 	/**
-	 * ·ÃÎÊÔªËØB£¬Ïàµ±ÓÚ¸øÔªËØBÌí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
-	 * @param elementB ÔªËØBµÄ¶ÔÏó
+	 * è®¿é—®å…ƒç´ Bï¼Œç›¸å½“äºç»™å…ƒç´ Bæ·»åŠ è®¿é—®è€…çš„åŠŸèƒ½
+	 * @param elementB å…ƒç´ Bçš„å¯¹è±¡
 	 */
 	public void visitConcreteElementB(ConcreteElementB elementB);
 }

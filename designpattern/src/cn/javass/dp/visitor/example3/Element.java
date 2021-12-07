@@ -1,11 +1,11 @@
 package cn.javass.dp.visitor.example3;
 /**
- * ±»·ÃÎÊµÄÔªËØµÄ½Ó¿Ú
+ * è¢«è®¿é—®çš„å…ƒç´ çš„æ¥å£
  */
 public abstract class Element {
 	/**
-	 * ½ÓÊÜ·ÃÎÊÕßµÄ·ÃÎÊ
-	 * @param visitor ·ÃÎÊÕß¶ÔÏó
+	 * æ¥å—è®¿é—®è€…çš„è®¿é—®
+	 * @param visitor è®¿é—®è€…å¯¹è±¡
 	 */
 	public abstract void accept(Visitor visitor);
 }

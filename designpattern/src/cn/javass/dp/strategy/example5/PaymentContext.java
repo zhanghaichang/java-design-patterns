@@ -1,25 +1,25 @@
 package cn.javass.dp.strategy.example5;
 /**
- * Ö§¸¶¹¤×ÊµÄÉÏÏÂÎÄ£¬Ã¿¸öÈËµÄ¹¤×Ê²»Í¬£¬Ö§¸¶·½Ê½Ò²²»Í¬
+ * æ”¯ä»˜å·¥èµ„çš„ä¸Šä¸‹æ–‡ï¼Œæ¯ä¸ªäººçš„å·¥èµ„ä¸åŒï¼Œæ”¯ä»˜æ–¹å¼ä¹Ÿä¸åŒ
  */
 public class PaymentContext {
 	/**
-	 * Ó¦±»Ö§¸¶¹¤×ÊµÄÈËÔ±£¬¼òµ¥µã£¬ÓÃĞÕÃûÀ´´úÌæ
+	 * åº”è¢«æ”¯ä»˜å·¥èµ„çš„äººå‘˜ï¼Œç®€å•ç‚¹ï¼Œç”¨å§“åæ¥ä»£æ›¿
 	 */
 	private String userName = null;
 	/**
-	 * Ó¦±»Ö§¸¶µÄ¹¤×ÊµÄ½ğ¶î
+	 * åº”è¢«æ”¯ä»˜çš„å·¥èµ„çš„é‡‘é¢
 	 */
 	private double money = 0.0;
 	/**
-	 * Ö§¸¶¹¤×ÊµÄ·½Ê½²ßÂÔµÄ½Ó¿Ú
+	 * æ”¯ä»˜å·¥èµ„çš„æ–¹å¼ç­–ç•¥çš„æ¥å£
 	 */
 	private PaymentStrategy strategy = null;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë±»Ö§¸¶¹¤×ÊµÄÈËÔ±£¬Ó¦Ö§¸¶µÄ½ğ¶îºÍ¾ßÌåµÄÖ§¸¶²ßÂÔ
-	 * @param userName ±»Ö§¸¶¹¤×ÊµÄÈËÔ±
-	 * @param money Ó¦Ö§¸¶µÄ½ğ¶î
-	 * @param strategy ¾ßÌåµÄÖ§¸¶²ßÂÔ
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥è¢«æ”¯ä»˜å·¥èµ„çš„äººå‘˜ï¼Œåº”æ”¯ä»˜çš„é‡‘é¢å’Œå…·ä½“çš„æ”¯ä»˜ç­–ç•¥
+	 * @param userName è¢«æ”¯ä»˜å·¥èµ„çš„äººå‘˜
+	 * @param money åº”æ”¯ä»˜çš„é‡‘é¢
+	 * @param strategy å…·ä½“çš„æ”¯ä»˜ç­–ç•¥
 	 */
 	public PaymentContext(String userName,double money,PaymentStrategy strategy){
 		this.userName = userName;
@@ -28,10 +28,10 @@ public class PaymentContext {
 	}
 
 	/**
-	 * Á¢¼´Ö§¸¶¹¤×Ê
+	 * ç«‹å³æ”¯ä»˜å·¥èµ„
 	 */
 	public void payNow(){
-		//Ê¹ÓÃ¿Í»§Ï£ÍûµÄÖ§¸¶²ßÂÔÀ´Ö§¸¶¹¤×Ê
+		//ä½¿ç”¨å®¢æˆ·å¸Œæœ›çš„æ”¯ä»˜ç­–ç•¥æ¥æ”¯ä»˜å·¥èµ„
 		this.strategy.pay(this);
 	}
 	public String getUserName() {

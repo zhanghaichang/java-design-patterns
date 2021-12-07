@@ -1,26 +1,26 @@
 package cn.javass.dp.command.example1;
 /**
- * ¾ßÌåµÄÃüÁîÊµÏÖ¶ÔÏó
+ * å…·ä½“çš„å‘½ä»¤å®ç°å¯¹è±¡
  */
 public class ConcreteCommand implements Command {
 	/**
-	 * ³ÖÓĞÏàÓ¦µÄ½ÓÊÜÕß¶ÔÏó
+	 * æŒæœ‰ç›¸åº”çš„æ¥å—è€…å¯¹è±¡
 	 */
 	private Receiver receiver = null;
 	/**
-	 * Ê¾Òâ£¬ÃüÁî¶ÔÏó¿ÉÒÔÓĞ×Ô¼ºµÄ×´Ì¬
+	 * ç¤ºæ„ï¼Œå‘½ä»¤å¯¹è±¡å¯ä»¥æœ‰è‡ªå·±çš„çŠ¶æ€
 	 */
 	private String state;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÏàÓ¦µÄ½ÓÊÜÕß¶ÔÏó
-	 * @param receiver ÏàÓ¦µÄ½ÓÊÜÕß¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥ç›¸åº”çš„æ¥å—è€…å¯¹è±¡
+	 * @param receiver ç›¸åº”çš„æ¥å—è€…å¯¹è±¡
 	 */
 	public ConcreteCommand(Receiver receiver){
 		this.receiver = receiver;
 	}
 	
 	public void execute() {
-		//Í¨³£»á×ªµ÷½ÓÊÜÕß¶ÔÏóµÄÏàÓ¦·½·¨£¬ÈÃ½ÓÊÜÕßÀ´ÕæÕıÖ´ĞĞ¹¦ÄÜ
+		//é€šå¸¸ä¼šè½¬è°ƒæ¥å—è€…å¯¹è±¡çš„ç›¸åº”æ–¹æ³•ï¼Œè®©æ¥å—è€…æ¥çœŸæ­£æ‰§è¡ŒåŠŸèƒ½
 		receiver.action();
 	}
 

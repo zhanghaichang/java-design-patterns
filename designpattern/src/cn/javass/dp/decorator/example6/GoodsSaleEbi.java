@@ -1,14 +1,14 @@
 package cn.javass.dp.decorator.example6;
 /**
- * ÉÌÆ·ÏúÊÛ¹ÜÀíµÄÒµÎñ½Ó¿Ú
+ * å•†å“é”€å”®ç®¡ç†çš„ä¸šåŠ¡æ¥å£
  */
 public interface GoodsSaleEbi {
 	/**
-	 * ±£´æÏúÊÛĞÅÏ¢£¬±¾À´ÏúÊÛÊı¾İÓ¦¸ÃÊÇ¶àÌõ£¬Ì«Âé·³ÁË£¬ÎªÁËÑİÊ¾£¬¼òµ¥µã
-	 * @param user ²Ù×÷ÈËÔ±
-	 * @param customer ¿Í»§
-	 * @param saleModel ÏúÊÛÊı¾İ
-	 * @return ÊÇ·ñ±£´æ³É¹¦
+	 * ä¿å­˜é”€å”®ä¿¡æ¯ï¼Œæœ¬æ¥é”€å”®æ•°æ®åº”è¯¥æ˜¯å¤šæ¡ï¼Œå¤ªéº»çƒ¦äº†ï¼Œä¸ºäº†æ¼”ç¤ºï¼Œç®€å•ç‚¹
+	 * @param user æ“ä½œäººå‘˜
+	 * @param customer å®¢æˆ·
+	 * @param saleModel é”€å”®æ•°æ®
+	 * @return æ˜¯å¦ä¿å­˜æˆåŠŸ
 	 */
 	public boolean sale(String user,String customer,SaleModel saleModel);
 }

@@ -3,7 +3,7 @@ package cn.javass.dp.adapter.example5;
 import java.util.List;
 
 /**
- * ÀàÊÊÅäÆ÷¶ÔÏó
+ * ç±»é€‚é…å™¨å¯¹è±¡
  */
 public class ClassAdapter extends LogFileOperate implements LogDbOperateApi{
 	
@@ -12,11 +12,11 @@ public class ClassAdapter extends LogFileOperate implements LogDbOperateApi{
 	}
 
 	public void createLog(LogModel lm) {
-		//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
+		//1ï¼šå…ˆè¯»å–æ–‡ä»¶çš„å†…å®¹
 		List<LogModel> list = this.readLogFile();
-		//2£º¼ÓÈëĞÂµÄÈÕÖ¾¶ÔÏó
+		//2ï¼šåŠ å…¥æ–°çš„æ—¥å¿—å¯¹è±¡
 		list.add(lm);
-		//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
+		//3ï¼šé‡æ–°å†™å…¥æ–‡ä»¶
 		this.writeLogFile(list);
 	}
 
@@ -25,25 +25,25 @@ public class ClassAdapter extends LogFileOperate implements LogDbOperateApi{
 	}
 
 	public void removeLog(LogModel lm) {
-		//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
+		//1ï¼šå…ˆè¯»å–æ–‡ä»¶çš„å†…å®¹
 		List<LogModel> list = this.readLogFile();
-		//2£ºÉ¾³ıÏàÓ¦µÄÈÕÖ¾¶ÔÏó
+		//2ï¼šåˆ é™¤ç›¸åº”çš„æ—¥å¿—å¯¹è±¡
 		list.remove(lm);
-		//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
+		//3ï¼šé‡æ–°å†™å…¥æ–‡ä»¶
 		this.writeLogFile(list);
 	}
 
 	public void updateLog(LogModel lm) {
-		//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
+		//1ï¼šå…ˆè¯»å–æ–‡ä»¶çš„å†…å®¹
 		List<LogModel> list = this.readLogFile();
-		//2£ºĞŞ¸ÄÏàÓ¦µÄÈÕÖ¾¶ÔÏó
+		//2ï¼šä¿®æ”¹ç›¸åº”çš„æ—¥å¿—å¯¹è±¡
 		for(int i=0;i<list.size();i++){
 			if(list.get(i).getLogId().equals(lm.getLogId())){
 				list.set(i, lm);
 				break;
 			}
 		}
-		//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
+		//3ï¼šé‡æ–°å†™å…¥æ–‡ä»¶
 		this.writeLogFile(list);
 	}
 }

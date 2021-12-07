@@ -1,12 +1,12 @@
 package cn.javass.dp.strategy.example3;
 
 /**
- * ÊµÏÖ¾ßÌåµÄËã·¨
+ * å®ç°å…·ä½“çš„ç®—æ³•
  */
 public class ConcreteStrategyA implements Strategy {
 
 	public void algorithmInterface() {
-		//¾ßÌåµÄËã·¨ÊµÏÖ		
+		//å…·ä½“çš„ç®—æ³•å®ç°		
 	}
 	
 }

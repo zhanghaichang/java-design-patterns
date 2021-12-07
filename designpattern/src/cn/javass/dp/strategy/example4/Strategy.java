@@ -1,13 +1,13 @@
 package cn.javass.dp.strategy.example4;
 
 /**
- * ²ßÂÔ£¬¶¨Òå¼ÆËã±¨¼ÛËã·¨µÄ½Ó¿Ú
+ * ç­–ç•¥ï¼Œå®šä¹‰è®¡ç®—æŠ¥ä»·ç®—æ³•çš„æ¥å£
  */
 public interface Strategy {
 	/**
-	 * ¼ÆËãÓ¦±¨µÄ¼Û¸ñ
-	 * @param goodsPrice ÉÌÆ·ÏúÊÛÔ­¼Û
-	 * @return ¼ÆËã³öÀ´µÄ£¬Ó¦¸Ã¸ø¿Í»§±¨µÄ¼Û¸ñ
+	 * è®¡ç®—åº”æŠ¥çš„ä»·æ ¼
+	 * @param goodsPrice å•†å“é”€å”®åŸä»·
+	 * @return è®¡ç®—å‡ºæ¥çš„ï¼Œåº”è¯¥ç»™å®¢æˆ·æŠ¥çš„ä»·æ ¼
 	 */
 	public double calcPrice(double goodsPrice);
 }

@@ -3,23 +3,23 @@ package cn.javass.dp.adapter.example2;
 import java.io.*;
 
 /**
- * ÈÕÖ¾Êı¾İ¶ÔÏó
+ * æ—¥å¿—æ•°æ®å¯¹è±¡
  */
 public class LogModel implements Serializable{
 	/**
-	 * ÈÕÖ¾±àºÅ
+	 * æ—¥å¿—ç¼–å·
 	 */
 	private String logId;
 	/**
-	 * ²Ù×÷ÈËÔ±
+	 * æ“ä½œäººå‘˜
 	 */
 	private String operateUser;
 	/**
-	 * ²Ù×÷Ê±¼ä£¬ÒÔyyyy-MM-dd HH:mm:ssµÄ¸ñÊ½¼ÇÂ¼
+	 * æ“ä½œæ—¶é—´ï¼Œä»¥yyyy-MM-dd HH:mm:ssçš„æ ¼å¼è®°å½•
 	 */
 	private String operateTime;	
 	/**
-	 * ÈÕÖ¾ÄÚÈİ
+	 * æ—¥å¿—å†…å®¹
 	 */
 	private String logContent;
 	

@@ -1,18 +1,18 @@
 package cn.javass.dp.prototype.example4;
 /**
- * ¸öÈË¶©µ¥¶ÔÏó
+ * ä¸ªäººè®¢å•å¯¹è±¡
  */
 public class PersonalOrder implements OrderApi{
 	/**
-	 * ¶©¹ºÈËÔ±ĞÕÃû
+	 * è®¢è´­äººå‘˜å§“å
 	 */
 	private String customerName;
 	/**
-	 * ²úÆ·±àºÅ
+	 * äº§å“ç¼–å·
 	 */
 	private String productId;
 	/**
-	 * ¶©µ¥²úÆ·ÊıÁ¿
+	 * è®¢å•äº§å“æ•°é‡
 	 */
 	private int orderProductNum = 0;
 	
@@ -35,11 +35,11 @@ public class PersonalOrder implements OrderApi{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "±¾¸öÈË¶©µ¥µÄ¶©¹ºÈËÊÇ="+this.customerName+"£¬¶©¹º²úÆ·ÊÇ="+this.productId+"£¬¶©¹ºÊıÁ¿Îª="+this.orderProductNum;
+		return "æœ¬ä¸ªäººè®¢å•çš„è®¢è´­äººæ˜¯="+this.customerName+"ï¼Œè®¢è´­äº§å“æ˜¯="+this.productId+"ï¼Œè®¢è´­æ•°é‡ä¸º="+this.orderProductNum;
 	}
 	
 	public OrderApi cloneOrder() {
-		//´´½¨Ò»¸öĞÂµÄ¶©µ¥£¬È»ºó°Ñ±¾ÊµÀıµÄÊı¾İ¸´ÖÆ¹ıÈ¥
+		//åˆ›å»ºä¸€ä¸ªæ–°çš„è®¢å•ï¼Œç„¶åæŠŠæœ¬å®ä¾‹çš„æ•°æ®å¤åˆ¶è¿‡å»
 		PersonalOrder order = new PersonalOrder();
 		order.setCustomerName(this.customerName);
 		order.setProductId(this.productId);

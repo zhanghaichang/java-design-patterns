@@ -1,20 +1,20 @@
 package cn.javass.dp.command.example4;
 /**
- * ¾ßÌåµÄ¼Ó·¨ÃüÁîÊµÏÖ¶ÔÏó
+ * å…·ä½“çš„åŠ æ³•å‘½ä»¤å®ç°å¯¹è±¡
  */
 public class AddCommand implements Command{
 	/**
-	 * ³ÖÓĞ¾ßÌåÖ´ĞĞ¼ÆËãµÄ¶ÔÏó
+	 * æŒæœ‰å…·ä½“æ‰§è¡Œè®¡ç®—çš„å¯¹è±¡
 	 */
 	private OperationApi operation = null;
 	/**
-	 * ²Ù×÷µÄÊı¾İ£¬Ò²¾ÍÊÇÒª¼ÓÉÏµÄÊı¾İ
+	 * æ“ä½œçš„æ•°æ®ï¼Œä¹Ÿå°±æ˜¯è¦åŠ ä¸Šçš„æ•°æ®
 	 */
 	private int opeNum;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë¾ßÌåÖ´ĞĞ¼ÆËãµÄ¶ÔÏó
-	 * @param operation ¾ßÌåÖ´ĞĞ¼ÆËãµÄ¶ÔÏó
-	 * @param opeNum Òª¼ÓÉÏµÄÊı¾İ
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥å…·ä½“æ‰§è¡Œè®¡ç®—çš„å¯¹è±¡
+	 * @param operation å…·ä½“æ‰§è¡Œè®¡ç®—çš„å¯¹è±¡
+	 * @param opeNum è¦åŠ ä¸Šçš„æ•°æ®
 	 */
 	public AddCommand(OperationApi operation,int opeNum){
 		this.operation = operation;
@@ -22,13 +22,13 @@ public class AddCommand implements Command{
 	}
 	
 	public void execute() {
-		//×ªµ÷½ÓÊÕÕßÈ¥ÕæÕıÖ´ĞĞ¹¦ÄÜ£¬Õâ¸öÃüÁîÊÇ×ö¼Ó·¨
+		//è½¬è°ƒæ¥æ”¶è€…å»çœŸæ­£æ‰§è¡ŒåŠŸèƒ½ï¼Œè¿™ä¸ªå‘½ä»¤æ˜¯åšåŠ æ³•
 		this.operation.add(opeNum);
 	}
 	
 	public void undo() {
-		//×ªµ÷½ÓÊÕÕßÈ¥ÕæÕıÖ´ĞĞ¹¦ÄÜ
-		//ÃüÁî±¾ÉíÊÇ×ö¼Ó·¨£¬ÄÇÃ´³·ÏúµÄÊ±ºò¾ÍÊÇ×ö¼õ·¨ÁË
+		//è½¬è°ƒæ¥æ”¶è€…å»çœŸæ­£æ‰§è¡ŒåŠŸèƒ½
+		//å‘½ä»¤æœ¬èº«æ˜¯åšåŠ æ³•ï¼Œé‚£ä¹ˆæ’¤é”€çš„æ—¶å€™å°±æ˜¯åšå‡æ³•äº†
 		this.operation.substract(opeNum);
 	}
 }

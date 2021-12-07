@@ -2,12 +2,12 @@ package cn.javass.dp.decorator.example2;
 
 public class C2 {
 	/**
-	 * ´´½¨A¶ÔÏóµÄÊµÀı
+	 * åˆ›å»ºAå¯¹è±¡çš„å®ä¾‹
 	 */
 	private A a = new A();
 
 	public void a1(){
-		//×ªµ÷A¶ÔÏóµÄ¹¦ÄÜ
+		//è½¬è°ƒAå¯¹è±¡çš„åŠŸèƒ½
 		a.a1();
 	}
 	public void c11(){

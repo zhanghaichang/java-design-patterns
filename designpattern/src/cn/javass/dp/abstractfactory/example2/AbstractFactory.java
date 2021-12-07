@@ -1,16 +1,16 @@
 package cn.javass.dp.abstractfactory.example2;
 /**
- * ³éÏó¹¤³§µÄ½Ó¿Ú£¬ÉùÃ÷´´½¨³éÏó²úÆ·¶ÔÏóµÄ²Ù×÷
+ * æŠ½è±¡å·¥å‚çš„æ¥å£ï¼Œå£°æ˜åˆ›å»ºæŠ½è±¡äº§å“å¯¹è±¡çš„æ“ä½œ
  */
 public interface AbstractFactory {
 	/**
-	 * Ê¾Àı·½·¨£¬´´½¨³éÏó²úÆ·AµÄ¶ÔÏó
-	 * @return ³éÏó²úÆ·AµÄ¶ÔÏó
+	 * ç¤ºä¾‹æ–¹æ³•ï¼Œåˆ›å»ºæŠ½è±¡äº§å“Açš„å¯¹è±¡
+	 * @return æŠ½è±¡äº§å“Açš„å¯¹è±¡
 	 */
 	public AbstractProductA createProductA();
 	/**
-	 * Ê¾Àı·½·¨£¬´´½¨³éÏó²úÆ·BµÄ¶ÔÏó
-	 * @return ³éÏó²úÆ·BµÄ¶ÔÏó
+	 * ç¤ºä¾‹æ–¹æ³•ï¼Œåˆ›å»ºæŠ½è±¡äº§å“Bçš„å¯¹è±¡
+	 * @return æŠ½è±¡äº§å“Bçš„å¯¹è±¡
 	 */
 	public AbstractProductB createProductB();
 }

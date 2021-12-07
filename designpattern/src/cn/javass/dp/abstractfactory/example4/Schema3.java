@@ -1,18 +1,18 @@
 package cn.javass.dp.abstractfactory.example4;
 
 /**
- * ×°»ú·½°¸Èı£ºIntel µÄCPU + ¼¼¼ÎµÄÖ÷°å + ÏÖ´úµÄÄÚ´æ
+ * è£…æœºæ–¹æ¡ˆä¸‰ï¼šIntel çš„CPU + æŠ€å˜‰çš„ä¸»æ¿ + ç°ä»£çš„å†…å­˜
  */
 public class Schema3 implements AbstractFactory{
 	public Object createProduct(int type) {
 		Object retObj = null;
-		//typeÎª1±íÊ¾´´½¨CPU£¬typeÎª2±íÊ¾´´½¨Ö÷°å£¬typeÎª3±íÊ¾´´½¨ÄÚ´æ
+		//typeä¸º1è¡¨ç¤ºåˆ›å»ºCPUï¼Œtypeä¸º2è¡¨ç¤ºåˆ›å»ºä¸»æ¿ï¼Œtypeä¸º3è¡¨ç¤ºåˆ›å»ºå†…å­˜
 		if(type==1){
 			retObj = new IntelCPU(1156);
 		}else if(type==2){
 			retObj = new GAMainboard(1156);
 		}
-		//´´½¨ĞÂÌí¼ÓµÄ²úÆ·
+		//åˆ›å»ºæ–°æ·»åŠ çš„äº§å“
 		else if(type==3){
 			retObj = new HyMemory();
 		}

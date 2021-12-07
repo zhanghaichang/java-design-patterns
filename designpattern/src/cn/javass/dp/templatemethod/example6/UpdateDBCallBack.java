@@ -2,12 +2,12 @@ package cn.javass.dp.templatemethod.example6;
 
 import java.sql.PreparedStatement;
 /**
- * ¸üĞÂÊı¾İ¿âµÄ·½·¨Ê¹ÓÃµÄ»Øµ÷½Ó¿Ú
+ * æ›´æ–°æ•°æ®åº“çš„æ–¹æ³•ä½¿ç”¨çš„å›è°ƒæ¥å£
  */
 public interface UpdateDBCallBack {
 	/**
-	 * Ê¹ÓÃPreparedStatementÀ´¸øsqlÖĞµÄ"?"´«²Î
-	 * @param pstmt PreparedStatement ¶ÔÏó
+	 * ä½¿ç”¨PreparedStatementæ¥ç»™sqlä¸­çš„"?"ä¼ å‚
+	 * @param pstmt PreparedStatement å¯¹è±¡
 	 * @throws Exception
 	 */
 	public void setValue(PreparedStatement pstmt)throws Exception;

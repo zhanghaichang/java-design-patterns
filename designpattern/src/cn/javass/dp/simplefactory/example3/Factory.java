@@ -1,14 +1,14 @@
 package cn.javass.dp.simplefactory.example3;
 /**
- * ¹¤³§Àà£¬ÓÃÀ´´´ÔìApi¶ÔÏó
+ * å·¥å‚ç±»ï¼Œç”¨æ¥åˆ›é€ Apiå¯¹è±¡
  */
 public class Factory {
 	/**
-	 * ¾ßÌåµÄ´´ÔìApi¶ÔÏóµÄ·½·¨
-	 * @return ´´ÔìºÃµÄApi¶ÔÏó
+	 * å…·ä½“çš„åˆ›é€ Apiå¯¹è±¡çš„æ–¹æ³•
+	 * @return åˆ›é€ å¥½çš„Apiå¯¹è±¡
 	 */
 	public static Api createApi(){
-		//ÓÉÓÚÖ»ÓĞÒ»¸öÊµÏÖ£¬¾Í²»ÓÃÌõ¼şÅĞ¶ÏÁË
+		//ç”±äºåªæœ‰ä¸€ä¸ªå®ç°ï¼Œå°±ä¸ç”¨æ¡ä»¶åˆ¤æ–­äº†
 		return new Impl();
 	}
 }

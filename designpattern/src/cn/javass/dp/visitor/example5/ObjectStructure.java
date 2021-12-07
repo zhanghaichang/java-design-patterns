@@ -1,27 +1,27 @@
 package cn.javass.dp.visitor.example5;
 import java.util.*;
 /**
- * ����ṹ,ͨ���������Ԫ�ض�����б������÷������ܷ��ʵ����е�Ԫ��
+ * 对象结构,通常在这里对元素对象进行遍历，让访问者能访问到所有的元素
  */
 public class ObjectStructure {
 	/**
-	 * ��ʾ����ṹ��������һ����Ͻṹ
+	 * 表示对象结构，可以是一个组合结构
 	 */
 	private Component root = null;
 	/**
-	 * �ṩ���ͻ��˲����ĸ߲�ӿ�
-	 * @param visitor �ͻ�����Ҫʹ�õķ�����
+	 * 提供给客户端操作的高层接口
+	 * @param visitor 客户端需要使用的访问者
 	 */
 	public void handleRequest(Visitor visitor){
-		//����϶���ṹ�еĸ�Ԫ�أ����ܷ���
-		//����϶���ṹ���Ѿ�ʵ����Ԫ�صı���
+		//让组合对象结构中的根元素，接受访问
+		//在组合对象结构中已经实现了元素的遍历
 		if(root!=null){
 			root.accept(visitor);
 		}
 	}
 	/**
-	 * ������϶���ṹ
-	 * @param ele ��϶���ṹ
+	 * 传入组合对象结构
+	 * @param ele 组合对象结构
 	 */
 	public void setRoot(Component ele){
 		this.root = ele;

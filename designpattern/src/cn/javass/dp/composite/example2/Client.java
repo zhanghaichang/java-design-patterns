@@ -2,16 +2,16 @@ package cn.javass.dp.composite.example2;
 
 public class Client {
 	public static void main(String[] args) {
-		//¶¨Òå¶à¸öComposite¶ÔÏó
+		//å®šä¹‰å¤šä¸ªCompositeå¯¹è±¡
 		Component root = new Composite();
 		Component c1 = new Composite();
 		Component c2 = new Composite();
-		//¶¨Òå¶à¸öÒ¶×Ó¶ÔÏó
+		//å®šä¹‰å¤šä¸ªå¶å­å¯¹è±¡
 		Component leaf1 = new Leaf();
 		Component leaf2 = new Leaf();
 		Component leaf3 = new Leaf();
 		
-		//×éºÍ³ÉÎªÊ÷ĞÎµÄ¶ÔÏó½á¹¹
+		//ç»„å’Œæˆä¸ºæ ‘å½¢çš„å¯¹è±¡ç»“æ„
 		root.addChild(c1);
 		root.addChild(c2);
 		root.addChild(leaf1);
@@ -19,7 +19,7 @@ public class Client {
 		c1.addChild(leaf2);
 		c2.addChild(leaf3);
 		
-		//²Ù×÷Component¶ÔÏó
+		//æ“ä½œComponentå¯¹è±¡
 		Component o = root.getChildren(1);
 		System.out.println(o);
 	}

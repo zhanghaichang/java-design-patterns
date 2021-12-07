@@ -1,15 +1,15 @@
 package cn.javass.dp.templatemethod.example4;
 /**
- * ·â×°½øÐÐµÇÂ¼¿ØÖÆËùÐèÒªµÄÊý¾Ý£¬ÔÚ¹«¹²Êý¾ÝµÄ»ù´¡ÉÏ£¬
- * Ìí¼Ó¾ßÌåÄ£¿éÐèÒªµÄÊý¾Ý
+ * å°è£…è¿›è¡Œç™»å½•æŽ§åˆ¶æ‰€éœ€è¦çš„æ•°æ®ï¼Œåœ¨å…¬å…±æ•°æ®çš„åŸºç¡€ä¸Šï¼Œ
+ * æ·»åŠ å…·ä½“æ¨¡å—éœ€è¦çš„æ•°æ®
  */
 public class NormalLoginModel extends LoginModel{
 	/**
-	 * ÃÜÂëÑéÖ¤ÎÊÌâ
+	 * å¯†ç éªŒè¯é—®é¢˜
 	 */
 	private String question;
 	/**
-	 * ÃÜÂëÑéÖ¤´ð°¸
+	 * å¯†ç éªŒè¯ç­”æ¡ˆ
 	 */
 	private String answer;
 	public String getQuestion() {

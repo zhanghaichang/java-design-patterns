@@ -1,25 +1,25 @@
 package cn.javass.dp.chainofresponsibility.example6;
 /**
- * ¶¨ÒåÖ°Ôğ¶ÔÏóµÄ½Ó¿Ú
+ * å®šä¹‰èŒè´£å¯¹è±¡çš„æ¥å£
  */
 public abstract class SaleHandler {
 	/**
-	 * ³ÖÓĞÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
+	 * æŒæœ‰ä¸‹ä¸€ä¸ªå¤„ç†è¯·æ±‚çš„å¯¹è±¡
 	 */
 	protected SaleHandler successor = null;
 	/**
-	 * ÉèÖÃÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
-	 * @param successor ÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
+	 * è®¾ç½®ä¸‹ä¸€ä¸ªå¤„ç†è¯·æ±‚çš„å¯¹è±¡
+	 * @param successor ä¸‹ä¸€ä¸ªå¤„ç†è¯·æ±‚çš„å¯¹è±¡
 	 */
 	public void setSuccessor(SaleHandler successor){
 		this.successor = successor;
 	}
 	/**
-	 * ´¦Àí±£´æÏúÊÛĞÅÏ¢µÄÇëÇó
-	 * @param user ²Ù×÷ÈËÔ±
-	 * @param customer ¿Í»§
-	 * @param saleModel ÏúÊÛÊı¾İ
-	 * @return ÊÇ·ñ´¦Àí³É¹¦
+	 * å¤„ç†ä¿å­˜é”€å”®ä¿¡æ¯çš„è¯·æ±‚
+	 * @param user æ“ä½œäººå‘˜
+	 * @param customer å®¢æˆ·
+	 * @param saleModel é”€å”®æ•°æ®
+	 * @return æ˜¯å¦å¤„ç†æˆåŠŸ
 	 */
 	public abstract boolean sale(String user,String customer,SaleModel saleModel);
 }

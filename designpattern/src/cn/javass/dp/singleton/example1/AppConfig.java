@@ -3,15 +3,15 @@ package cn.javass.dp.singleton.example1;
 import java.io.*;
 import java.util.*;
 /**
- * ¶ÁÈ¡Ó¦ÓÃÅäÖÃÎÄ¼ş
+ * è¯»å–åº”ç”¨é…ç½®æ–‡ä»¶
  */
 public class AppConfig {
 	/**
-	 * ÓÃÀ´´æ·ÅÅäÖÃÎÄ¼şÖĞ²ÎÊıAµÄÖµ
+	 * ç”¨æ¥å­˜æ”¾é…ç½®æ–‡ä»¶ä¸­å‚æ•°Açš„å€¼
 	 */
 	private String parameterA;
 	/**
-	 * ÓÃÀ´´æ·ÅÅäÖÃÎÄ¼şÖĞ²ÎÊıBµÄÖµ
+	 * ç”¨æ¥å­˜æ”¾é…ç½®æ–‡ä»¶ä¸­å‚æ•°Bçš„å€¼
 	 */
 	private String parameterB;
 	
@@ -22,14 +22,14 @@ public class AppConfig {
 		return parameterB;
 	}
 	/**
-	 * ¹¹Ôì·½·¨
+	 * æ„é€ æ–¹æ³•
 	 */
 	public AppConfig(){
-		//µ÷ÓÃ¶ÁÈ¡ÅäÖÃÎÄ¼şµÄ·½·¨
+		//è°ƒç”¨è¯»å–é…ç½®æ–‡ä»¶çš„æ–¹æ³•
 		readConfig();
 	}
 	/**
-	 * ¶ÁÈ¡ÅäÖÃÎÄ¼ş£¬°ÑÅäÖÃÎÄ¼şÖĞµÄÄÚÈİ¶Á³öÀ´ÉèÖÃµ½ÊôĞÔÉÏ
+	 * è¯»å–é…ç½®æ–‡ä»¶ï¼ŒæŠŠé…ç½®æ–‡ä»¶ä¸­çš„å†…å®¹è¯»å‡ºæ¥è®¾ç½®åˆ°å±æ€§ä¸Š
 	 */
 	private void readConfig(){
 		Properties p = new Properties(); 
@@ -37,11 +37,11 @@ public class AppConfig {
 		try {
 			in = AppConfig.class.getResourceAsStream("AppConfig.properties");
 			p.load(in);
-			//°ÑÅäÖÃÎÄ¼şÖĞµÄÄÚÈİ¶Á³öÀ´ÉèÖÃµ½ÊôĞÔÉÏ
+			//æŠŠé…ç½®æ–‡ä»¶ä¸­çš„å†…å®¹è¯»å‡ºæ¥è®¾ç½®åˆ°å±æ€§ä¸Š
 			this.parameterA = p.getProperty("paramA");
 			this.parameterB = p.getProperty("paramB");
 		} catch (IOException e) {
-			System.out.println("×°ÔØÅäÖÃÎÄ¼ş³ö´íÁË£¬¾ßÌå¶ÑÕ»ĞÅÏ¢ÈçÏÂ£º");
+			System.out.println("è£…è½½é…ç½®æ–‡ä»¶å‡ºé”™äº†ï¼Œå…·ä½“å †æ ˆä¿¡æ¯å¦‚ä¸‹ï¼š");
 			e.printStackTrace();
 		}finally{
 			try {

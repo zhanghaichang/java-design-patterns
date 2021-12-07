@@ -1,24 +1,24 @@
 package cn.javass.dp.chainofresponsibility.example3;
 /**
- * ¶¨ÒåÖ°Ôğ¶ÔÏóµÄ½Ó¿Ú
+ * å®šä¹‰èŒè´£å¯¹è±¡çš„æ¥å£
  */
 public abstract class Handler {
 	/**
-	 * ³ÖÓĞÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
+	 * æŒæœ‰ä¸‹ä¸€ä¸ªå¤„ç†è¯·æ±‚çš„å¯¹è±¡
 	 */
 	protected Handler successor = null;
 	/**
-	 * ÉèÖÃÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
-	 * @param successor ÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
+	 * è®¾ç½®ä¸‹ä¸€ä¸ªå¤„ç†è¯·æ±‚çš„å¯¹è±¡
+	 * @param successor ä¸‹ä¸€ä¸ªå¤„ç†è¯·æ±‚çš„å¯¹è±¡
 	 */
 	public void setSuccessor(Handler successor){
 		this.successor = successor;
 	}
 	/**
-	 * ´¦Àí¾Û²Í·ÑÓÃµÄÉêÇë
-	 * @param user ÉêÇëÈË
-	 * @param fee ÉêÇëµÄÇ®Êı
-	 * @return ³É¹¦»òÊ§°ÜµÄ¾ßÌåÍ¨Öª
+	 * å¤„ç†èšé¤è´¹ç”¨çš„ç”³è¯·
+	 * @param user ç”³è¯·äºº
+	 * @param fee ç”³è¯·çš„é’±æ•°
+	 * @return æˆåŠŸæˆ–å¤±è´¥çš„å…·ä½“é€šçŸ¥
 	 */
 	public abstract String handleFeeRequest(String user,double fee);
 }

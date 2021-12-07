@@ -1,18 +1,18 @@
 package cn.javass.dp.prototype.example1;
 /**
- * ÆóÒµ¶©µ¥¶ÔÏó
+ * ä¼ä¸šè®¢å•å¯¹è±¡
  */
 public class EnterpriseOrder implements OrderApi{
 	/**
-	 * ÆóÒµÃû³Æ
+	 * ä¼ä¸šåç§°
 	 */
 	private String enterpriseName;
 	/**
-	 * ²úÆ·±àºÅ
+	 * äº§å“ç¼–å·
 	 */
 	private String productId;	
 	/**
-	 * ¶©µ¥²úÆ·ÊıÁ¿
+	 * è®¢å•äº§å“æ•°é‡
 	 */
 	private int orderProductNum = 0;
 	public int getOrderProductNum() {
@@ -34,6 +34,6 @@ public class EnterpriseOrder implements OrderApi{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "±¾ÆóÒµ¶©µ¥µÄ¶©¹ºÆóÒµÊÇ="+this.enterpriseName+"£¬¶©¹º²úÆ·ÊÇ="+this.productId+"£¬¶©¹ºÊıÁ¿Îª="+this.orderProductNum;
+		return "æœ¬ä¼ä¸šè®¢å•çš„è®¢è´­ä¼ä¸šæ˜¯="+this.enterpriseName+"ï¼Œè®¢è´­äº§å“æ˜¯="+this.productId+"ï¼Œè®¢è´­æ•°é‡ä¸º="+this.orderProductNum;
 	}
 }

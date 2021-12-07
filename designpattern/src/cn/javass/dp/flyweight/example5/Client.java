@@ -4,19 +4,19 @@ import java.util.*;
 public class Client {
 	public static void main(String[] args) throws Exception{
 		SecurityMgr mgr = SecurityMgr.getInstance();
-		boolean f1 = mgr.hasPermit("ÕÅÈı","Ğ½×ÊÊı¾İ","²é¿´");
-		boolean f2 = mgr.hasPermit("ÀîËÄ","Ğ½×ÊÊı¾İ","²é¿´");
-		boolean f3 = mgr.hasPermit("ÀîËÄ","Ğ½×ÊÊı¾İ","ĞŞ¸Ä");
+		boolean f1 = mgr.hasPermit("å¼ ä¸‰","è–ªèµ„æ•°æ®","æŸ¥çœ‹");
+		boolean f2 = mgr.hasPermit("æå››","è–ªèµ„æ•°æ®","æŸ¥çœ‹");
+		boolean f3 = mgr.hasPermit("æå››","è–ªèµ„æ•°æ®","ä¿®æ”¹");
 
 //		Thread.sleep(4000);
 		for(int i=0;i<3;i++){
-			mgr.hasPermit("ÕÅÈı"+i,"Ğ½×ÊÊı¾İ","²é¿´");
+			mgr.hasPermit("å¼ ä¸‰"+i,"è–ªèµ„æ•°æ®","æŸ¥çœ‹");
 		}	
 		
-		//ÌØ±ğÌáĞÑ£ºÕâÀï²é¿´µÄÒıÓÃ´ÎÊı£¬²»ÊÇÖ¸²âÊÔÊ¹ÓÃµÄ´ÎÊı
-		//Ö¸µÄÊÇSecurityMgrµÄqueryByUser·½·¨Í¨¹ıÏíÔª¹¤³§È¥»ñÈ¡ÏíÔª¶ÔÏóµÄ´ÎÊı
-		System.out.println("Ğ½×ÊÊı¾İ,²é¿´ ±»ÒıÓÃÁË"+FlyweightFactory.getInstance().getUseTimes("Ğ½×ÊÊı¾İ,²é¿´")+"´Î");
-		System.out.println("Ğ½×ÊÊı¾İ,ĞŞ¸Ä ±»ÒıÓÃÁË"+FlyweightFactory.getInstance().getUseTimes("Ğ½×ÊÊı¾İ,ĞŞ¸Ä")+"´Î");
-		System.out.println("ÈËÔ±ÁĞ±í,²é¿´ ±»ÒıÓÃÁË"+FlyweightFactory.getInstance().getUseTimes("ÈËÔ±ÁĞ±í,²é¿´")+"´Î");
+		//ç‰¹åˆ«æé†’ï¼šè¿™é‡ŒæŸ¥çœ‹çš„å¼•ç”¨æ¬¡æ•°ï¼Œä¸æ˜¯æŒ‡æµ‹è¯•ä½¿ç”¨çš„æ¬¡æ•°
+		//æŒ‡çš„æ˜¯SecurityMgrçš„queryByUseræ–¹æ³•é€šè¿‡äº«å…ƒå·¥å‚å»è·å–äº«å…ƒå¯¹è±¡çš„æ¬¡æ•°
+		System.out.println("è–ªèµ„æ•°æ®,æŸ¥çœ‹ è¢«å¼•ç”¨äº†"+FlyweightFactory.getInstance().getUseTimes("è–ªèµ„æ•°æ®,æŸ¥çœ‹")+"æ¬¡");
+		System.out.println("è–ªèµ„æ•°æ®,ä¿®æ”¹ è¢«å¼•ç”¨äº†"+FlyweightFactory.getInstance().getUseTimes("è–ªèµ„æ•°æ®,ä¿®æ”¹")+"æ¬¡");
+		System.out.println("äººå‘˜åˆ—è¡¨,æŸ¥çœ‹ è¢«å¼•ç”¨äº†"+FlyweightFactory.getInstance().getUseTimes("äººå‘˜åˆ—è¡¨,æŸ¥çœ‹")+"æ¬¡");
 	}
 }

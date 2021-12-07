@@ -2,9 +2,9 @@ package cn.javass.dp.flyweight.example2;
 
 import java.util.*;
 /**
- * Client¶ÔÏó£¬Í¨³£»áÎ¬³ÖÒ»¸ö¶ÔflyweightµÄÒıÓÃ£¬
- * ¼ÆËã»ò´æ´¢Ò»¸ö»ò¶à¸öflyweightµÄÍâ²¿×´Ì¬
+ * Clientå¯¹è±¡ï¼Œé€šå¸¸ä¼šç»´æŒä¸€ä¸ªå¯¹flyweightçš„å¼•ç”¨ï¼Œ
+ * è®¡ç®—æˆ–å­˜å‚¨ä¸€ä¸ªæˆ–å¤šä¸ªflyweightçš„å¤–éƒ¨çŠ¶æ€
  */
 public class Client {
-	//¾ßÌåµÄ¹¦ÄÜ´¦Àí
+	//å…·ä½“çš„åŠŸèƒ½å¤„ç†
 }

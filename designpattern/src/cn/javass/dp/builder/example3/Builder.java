@@ -4,22 +4,22 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * ¹¹½¨Æ÷½Ó¿Ú£¬¶¨Òå´´½¨Ò»¸öÊä³öÎÄ¼ş¶ÔÏóËùĞèµÄ¸÷¸ö²¿¼şµÄ²Ù×÷
+ * æ„å»ºå™¨æ¥å£ï¼Œå®šä¹‰åˆ›å»ºä¸€ä¸ªè¾“å‡ºæ–‡ä»¶å¯¹è±¡æ‰€éœ€çš„å„ä¸ªéƒ¨ä»¶çš„æ“ä½œ
  */
 public interface Builder {
 	/**
-	 * ¹¹½¨Êä³öÎÄ¼şµÄHeader²¿·Ö
-	 * @param ehm ÎÄ¼şÍ·µÄÄÚÈİ
+	 * æ„å»ºè¾“å‡ºæ–‡ä»¶çš„Headeréƒ¨åˆ†
+	 * @param ehm æ–‡ä»¶å¤´çš„å†…å®¹
 	 */
 	public void buildHeader(ExportHeaderModel ehm);
 	/**
-	 * ¹¹½¨Êä³öÎÄ¼şµÄBody²¿·Ö
-	 * @param mapData ÒªÊä³öµÄÊı¾İµÄÄÚÈİ
+	 * æ„å»ºè¾“å‡ºæ–‡ä»¶çš„Bodyéƒ¨åˆ†
+	 * @param mapData è¦è¾“å‡ºçš„æ•°æ®çš„å†…å®¹
 	 */
 	public void buildBody(Map<String,Collection<ExportDataModel>> mapData);
 	/**
-	 * ¹¹½¨Êä³öÎÄ¼şµÄFooter²¿·Ö
-	 * @param efm ÎÄ¼şÎ²µÄÄÚÈİ
+	 * æ„å»ºè¾“å‡ºæ–‡ä»¶çš„Footeréƒ¨åˆ†
+	 * @param efm æ–‡ä»¶å°¾çš„å†…å®¹
 	 */
 	public void buildFooter(ExportFooterModel efm);
 }

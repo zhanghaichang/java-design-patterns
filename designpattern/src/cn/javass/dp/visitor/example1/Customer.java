@@ -1,14 +1,14 @@
 package cn.javass.dp.visitor.example1;
 /**
- * ¸÷ÖÖ¿Í»§µÄ¸¸Àà
+ * å„ç§å®¢æˆ·çš„çˆ¶ç±»
  */
 public abstract class Customer {
 	/**
-	 * ¿Í»§±àºÅ
+	 * å®¢æˆ·ç¼–å·
 	 */
 	private String customerId;
 	/**
-	 * ¿Í»§Ãû³Æ
+	 * å®¢æˆ·åç§°
 	 */
 	private String name;
 	
@@ -25,7 +25,7 @@ public abstract class Customer {
 		this.name = name;
 	}	
 	/**
-	 * ¿Í»§Ìá³ö·şÎñÇëÇóµÄ·½·¨£¬Ê¾ÒâÒ»ÏÂ
+	 * å®¢æˆ·æå‡ºæœåŠ¡è¯·æ±‚çš„æ–¹æ³•ï¼Œç¤ºæ„ä¸€ä¸‹
 	 */
 	public abstract void serviceRequest();
 }

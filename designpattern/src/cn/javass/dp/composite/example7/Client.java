@@ -2,17 +2,17 @@ package cn.javass.dp.composite.example7;
 
 public class Client {
 	public static void main(String[] args) {
-		//¶¨ÒåËùÓĞµÄ×éºÏ¶ÔÏó
-		Component root = new Composite("·ş×°");
-		Component c1 = new Composite("ÄĞ×°");
-		Component c2= new Composite("³ÄÒÂ");
-		Component c3= new Composite("ÄĞ×°");
-		//ÉèÖÃÒ»¸ö»·×´ÒıÓÃ
+		//å®šä¹‰æ‰€æœ‰çš„ç»„åˆå¯¹è±¡
+		Component root = new Composite("æœè£…");
+		Component c1 = new Composite("ç”·è£…");
+		Component c2= new Composite("è¡¬è¡£");
+		Component c3= new Composite("ç”·è£…");
+		//è®¾ç½®ä¸€ä¸ªç¯çŠ¶å¼•ç”¨
 		root.addChild(c1);
 		c1.addChild(c2);
 		c2.addChild(c3);
 		
-		//µ÷ÓÃ¸ù¶ÔÏóµÄÊä³ö¹¦ÄÜÀ´Êä³öÕû¿ÃÊ÷
+		//è°ƒç”¨æ ¹å¯¹è±¡çš„è¾“å‡ºåŠŸèƒ½æ¥è¾“å‡ºæ•´æ£µæ ‘
 		root.printStruct("");
 	}
 }

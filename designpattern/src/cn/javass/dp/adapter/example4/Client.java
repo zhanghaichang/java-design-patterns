@@ -2,30 +2,30 @@ package cn.javass.dp.adapter.example4;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//×¼±¸ÈÕÖ¾ÄÚÈİ£¬Ò²¾ÍÊÇ²âÊÔµÄÊı¾İ
+		//å‡†å¤‡æ—¥å¿—å†…å®¹ï¼Œä¹Ÿå°±æ˜¯æµ‹è¯•çš„æ•°æ®
 		LogModel lm1 = new LogModel();
 		lm1.setLogId("001");
 		lm1.setOperateUser("admin");
 		lm1.setOperateTime("2010-03-02 10:08:18");
-		lm1.setLogContent("ÕâÊÇÒ»¸ö²âÊÔ");
+		lm1.setLogContent("è¿™æ˜¯ä¸€ä¸ªæµ‹è¯•");
 		
 		List<LogModel> list = new ArrayList<LogModel>();
 		list.add(lm1);
 
-		//´´½¨²Ù×÷ÈÕÖ¾ÎÄ¼şµÄ¶ÔÏó
+		//åˆ›å»ºæ“ä½œæ—¥å¿—æ–‡ä»¶çš„å¯¹è±¡
 		LogFileOperateApi fileLogApi = new LogFileOperate("");
 		LogDbOperateApi dbLogApi = new LogDbOperate();
 		
-		//´´½¨¾­¹ıË«ÏòÊÊÅäºóµÄ²Ù×÷ÈÕÖ¾µÄ½Ó¿Ú¶ÔÏó
+		//åˆ›å»ºç»è¿‡åŒå‘é€‚é…åçš„æ“ä½œæ—¥å¿—çš„æ¥å£å¯¹è±¡
 		LogFileOperateApi fileLogApi2 = new TwoDirectAdapter(fileLogApi,dbLogApi); 
 		LogDbOperateApi dbLogApi2 = new TwoDirectAdapter(fileLogApi,dbLogApi); 
 		
-		//ÏÈ²âÊÔ´ÓÎÄ¼ş²Ù×÷ÊÊÅäµ½µÚ¶ş°æ£¬ËäÈ»µ÷ÓÃµÄÊÇµÚ¶ş°æµÄ½Ó¿Ú£¬ÆäÊµÊÇÎÄ¼ş²Ù×÷ÔÚÊµÏÖ
+		//å…ˆæµ‹è¯•ä»æ–‡ä»¶æ“ä½œé€‚é…åˆ°ç¬¬äºŒç‰ˆï¼Œè™½ç„¶è°ƒç”¨çš„æ˜¯ç¬¬äºŒç‰ˆçš„æ¥å£ï¼Œå…¶å®æ˜¯æ–‡ä»¶æ“ä½œåœ¨å®ç°
 		dbLogApi2.createLog(lm1);
 		List<LogModel> allLog = dbLogApi2.getAllLog();
 		System.out.println("allLog="+allLog);
 		
-		//ÔÙ²âÊÔ´ÓÊı¾İ¿â´æ´¢ÊÊÅä³ÉµÚÒ»°æµÄ½Ó¿Ú£¬Ò²¾ÍÊÇµ÷ÓÃµÚÒ»°æµÄ½Ó¿Ú£¬ÆäÊµÊÇÊı¾İÊµÏÖ
+		//å†æµ‹è¯•ä»æ•°æ®åº“å­˜å‚¨é€‚é…æˆç¬¬ä¸€ç‰ˆçš„æ¥å£ï¼Œä¹Ÿå°±æ˜¯è°ƒç”¨ç¬¬ä¸€ç‰ˆçš„æ¥å£ï¼Œå…¶å®æ˜¯æ•°æ®å®ç°
 		fileLogApi2.writeLogFile(list);
 		fileLogApi2.readLogFile();
 	}

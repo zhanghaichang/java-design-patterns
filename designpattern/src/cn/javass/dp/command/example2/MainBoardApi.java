@@ -1,10 +1,10 @@
 package cn.javass.dp.command.example2;
 /**
- * Ö÷°åµÄ½Ó¿Ú
+ * ä¸»æ¿çš„æ¥å£
  */
 public interface MainBoardApi {
 	/**
-	 * Ö÷°å¾ßÓĞÄÜ¿ª»úµÄ¹¦ÄÜ
+	 * ä¸»æ¿å…·æœ‰èƒ½å¼€æœºçš„åŠŸèƒ½
 	 */
 	public void open();
 }

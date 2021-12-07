@@ -1,10 +1,10 @@
 package cn.javass.dp.memento.example4;
 /**
- * ÔËËãÀà£¬ÕæÕıÊµÏÖ¼Ó¼õ·¨ÔËËã
+ * è¿ç®—ç±»ï¼ŒçœŸæ­£å®ç°åŠ å‡æ³•è¿ç®—
  */
 public class Operation implements OperationApi{
 	/**
-	 * ¼ÇÂ¼ÔËËãµÄ½á¹û
+	 * è®°å½•è¿ç®—çš„ç»“æœ
 	 */
 	private int result;
 	public int getResult() {
@@ -26,7 +26,7 @@ public class Operation implements OperationApi{
 		this.result = m.getResult();
 	}
 	/**
-	 * ±¸ÍüÂ¼¶ÔÏó
+	 * å¤‡å¿˜å½•å¯¹è±¡
 	 */
 	private static class MementoImpl implements Memento{
 		private int result = 0;

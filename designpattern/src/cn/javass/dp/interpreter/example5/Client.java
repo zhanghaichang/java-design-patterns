@@ -9,23 +9,23 @@ import org.w3c.dom.Element;
 
 public class Client {
 	public static void main(String[] args) throws Exception {
-		//×¼±¸ÉÏÏÂÎÄ
+		//å‡†å¤‡ä¸Šä¸‹æ–‡
 		Context c = new Context("InterpreterTest.xml");
-		//Í¨¹ı½âÎöÆ÷»ñÈ¡³éÏóÓï·¨Ê÷
+		//é€šè¿‡è§£æå™¨è·å–æŠ½è±¡è¯­æ³•æ ‘
 		ReadXmlExpression re = Parser.parse("root/a/b/d$.id$");
-		//ÇëÇó½âÎö£¬»ñÈ¡·µ»ØÖµ
+		//è¯·æ±‚è§£æï¼Œè·å–è¿”å›å€¼
 		String ss[] = re.interpret(c);
 		for (String s : ss) {
-			System.out.println("dµÄÊôĞÔidÖµÊÇ=" + s);
+			System.out.println("dçš„å±æ€§idå€¼æ˜¯=" + s);
 		}
 		
-		//Èç¹ûÒªÊ¹ÓÃÍ¬Ò»¸öÉÏÏÂÎÄ£¬Á¬Ğø½øĞĞ½âÎö£¬ĞèÒªÖØĞÂ³õÊ¼»¯ÉÏÏÂÎÄ¶ÔÏó
+		//å¦‚æœè¦ä½¿ç”¨åŒä¸€ä¸ªä¸Šä¸‹æ–‡ï¼Œè¿ç»­è¿›è¡Œè§£æï¼Œéœ€è¦é‡æ–°åˆå§‹åŒ–ä¸Šä¸‹æ–‡å¯¹è±¡
 		c.reInit();
 		ReadXmlExpression re2 = Parser.parse("root/a/b/d$");
-		//ÇëÇó½âÎö£¬»ñÈ¡·µ»ØÖµ
+		//è¯·æ±‚è§£æï¼Œè·å–è¿”å›å€¼
 		String ss2[] = re2.interpret(c);
 		for (String s : ss2) {
-			System.out.println("dµÄÖµÊÇ=" + s);
+			System.out.println("dçš„å€¼æ˜¯=" + s);
 		}
 	}
 }

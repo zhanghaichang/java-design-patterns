@@ -1,15 +1,15 @@
 package cn.javass.dp.visitor.example4;
 
 /**
- * ¸÷ÖÖ¿Í»§µÄ¸¸Àà
+ * å„ç§å®¢æˆ·çš„çˆ¶ç±»
  */
 public abstract class Customer {
 	/**
-	 * ¿Í»§±àºÅ
+	 * å®¢æˆ·ç¼–å·
 	 */
 	private String customerId;
 	/**
-	 * ¿Í»§Ãû³Æ
+	 * å®¢æˆ·åç§°
 	 */
 	private String name;
 	
@@ -27,8 +27,8 @@ public abstract class Customer {
 	}	
 	
 	/**
-	 * ½ÓÊÜ·ÃÎÊÕßµÄ·ÃÎÊ
-	 * @param visitor ·ÃÎÊÕß¶ÔÏó
+	 * æ¥å—è®¿é—®è€…çš„è®¿é—®
+	 * @param visitor è®¿é—®è€…å¯¹è±¡
 	 */
 	public abstract void accept(Visitor visitor);
 }

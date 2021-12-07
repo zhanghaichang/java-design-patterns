@@ -1,27 +1,27 @@
 package cn.javass.dp.chainofresponsibility.example5;
 /**
- * ÊµÏÖ²¿ÃÅ¾­Àí´¦ÀíÔ¤Ö§²îÂÃ·ÑÓÃÉêÇëµÄ¶ÔÏó 
+ * å®ç°éƒ¨é—¨ç»ç†å¤„ç†é¢„æ”¯å·®æ—…è´¹ç”¨ç”³è¯·çš„å¯¹è±¡ 
  */
 public class DepManager2 extends DepManager{
 	public Object handleRequest(RequestModel request){
 		if(PreFeeRequestModel.FEE_TYPE.equals(request.getType())){
-			//±íÊ¾Ô¤Ö§²îÂÃ·ÑÓÃÉêÇë
+			//è¡¨ç¤ºé¢„æ”¯å·®æ—…è´¹ç”¨ç”³è¯·
 			return myHandler(request);
 		}else{
-			//ÆäËûµÄÈÃ¸¸ÀàÈ¥´¦Àí
+			//å…¶ä»–çš„è®©çˆ¶ç±»å»å¤„ç†
 			return super.handleRequest(request);
 		}
 	}
 	private Object myHandler(RequestModel request) {
-		//ÏÈ°ÑÍ¨ÓÃµÄ¶ÔÏóÔìĞÍ»ØÀ´
+		//å…ˆæŠŠé€šç”¨çš„å¯¹è±¡é€ å‹å›æ¥
 		PreFeeRequestModel fr = (PreFeeRequestModel)request;
-		//²¿ÃÅ¾­ÀíµÄÈ¨ÏŞ±È½ÏĞ¡£¬Ö»ÄÜÔÚ20000ÒÔÄÚ
+		//éƒ¨é—¨ç»ç†çš„æƒé™æ¯”è¾ƒå°ï¼Œåªèƒ½åœ¨20000ä»¥å†…
 		if(fr.getFee() < 20000){
-			//¹¤×÷ĞèÒªÂï£¬Í³Í³Í¬Òâ
-			System.out.println("²¿ÃÅ¾­ÀíÍ¬Òâ"+fr.getUser()+"Ô¤Ö§²îÂÃ·ÑÓÃ"+fr.getFee()+"ÔªµÄÇëÇó");
+			//å·¥ä½œéœ€è¦å˜›ï¼Œç»Ÿç»ŸåŒæ„
+			System.out.println("éƒ¨é—¨ç»ç†åŒæ„"+fr.getUser()+"é¢„æ”¯å·®æ—…è´¹ç”¨"+fr.getFee()+"å…ƒçš„è¯·æ±‚");
 			return true;
 		}else{
-			//³¬¹ı20000£¬¼ÌĞø´«µİ¸ø¼¶±ğ¸ü¸ßµÄÈË´¦Àí
+			//è¶…è¿‡20000ï¼Œç»§ç»­ä¼ é€’ç»™çº§åˆ«æ›´é«˜çš„äººå¤„ç†
 			if(this.successor != null){
 				return this.successor.handleRequest(request);
 			}

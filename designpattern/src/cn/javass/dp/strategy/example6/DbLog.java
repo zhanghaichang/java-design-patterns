@@ -1,13 +1,13 @@
 package cn.javass.dp.strategy.example6;
 /**
- * °ÑÈÕÖ¾¼ÇÂ¼µ½Êı¾İ¿â
+ * æŠŠæ—¥å¿—è®°å½•åˆ°æ•°æ®åº“
  */
 public class DbLog implements LogStrategy{
 	public void log(String msg) {		
-		//ÖÆÔì´íÎó
+		//åˆ¶é€ é”™è¯¯
 		if(msg!=null && msg.trim().length()>5){
 			int a = 5/0;
 		}
-		System.out.println("ÏÖÔÚ°Ñ '"+msg+"' ¼ÇÂ¼µ½Êı¾İ¿âÖĞ");
+		System.out.println("ç°åœ¨æŠŠ '"+msg+"' è®°å½•åˆ°æ•°æ®åº“ä¸­");
 	}
 }

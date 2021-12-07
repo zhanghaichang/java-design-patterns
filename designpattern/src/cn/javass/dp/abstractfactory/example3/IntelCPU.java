@@ -1,15 +1,15 @@
 package cn.javass.dp.abstractfactory.example3;
 /**
- *IntelµÄCPUÊµÏÖ
+ *Intelçš„CPUå®ç°
  */
 public class IntelCPU implements CPUApi{
 	/**
-	 * CPUµÄÕë½ÅÊıÄ¿
+	 * CPUçš„é’ˆè„šæ•°ç›®
 	 */
 	private int pins = 0;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëCPUµÄÕë½ÅÊıÄ¿
-	 * @param pins CPUµÄÕë½ÅÊıÄ¿
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥CPUçš„é’ˆè„šæ•°ç›®
+	 * @param pins CPUçš„é’ˆè„šæ•°ç›®
 	 */
 	public IntelCPU(int pins){
 		this.pins = pins;

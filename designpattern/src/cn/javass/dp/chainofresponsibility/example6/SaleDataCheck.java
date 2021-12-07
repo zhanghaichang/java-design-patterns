@@ -1,31 +1,31 @@
 package cn.javass.dp.chainofresponsibility.example6;
 /**
- * ½øĞĞÊı¾İÍ¨ÓÃ¼ì²éµÄÖ°Ôğ¶ÔÏó
+ * è¿›è¡Œæ•°æ®é€šç”¨æ£€æŸ¥çš„èŒè´£å¯¹è±¡
  */
 public class SaleDataCheck extends SaleHandler{
 	public boolean sale(String user, String customer, SaleModel saleModel) {
-		//½øĞĞÊı¾İÍ¨ÓÃ¼ì²é£¬ÉÔÂé·³µã£¬Ã¿¸öÊı¾İ¶¼Òª¼ì²â
+		//è¿›è¡Œæ•°æ®é€šç”¨æ£€æŸ¥ï¼Œç¨éº»çƒ¦ç‚¹ï¼Œæ¯ä¸ªæ•°æ®éƒ½è¦æ£€æµ‹
 		if(user==null || user.trim().length()==0){
-			System.out.println("ÉêÇëÈË²»ÄÜÎª¿Õ");
+			System.out.println("ç”³è¯·äººä¸èƒ½ä¸ºç©º");
 			return false;
 		}
 		if(customer==null || customer.trim().length()==0){
-			System.out.println("¿Í»§²»ÄÜÎª¿Õ");
+			System.out.println("å®¢æˆ·ä¸èƒ½ä¸ºç©º");
 			return false;
 		}
 		if(saleModel==null ){
-			System.out.println("ÏúÊÛÉÌÆ·µÄÊı¾İ²»ÄÜÎª¿Õ");
+			System.out.println("é”€å”®å•†å“çš„æ•°æ®ä¸èƒ½ä¸ºç©º");
 			return false;
 		}
 		if(saleModel.getGoods()==null ||saleModel.getGoods().trim().length()==0){
-			System.out.println("ÏúÊÛµÄÉÌÆ·²»ÄÜÎª¿Õ");
+			System.out.println("é”€å”®çš„å•†å“ä¸èƒ½ä¸ºç©º");
 			return false;
 		}
 		if(saleModel.getSaleNum()==0){
-			System.out.println("ÏúÊÛÉÌÆ·µÄÊıÁ¿²»ÄÜÎª0");
+			System.out.println("é”€å”®å•†å“çš„æ•°é‡ä¸èƒ½ä¸º0");
 			return false;
 		}		
-		//Èç¹ûÍ¨¹ıÁËÉÏÃæµÄ¼ì²â£¬ÄÇ¾ÍÏòÏÂ¼ÌĞøÖ´ĞĞ
+		//å¦‚æœé€šè¿‡äº†ä¸Šé¢çš„æ£€æµ‹ï¼Œé‚£å°±å‘ä¸‹ç»§ç»­æ‰§è¡Œ
 		return this.successor.sale(user, customer, saleModel);
 	}
 }

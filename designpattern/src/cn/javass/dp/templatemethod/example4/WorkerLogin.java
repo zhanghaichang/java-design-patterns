@@ -1,20 +1,20 @@
 package cn.javass.dp.templatemethod.example4;
 /**
- * ¹¤×÷ÈËÔ±µÇÂ¼¿ØÖÆµÄÂß¼­´¦Àí
+ * å·¥ä½œäººå‘˜ç™»å½•æ§åˆ¶çš„é€»è¾‘å¤„ç†
  */
 public class WorkerLogin extends LoginTemplate{
 
 	public LoginModel findLoginUser(String loginId) {
-		// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓĞÄ¬ÈÏÊı¾İµÄ¶ÔÏó
+		// è¿™é‡Œçœç•¥å…·ä½“çš„å¤„ç†ï¼Œä»…åšç¤ºæ„ï¼Œè¿”å›ä¸€ä¸ªæœ‰é»˜è®¤æ•°æ®çš„å¯¹è±¡
 		LoginModel lm = new LoginModel();
 		lm.setLoginId(loginId);
 		lm.setPwd("workerpwd");
 		return lm;
 	}
 	public String encryptPwd(String pwd){
-		//¸²¸Ç¸¸ÀàµÄ·½·¨£¬Ìá¹©ÕæÕıµÄ¼ÓÃÜÊµÏÖ
-		//ÕâÀï¶ÔÃÜÂë½øĞĞ¼ÓÃÜ£¬±ÈÈçÊ¹ÓÃ£ºMD5¡¢3DESµÈµÈ£¬Ê¡ÂÔÁË
-		System.out.println("Ê¹ÓÃMD5½øĞĞÃÜÂë¼ÓÃÜ");
+		//è¦†ç›–çˆ¶ç±»çš„æ–¹æ³•ï¼Œæä¾›çœŸæ­£çš„åŠ å¯†å®ç°
+		//è¿™é‡Œå¯¹å¯†ç è¿›è¡ŒåŠ å¯†ï¼Œæ¯”å¦‚ä½¿ç”¨ï¼šMD5ã€3DESç­‰ç­‰ï¼Œçœç•¥äº†
+		System.out.println("ä½¿ç”¨MD5è¿›è¡Œå¯†ç åŠ å¯†");
 		return pwd;
 	}
 }

@@ -1,14 +1,14 @@
 package cn.javass.dp.state.example3;
 /**
- * ·â×°Ò»¸öÍ¶Æ±×´Ì¬Ïà¹ØµÄĞĞÎª
+ * å°è£…ä¸€ä¸ªæŠ•ç¥¨çŠ¶æ€ç›¸å…³çš„è¡Œä¸º
  */
 public interface VoteState {
 	/**
-	 * ´¦Àí×´Ì¬¶ÔÓ¦µÄĞĞÎª
-	 * @param user Í¶Æ±ÈË
-	 * @param voteItem Í¶Æ±Ïî
-	 * @param voteManager Í¶Æ±ÉÏÏÂÎÄ£¬ÓÃÀ´ÔÚÊµÏÖ×´Ì¬¶ÔÓ¦µÄ¹¦ÄÜ´¦ÀíµÄÊ±ºò£¬
-	 *                    ¿ÉÒÔ»Øµ÷ÉÏÏÂÎÄµÄÊı¾İ
+	 * å¤„ç†çŠ¶æ€å¯¹åº”çš„è¡Œä¸º
+	 * @param user æŠ•ç¥¨äºº
+	 * @param voteItem æŠ•ç¥¨é¡¹
+	 * @param voteManager æŠ•ç¥¨ä¸Šä¸‹æ–‡ï¼Œç”¨æ¥åœ¨å®ç°çŠ¶æ€å¯¹åº”çš„åŠŸèƒ½å¤„ç†çš„æ—¶å€™ï¼Œ
+	 *                    å¯ä»¥å›è°ƒä¸Šä¸‹æ–‡çš„æ•°æ®
 	 */
 	public void vote(String user,String voteItem,VoteManager voteManager);
 }

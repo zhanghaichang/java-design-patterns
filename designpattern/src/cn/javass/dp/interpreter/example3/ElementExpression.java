@@ -4,15 +4,15 @@ import java.util.*;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 /**
- * ÔªËØ×÷Îª·ÇÖÕ½á·û¶ÔÓ¦µÄ½âÊÍÆ÷£¬½âÊÍ²¢Ö´ĞĞÖĞ¼äÔªËØ
+ * å…ƒç´ ä½œä¸ºéç»ˆç»“ç¬¦å¯¹åº”çš„è§£é‡Šå™¨ï¼Œè§£é‡Šå¹¶æ‰§è¡Œä¸­é—´å…ƒç´ 
  */
 public class ElementExpression extends ReadXmlExpression{
 	/**
-	 * ÓÃÀ´¼ÇÂ¼×éºÏµÄReadXmlExpressionÔªËØ
+	 * ç”¨æ¥è®°å½•ç»„åˆçš„ReadXmlExpressionå…ƒç´ 
 	 */
 	private Collection<ReadXmlExpression> eles = new ArrayList<ReadXmlExpression>();
 	/**
-	 * ÔªËØµÄÃû³Æ
+	 * å…ƒç´ çš„åç§°
 	 */
 	private String eleName = "";
 	public ElementExpression(String eleName){
@@ -28,20 +28,20 @@ public class ElementExpression extends ReadXmlExpression{
 	}
 	
 	public String[] interpret(Context c) {
-		//ÏÈÈ¡³öÉÏÏÂÎÄÀïµÄµ±Ç°ÔªËØ×÷Îª¸¸¼¶ÔªËØ
-		//²éÕÒµ½µ±Ç°ÔªËØÃû³ÆËù¶ÔÓ¦µÄxmlÔªËØ£¬²¢ÉèÖÃ»Øµ½ÉÏÏÂÎÄÖĞ
+		//å…ˆå–å‡ºä¸Šä¸‹æ–‡é‡Œçš„å½“å‰å…ƒç´ ä½œä¸ºçˆ¶çº§å…ƒç´ 
+		//æŸ¥æ‰¾åˆ°å½“å‰å…ƒç´ åç§°æ‰€å¯¹åº”çš„xmlå…ƒç´ ï¼Œå¹¶è®¾ç½®å›åˆ°ä¸Šä¸‹æ–‡ä¸­
 		Element pEle = c.getPreEle();
 		if(pEle==null){
-			//ËµÃ÷ÏÖÔÚ»ñÈ¡µÄÊÇ¸ùÔªËØ
+			//è¯´æ˜ç°åœ¨è·å–çš„æ˜¯æ ¹å…ƒç´ 
 			c.setPreEle(c.getDocument().getDocumentElement());
 		}else{
-			//¸ù¾İ¸¸¼¶ÔªËØºÍÒª²éÕÒµÄÔªËØµÄÃû³ÆÀ´»ñÈ¡µ±Ç°µÄÔªËØ
+			//æ ¹æ®çˆ¶çº§å…ƒç´ å’Œè¦æŸ¥æ‰¾çš„å…ƒç´ çš„åç§°æ¥è·å–å½“å‰çš„å…ƒç´ 
 			Element nowEle = c.getNowEle(pEle, eleName);
-			//°Ñµ±Ç°»ñÈ¡µÄÔªËØ·Åµ½ÉÏÏÂÎÄÀïÃæ
+			//æŠŠå½“å‰è·å–çš„å…ƒç´ æ”¾åˆ°ä¸Šä¸‹æ–‡é‡Œé¢
 			c.setPreEle(nowEle);
 		}
 		
-		//Ñ­»·µ÷ÓÃ×ÓÔªËØµÄinterpret·½·¨
+		//å¾ªç¯è°ƒç”¨å­å…ƒç´ çš„interpretæ–¹æ³•
 		String [] ss = null;
 		for(ReadXmlExpression ele : eles){
 			ss = ele.interpret(c);

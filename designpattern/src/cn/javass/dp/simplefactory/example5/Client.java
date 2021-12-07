@@ -1,12 +1,12 @@
 package cn.javass.dp.simplefactory.example5;
 
 /**
- * ¿Í»§¶Ë£º²âÊÔÊ¹ÓÃApi½Ó¿Ú
+ * å®¢æˆ·ç«¯ï¼šæµ‹è¯•ä½¿ç”¨Apiæ¥å£
  */
 public class Client {
 	public static void main(String[] args) {
-		//ÖØÒª¸Ä±ä£¬Ã»ÓĞnew Impl()ÁË£¬È¡¶ø´úÖ®Factory.createApi()
+		//é‡è¦æ”¹å˜ï¼Œæ²¡æœ‰new Impl()äº†ï¼Œå–è€Œä»£ä¹‹Factory.createApi()
 		Api api = Factory.createApi();
-		api.test1("¹ş¹ş£¬²»Òª½ôÕÅ£¬Ö»ÊÇ¸ö²âÊÔ¶øÒÑ£¡");
+		api.test1("å“ˆå“ˆï¼Œä¸è¦ç´§å¼ ï¼Œåªæ˜¯ä¸ªæµ‹è¯•è€Œå·²ï¼");
 	}
 }

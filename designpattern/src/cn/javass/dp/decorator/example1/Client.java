@@ -2,15 +2,15 @@ package cn.javass.dp.decorator.example1;
 
 public class Client {
 	public static void main(String[] args) {
-		//ÏÈ´´½¨¼ÆËã½±½ğµÄ¶ÔÏó
+		//å…ˆåˆ›å»ºè®¡ç®—å¥–é‡‘çš„å¯¹è±¡
 		Prize p = new Prize();
 		
-		//ÈÕÆÚ¶ÔÏó¶¼Ã»ÓĞÓÃÉÏ£¬ËùÒÔ´«null¾Í¿ÉÒÔÁË
-		double zs = p.calcPrize("ÕÅÈı",null,null);		
-		System.out.println("==========ÕÅÈıÓ¦µÃ½±½ğ£º"+zs);
-		double ls = p.calcPrize("ÀîËÄ",null,null);
-		System.out.println("==========ÀîËÄÓ¦µÃ½±½ğ£º"+ls);		
-		double ww = p.calcPrize("ÍõÎå",null,null);
-		System.out.println("==========Íõ¾­ÀíÓ¦µÃ½±½ğ£º"+ww);
+		//æ—¥æœŸå¯¹è±¡éƒ½æ²¡æœ‰ç”¨ä¸Šï¼Œæ‰€ä»¥ä¼ nullå°±å¯ä»¥äº†
+		double zs = p.calcPrize("å¼ ä¸‰",null,null);		
+		System.out.println("==========å¼ ä¸‰åº”å¾—å¥–é‡‘ï¼š"+zs);
+		double ls = p.calcPrize("æå››",null,null);
+		System.out.println("==========æå››åº”å¾—å¥–é‡‘ï¼š"+ls);		
+		double ww = p.calcPrize("ç‹äº”",null,null);
+		System.out.println("==========ç‹ç»ç†åº”å¾—å¥–é‡‘ï¼š"+ww);
 	}
 }

@@ -2,30 +2,30 @@ package cn.javass.dp.templatemethod.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼±¸µÇÂ¼ÈËµÄĞÅÏ¢
+		//å‡†å¤‡ç™»å½•äººçš„ä¿¡æ¯
 		LoginModel lm = new LoginModel();
 		lm.setLoginId("admin");
 		lm.setPwd("workerpwd");
-		//×¼±¸ÓÃÀ´½øĞĞÅĞ¶ÏµÄ¶ÔÏó
+		//å‡†å¤‡ç”¨æ¥è¿›è¡Œåˆ¤æ–­çš„å¯¹è±¡
 		LoginTemplate lt = new WorkerLogin();
 		LoginTemplate lt2 = new NormalLogin();
-		//½øĞĞµÇÂ¼²âÊÔ
+		//è¿›è¡Œç™»å½•æµ‹è¯•
 		boolean flag = lt.login(lm);
-		System.out.println("¿ÉÒÔµÇÂ¼¹¤×÷Æ½Ì¨="+flag);
+		System.out.println("å¯ä»¥ç™»å½•å·¥ä½œå¹³å°="+flag);
 		
 		boolean flag2 = lt2.login(lm);
-		System.out.println("¿ÉÒÔ½øĞĞÆÕÍ¨ÈËÔ±µÇÂ¼="+flag2);
+		System.out.println("å¯ä»¥è¿›è¡Œæ™®é€šäººå‘˜ç™»å½•="+flag2);
 		
-		//×¼±¸µÇÂ¼ÈËµÄĞÅÏ¢
+		//å‡†å¤‡ç™»å½•äººçš„ä¿¡æ¯
 		NormalLoginModel nlm = new NormalLoginModel();
 		nlm.setLoginId("testUser");
 		nlm.setPwd("testpwd");
 		nlm.setQuestion("testQuestion");
 		nlm.setAnswer("testAnswer");
-		//×¼±¸ÓÃÀ´½øĞĞÅĞ¶ÏµÄ¶ÔÏó
+		//å‡†å¤‡ç”¨æ¥è¿›è¡Œåˆ¤æ–­çš„å¯¹è±¡
 		LoginTemplate lt3 = new NormalLogin2();
-		//½øĞĞµÇÂ¼²âÊÔ
+		//è¿›è¡Œç™»å½•æµ‹è¯•
 		boolean flag3 = lt3.login(nlm);
-		System.out.println("¿ÉÒÔ½øĞĞÆÕÍ¨ÈËÔ±¼ÓÇ¿°æµÇÂ¼="+flag3);
+		System.out.println("å¯ä»¥è¿›è¡Œæ™®é€šäººå‘˜åŠ å¼ºç‰ˆç™»å½•="+flag3);
 	}
 }

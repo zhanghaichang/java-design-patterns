@@ -2,26 +2,26 @@ package cn.javass.dp.state.example2;
 
 
 /**
- * ¶¨Òå¿Í»§¸ĞĞËÈ¤µÄ½Ó¿Ú£¬Í¨³£»áÎ¬»¤Ò»¸öStateÀàĞÍµÄ¶ÔÏóÊµÀı
+ * å®šä¹‰å®¢æˆ·æ„Ÿå…´è¶£çš„æ¥å£ï¼Œé€šå¸¸ä¼šç»´æŠ¤ä¸€ä¸ªStateç±»å‹çš„å¯¹è±¡å®ä¾‹
  */
 public class Context {
 	/**
-	 * ³ÖÓĞÒ»¸öStateÀàĞÍµÄ¶ÔÏóÊµÀı
+	 * æŒæœ‰ä¸€ä¸ªStateç±»å‹çš„å¯¹è±¡å®ä¾‹
 	 */
 	private State state;
 	/**
-	 * ÉèÖÃÊµÏÖStateµÄ¶ÔÏóµÄÊµÀı 
-	 * @param state ÊµÏÖStateµÄ¶ÔÏóµÄÊµÀı 
+	 * è®¾ç½®å®ç°Stateçš„å¯¹è±¡çš„å®ä¾‹ 
+	 * @param state å®ç°Stateçš„å¯¹è±¡çš„å®ä¾‹ 
 	 */
 	public void setState(State state) {
 		this.state = state;
 	}
 	/**
-	 * ÓÃ»§¸ĞĞËÈ¤µÄ½Ó¿Ú·½·¨
-	 * @param sampleParameter Ê¾Òâ²ÎÊı
+	 * ç”¨æˆ·æ„Ÿå…´è¶£çš„æ¥å£æ–¹æ³•
+	 * @param sampleParameter ç¤ºæ„å‚æ•°
 	 */
 	public void request(String sampleParameter) {
-		//ÔÚ´¦ÀíÖĞ£¬»á×ªµ÷stateÀ´´¦Àí
+		//åœ¨å¤„ç†ä¸­ï¼Œä¼šè½¬è°ƒstateæ¥å¤„ç†
 		state.handle(sampleParameter);
 	}
 

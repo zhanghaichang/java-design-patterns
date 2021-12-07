@@ -1,15 +1,15 @@
 package cn.javass.dp.bridge.example5;
 /**
- * À©³äÓÉAbstraction¶¨ÒåµÄ½Ó¿Ú¹¦ÄÜ
+ * æ‰©å……ç”±Abstractionå®šä¹‰çš„æ¥å£åŠŸèƒ½
  */
 public class RefinedAbstraction extends Abstraction {
 	public RefinedAbstraction(Implementor impl) {
 		super(impl);
 	}
 	/**
-	 * Ê¾Àı²Ù×÷£¬ÊµÏÖÒ»¶¨µÄ¹¦ÄÜ£¬¿ÉÄÜ»áÊ¹ÓÃ¾ßÌåÊµÏÖ²¿·ÖµÄÊµÏÖ·½·¨£¬
-	 * µ«ÊÇ±¾·½·¨¸ü´óµÄ¿ÉÄÜÊÇÊ¹ÓÃAbstractionÖĞ¶¨ÒåµÄ·½·¨£¬
-	 * Í¨¹ı×éºÏÊ¹ÓÃAbstractionÖĞ¶¨ÒåµÄ·½·¨À´Íê³É¸ü¶àµÄ¹¦ÄÜ
+	 * ç¤ºä¾‹æ“ä½œï¼Œå®ç°ä¸€å®šçš„åŠŸèƒ½ï¼Œå¯èƒ½ä¼šä½¿ç”¨å…·ä½“å®ç°éƒ¨åˆ†çš„å®ç°æ–¹æ³•ï¼Œ
+	 * ä½†æ˜¯æœ¬æ–¹æ³•æ›´å¤§çš„å¯èƒ½æ˜¯ä½¿ç”¨Abstractionä¸­å®šä¹‰çš„æ–¹æ³•ï¼Œ
+	 * é€šè¿‡ç»„åˆä½¿ç”¨Abstractionä¸­å®šä¹‰çš„æ–¹æ³•æ¥å®Œæˆæ›´å¤šçš„åŠŸèƒ½
 	 */
 	public void otherOperation(){
 		//

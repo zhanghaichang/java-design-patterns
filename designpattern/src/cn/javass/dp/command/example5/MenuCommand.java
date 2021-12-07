@@ -1,23 +1,23 @@
 package cn.javass.dp.command.example5;
 import java.util.*;
 /**
- * ²Ëµ¥¶ÔÏó£¬ÊÇ¸öºêÃüÁî¶ÔÏó
+ * èœå•å¯¹è±¡ï¼Œæ˜¯ä¸ªå®å‘½ä»¤å¯¹è±¡
  */
 public class MenuCommand implements Command {
 	/**
-	 * ÓÃÀ´¼ÇÂ¼×éºÏ±¾²Ëµ¥µÄ¶àµÀ²ËÆ·£¬Ò²¾ÍÊÇ¶à¸öÃüÁî¶ÔÏó
+	 * ç”¨æ¥è®°å½•ç»„åˆæœ¬èœå•çš„å¤šé“èœå“ï¼Œä¹Ÿå°±æ˜¯å¤šä¸ªå‘½ä»¤å¯¹è±¡
 	 */
 	private Collection<Command> col = new ArrayList<Command>();
 	/**
-	 * µã²Ë£¬°Ñ²ËÆ·¼ÓÈëµ½²Ëµ¥ÖĞ
-	 * @param cmd ¿Í»§µãµÄ²Ë
+	 * ç‚¹èœï¼ŒæŠŠèœå“åŠ å…¥åˆ°èœå•ä¸­
+	 * @param cmd å®¢æˆ·ç‚¹çš„èœ
 	 */
 	public void addCommand(Command cmd){
 		col.add(cmd);
 	}
 	
 	public void execute() {
-		//Ö´ĞĞ²Ëµ¥ÆäÊµ¾ÍÊÇÑ­»·Ö´ĞĞ²Ëµ¥ÀïÃæµÄÃ¿¸ö²Ë
+		//æ‰§è¡Œèœå•å…¶å®å°±æ˜¯å¾ªç¯æ‰§è¡Œèœå•é‡Œé¢çš„æ¯ä¸ªèœ
 		for(Command cmd : col){
 			cmd.execute();
 		}

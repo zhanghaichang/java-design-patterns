@@ -1,12 +1,12 @@
 package cn.javass.dp.bridge.example6;
 /**
- * ÊµÏÖ·¢ËÍÏûÏ¢µÄÍ³Ò»½Ó¿Ú
+ * å®ç°å‘é€æ¶ˆæ¯çš„ç»Ÿä¸€æ¥å£
  */
 public interface MessageImplementor {
 	/**
-	 * ·¢ËÍÏûÏ¢
-	 * @param message Òª·¢ËÍµÄÏûÏ¢ÄÚÈİ
-	 * @param toUser °ÑÏûÏ¢·¢ËÍµÄÄ¿µÄÈËÔ±
+	 * å‘é€æ¶ˆæ¯
+	 * @param message è¦å‘é€çš„æ¶ˆæ¯å†…å®¹
+	 * @param toUser æŠŠæ¶ˆæ¯å‘é€çš„ç›®çš„äººå‘˜
 	 */
 	public void send(String message,String toUser);
 }

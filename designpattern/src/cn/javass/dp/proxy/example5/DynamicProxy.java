@@ -4,22 +4,22 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 /**
- * Ê¹ÓÃJavaÖĞµÄ¶¯Ì¬´úÀí
+ * ä½¿ç”¨Javaä¸­çš„åŠ¨æ€ä»£ç†
  */
 public class DynamicProxy implements InvocationHandler{
 	/**
-	 * ±»´úÀíµÄ¶ÔÏó
+	 * è¢«ä»£ç†çš„å¯¹è±¡
 	 */
 	private OrderApi order = null;
 	/**
-	 * »ñÈ¡°ó¶¨ºÃ´úÀíºÍ¾ßÌåÄ¿±ê¶ÔÏóºóµÄÄ¿±ê¶ÔÏóµÄ½Ó¿Ú
-	 * @param order ¾ßÌåµÄ¶©µ¥¶ÔÏó£¬Ïàµ±ÓÚ¾ßÌåÄ¿±ê¶ÔÏó
-	 * @return °ó¶¨ºÃ´úÀíºÍ¾ßÌåÄ¿±ê¶ÔÏóºóµÄÄ¿±ê¶ÔÏóµÄ½Ó¿Ú
+	 * è·å–ç»‘å®šå¥½ä»£ç†å’Œå…·ä½“ç›®æ ‡å¯¹è±¡åçš„ç›®æ ‡å¯¹è±¡çš„æ¥å£
+	 * @param order å…·ä½“çš„è®¢å•å¯¹è±¡ï¼Œç›¸å½“äºå…·ä½“ç›®æ ‡å¯¹è±¡
+	 * @return ç»‘å®šå¥½ä»£ç†å’Œå…·ä½“ç›®æ ‡å¯¹è±¡åçš„ç›®æ ‡å¯¹è±¡çš„æ¥å£
 	 */
 	public OrderApi getProxyInterface(Order order){
-		//ÉèÖÃ±»´úÀíµÄ¶ÔÏó£¬ºÃ·½±ãinvokeÀïÃæµÄ²Ù×÷
+		//è®¾ç½®è¢«ä»£ç†çš„å¯¹è±¡ï¼Œå¥½æ–¹ä¾¿invokeé‡Œé¢çš„æ“ä½œ
 		this.order = order;
-		//°ÑÕæÕıµÄ¶©µ¥¶ÔÏóºÍ¶¯Ì¬´úÀí¹ØÁªÆğÀ´
+		//æŠŠçœŸæ­£çš„è®¢å•å¯¹è±¡å’ŒåŠ¨æ€ä»£ç†å…³è”èµ·æ¥
 		OrderApi orderApi = (OrderApi) Proxy.newProxyInstance(
 				order.getClass().getClassLoader(),
 				order.getClass().getInterfaces(), 
@@ -29,17 +29,17 @@ public class DynamicProxy implements InvocationHandler{
 	
 	public Object invoke(Object proxy, Method method, Object[] args)
 			throws Throwable {
-		//Èç¹ûÊÇµ÷ÓÃsetter·½·¨¾ÍĞèÒª¼ì²éÈ¨ÏŞ
+		//å¦‚æœæ˜¯è°ƒç”¨setteræ–¹æ³•å°±éœ€è¦æ£€æŸ¥æƒé™
 		if(method.getName().startsWith("set")){
-			//Èç¹û²»ÊÇ´´½¨ÈË£¬ÄÇ¾Í²»ÄÜĞŞ¸Ä
+			//å¦‚æœä¸æ˜¯åˆ›å»ºäººï¼Œé‚£å°±ä¸èƒ½ä¿®æ”¹
 			if(order.getOrderUser()!=null && order.getOrderUser().equals(args[1])){
-				//¿ÉÒÔ²Ù×÷
+				//å¯ä»¥æ“ä½œ
 				return method.invoke(order, args);
 			}else{
-				System.out.println("¶Ô²»Æğ£¬"+args[1]+"£¬ÄúÎŞÈ¨ĞŞ¸Ä±¾¶©µ¥ÖĞµÄÊı¾İ");
+				System.out.println("å¯¹ä¸èµ·ï¼Œ"+args[1]+"ï¼Œæ‚¨æ— æƒä¿®æ”¹æœ¬è®¢å•ä¸­çš„æ•°æ®");
 			}
 		}else{
-			//²»ÊÇµ÷ÓÃµÄsetter·½·¨¾Í¼ÌĞøÔËĞĞ
+			//ä¸æ˜¯è°ƒç”¨çš„setteræ–¹æ³•å°±ç»§ç»­è¿è¡Œ
 			return method.invoke(order, args);
 		}
 		return null;

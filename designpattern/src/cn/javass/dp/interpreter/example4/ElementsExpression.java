@@ -4,15 +4,15 @@ import java.util.*;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 /**
- * ¶à¸öÔªËØ×öÎª·ÇÖÕ½á·ûµÄ½âÊÍ´¦Àí¶ÔÏó
+ * å¤šä¸ªå…ƒç´ åšä¸ºéç»ˆç»“ç¬¦çš„è§£é‡Šå¤„ç†å¯¹è±¡
  */
 public class ElementsExpression extends ReadXmlExpression{
 	/**
-	 * ÓÃÀ´¼ÇÂ¼×éºÏµÄReadXmlExpressionÔªËØ
+	 * ç”¨æ¥è®°å½•ç»„åˆçš„ReadXmlExpressionå…ƒç´ 
 	 */
 	private Collection<ReadXmlExpression> eles = new ArrayList<ReadXmlExpression>();
 	/**
-	 * ÔªËØÃû×Ö
+	 * å…ƒç´ åå­—
 	 */
 	private String eleName = "";
 	public ElementsExpression(String eleName){
@@ -20,9 +20,9 @@ public class ElementsExpression extends ReadXmlExpression{
 	}
 	
 	public String[] interpret(Context c) {
-		//ÏÈÈ¡³öÉÏÏÂÎÄÀïµÄ¸¸¼¶ÔªËØ
+		//å…ˆå–å‡ºä¸Šä¸‹æ–‡é‡Œçš„çˆ¶çº§å…ƒç´ 
 		List<Element> pEles = c.getPreEles();
-		//°Ñµ±Ç°»ñÈ¡µÄÔªËØ·Åµ½ÉÏÏÂÎÄÀïÃæ£¬Õâ´ÎÊÇ»ñÈ¡¶à¸öÔªËØ
+		//æŠŠå½“å‰è·å–çš„å…ƒç´ æ”¾åˆ°ä¸Šä¸‹æ–‡é‡Œé¢ï¼Œè¿™æ¬¡æ˜¯è·å–å¤šä¸ªå…ƒç´ 
 		List<Element> nowEles = new ArrayList<Element>();
 		
 		for(Element ele : pEles){
@@ -30,7 +30,7 @@ public class ElementsExpression extends ReadXmlExpression{
 		}
 		c.setPreEles(nowEles);
 		
-		//Ñ­»·µ÷ÓÃ×ÓÔªËØµÄinterpret·½·¨
+		//å¾ªç¯è°ƒç”¨å­å…ƒç´ çš„interpretæ–¹æ³•
 		String [] ss = null;
 		for(ReadXmlExpression ele : eles){
 			ss = ele.interpret(c);

@@ -1,54 +1,54 @@
 package cn.javass.dp.state.example4;
 import java.util.*;
 /**
- * Í¶Æ±¹ÜÀí
+ * æŠ•ç¥¨ç®¡ç†
  */
 public class VoteManager {
 	/**
-	 * ¼ÇÂ¼µ±Ç°Ã¿¸öÓÃ»§¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏó£¬Ã¿¸öÓÃ»§µ±Ç°µÄ×´Ì¬ÊÇ²»Í¬µÄ
-	 * Map<String,VoteState>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,µ±Ç°¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏó>
+	 * è®°å½•å½“å‰æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„çŠ¶æ€å¤„ç†å¯¹è±¡ï¼Œæ¯ä¸ªç”¨æˆ·å½“å‰çš„çŠ¶æ€æ˜¯ä¸åŒçš„
+	 * Map<String,VoteState>å¯¹åº”Map<ç”¨æˆ·åç§°,å½“å‰å¯¹åº”çš„çŠ¶æ€å¤„ç†å¯¹è±¡>
 	 */
 	private Map<String,VoteState> mapState = new HashMap<String,VoteState>();
 
 	/**
-	 * ¼ÇÂ¼ÓÃ»§Í¶Æ±µÄ½á¹û,Map<String,String>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,Í¶Æ±µÄÑ¡Ïî>
+	 * è®°å½•ç”¨æˆ·æŠ•ç¥¨çš„ç»“æœ,Map<String,String>å¯¹åº”Map<ç”¨æˆ·åç§°,æŠ•ç¥¨çš„é€‰é¡¹>
 	 */
 	private Map<String,String> mapVote = new HashMap<String,String>();
 	/**
-	 * ¼ÇÂ¼ÓÃ»§Í¶Æ±´ÎÊı,Map<String,Integer>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,Í¶Æ±µÄ´ÎÊı>
+	 * è®°å½•ç”¨æˆ·æŠ•ç¥¨æ¬¡æ•°,Map<String,Integer>å¯¹åº”Map<ç”¨æˆ·åç§°,æŠ•ç¥¨çš„æ¬¡æ•°>
 	 */
 	private Map<String,Integer> mapVoteCount = new HashMap<String,Integer>();
 	
 	
 	/**
-	 * »ñÈ¡¼ÇÂ¼ÓÃ»§Í¶Æ±½á¹ûµÄMap
-	 * @return ¼ÇÂ¼ÓÃ»§Í¶Æ±½á¹ûµÄMap
+	 * è·å–è®°å½•ç”¨æˆ·æŠ•ç¥¨ç»“æœçš„Map
+	 * @return è®°å½•ç”¨æˆ·æŠ•ç¥¨ç»“æœçš„Map
 	 */
 	public Map<String, String> getMapVote() {
 		return mapVote;
 	}
 	/**
-	 * »ñÈ¡¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏóµÄMap
-	 * @return ¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏóµÄMap
+	 * è·å–è®°å½•æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„çŠ¶æ€å¤„ç†å¯¹è±¡çš„Map
+	 * @return è®°å½•æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„çŠ¶æ€å¤„ç†å¯¹è±¡çš„Map
 	 */
 	public Map<String, VoteState> getMapState() {
 		return mapState;
 	}
 	/**
-	 * »ñÈ¡¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄÍ¶Æ±´ÎÊıµÄMap
-	 * @return ¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄÍ¶Æ±´ÎÊıµÄMap
+	 * è·å–è®°å½•æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„æŠ•ç¥¨æ¬¡æ•°çš„Map
+	 * @return è®°å½•æ¯ä¸ªç”¨æˆ·å¯¹åº”çš„æŠ•ç¥¨æ¬¡æ•°çš„Map
 	 */
 	public Map<String, Integer> getMapVoteCount() {
 		return mapVoteCount;
 	}
 	/**
-	 * Í¶Æ±
-	 * @param user Í¶Æ±ÈË£¬ÎªÁË¼òµ¥£¬¾ÍÊÇÓÃ»§Ãû³Æ
-	 * @param voteItem Í¶Æ±µÄÑ¡Ïî
+	 * æŠ•ç¥¨
+	 * @param user æŠ•ç¥¨äººï¼Œä¸ºäº†ç®€å•ï¼Œå°±æ˜¯ç”¨æˆ·åç§°
+	 * @param voteItem æŠ•ç¥¨çš„é€‰é¡¹
 	 */
 	public void vote(String user,String voteItem){
-		//1£ºÏÈÎª¸ÃÓÃ»§Ôö¼ÓÍ¶Æ±µÄ´ÎÊı
-		//ÏÈ´Ó¼ÇÂ¼ÖĞÈ¡³öÒÑÓĞµÄÍ¶Æ±´ÎÊı
+		//1ï¼šå…ˆä¸ºè¯¥ç”¨æˆ·å¢åŠ æŠ•ç¥¨çš„æ¬¡æ•°
+		//å…ˆä»è®°å½•ä¸­å–å‡ºå·²æœ‰çš„æŠ•ç¥¨æ¬¡æ•°
 		Integer oldVoteCount = mapVoteCount.get(user);
 		if(oldVoteCount==null){
 			oldVoteCount = 0;
@@ -56,14 +56,14 @@ public class VoteManager {
 		oldVoteCount = oldVoteCount + 1;
 		mapVoteCount.put(user, oldVoteCount);
 
-		//2£º»ñÈ¡¸ÃÓÃ»§µÄÍ¶Æ±×´Ì¬
+		//2ï¼šè·å–è¯¥ç”¨æˆ·çš„æŠ•ç¥¨çŠ¶æ€
 		VoteState state = mapState.get(user);
-		//Èç¹ûÃ»ÓĞÍ¶Æ±×´Ì¬£¬ËµÃ÷»¹Ã»ÓĞÍ¶¹ıÆ±£¬¾Í³õÊ¼»¯Ò»¸öÕı³£Í¶Æ±×´Ì¬
+		//å¦‚æœæ²¡æœ‰æŠ•ç¥¨çŠ¶æ€ï¼Œè¯´æ˜è¿˜æ²¡æœ‰æŠ•è¿‡ç¥¨ï¼Œå°±åˆå§‹åŒ–ä¸€ä¸ªæ­£å¸¸æŠ•ç¥¨çŠ¶æ€
 		if(state==null){
 			state = new NormalVoteState();
 		}
 		
-		//È»ºó×ªµ÷×´Ì¬¶ÔÏóÀ´½øĞĞÏàÓ¦µÄ²Ù×÷
+		//ç„¶åè½¬è°ƒçŠ¶æ€å¯¹è±¡æ¥è¿›è¡Œç›¸åº”çš„æ“ä½œ
 		state.vote(user, voteItem, this);
 	}
 }

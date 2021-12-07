@@ -1,19 +1,19 @@
 package cn.javass.dp.factorymethod.example4;
 /**
- * ¿Í»§¶ËÊ¹ÓÃCreator¶ÔÏóµÄÇé¿öÏÂ£¬CreatorµÄ»ù±¾ÊµÏÖ½á¹¹
+ * å®¢æˆ·ç«¯ä½¿ç”¨Creatorå¯¹è±¡çš„æƒ…å†µä¸‹ï¼ŒCreatorçš„åŸºæœ¬å®ç°ç»“æ„
  */
 public abstract class Creator {
 	/**
-	 * ¹¤³§·½·¨£¬Ò»°ã²»¶ÔÍâ
-	 * @return ´´½¨µÄ²úÆ·¶ÔÏó
+	 * å·¥å‚æ–¹æ³•ï¼Œä¸€èˆ¬ä¸å¯¹å¤–
+	 * @return åˆ›å»ºçš„äº§å“å¯¹è±¡
 	 */
 	protected abstract Product factoryMethod();
 	/**
-	 * Ìá¹©¸øÍâ²¿Ê¹ÓÃµÄ·½·¨£¬
-	 * ¿Í»§¶ËÒ»°ãÊ¹ÓÃCreatorÌá¹©µÄÕâĞ©·½·¨À´Íê³ÉËùĞèÒªµÄ¹¦ÄÜ
+	 * æä¾›ç»™å¤–éƒ¨ä½¿ç”¨çš„æ–¹æ³•ï¼Œ
+	 * å®¢æˆ·ç«¯ä¸€èˆ¬ä½¿ç”¨Creatoræä¾›çš„è¿™äº›æ–¹æ³•æ¥å®Œæˆæ‰€éœ€è¦çš„åŠŸèƒ½
 	 */
 	public void someOperation(){
-		//ÔÚÕâÀïÊ¹ÓÃ¹¤³§·½·¨
+		//åœ¨è¿™é‡Œä½¿ç”¨å·¥å‚æ–¹æ³•
 		Product p = factoryMethod();
 	}
 }

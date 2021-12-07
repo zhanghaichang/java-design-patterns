@@ -2,22 +2,22 @@ package cn.javass.dp.prototype.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//ÏÈ´´½¨Ô­ĞÍÊµÀı
+		//å…ˆåˆ›å»ºåŸå‹å®ä¾‹
 		OrderApi oa1 = new PersonalOrder();
 		
-		//ÉèÖÃÔ­ĞÍÊµÀıµÄ¶©µ¥ÊıÁ¿µÄÖµ
+		//è®¾ç½®åŸå‹å®ä¾‹çš„è®¢å•æ•°é‡çš„å€¼
 		oa1.setOrderProductNum(100);
-		//ÎªÁË¼òµ¥£¬ÕâÀï½ö½öÊä³öÊıÁ¿
-	    System.out.println("ÕâÊÇµÚÒ»´Î»ñÈ¡µÄ¶ÔÏóÊµÀı==="+oa1.getOrderProductNum());
+		//ä¸ºäº†ç®€å•ï¼Œè¿™é‡Œä»…ä»…è¾“å‡ºæ•°é‡
+	    System.out.println("è¿™æ˜¯ç¬¬ä¸€æ¬¡è·å–çš„å¯¹è±¡å®ä¾‹==="+oa1.getOrderProductNum());
 	    
-		//Í¨¹ı¿ËÂ¡À´»ñÈ¡ĞÂµÄÊµÀı
+		//é€šè¿‡å…‹éš†æ¥è·å–æ–°çš„å®ä¾‹
 	    OrderApi oa2 = (OrderApi)oa1.cloneOrder();
-		//ĞŞ¸ÄËüµÄÊıÁ¿
+		//ä¿®æ”¹å®ƒçš„æ•°é‡
 		oa2.setOrderProductNum(80);
-		//Êä³ö¿ËÂ¡³öÀ´µÄ¶ÔÏóµÄÖµ
-		System.out.println("Êä³ö¿ËÂ¡³öÀ´µÄÊµÀı==="+oa2.getOrderProductNum());
+		//è¾“å‡ºå…‹éš†å‡ºæ¥çš„å¯¹è±¡çš„å€¼
+		System.out.println("è¾“å‡ºå…‹éš†å‡ºæ¥çš„å®ä¾‹==="+oa2.getOrderProductNum());
 		
-		//ÔÙ´ÎÊä³öÔ­ĞÍÊµÀıµÄÖµ
-		System.out.println("ÔÙ´ÎÊä³öÔ­ĞÍÊµÀı==="+oa1.getOrderProductNum());	
+		//å†æ¬¡è¾“å‡ºåŸå‹å®ä¾‹çš„å€¼
+		System.out.println("å†æ¬¡è¾“å‡ºåŸå‹å®ä¾‹==="+oa1.getOrderProductNum());	
 	}
 }

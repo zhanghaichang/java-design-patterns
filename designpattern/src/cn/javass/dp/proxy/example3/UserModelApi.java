@@ -1,6 +1,6 @@
 package cn.javass.dp.proxy.example3;
 /**
- * ¶¨ÒåÓÃ»§Êı¾İ¶ÔÏóµÄ½Ó¿Ú
+ * å®šä¹‰ç”¨æˆ·æ•°æ®å¯¹è±¡çš„æ¥å£
  */
 public interface UserModelApi {
 	public String getUserId();

@@ -5,11 +5,11 @@ public class C3 {
 	private B b = new B();
 
 	public void a1(){
-		//×ªµ÷A¶ÔÏóµÄ¹¦ÄÜ
+		//è½¬è°ƒAå¯¹è±¡çš„åŠŸèƒ½
 		a.a1();
 	}
 	public void b1(){
-		//×ªµ÷B¶ÔÏóµÄ¹¦ÄÜ
+		//è½¬è°ƒBå¯¹è±¡çš„åŠŸèƒ½
 		b.b1();
 	}
 

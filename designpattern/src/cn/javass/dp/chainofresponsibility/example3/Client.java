@@ -2,27 +2,27 @@ package cn.javass.dp.chainofresponsibility.example3;
 
 public class Client {
 	public static void main(String[] args) {
-		//ÏÈÒª×é×°Ö°ÔğÁ´		
+		//å…ˆè¦ç»„è£…èŒè´£é“¾		
 		Handler h1 = new GeneralManager();
 		Handler h2 = new DepManager();
 		Handler h3 = new ProjectManager();
 		h3.setSuccessor(h2);
 		h2.setSuccessor(h1);
 		
-		//¿ªÊ¼²âÊÔ
-		String ret1 = h3.handleFeeRequest("Ğ¡Àî", 300);
+		//å¼€å§‹æµ‹è¯•
+		String ret1 = h3.handleFeeRequest("å°æ", 300);
 		System.out.println("the ret1="+ret1);	
-		String ret2 = h3.handleFeeRequest("Ğ¡ÕÅ", 300);
+		String ret2 = h3.handleFeeRequest("å°å¼ ", 300);
 		System.out.println("the ret2="+ret2);	
 		
-		String ret3 = h3.handleFeeRequest("Ğ¡Àî", 600);
+		String ret3 = h3.handleFeeRequest("å°æ", 600);
 		System.out.println("the ret3="+ret3);	
-		String ret4 = h3.handleFeeRequest("Ğ¡ÕÅ", 600);
+		String ret4 = h3.handleFeeRequest("å°å¼ ", 600);
 		System.out.println("the ret4="+ret4);	
 		
-		String ret5 = h3.handleFeeRequest("Ğ¡Àî", 1200);	
+		String ret5 = h3.handleFeeRequest("å°æ", 1200);	
 		System.out.println("the ret5="+ret5);	
-		String ret6 = h3.handleFeeRequest("Ğ¡ÕÅ", 1200);
+		String ret6 = h3.handleFeeRequest("å°å¼ ", 1200);
 		System.out.println("the ret6="+ret6);	
 	}
 }

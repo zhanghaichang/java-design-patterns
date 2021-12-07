@@ -1,10 +1,10 @@
 package cn.javass.dp.prototype.example2;
 /**
- * ¿ËÂ¡µÄ¾ßÌåÊµÏÖ¶ÔÏó
+ * å…‹éš†çš„å…·ä½“å®ç°å¯¹è±¡
  */
 public class ConcretePrototype1 implements Prototype {
 	public Prototype clone() {
-		//×î¼òµ¥µÄ¿ËÂ¡£¬ĞÂ½¨Ò»¸ö×ÔÉí¶ÔÏó£¬ÓÉÓÚÃ»ÓĞÊôĞÔ£¬¾Í²»È¥¸´ÖÆÖµÁË
+		//æœ€ç®€å•çš„å…‹éš†ï¼Œæ–°å»ºä¸€ä¸ªè‡ªèº«å¯¹è±¡ï¼Œç”±äºæ²¡æœ‰å±æ€§ï¼Œå°±ä¸å»å¤åˆ¶å€¼äº†
 		Prototype prototype = new ConcretePrototype1();
 		return prototype;
 	}

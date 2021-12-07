@@ -4,32 +4,32 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * Ö¸µ¼Õß£¬Ö¸µ¼Ê¹ÓÃ¹¹½¨Æ÷µÄ½Ó¿ÚÀ´¹¹½¨Êä³öµÄÎÄ¼şµÄ¶ÔÏó
+ * æŒ‡å¯¼è€…ï¼ŒæŒ‡å¯¼ä½¿ç”¨æ„å»ºå™¨çš„æ¥å£æ¥æ„å»ºè¾“å‡ºçš„æ–‡ä»¶çš„å¯¹è±¡
  */
 public class Director {
 	/**
-	 * ³ÖÓĞµ±Ç°ĞèÒªÊ¹ÓÃµÄ¹¹½¨Æ÷¶ÔÏó
+	 * æŒæœ‰å½“å‰éœ€è¦ä½¿ç”¨çš„æ„å»ºå™¨å¯¹è±¡
 	 */
 	private Builder builder;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë¹¹½¨Æ÷¶ÔÏó
-	 * @param builder ¹¹½¨Æ÷¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥æ„å»ºå™¨å¯¹è±¡
+	 * @param builder æ„å»ºå™¨å¯¹è±¡
 	 */
 	public Director(Builder builder) {
 		this.builder = builder;
 	}
 	/**
-	 * Ö¸µ¼¹¹½¨Æ÷¹¹½¨×îÖÕµÄÊä³öµÄÎÄ¼şµÄ¶ÔÏó
-	 * @param ehm ÎÄ¼şÍ·µÄÄÚÈİ
-	 * @param mapData Êı¾İµÄÄÚÈİ
-	 * @param efm ÎÄ¼şÎ²µÄÄÚÈİ
+	 * æŒ‡å¯¼æ„å»ºå™¨æ„å»ºæœ€ç»ˆçš„è¾“å‡ºçš„æ–‡ä»¶çš„å¯¹è±¡
+	 * @param ehm æ–‡ä»¶å¤´çš„å†…å®¹
+	 * @param mapData æ•°æ®çš„å†…å®¹
+	 * @param efm æ–‡ä»¶å°¾çš„å†…å®¹
 	 */
 	public void construct(ExportHeaderModel ehm,Map<String,Collection<ExportDataModel>> mapData,ExportFooterModel efm) {
-		//1£ºÏÈ¹¹½¨Header
+		//1ï¼šå…ˆæ„å»ºHeader
 		builder.buildHeader(ehm);
-		//2£ºÈ»ºó¹¹½¨Body
+		//2ï¼šç„¶åæ„å»ºBody
 		builder.buildBody(mapData);
-		//3£ºÈ»ºó¹¹½¨Footer
+		//3ï¼šç„¶åæ„å»ºFooter
 		builder.buildFooter(efm);
 	}
 }

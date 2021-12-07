@@ -1,11 +1,11 @@
 package cn.javass.dp.prototype.example2;
 /**
- * ÉùÃ÷Ò»¸ö¿ËÂ¡×ÔÉíµÄ½Ó¿Ú
+ * å£°æ˜ä¸€ä¸ªå…‹éš†è‡ªèº«çš„æ¥å£
  */
 public interface Prototype {
 	/**
-	 * ¿ËÂ¡×ÔÉíµÄ·½·¨
-	 * @return Ò»¸ö´Ó×ÔÉí¿ËÂ¡³öÀ´µÄ¶ÔÏó
+	 * å…‹éš†è‡ªèº«çš„æ–¹æ³•
+	 * @return ä¸€ä¸ªä»è‡ªèº«å…‹éš†å‡ºæ¥çš„å¯¹è±¡
 	 */
 	public Prototype clone();
 }

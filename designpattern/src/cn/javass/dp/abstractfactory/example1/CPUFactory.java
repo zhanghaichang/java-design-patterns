@@ -1,16 +1,16 @@
 package cn.javass.dp.abstractfactory.example1;
 /**
- * ´´½¨CPUµÄ¼òµ¥¹¤³§
+ * åˆ›å»ºCPUçš„ç®€å•å·¥å‚
  */
 public class CPUFactory {
 	/**
-	 * ´´½¨CPU½Ó¿Ú¶ÔÏóµÄ·½·¨
-	 * @param type Ñ¡ÔñCPUÀàĞÍµÄ²ÎÊı
-	 * @return CPU½Ó¿Ú¶ÔÏóµÄ·½·¨
+	 * åˆ›å»ºCPUæ¥å£å¯¹è±¡çš„æ–¹æ³•
+	 * @param type é€‰æ‹©CPUç±»å‹çš„å‚æ•°
+	 * @return CPUæ¥å£å¯¹è±¡çš„æ–¹æ³•
 	 */
 	public static CPUApi createCPUApi(int type){
 		CPUApi cpu = null;
-		//¸ù¾İ²ÎÊıÀ´Ñ¡Ôñ²¢´´½¨ÏàÓ¦µÄCPU¶ÔÏó
+		//æ ¹æ®å‚æ•°æ¥é€‰æ‹©å¹¶åˆ›å»ºç›¸åº”çš„CPUå¯¹è±¡
 		if(type==1){
 			cpu = new IntelCPU(1156);
 		}else if(type==2){

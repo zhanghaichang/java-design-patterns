@@ -2,9 +2,9 @@ package cn.javass.dp.state.example3;
 
 public class NormalVoteState2 extends NormalVoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//ÏÈµ÷ÓÃÒÑÓĞµÄ¹¦ÄÜ
+		//å…ˆè°ƒç”¨å·²æœ‰çš„åŠŸèƒ½
 		super.vote(user, voteItem, voteManager);
-		//¸øÓè»ı·Ö½±Àø£¬Ê¾ÒâÒ»ÏÂ
-		System.out.println("½±Àø»ı·Ö10·Ö");
+		//ç»™äºˆç§¯åˆ†å¥–åŠ±ï¼Œç¤ºæ„ä¸€ä¸‹
+		System.out.println("å¥–åŠ±ç§¯åˆ†10åˆ†");
 	}
 }

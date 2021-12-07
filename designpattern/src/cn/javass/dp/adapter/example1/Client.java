@@ -1,14 +1,14 @@
 package cn.javass.dp.adapter.example1;
 /**
- * Ê¹ÓÃÊÊÅäÆ÷µÄ¿Í»§¶Ë
+ * ä½¿ç”¨é€‚é…å™¨çš„å®¢æˆ·ç«¯
  */
 public class Client {	
 	public static void main(String[] args) {
-		//´´½¨Ğè±»ÊÊÅäµÄ¶ÔÏó
+		//åˆ›å»ºéœ€è¢«é€‚é…çš„å¯¹è±¡
 		Adaptee adaptee = new Adaptee();
-		//´´½¨¿Í»§¶ËĞèÒªµ÷ÓÃµÄ½Ó¿Ú¶ÔÏó
+		//åˆ›å»ºå®¢æˆ·ç«¯éœ€è¦è°ƒç”¨çš„æ¥å£å¯¹è±¡
 		Target target = new Adapter(adaptee);
-		//ÇëÇó´¦Àí
+		//è¯·æ±‚å¤„ç†
 		target.request();
 	}
 }

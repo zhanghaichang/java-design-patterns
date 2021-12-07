@@ -5,27 +5,27 @@ import java.util.Collection;
 import java.util.Iterator;
 
 /**
- * ÓÃÀ´ÊµÏÖ·ÃÎÊÊı×éµÄµü´ú½Ó¿Ú,¼ÓÈëÁËµü´ú²ßÂÔ
+ * ç”¨æ¥å®ç°è®¿é—®æ•°ç»„çš„è¿­ä»£æ¥å£,åŠ å…¥äº†è¿­ä»£ç­–ç•¥
  */
 public class ArrayIteratorImpl implements Iterator{
 	/**
-	 * ÓÃÀ´´æ·Å±»µü´úµÄÊı×é
+	 * ç”¨æ¥å­˜æ”¾è¢«è¿­ä»£çš„æ•°ç»„
 	 */
 	private PayModel[] pms = null;
 	/**
-	 * ÓÃÀ´¼ÇÂ¼µ±Ç°µü´úµ½µÄÎ»ÖÃË÷Òı
+	 * ç”¨æ¥è®°å½•å½“å‰è¿­ä»£åˆ°çš„ä½ç½®ç´¢å¼•
 	 */
 	private int index = 0;
 	
 	public ArrayIteratorImpl(SalaryManager aggregate){
-		//ÔÚÕâÀïÏÈ¶Ô¾ÛºÏ¶ÔÏóµÄÊı¾İ½øĞĞ¹ıÂË£¬±ÈÈç¹¤×Ê±ØĞëÔÚ3000ÒÔÏÂ
+		//åœ¨è¿™é‡Œå…ˆå¯¹èšåˆå¯¹è±¡çš„æ•°æ®è¿›è¡Œè¿‡æ»¤ï¼Œæ¯”å¦‚å·¥èµ„å¿…é¡»åœ¨3000ä»¥ä¸‹
 		Collection<PayModel> tempCol = new ArrayList<PayModel>();
 		for(PayModel pm : aggregate.getPays()){
 			if(pm.getPay() < 3000){
 				tempCol.add(pm);
 			}
 		}
-		//È»ºó°Ñ·ûºÏÒªÇóµÄÊı¾İ´æ·Åµ½ÓÃÀ´µü´úµÄÊı×é
+		//ç„¶åæŠŠç¬¦åˆè¦æ±‚çš„æ•°æ®å­˜æ”¾åˆ°ç”¨æ¥è¿­ä»£çš„æ•°ç»„
 		this.pms = new PayModel[tempCol.size()];
 		int i=0;
 		for(PayModel pm : tempCol){
@@ -36,7 +36,7 @@ public class ArrayIteratorImpl implements Iterator{
 	
 	
 	public boolean hasNext() {
-		//ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÔªËØ
+		//åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä¸ªå…ƒç´ 
 		if(pms!=null && index<=(pms.length-1)){
 			return true;
 		}
@@ -48,11 +48,11 @@ public class ArrayIteratorImpl implements Iterator{
 		Object retObj = null;
 		if(hasNext()){
 			retObj = pms[index];
-			//Ã¿È¡×ßÒ»¸öÖµ£¬¾Í°ÑÒÑ·ÃÎÊË÷Òı¼Ó1
+			//æ¯å–èµ°ä¸€ä¸ªå€¼ï¼Œå°±æŠŠå·²è®¿é—®ç´¢å¼•åŠ 1
 			index++;
 		}
 		
-		//ÔÚÕâÀï¶ÔÒª·µ»ØµÄÊı¾İ½øĞĞ¹ıÂË£¬±ÈÈç²»ÈÃ²é¿´¹¤×ÊÊı¾İ
+		//åœ¨è¿™é‡Œå¯¹è¦è¿”å›çš„æ•°æ®è¿›è¡Œè¿‡æ»¤ï¼Œæ¯”å¦‚ä¸è®©æŸ¥çœ‹å·¥èµ„æ•°æ®
 		((PayModel)retObj).setPay(0.0);
 		
 		return retObj;
@@ -60,6 +60,6 @@ public class ArrayIteratorImpl implements Iterator{
 
 	
 	public void remove() {
-		//ÔİÊ±¿ÉÒÔ²»ÊµÏÖ		
+		//æš‚æ—¶å¯ä»¥ä¸å®ç°		
 	}
 }

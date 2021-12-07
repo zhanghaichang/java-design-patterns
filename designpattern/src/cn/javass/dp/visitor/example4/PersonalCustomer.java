@@ -1,14 +1,14 @@
 package cn.javass.dp.visitor.example4;
 /**
- * 个人客户
+ * 涓汉瀹㈡埛
  */
 public class PersonalCustomer extends Customer{
 	/**
-	 * 联系电话
+	 * 鑱旂郴鐢佃瘽
 	 */
 	private String telephone;
 	/**
-	 * 年龄
+	 * 骞撮緞
 	 */
 	private int age;
 	
@@ -25,7 +25,7 @@ public class PersonalCustomer extends Customer{
 		this.age = age;
 	}
 	public void accept(Visitor visitor) {
-		//回调访问者对象的相应方法
+		//鍥炶皟璁块棶鑰呭璞＄殑鐩稿簲鏂规硶
 		visitor.visitPersonalCustomer(this);
 	}
 }

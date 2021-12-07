@@ -1,11 +1,11 @@
 package cn.javass.dp.factorymethod.example3;
 /**
- * ╬ълЕ╣д╢╢╫╗фВй╣ож╤тоСё╛й╣ож╢╢╫╗╣╪ЁЖЁинд╠╬нд╪Ч╦Яй╫╣д╤тоС
+ * Е┘╥Д╫⌠Г └Е┬⌡Е╩╨Е≥╗Е╝·Г▌╟Е╞╧Х╠║О╪▄Е╝·Г▌╟Е┬⌡Е╩╨Е╞╪Е┤╨Ф┬░Ф√┤Ф°╛Ф√┤Д╩╤Ф═╪Е╪▐Г └Е╞╧Х╠║
  */
 public class ExportTxtFileOperate extends ExportOperate{
 
 	protected ExportFileApi factoryMethod() {
-		//╢╢╫╗╣╪ЁЖЁинд╠╬нд╪Ч╦Яй╫╣д╤тоС
+		//Е┬⌡Е╩╨Е╞╪Е┤╨Ф┬░Ф√┤Ф°╛Ф√┤Д╩╤Ф═╪Е╪▐Г └Е╞╧Х╠║
 		return new ExportTxtFile();
 	}
 

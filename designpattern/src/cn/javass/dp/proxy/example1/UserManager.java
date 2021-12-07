@@ -3,14 +3,14 @@ import java.util.*;
 import java.sql.*;
 
 /**
- * ÊµÏÖÊ¾ÀıÒªÇóµÄ¹¦ÄÜ
+ * å®ç°ç¤ºä¾‹è¦æ±‚çš„åŠŸèƒ½
  */
 public class UserManager {
 	
 	/**
-	 * ¸ù¾İ²¿ÃÅ±àºÅÀ´»ñÈ¡¸Ã²¿ÃÅÏÂµÄËùÓĞÈËÔ±
-	 * @param depId ²¿ÃÅ±àºÅ
-	 * @return ¸Ã²¿ÃÅÏÂµÄËùÓĞÈËÔ±
+	 * æ ¹æ®éƒ¨é—¨ç¼–å·æ¥è·å–è¯¥éƒ¨é—¨ä¸‹çš„æ‰€æœ‰äººå‘˜
+	 * @param depId éƒ¨é—¨ç¼–å·
+	 * @return è¯¥éƒ¨é—¨ä¸‹çš„æ‰€æœ‰äººå‘˜
 	 */
 	public Collection<UserModel> getUserByDepId(String depId)throws Exception{
 		Collection<UserModel> col = new ArrayList<UserModel>();
@@ -42,8 +42,8 @@ public class UserManager {
 		return col;
 	}
 	/**
-	 * »ñÈ¡ÓëÊı¾İ¿âµÄÁ¬½Ó
-	 * @return Êı¾İ¿âÁ¬½Ó
+	 * è·å–ä¸æ•°æ®åº“çš„è¿æ¥
+	 * @return æ•°æ®åº“è¿æ¥
 	 */
 	private Connection getConnection() throws Exception {
 		Class.forName("oracle.jdbc.driver.OracleDriver");

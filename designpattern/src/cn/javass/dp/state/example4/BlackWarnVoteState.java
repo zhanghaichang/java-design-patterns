@@ -2,12 +2,12 @@ package cn.javass.dp.state.example4;
 
 public class BlackWarnVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//´ý½øºÚÃûµ¥¾¯¸æ×´Ì¬
-		System.out.println("½ûÖ¹µÇÂ¼ºÍÊ¹ÓÃÏµÍ³3Ìì");
+		//å¾…è¿›é»‘åå•è­¦å‘ŠçŠ¶æ€
+		System.out.println("ç¦æ­¢ç™»å½•å’Œä½¿ç”¨ç³»ç»Ÿ3å¤©");
 		
-		//´ý½øºÚÃûµ¥¾¯¸æ×´Ì¬´¦ÀíÍê³É£¬Î¬»¤ÏÂÒ»¸ö×´Ì¬£¬Í¶Æ±µ½10´Î£¬¾Í½øºÚÃûµ¥ÁË
-		//×¢ÒâÕâÀïÊÇÅÐ¶Ï´óÓÚµÈÓÚ9£¬ÒòÎªÕâÀïÉèÖÃµÄÊÇÏÂÒ»¸ö×´Ì¬
-		//ÏÂÒ»¸ö²Ù×÷´ÎÊý¾ÍÊÇ10ÁË£¬¾ÍÓ¦¸ÃËãÊÇ½øºÚÃûµ¥ÁË
+		//å¾…è¿›é»‘åå•è­¦å‘ŠçŠ¶æ€å¤„ç†å®Œæˆï¼Œç»´æŠ¤ä¸‹ä¸€ä¸ªçŠ¶æ€ï¼ŒæŠ•ç¥¨åˆ°10æ¬¡ï¼Œå°±è¿›é»‘åå•äº†
+		//æ³¨æ„è¿™é‡Œæ˜¯åˆ¤æ–­å¤§äºŽç­‰äºŽ9ï¼Œå› ä¸ºè¿™é‡Œè®¾ç½®çš„æ˜¯ä¸‹ä¸€ä¸ªçŠ¶æ€
+		//ä¸‹ä¸€ä¸ªæ“ä½œæ¬¡æ•°å°±æ˜¯10äº†ï¼Œå°±åº”è¯¥ç®—æ˜¯è¿›é»‘åå•äº†
 		if(voteManager.getMapVoteCount().get(user) >= 9){
 			voteManager.getMapState().put(user, new BlackVoteState());
 		}

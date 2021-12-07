@@ -1,10 +1,10 @@
 package cn.javass.dp.strategy.example4;
 /**
- * 具体算法实现，为老客户计算应报的价格
+ * 鍏蜂綋绠楁硶瀹炵幇锛屼负鑰佸鎴疯绠楀簲鎶ョ殑浠锋牸
  */
 public class OldCustomerStrategy implements Strategy{
 	public double calcPrice(double goodsPrice) {
-		System.out.println("对于老客户，统一折扣5%");
+		System.out.println("瀵逛簬鑰佸鎴凤紝缁熶竴鎶樻墸5%");
 		return goodsPrice*(1-0.05);
 	}
 }

@@ -2,12 +2,12 @@ package cn.javass.dp.bridge.example4;
 
 public class UrgencyMessageEmail implements UrgencyMessage{
 	public void send(String message, String toUser) {
-		message = "¼Ó¼±£º"+message;
-		System.out.println("Ê¹ÓÃEmailµÄ·½Ê½£¬·¢ËÍÏûÏ¢'"+message+"'¸ø"+toUser);
+		message = "åŠ æ€¥ï¼š"+message;
+		System.out.println("ä½¿ç”¨Emailçš„æ–¹å¼ï¼Œå‘é€æ¶ˆæ¯'"+message+"'ç»™"+toUser);
 	}
 
 	public Object watch(String messageId) {
-		//»ñÈ¡ÏàÓ¦µÄÊı¾İ£¬×éÖ¯³É¼à¿ØµÄÊı¾İ¶ÔÏó£¬È»ºó·µ»Ø		
+		//è·å–ç›¸åº”çš„æ•°æ®ï¼Œç»„ç»‡æˆç›‘æ§çš„æ•°æ®å¯¹è±¡ï¼Œç„¶åè¿”å›		
 		return null;
 	}	
 }

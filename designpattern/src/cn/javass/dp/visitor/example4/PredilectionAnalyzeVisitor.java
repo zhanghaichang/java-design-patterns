@@ -1,14 +1,14 @@
 package cn.javass.dp.visitor.example4;
 /**
- * ¾ßÌåµÄ·ÃÎÊÕß£¬ÊµÏÖ¶Ô¿Í»§µÄÆ«ºÃ·ÖÎö
+ * å…·ä½“çš„è®¿é—®è€…ï¼Œå®ç°å¯¹å®¢æˆ·çš„åå¥½åˆ†æ
  */
 public class PredilectionAnalyzeVisitor implements Visitor {
 	public void visitEnterpriseCustomer(EnterpriseCustomer ec){
-		//¸ù¾İ¹ıÍù¹ºÂòµÄÀúÊ·¡¢Ç±ÔÚ¹ºÂòÒâÏò
-		//ÒÔ¼°¿Í»§ËùÔÚĞĞÒµµÄ·¢Õ¹Ç÷ÊÆ¡¢¿Í»§µÄ·¢Õ¹Ô¤ÆÚµÈµÄ·ÖÎö
-		System.out.println("ÏÖÔÚ¶ÔÆóÒµ¿Í»§"+ec.getName()+"½øĞĞ²úÆ·Æ«ºÃ·ÖÎö");
+		//æ ¹æ®è¿‡å¾€è´­ä¹°çš„å†å²ã€æ½œåœ¨è´­ä¹°æ„å‘
+		//ä»¥åŠå®¢æˆ·æ‰€åœ¨è¡Œä¸šçš„å‘å±•è¶‹åŠ¿ã€å®¢æˆ·çš„å‘å±•é¢„æœŸç­‰çš„åˆ†æ
+		System.out.println("ç°åœ¨å¯¹ä¼ä¸šå®¢æˆ·"+ec.getName()+"è¿›è¡Œäº§å“åå¥½åˆ†æ");
 	}
 	public void visitPersonalCustomer(PersonalCustomer pc){
-		System.out.println("ÏÖÔÚ¶Ô¸öÈË¿Í»§"+pc.getName()+"½øĞĞ²úÆ·Æ«ºÃ·ÖÎö");
+		System.out.println("ç°åœ¨å¯¹ä¸ªäººå®¢æˆ·"+pc.getName()+"è¿›è¡Œäº§å“åå¥½åˆ†æ");
 	}
 }

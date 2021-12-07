@@ -1,12 +1,12 @@
 package cn.javass.dp.decorator.example3;
 
 /**
- * ¾ßÌåÊµÏÖ×é¼ş¶ÔÏó½Ó¿ÚµÄ¶ÔÏó
+ * å…·ä½“å®ç°ç»„ä»¶å¯¹è±¡æ¥å£çš„å¯¹è±¡
  */
 public class ConcreteComponent extends Component {
 
 	public void operation() {
-		//ÏàÓ¦µÄ¹¦ÄÜ´¦Àí
+		//ç›¸åº”çš„åŠŸèƒ½å¤„ç†
 	}
 
 }

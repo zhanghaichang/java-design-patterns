@@ -1,11 +1,11 @@
 package cn.javass.dp.templatemethod.example4;
 
 /**
- * ÆÕÍ¨ÓÃ»§µÇÂ¼¿ØÖÆµÄÂß¼­´¦Àí
+ * æ™®é€šç”¨æˆ·ç™»å½•æ§åˆ¶çš„é€»è¾‘å¤„ç†
  */
 public class NormalLogin extends LoginTemplate{
 	public LoginModel findLoginUser(String loginId) {
-		// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓĞÄ¬ÈÏÊı¾İµÄ¶ÔÏó
+		// è¿™é‡Œçœç•¥å…·ä½“çš„å¤„ç†ï¼Œä»…åšç¤ºæ„ï¼Œè¿”å›ä¸€ä¸ªæœ‰é»˜è®¤æ•°æ®çš„å¯¹è±¡
 		LoginModel lm = new LoginModel();
 		lm.setLoginId(loginId);
 		lm.setPwd("testpwd");

@@ -1,13 +1,13 @@
 package cn.javass.dp.facade.example2;
 /**
- * Íâ¹Û¶ÔÏó
+ * å¤–è§‚å¯¹è±¡
  */
 public class Facade {
 	/**
-	 * Ê¾Òâ·½·¨£¬Âú×ã¿Í»§ĞèÒªµÄ¹¦ÄÜ
+	 * ç¤ºæ„æ–¹æ³•ï¼Œæ»¡è¶³å®¢æˆ·éœ€è¦çš„åŠŸèƒ½
 	 */
 	public void test(){
-		//ÔÚÄÚ²¿ÊµÏÖµÄÊ±ºò£¬¿ÉÄÜ»áµ÷ÓÃµ½ÄÚ²¿µÄ¶à¸öÄ£¿é
+		//åœ¨å†…éƒ¨å®ç°çš„æ—¶å€™ï¼Œå¯èƒ½ä¼šè°ƒç”¨åˆ°å†…éƒ¨çš„å¤šä¸ªæ¨¡å—
 		AModuleApi a = new AModuleImpl();
 		a.testA();
 		BModuleApi b = new BModuleImpl();

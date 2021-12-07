@@ -1,25 +1,25 @@
 package cn.javass.dp.bridge.example7;
 
 /**
- * ³éÏóµÄÏûÏ¢¶ÔÏó
+ * æŠ½è±¡çš„æ¶ˆæ¯å¯¹è±¡
  */
 public abstract class AbstractMessage3 {
 	/**
-	 * ³ÖÓĞÒ»¸öÊµÏÖ²¿·ÖµÄ¶ÔÏó
+	 * æŒæœ‰ä¸€ä¸ªå®ç°éƒ¨åˆ†çš„å¯¹è±¡
 	 */
 	protected MessageImplementor impl;
 	/**
-	 * ¹¹Ôì·½·¨
+	 * æ„é€ æ–¹æ³•
 	 */
 	public AbstractMessage3(){
-		//´´½¨Ò»¸öÄ¬ÈÏµÄÊµÏÖ
+		//åˆ›å»ºä¸€ä¸ªé»˜è®¤çš„å®ç°
 		this.impl = new MessageSMS();
 	}
 	
 	/**
-	 * ·¢ËÍÏûÏ¢£¬×ªµ÷ÊµÏÖ²¿·ÖµÄ·½·¨
-	 * @param message Òª·¢ËÍµÄÏûÏ¢ÄÚÈİ
-	 * @param toUser °ÑÏûÏ¢·¢ËÍµÄÄ¿µÄÈËÔ±
+	 * å‘é€æ¶ˆæ¯ï¼Œè½¬è°ƒå®ç°éƒ¨åˆ†çš„æ–¹æ³•
+	 * @param message è¦å‘é€çš„æ¶ˆæ¯å†…å®¹
+	 * @param toUser æŠŠæ¶ˆæ¯å‘é€çš„ç›®çš„äººå‘˜
 	 */
 	public void sendMessage(String message,String toUser){
 		this.impl.send(message, toUser);

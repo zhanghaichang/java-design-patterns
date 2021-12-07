@@ -1,18 +1,18 @@
 package cn.javass.dp.prototype.example5;
 /**
- * ¸öÈË¶©µ¥¶ÔÏó,ÀûÓÃJavaµÄClone¹¦ÄÜ
+ * ä¸ªäººè®¢å•å¯¹è±¡,åˆ©ç”¨Javaçš„CloneåŠŸèƒ½
  */
 public class PersonalOrder implements Cloneable  , OrderApi{
 	/**
-	 * ¶©¹ºÈËÔ±ĞÕÃû
+	 * è®¢è´­äººå‘˜å§“å
 	 */
 	private String customerName;
 	/**
-	 * ²úÆ·±àºÅ
+	 * äº§å“ç¼–å·
 	 */
 	private String productId;
 	/**
-	 * ¶©µ¥²úÆ·ÊıÁ¿
+	 * è®¢å•äº§å“æ•°é‡
 	 */
 	private int orderProductNum = 0;
 	
@@ -35,10 +35,10 @@ public class PersonalOrder implements Cloneable  , OrderApi{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "±¾¸öÈË¶©µ¥µÄ¶©¹ºÈËÊÇ="+this.customerName+"£¬¶©¹º²úÆ·ÊÇ="+this.productId+"£¬¶©¹ºÊıÁ¿Îª="+this.orderProductNum;
+		return "æœ¬ä¸ªäººè®¢å•çš„è®¢è´­äººæ˜¯="+this.customerName+"ï¼Œè®¢è´­äº§å“æ˜¯="+this.productId+"ï¼Œè®¢è´­æ•°é‡ä¸º="+this.orderProductNum;
 	}
 	public Object clone(){
-		//¿ËÂ¡·½·¨µÄÕæÕıÊµÏÖ£¬Ö±½Óµ÷ÓÃ¸¸ÀàµÄ¿ËÂ¡·½·¨¾Í¿ÉÒÔÁË
+		//å…‹éš†æ–¹æ³•çš„çœŸæ­£å®ç°ï¼Œç›´æ¥è°ƒç”¨çˆ¶ç±»çš„å…‹éš†æ–¹æ³•å°±å¯ä»¥äº†
 		Object obj = null;
 		try {
 			obj = super.clone();

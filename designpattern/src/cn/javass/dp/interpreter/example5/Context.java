@@ -11,38 +11,38 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 /**
- *	ÉÏÏÂÎÄ£¬ÓÃÀ´°üº¬½âÊÍÆ÷ĞèÒªµÄÒ»Ğ©È«¾ÖĞÅÏ¢
+ *	ä¸Šä¸‹æ–‡ï¼Œç”¨æ¥åŒ…å«è§£é‡Šå™¨éœ€è¦çš„ä¸€äº›å…¨å±€ä¿¡æ¯
  */
 public class Context {
 	/**
-	 * Dom½âÎöXmlµÄDocument¶ÔÏó
+	 * Domè§£æXmlçš„Documentå¯¹è±¡
 	 */
 	private Document document = null;
 	/**
-	 * ÉÏÒ»´Î±»´¦ÀíµÄ¶à¸öÔªËØ
+	 * ä¸Šä¸€æ¬¡è¢«å¤„ç†çš„å¤šä¸ªå…ƒç´ 
 	 */
 	private List<Element> preEles = new ArrayList<Element>();
 	/**
-	 * ¹¹Ôì·½·¨
-	 * @param filePathName ĞèÒª¶ÁÈ¡µÄxmlµÄÂ·¾¶ºÍÃû×Ö
+	 * æ„é€ æ–¹æ³•
+	 * @param filePathName éœ€è¦è¯»å–çš„xmlçš„è·¯å¾„å’Œåå­—
 	 * @throws Exception
 	 */
 	public Context(String filePathName) throws Exception{
-		//Í¨¹ı¸¨ÖúµÄXml¹¤¾ßÀàÀ´»ñÈ¡±»½âÎöµÄxml¶ÔÓ¦µÄDocument¶ÔÏó
+		//é€šè¿‡è¾…åŠ©çš„Xmlå·¥å…·ç±»æ¥è·å–è¢«è§£æçš„xmlå¯¹åº”çš„Documentå¯¹è±¡
 		this.document = XmlUtil.getRoot(filePathName);
 	}
 	/**
-	 * ÖØĞÂ³õÊ¼»¯ÉÏÏÂÎÄ
+	 * é‡æ–°åˆå§‹åŒ–ä¸Šä¸‹æ–‡
 	 */
 	public void reInit(){
 		preEles = new ArrayList<Element>();
 	}
 	/**
-	 * ¸÷¸öExpression¹«¹²Ê¹ÓÃµÄ·½·¨,
-	 * ¸ù¾İ¸¸ÔªËØºÍµ±Ç°ÔªËØµÄÃû³ÆÀ´»ñÈ¡µ±Ç°µÄ¶à¸öÔªËØµÄ¼¯ºÏ
-	 * @param pEle ¸¸ÔªËØ 
-	 * @param eleName µ±Ç°ÔªËØµÄÃû³Æ
-	 * @return µ±Ç°µÄ¶à¸öÔªËØµÄ¼¯ºÏ
+	 * å„ä¸ªExpressionå…¬å…±ä½¿ç”¨çš„æ–¹æ³•,
+	 * æ ¹æ®çˆ¶å…ƒç´ å’Œå½“å‰å…ƒç´ çš„åç§°æ¥è·å–å½“å‰çš„å¤šä¸ªå…ƒç´ çš„é›†åˆ
+	 * @param pEle çˆ¶å…ƒç´  
+	 * @param eleName å½“å‰å…ƒç´ çš„åç§°
+	 * @return å½“å‰çš„å¤šä¸ªå…ƒç´ çš„é›†åˆ
 	 */
 	public List<Element> getNowEles(Element pEle,String eleName){
 		List<Element> elements = new ArrayList<Element>();

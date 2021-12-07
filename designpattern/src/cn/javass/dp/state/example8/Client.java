@@ -2,20 +2,20 @@ package cn.javass.dp.state.example8;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨ÒµÎñ¶ÔÏó£¬²¢ÉèÖÃÒµÎñÊı¾İ
+		//åˆ›å»ºä¸šåŠ¡å¯¹è±¡ï¼Œå¹¶è®¾ç½®ä¸šåŠ¡æ•°æ®
 		LeaveRequestModel lrm = new LeaveRequestModel();
-		lrm.setUser("Ğ¡Àî");
+		lrm.setUser("å°æ");
 		lrm.setBeginDate("2010-02-08");
 		lrm.setLeaveDays(5);
 		
-		//´´½¨ÉÏÏÂÎÄ¶ÔÏó
+		//åˆ›å»ºä¸Šä¸‹æ–‡å¯¹è±¡
 		LeaveRequestContext request = new LeaveRequestContext();
-		//ÎªÉÏÏÂÎÄ¶ÔÏóÉèÖÃÒµÎñÊı¾İ¶ÔÏó
+		//ä¸ºä¸Šä¸‹æ–‡å¯¹è±¡è®¾ç½®ä¸šåŠ¡æ•°æ®å¯¹è±¡
 		request.setBusinessVO(lrm);
-		//ÅäÖÃÉÏÏÂÎÄ£¬×÷Îª¿ªÊ¼µÄ×´Ì¬£¬ÒÔºó¾Í²»¹ÜÁË
+		//é…ç½®ä¸Šä¸‹æ–‡ï¼Œä½œä¸ºå¼€å§‹çš„çŠ¶æ€ï¼Œä»¥åå°±ä¸ç®¡äº†
 		request.setState(new ProjectManagerState());
 		
-		//ÇëÇóÉÏÏÂÎÄ£¬ÈÃÉÏÏÂÎÄ¿ªÊ¼´¦Àí¹¤×÷
+		//è¯·æ±‚ä¸Šä¸‹æ–‡ï¼Œè®©ä¸Šä¸‹æ–‡å¼€å§‹å¤„ç†å·¥ä½œ
 		request.doWork();
 	}
 }

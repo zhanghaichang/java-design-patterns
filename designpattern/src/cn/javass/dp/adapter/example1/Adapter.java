@@ -1,22 +1,22 @@
 package cn.javass.dp.adapter.example1;
 /**
- * ÊÊÅäÆ÷
+ * é€‚é…å™¨
  */
 public class Adapter implements Target {
 	/**
-	 * ³ÖÓĞĞèÒª±»ÊÊÅäµÄ½Ó¿Ú¶ÔÏó
+	 * æŒæœ‰éœ€è¦è¢«é€‚é…çš„æ¥å£å¯¹è±¡
 	 */
 	private Adaptee adaptee;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëĞèÒª±»ÊÊÅäµÄ¶ÔÏó
-	 * @param adaptee ĞèÒª±»ÊÊÅäµÄ¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥éœ€è¦è¢«é€‚é…çš„å¯¹è±¡
+	 * @param adaptee éœ€è¦è¢«é€‚é…çš„å¯¹è±¡
 	 */
 	public Adapter(Adaptee adaptee) {
 		this.adaptee = adaptee;
 	}
 
 	public void request() {
-		//¿ÉÄÜ×ªµ÷ÒÑ¾­ÊµÏÖÁËµÄ·½·¨£¬½øĞĞÊÊÅä
+		//å¯èƒ½è½¬è°ƒå·²ç»å®ç°äº†çš„æ–¹æ³•ï¼Œè¿›è¡Œé€‚é…
 		adaptee.specificRequest();
 	}
 }

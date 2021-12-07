@@ -2,7 +2,7 @@ package cn.javass.dp.decorator.example5;
 import java.io.*;
 public class IOTest {
 	public static void main(String[] args)throws Exception  {
-		//流式读取文件
+		//娴佸紡璇诲彇鏂囦欢
 		DataInputStream din = null;
 		try{
 			din = new DataInputStream(
@@ -10,11 +10,11 @@ public class IOTest {
 						new FileInputStream("IOTest.txt")
 				)
 			);
-			//然后就可以获取文件内容了
+			//鐒跺悗灏卞彲浠ヨ幏鍙栨枃浠跺唴瀹逛簡
 			byte bs []= new byte[din.available()]; 
 			din.read(bs);
 			String content = new String(bs);
-			System.out.println("文件内容===="+content);
+			System.out.println("鏂囦欢鍐呭===="+content);
 		}finally{
 			din.close();
 		}		

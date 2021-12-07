@@ -1,11 +1,11 @@
 package cn.javass.dp.decorator.example3;
 
 /**
- * 组件对象的接口，可以给这些对象动态的添加职责
+ * 缁勪欢瀵硅薄鐨勬帴鍙ｏ紝鍙互缁欒繖浜涘璞″姩鎬佺殑娣诲姞鑱岃矗
  */
 public abstract class Component {
 	/**
-	 * 示例方法
+	 * 绀轰緥鏂规硶
 	 */
 	public abstract void operation();
 }

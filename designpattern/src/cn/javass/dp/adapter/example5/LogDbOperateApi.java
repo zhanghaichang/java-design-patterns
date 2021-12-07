@@ -1,28 +1,28 @@
 package cn.javass.dp.adapter.example5;
 import java.util.*;
 /**
- * ���������־��Ӧ�ýӿڣ�Ϊ��ʾ���ļ򵥣�
- * ֻ�Ǽ򵥵Ķ�������ɾ�Ĳ�ķ���
+ * 定义操作日志的应用接口，为了示例的简单，
+ * 只是简单的定义了增删改查的方法
  */
 public interface LogDbOperateApi {
 	/**
-	 * ������־
-	 * @param lm ��Ҫ��������־����
+	 * 新增日志
+	 * @param lm 需要新增的日志对象
 	 */
 	public void createLog(LogModel lm);
 	/**
-	 * �޸���־
-	 * @param lm ��Ҫ�޸ĵ���־����
+	 * 修改日志
+	 * @param lm 需要修改的日志对象
 	 */
 	public void updateLog(LogModel lm);
 	/**
-	 * ɾ����־
-	 * @param lm ��Ҫɾ������־����
+	 * 删除日志
+	 * @param lm 需要删除的日志对象
 	 */
 	public void removeLog(LogModel lm);
 	/**
-	 * ��ȡ���е���־
-	 * @return ���е���־����
+	 * 获取所有的日志
+	 * @return 所有的日志对象
 	 */
 	public List<LogModel> getAllLog();
 }

@@ -1,6 +1,6 @@
 package cn.javass.dp.mediator.example2;
 /**
- * ÏÔ¿¨Àà£¬Ò»¸öÍ¬ÊÂÀà
+ * æ˜¾å¡ç±»ï¼Œä¸€ä¸ªåŒäº‹ç±»
  */
 public class VideoCard extends Colleague{
 	public VideoCard(Mediator mediator) {
@@ -8,11 +8,11 @@ public class VideoCard extends Colleague{
 	}
 	
 	/**
-	 * ÏÔÊ¾ÊÓÆµÊı¾İ
-	 * @param data ±»ÏÔÊ¾µÄÊı¾İ
+	 * æ˜¾ç¤ºè§†é¢‘æ•°æ®
+	 * @param data è¢«æ˜¾ç¤ºçš„æ•°æ®
 	 */
 	public void showData(String data){
-		System.out.println("ÄúÕı¹Û¿´µÄÊÇ£º"+data);
+		System.out.println("æ‚¨æ­£è§‚çœ‹çš„æ˜¯ï¼š"+data);
 	}
 	
 }

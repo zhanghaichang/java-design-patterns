@@ -3,67 +3,67 @@ package cn.javass.dp.composite.example6;
 import java.util.Iterator;
 import java.util.List;
 /**
- * ³éÏóµÄ×é¼ş¶ÔÏó
+ * æŠ½è±¡çš„ç»„ä»¶å¯¹è±¡
  */
 public abstract class Component {
 	/**
-	 * ¼ÇÂ¼¸¸×é¼ş¶ÔÏó
+	 * è®°å½•çˆ¶ç»„ä»¶å¯¹è±¡
 	 */
 	private Component parent = null;
 	
 	/**
-	 * »ñÈ¡Ò»¸ö×é¼şµÄ¸¸×é¼ş¶ÔÏó
-	 * @return Ò»¸ö×é¼şµÄ¸¸×é¼ş¶ÔÏó
+	 * è·å–ä¸€ä¸ªç»„ä»¶çš„çˆ¶ç»„ä»¶å¯¹è±¡
+	 * @return ä¸€ä¸ªç»„ä»¶çš„çˆ¶ç»„ä»¶å¯¹è±¡
 	 */
 	public Component getParent() {
 		return parent;
 	}
 	/**
-	 * ÉèÖÃÒ»¸ö×é¼şµÄ¸¸×é¼ş¶ÔÏó
-	 * @param parent Ò»¸ö×é¼şµÄ¸¸×é¼ş¶ÔÏó
+	 * è®¾ç½®ä¸€ä¸ªç»„ä»¶çš„çˆ¶ç»„ä»¶å¯¹è±¡
+	 * @param parent ä¸€ä¸ªç»„ä»¶çš„çˆ¶ç»„ä»¶å¯¹è±¡
 	 */
 	public void setParent(Component parent) {
 		this.parent = parent;
 	}
 	/**
-	 * ·µ»ØÄ³¸ö×é¼şµÄ×Ó×é¼ş¶ÔÏó
-	 * @return Ä³¸ö×é¼şµÄ×Ó×é¼ş¶ÔÏó
+	 * è¿”å›æŸä¸ªç»„ä»¶çš„å­ç»„ä»¶å¯¹è±¡
+	 * @return æŸä¸ªç»„ä»¶çš„å­ç»„ä»¶å¯¹è±¡
 	 */
 	public List<Component> getChildren() {
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 	}
-/*-------------------ÒÔÏÂÊÇÔ­ÓĞµÄ¶¨Òå----------------------*/	
+/*-------------------ä»¥ä¸‹æ˜¯åŸæœ‰çš„å®šä¹‰----------------------*/	
 
 	/**
-	 * Êä³ö×é¼ş×ÔÉíµÄÃû³Æ
+	 * è¾“å‡ºç»„ä»¶è‡ªèº«çš„åç§°
 	 */
 	public abstract void printStruct(String preStr);
 
 	/**
-	 * Ïò×éºÏ¶ÔÏóÖĞ¼ÓÈë×é¼ş¶ÔÏó 
-	 * @param child ±»¼ÓÈë×éºÏ¶ÔÏóÖĞµÄ×é¼ş¶ÔÏó
+	 * å‘ç»„åˆå¯¹è±¡ä¸­åŠ å…¥ç»„ä»¶å¯¹è±¡ 
+	 * @param child è¢«åŠ å…¥ç»„åˆå¯¹è±¡ä¸­çš„ç»„ä»¶å¯¹è±¡
 	 */
 	public void addChild(Component child) {
-		// È±Ê¡µÄÊµÏÖ£¬Å×³öÀıÍâ£¬ÒòÎªÒ¶×Ó¶ÔÏóÃ»ÓĞÕâ¸ö¹¦ÄÜ£¬»òÕß×Ó×é¼şÃ»ÓĞÊµÏÖÕâ¸ö¹¦ÄÜ
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		// ç¼ºçœçš„å®ç°ï¼ŒæŠ›å‡ºä¾‹å¤–ï¼Œå› ä¸ºå¶å­å¯¹è±¡æ²¡æœ‰è¿™ä¸ªåŠŸèƒ½ï¼Œæˆ–è€…å­ç»„ä»¶æ²¡æœ‰å®ç°è¿™ä¸ªåŠŸèƒ½
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 	}
 
 	/**
-	 * ´Ó×éºÏ¶ÔÏóÖĞÒÆ³öÄ³¸ö×é¼ş¶ÔÏó
-	 * @param child ±»ÒÆ³öµÄ×é¼ş¶ÔÏó
+	 * ä»ç»„åˆå¯¹è±¡ä¸­ç§»å‡ºæŸä¸ªç»„ä»¶å¯¹è±¡
+	 * @param child è¢«ç§»å‡ºçš„ç»„ä»¶å¯¹è±¡
 	 */
 	public void removeChild(Component child) {
-		// È±Ê¡µÄÊµÏÖ£¬Å×³öÀıÍâ£¬ÒòÎªÒ¶×Ó¶ÔÏóÃ»ÓĞÕâ¸ö¹¦ÄÜ£¬»òÕß×Ó×é¼şÃ»ÓĞÊµÏÖÕâ¸ö¹¦ÄÜ
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		// ç¼ºçœçš„å®ç°ï¼ŒæŠ›å‡ºä¾‹å¤–ï¼Œå› ä¸ºå¶å­å¯¹è±¡æ²¡æœ‰è¿™ä¸ªåŠŸèƒ½ï¼Œæˆ–è€…å­ç»„ä»¶æ²¡æœ‰å®ç°è¿™ä¸ªåŠŸèƒ½
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 	}
 
 	/**
-	 * ·µ»ØÄ³¸öË÷Òı¶ÔÓ¦µÄ×é¼ş¶ÔÏó
-	 * @param index ĞèÒª»ñÈ¡µÄ×é¼ş¶ÔÏóµÄË÷Òı£¬Ë÷Òı´Ó0¿ªÊ¼
-	 * @return Ë÷Òı¶ÔÓ¦µÄ×é¼ş¶ÔÏó
+	 * è¿”å›æŸä¸ªç´¢å¼•å¯¹åº”çš„ç»„ä»¶å¯¹è±¡
+	 * @param index éœ€è¦è·å–çš„ç»„ä»¶å¯¹è±¡çš„ç´¢å¼•ï¼Œç´¢å¼•ä»0å¼€å§‹
+	 * @return ç´¢å¼•å¯¹åº”çš„ç»„ä»¶å¯¹è±¡
 	 */
 	public Component getChildren(int index) {
-		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+		throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 	}
 }
 

@@ -1,23 +1,23 @@
 package cn.javass.dp.singleton.example9;
 import java.util.*;
 /**
- * ¼òµ¥ÑİÊ¾ÈçºÎÀ©Õ¹µ¥ÀıÄ£Ê½£¬¿ØÖÆÊµÀıÊıÄ¿Îª3¸ö 
+ * ç®€å•æ¼”ç¤ºå¦‚ä½•æ‰©å±•å•ä¾‹æ¨¡å¼ï¼Œæ§åˆ¶å®ä¾‹æ•°ç›®ä¸º3ä¸ª 
  */
 public class OneExtend {
 	/**
-	 * ¶¨ÒåÒ»¸öÈ±Ê¡µÄkeyÖµµÄÇ°×º
+	 * å®šä¹‰ä¸€ä¸ªç¼ºçœçš„keyå€¼çš„å‰ç¼€
 	 */
 	private final static String DEFAULT_PREKEY = "Cache";
 	/**
-	 * »º´æÊµÀıµÄÈİÆ÷
+	 * ç¼“å­˜å®ä¾‹çš„å®¹å™¨
 	 */
 	private static Map<String,OneExtend> map = new HashMap<String,OneExtend>();
 	/**
-	 * ÓÃÀ´¼ÇÂ¼µ±Ç°ÕıÔÚÊ¹ÓÃµÚ¼¸¸öÊµÀı£¬µ½ÁË¿ØÖÆµÄ×î´óÊıÄ¿£¬¾Í·µ»Ø´Ó1¿ªÊ¼
+	 * ç”¨æ¥è®°å½•å½“å‰æ­£åœ¨ä½¿ç”¨ç¬¬å‡ ä¸ªå®ä¾‹ï¼Œåˆ°äº†æ§åˆ¶çš„æœ€å¤§æ•°ç›®ï¼Œå°±è¿”å›ä»1å¼€å§‹
 	 */
 	private static int num = 1;
 	/**
-	 * ¶¨Òå¿ØÖÆÊµÀıµÄ×î´óÊıÄ¿
+	 * å®šä¹‰æ§åˆ¶å®ä¾‹çš„æœ€å¤§æ•°ç›®
 	 */
 	private final static int NUM_MAX = 3; 
 	private OneExtend(){}
@@ -28,10 +28,10 @@ public class OneExtend {
 			oneExtend = new OneExtend();
 			map.put(key, oneExtend);
 		}
-		//°Ñµ±Ç°ÊµÀıµÄĞòºÅ¼Ó1
+		//æŠŠå½“å‰å®ä¾‹çš„åºå·åŠ 1
 		num++;
 		if(num > NUM_MAX){
-			//Èç¹ûÊµÀıµÄĞòºÅÒÑ¾­´ïµ½×î´óÊıÄ¿ÁË£¬ÄÇ¾ÍÖØ¸´´Ó1¿ªÊ¼»ñÈ¡
+			//å¦‚æœå®ä¾‹çš„åºå·å·²ç»è¾¾åˆ°æœ€å¤§æ•°ç›®äº†ï¼Œé‚£å°±é‡å¤ä»1å¼€å§‹è·å–
 			num = 1;
 		}
 		return oneExtend;		

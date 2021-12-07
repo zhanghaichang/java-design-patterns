@@ -1,10 +1,10 @@
 package cn.javass.dp.factorymethod.example2;
 /**
- * 具体的创建器实现对象
+ * 鍏蜂綋鐨勫垱寤哄櫒瀹炵幇瀵硅薄
  */
 public class ConcreteCreator extends Creator {
 	public Product factoryMethod() {
-		//重定义工厂方法，返回一个具体的Product对象
+		//閲嶅畾涔夊伐鍘傛柟娉曪紝杩斿洖涓�涓叿浣撶殑Product瀵硅薄
 		return new ConcreteProduct();
 	}
 }

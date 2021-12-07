@@ -2,24 +2,24 @@ package cn.javass.dp.chainofresponsibility.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//ÏÈÒª×é×°Ö°ÔğÁ´		
+		//å…ˆè¦ç»„è£…èŒè´£é“¾		
 		Handler h1 = new GeneralManager();
 		Handler h2 = new DepManager();
 		Handler h3 = new ProjectManager();
 		h3.setSuccessor(h2);
 		h2.setSuccessor(h1);
 		
-		//¿ªÊ¼²âÊÔÉêÇë¾Û²Í·ÑÓÃ
-		String ret1 = h3.handleFeeRequest("Ğ¡Àî", 300);
+		//å¼€å§‹æµ‹è¯•ç”³è¯·èšé¤è´¹ç”¨
+		String ret1 = h3.handleFeeRequest("å°æ", 300);
 		System.out.println("the ret1="+ret1);
-		String ret2 = h3.handleFeeRequest("Ğ¡Àî", 600);
+		String ret2 = h3.handleFeeRequest("å°æ", 600);
 		System.out.println("the ret2="+ret2);
-		String ret3 = h3.handleFeeRequest("Ğ¡Àî", 1200);
+		String ret3 = h3.handleFeeRequest("å°æ", 1200);
 		System.out.println("the ret3="+ret3);
 		
-		//¿ªÊ¼²âÊÔÉêÇë²îÂÃ·ÑÓÃ
-		h3.handlePreFeeRequest("Ğ¡ÕÅ", 3000);
-		h3.handlePreFeeRequest("Ğ¡ÕÅ", 6000);
-		h3.handlePreFeeRequest("Ğ¡ÕÅ", 32000);
+		//å¼€å§‹æµ‹è¯•ç”³è¯·å·®æ—…è´¹ç”¨
+		h3.handlePreFeeRequest("å°å¼ ", 3000);
+		h3.handlePreFeeRequest("å°å¼ ", 6000);
+		h3.handlePreFeeRequest("å°å¼ ", 32000);
 	}
 }

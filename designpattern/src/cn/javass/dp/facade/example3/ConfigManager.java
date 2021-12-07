@@ -1,7 +1,7 @@
 package cn.javass.dp.facade.example3;
 /**
- * Ê¾ÒâÅäÖÃ¹ÜÀí£¬¾ÍÊÇ¸ºÔğ¶ÁÈ¡ÅäÖÃÎÄ¼ş£¬
- * ²¢°ÑÅäÖÃÎÄ¼şµÄÄÚÈİÉèÖÃµ½ÅäÖÃModelÖĞÈ¥£¬ÊÇ¸öµ¥Àı
+ * ç¤ºæ„é…ç½®ç®¡ç†ï¼Œå°±æ˜¯è´Ÿè´£è¯»å–é…ç½®æ–‡ä»¶ï¼Œ
+ * å¹¶æŠŠé…ç½®æ–‡ä»¶çš„å†…å®¹è®¾ç½®åˆ°é…ç½®Modelä¸­å»ï¼Œæ˜¯ä¸ªå•ä¾‹
  */
 public class ConfigManager {
 	private static ConfigManager manager = null;
@@ -13,13 +13,13 @@ public class ConfigManager {
 		if(manager == null){
 			manager = new ConfigManager();
 			cm = new ConfigModel();
-			//¶ÁÈ¡ÅäÖÃÎÄ¼ş£¬°ÑÖµÉèÖÃµ½ConfigModelÖĞÈ¥
+			//è¯»å–é…ç½®æ–‡ä»¶ï¼ŒæŠŠå€¼è®¾ç½®åˆ°ConfigModelä¸­å»
 		}
 		return manager;
 	}
 	/**
-	 * »ñÈ¡ÅäÖÃµÄÊı¾İ
-	 * @return ÅäÖÃµÄÊı¾İ
+	 * è·å–é…ç½®çš„æ•°æ®
+	 * @return é…ç½®çš„æ•°æ®
 	 */
 	public ConfigModel getConfigData(){
 		return cm;

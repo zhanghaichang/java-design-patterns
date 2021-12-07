@@ -1,10 +1,10 @@
 package cn.javass.dp.factorymethod.example3;
 /**
- * ¾ßÌåµÄ´´½¨Æ÷ÊµÏÖ¶ÔÏó£¬ÊµÏÖ´´½¨µ¼³ö³ÉÊı¾İ¿â±¸·İÎÄ¼şĞÎÊ½µÄ¶ÔÏó
+ * å…·ä½“çš„åˆ›å»ºå™¨å®ç°å¯¹è±¡ï¼Œå®ç°åˆ›å»ºå¯¼å‡ºæˆæ•°æ®åº“å¤‡ä»½æ–‡ä»¶å½¢å¼çš„å¯¹è±¡
  */
 public class ExportDBOperate extends ExportOperate{
 	protected ExportFileApi factoryMethod() {
-		//´´½¨µ¼³ö³ÉÊı¾İ¿â±¸·İÎÄ¼şĞÎÊ½µÄ¶ÔÏó
+		//åˆ›å»ºå¯¼å‡ºæˆæ•°æ®åº“å¤‡ä»½æ–‡ä»¶å½¢å¼çš„å¯¹è±¡
 		return new ExportDB();
 	}
 }

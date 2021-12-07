@@ -2,47 +2,47 @@ package cn.javass.dp.iterator.example7;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//·ÃÎÊĞÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁĞ±í
+		//è®¿é—®æ–°æ”¶è´­å…¬å¸çš„å·¥èµ„åˆ—è¡¨
 		SalaryManager salaryManager = new SalaryManager();
-		//ÏÈ¼ÆËãÔÙ»ñÈ¡
+		//å…ˆè®¡ç®—å†è·å–
 		salaryManager.calcSalary();
 		
-		//µÃµ½Ë«Ïòµü´úÆ÷
+		//å¾—åˆ°åŒå‘è¿­ä»£å™¨
 		Iterator it = salaryManager.createIterator();
-		//Ê×ÏÈÉèÖÃµü´úÆ÷µ½µÚÒ»¸öÔªËØ
+		//é¦–å…ˆè®¾ç½®è¿­ä»£å™¨åˆ°ç¬¬ä¸€ä¸ªå…ƒç´ 
 		it.first();
 		
-		//ÏÈnextÒ»¸ö
+		//å…ˆnextä¸€ä¸ª
 		if(!it.isDone()){
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("next1 == "+pm);
-			//ÏòÏÂµü´úÒ»¸ö
+			//å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 			it.next();
 		}
-		//È»ºópreviousÒ»¸ö
+		//ç„¶åpreviousä¸€ä¸ª
 		if(!it.isFirst()){
-			//ÏòÇ°µü´úÒ»¸ö
+			//å‘å‰è¿­ä»£ä¸€ä¸ª
 			it.previous();
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("previous1 == "+pm);			
 		}
-		//ÔÙnextÒ»¸ö
+		//å†nextä¸€ä¸ª
 		if(!it.isDone()){
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("next2 == "+pm);
-			//ÏòÏÂµü´úÒ»¸ö
+			//å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 			it.next();
 		}
-		//¼ÌĞønextÒ»¸ö
+		//ç»§ç»­nextä¸€ä¸ª
 		if(!it.isDone()){
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("next3 == "+pm);
-			//ÏòÏÂµü´úÒ»¸ö
+			//å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 			it.next();
 		}
-		//È»ºópreviousÒ»¸ö
+		//ç„¶åpreviousä¸€ä¸ª
 		if(!it.isFirst()){
-			//ÏòÇ°µü´úÒ»¸ö
+			//å‘å‰è¿­ä»£ä¸€ä¸ª
 			it.previous();
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("previous2 == "+pm);			

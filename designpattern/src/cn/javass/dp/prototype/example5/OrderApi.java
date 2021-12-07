@@ -2,17 +2,17 @@ package cn.javass.dp.prototype.example5;
 
 
 /**
- * ¶©µ¥µÄ½Ó¿Ú£¬ÉùÃ÷ÁË¿ÉÒÔ¿ËÂ¡×ÔÉíµÄ·½·¨
+ * è®¢å•çš„æ¥å£ï¼Œå£°æ˜äº†å¯ä»¥å…‹éš†è‡ªèº«çš„æ–¹æ³•
  */
 public interface OrderApi {
 	/**
-	 * »ñÈ¡¶©µ¥²úÆ·ÊıÁ¿
-	 * @return ¶©µ¥ÖĞ²úÆ·ÊıÁ¿
+	 * è·å–è®¢å•äº§å“æ•°é‡
+	 * @return è®¢å•ä¸­äº§å“æ•°é‡
 	 */
 	public int getOrderProductNum();
 	/**
-	 * ÉèÖÃ¶©µ¥²úÆ·ÊıÁ¿
-	 * @param num ¶©µ¥²úÆ·ÊıÁ¿
+	 * è®¾ç½®è®¢å•äº§å“æ•°é‡
+	 * @param num è®¢å•äº§å“æ•°é‡
 	 */
 	public void setOrderProductNum(int num);
 	

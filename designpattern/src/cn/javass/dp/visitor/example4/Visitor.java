@@ -1,16 +1,16 @@
 package cn.javass.dp.visitor.example4;
 /**
- * ·ÃÎÊÕß½Ó¿Ú
+ * è®¿é—®è€…æ¥å£
  */
 public interface Visitor {
 	/**
-	 * ·ÃÎÊÆóÒµ¿Í»§£¬Ïàµ±ÓÚ¸øÆóÒµ¿Í»§Ìí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
-	 * @param ec ÆóÒµ¿Í»§µÄ¶ÔÏó
+	 * è®¿é—®ä¼ä¸šå®¢æˆ·ï¼Œç›¸å½“äºç»™ä¼ä¸šå®¢æˆ·æ·»åŠ è®¿é—®è€…çš„åŠŸèƒ½
+	 * @param ec ä¼ä¸šå®¢æˆ·çš„å¯¹è±¡
 	 */
 	public void visitEnterpriseCustomer(EnterpriseCustomer ec);
 	/**
-	 * ·ÃÎÊ¸öÈË¿Í»§£¬Ïàµ±ÓÚ¸ø¸öÈË¿Í»§Ìí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
-	 * @param pc ¸öÈË¿Í»§µÄ¶ÔÏó
+	 * è®¿é—®ä¸ªäººå®¢æˆ·ï¼Œç›¸å½“äºç»™ä¸ªäººå®¢æˆ·æ·»åŠ è®¿é—®è€…çš„åŠŸèƒ½
+	 * @param pc ä¸ªäººå®¢æˆ·çš„å¯¹è±¡
 	 */
 	public void visitPersonalCustomer(PersonalCustomer pc);
 }

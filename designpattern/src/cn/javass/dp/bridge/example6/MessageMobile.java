@@ -1,10 +1,10 @@
 package cn.javass.dp.bridge.example6;
 /**
- * ÒÔÊÖ»ú¶ÌÏûÏ¢µÄ·½Ê½·¢ËÍÏûÏ¢
+ * ä»¥æ‰‹æœºçŸ­æ¶ˆæ¯çš„æ–¹å¼å‘é€æ¶ˆæ¯
  */
 public  class MessageMobile implements MessageImplementor{
 
 	public void send(String message, String toUser) {
-		System.out.println("Ê¹ÓÃÊÖ»ú¶ÌÏûÏ¢µÄ·½Ê½£¬·¢ËÍÏûÏ¢'"+message+"'¸ø"+toUser);
+		System.out.println("ä½¿ç”¨æ‰‹æœºçŸ­æ¶ˆæ¯çš„æ–¹å¼ï¼Œå‘é€æ¶ˆæ¯'"+message+"'ç»™"+toUser);
 	}
 }

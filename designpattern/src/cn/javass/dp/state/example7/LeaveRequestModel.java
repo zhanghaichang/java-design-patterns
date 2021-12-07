@@ -1,22 +1,22 @@
 package cn.javass.dp.state.example7;
 /**
- * Çë¼Ùµ¥¶ÔÏó
+ * è¯·å‡å•å¯¹è±¡
  */
 public class LeaveRequestModel {
 	/**
-	 * Çë¼ÙÈË
+	 * è¯·å‡äºº
 	 */
 	private String user;
 	/**
-	 * Çë¼Ù¿ªÊ¼Ê±¼ä
+	 * è¯·å‡å¼€å§‹æ—¶é—´
 	 */
 	private String beginDate;
 	/**
-	 * Çë¼ÙÌìÊı
+	 * è¯·å‡å¤©æ•°
 	 */
 	private int leaveDays;
 	/**
-	 * ÉóºË½á¹û
+	 * å®¡æ ¸ç»“æœ
 	 */
 	private String result;
 	

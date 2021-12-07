@@ -1,10 +1,10 @@
 package cn.javass.dp.strategy.example4;
 /**
- * 具体算法实现，为新客户或者是普通客户计算应报的价格
+ * 鍏蜂綋绠楁硶瀹炵幇锛屼负鏂板鎴锋垨鑰呮槸鏅�氬鎴疯绠楀簲鎶ョ殑浠锋牸
  */
 public class NormalCustomerStrategy implements Strategy{
 	public double calcPrice(double goodsPrice) {
-		System.out.println("对于新客户或者是普通客户，没有折扣");
+		System.out.println("瀵逛簬鏂板鎴锋垨鑰呮槸鏅�氬鎴凤紝娌℃湁鎶樻墸");
 		return goodsPrice;
 	}
 }

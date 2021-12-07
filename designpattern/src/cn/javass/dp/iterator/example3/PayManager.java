@@ -2,33 +2,33 @@ package cn.javass.dp.iterator.example3;
 import java.util.*;
 
 /**
- * ¿Í»§·½ÒÑÓĞµÄ¹¤×Ê¹ÜÀí¶ÔÏó
+ * å®¢æˆ·æ–¹å·²æœ‰çš„å·¥èµ„ç®¡ç†å¯¹è±¡
  */
 public class PayManager extends Aggregate{
 	/**
-	 * ¾ÛºÏ¶ÔÏó£¬ÕâÀïÊÇJavaµÄ¼¯ºÏ¶ÔÏó
+	 * èšåˆå¯¹è±¡ï¼Œè¿™é‡Œæ˜¯Javaçš„é›†åˆå¯¹è±¡
 	 */
 	private List list = new ArrayList();
 	/**
-	 * »ñÈ¡¹¤×ÊÁĞ±í
-	 * @return ¹¤×ÊÁĞ±í
+	 * è·å–å·¥èµ„åˆ—è¡¨
+	 * @return å·¥èµ„åˆ—è¡¨
 	 */
 	public List getPayList(){
 		return list;
 	}
 	/**
-	 * ¼ÆËã¹¤×Ê£¬ÆäÊµÓ¦¸ÃÓĞºÜ¶à²ÎÊı£¬ÎªÁËÑİÊ¾´Ó¼ò
+	 * è®¡ç®—å·¥èµ„ï¼Œå…¶å®åº”è¯¥æœ‰å¾ˆå¤šå‚æ•°ï¼Œä¸ºäº†æ¼”ç¤ºä»ç®€
 	 */
 	public void calcPay(){
-		//¼ÆËã¹¤×Ê£¬²¢°Ñ¹¤×ÊĞÅÏ¢Ìî³äµ½¹¤×ÊÁĞ±íÀïÃæ
-		//ÎªÁË²âÊÔ£¬×öµã¼ÙÊı¾İ½øÈ¥
+		//è®¡ç®—å·¥èµ„ï¼Œå¹¶æŠŠå·¥èµ„ä¿¡æ¯å¡«å……åˆ°å·¥èµ„åˆ—è¡¨é‡Œé¢
+		//ä¸ºäº†æµ‹è¯•ï¼Œåšç‚¹å‡æ•°æ®è¿›å»
 		PayModel pm1 = new PayModel();
 		pm1.setPay(3800);
-		pm1.setUserName("ÕÅÈı");
+		pm1.setUserName("å¼ ä¸‰");
 		
 		PayModel pm2 = new PayModel();
 		pm2.setPay(5800);
-		pm2.setUserName("ÀîËÄ");
+		pm2.setUserName("æå››");
 		
 		list.add(pm1);
 		list.add(pm2);

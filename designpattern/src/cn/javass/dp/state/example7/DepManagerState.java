@@ -1,18 +1,18 @@
 package cn.javass.dp.state.example7;
 
 /**
- * ´¦Àí²¿ÃÅ¾­ÀíµÄÉóºË£¬´¦Àíºó¶ÔÓ¦ÉóºË½áÊø×´Ì¬
+ * å¤„ç†éƒ¨é—¨ç»ç†çš„å®¡æ ¸ï¼Œå¤„ç†åå¯¹åº”å®¡æ ¸ç»“æŸçŠ¶æ€
  */
 public class DepManagerState implements LeaveRequestState{
 	public void doWork(StateMachine request) {
-		//ÏÈ°ÑÒµÎñ¶ÔÏóÔìĞÍ»ØÀ´
+		//å…ˆæŠŠä¸šåŠ¡å¯¹è±¡é€ å‹å›æ¥
 		LeaveRequestModel lrm = (LeaveRequestModel)request.getBusinessVO();
 
-		//ÒµÎñ´¦Àí£¬°ÑÉóºË½á¹û±£´æµ½Êı¾İ¿âÖĞ
+		//ä¸šåŠ¡å¤„ç†ï¼ŒæŠŠå®¡æ ¸ç»“æœä¿å­˜åˆ°æ•°æ®åº“ä¸­
 		
-		//²¿ÃÅ¾­ÀíÉóºË¹ıºó£¬Ö±½Ó×ªÏòÉóºË½áÊø×´Ì¬ÁË
+		//éƒ¨é—¨ç»ç†å®¡æ ¸è¿‡åï¼Œç›´æ¥è½¬å‘å®¡æ ¸ç»“æŸçŠ¶æ€äº†
 		request.setState(new AuditOverState());
 
-		//¸øÉêÇëÈËÔö¼ÓÒ»¸ö¹¤×÷£¬ÈÃËû²ì¿´ÉóºË½á¹û
+		//ç»™ç”³è¯·äººå¢åŠ ä¸€ä¸ªå·¥ä½œï¼Œè®©ä»–å¯Ÿçœ‹å®¡æ ¸ç»“æœ
 	}
 }

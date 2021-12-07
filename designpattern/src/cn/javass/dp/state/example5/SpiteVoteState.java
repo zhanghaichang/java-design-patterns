@@ -2,17 +2,17 @@ package cn.javass.dp.state.example5;
 
 public class SpiteVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//¶ñÒâÍ¶Æ±
-		//È¡ÏûÓÃ»§µÄÍ¶Æ±×Ê¸ñ£¬²¢È¡ÏûÍ¶Æ±¼ÇÂ¼
+		//æ¶æ„æŠ•ç¥¨
+		//å–æ¶ˆç”¨æˆ·çš„æŠ•ç¥¨èµ„æ ¼ï¼Œå¹¶å–æ¶ˆæŠ•ç¥¨è®°å½•
 		String s = voteManager.getMapVote().get(user);
 		if(s!=null){
 			voteManager.getMapVote().remove(user);
 		}
-		System.out.println("ÄãÓÐ¶ñÒâË¢Æ±ÐÐÎª£¬È¡ÏûÍ¶Æ±×Ê¸ñ");
+		System.out.println("ä½ æœ‰æ¶æ„åˆ·ç¥¨è¡Œä¸ºï¼Œå–æ¶ˆæŠ•ç¥¨èµ„æ ¼");
 		
-		//¶ñÒâÍ¶Æ±Íê³É£¬Î¬»¤ÏÂÒ»¸ö×´Ì¬£¬Í¶Æ±µ½8´Î£¬¾Í½øºÚÃûµ¥ÁË
-		//×¢ÒâÕâÀïÊÇÅÐ¶Ï´óÓÚµÈÓÚ7£¬ÒòÎªÕâÀïÉèÖÃµÄÊÇÏÂÒ»¸ö×´Ì¬
-		//ÏÂÒ»¸ö²Ù×÷´ÎÊý¾ÍÊÇ8ÁË£¬¾ÍÓ¦¸ÃËãÊÇ½øºÚÃûµ¥ÁË
+		//æ¶æ„æŠ•ç¥¨å®Œæˆï¼Œç»´æŠ¤ä¸‹ä¸€ä¸ªçŠ¶æ€ï¼ŒæŠ•ç¥¨åˆ°8æ¬¡ï¼Œå°±è¿›é»‘åå•äº†
+		//æ³¨æ„è¿™é‡Œæ˜¯åˆ¤æ–­å¤§äºŽç­‰äºŽ7ï¼Œå› ä¸ºè¿™é‡Œè®¾ç½®çš„æ˜¯ä¸‹ä¸€ä¸ªçŠ¶æ€
+		//ä¸‹ä¸€ä¸ªæ“ä½œæ¬¡æ•°å°±æ˜¯8äº†ï¼Œå°±åº”è¯¥ç®—æ˜¯è¿›é»‘åå•äº†
 		if(voteManager.getMapVoteCount().get(user) >= 7){
 //			voteManager.getMapState().put(user, new BlackVoteState());
 		}

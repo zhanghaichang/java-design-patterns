@@ -2,23 +2,23 @@ package cn.javass.dp.memento.example3;
 
 
 /**
- * ¸ºÔğ±£´æÄ£ÄâÔËĞĞÁ÷³ÌAµÄ¶ÔÏóµÄ±¸ÍüÂ¼¶ÔÏó
+ * è´Ÿè´£ä¿å­˜æ¨¡æ‹Ÿè¿è¡Œæµç¨‹Açš„å¯¹è±¡çš„å¤‡å¿˜å½•å¯¹è±¡
  */
 public class FlowAMementoCareTaker {
 	/**
-	 * ¼ÇÂ¼±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
+	 * è®°å½•è¢«ä¿å­˜çš„å¤‡å¿˜å½•å¯¹è±¡
 	 */
 	private FlowAMockMemento memento = null;
 	/**
-	 * ±£´æ±¸ÍüÂ¼¶ÔÏó
-	 * @param memento ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
+	 * ä¿å­˜å¤‡å¿˜å½•å¯¹è±¡
+	 * @param memento è¢«ä¿å­˜çš„å¤‡å¿˜å½•å¯¹è±¡
 	 */
 	public void saveMemento(FlowAMockMemento memento){
 		this.memento = memento;
 	}
 	/**
-	 * »ñÈ¡±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
-	 * @return ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
+	 * è·å–è¢«ä¿å­˜çš„å¤‡å¿˜å½•å¯¹è±¡
+	 * @return è¢«ä¿å­˜çš„å¤‡å¿˜å½•å¯¹è±¡
 	 */
 	public FlowAMockMemento retriveMemento(){
 		return this.memento;

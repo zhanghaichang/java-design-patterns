@@ -2,8 +2,8 @@ package cn.javass.dp.state.example3;
 
 public class RepeatVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//ÖØ¸´Í¶Æ±
-		//ÔİÊ±²»×ö´¦Àí
-		System.out.println("Çë²»ÒªÖØ¸´Í¶Æ±");
+		//é‡å¤æŠ•ç¥¨
+		//æš‚æ—¶ä¸åšå¤„ç†
+		System.out.println("è¯·ä¸è¦é‡å¤æŠ•ç¥¨");
 	}
 }

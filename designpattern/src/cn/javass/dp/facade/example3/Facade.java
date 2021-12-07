@@ -1,10 +1,10 @@
 package cn.javass.dp.facade.example3;
 /**
- * ´úÂëÉú³É×ÓÏµÍ³µÄÍâ¹Û¶ÔÏó
+ * ä»£ç ç”Ÿæˆå­ç³»ç»Ÿçš„å¤–è§‚å¯¹è±¡
  */
 public class Facade {
 	/**
-	 * ¿Í»§¶ËĞèÒªµÄ£¬Ò»¸ö¼òµ¥µÄµ÷ÓÃ´úÂëÉú³ÉµÄ¹¦ÄÜ
+	 * å®¢æˆ·ç«¯éœ€è¦çš„ï¼Œä¸€ä¸ªç®€å•çš„è°ƒç”¨ä»£ç ç”Ÿæˆçš„åŠŸèƒ½
 	 */
 	public void generate(){
 		new Presentation().generate();

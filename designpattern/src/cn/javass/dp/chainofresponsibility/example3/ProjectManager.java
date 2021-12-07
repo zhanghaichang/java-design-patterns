@@ -4,18 +4,18 @@ public class ProjectManager extends Handler{
 	
 	public String handleFeeRequest(String user, double fee) {
 		String str = "";
-		//ÏîÄ¿¾­ÀíµÄÈ¨ÏŞ±È½ÏĞ¡£¬Ö»ÄÜÔÚ500ÒÔÄÚ
+		//é¡¹ç›®ç»ç†çš„æƒé™æ¯”è¾ƒå°ï¼Œåªèƒ½åœ¨500ä»¥å†…
 		if(fee < 500){
-			//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâĞ¡ÀîµÄ
-			if("Ğ¡Àî".equals(user)){
-				str = "ÏîÄ¿¾­ÀíÍ¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
+			//ä¸ºäº†æµ‹è¯•ï¼Œç®€å•ç‚¹ï¼ŒåªåŒæ„å°æçš„
+			if("å°æ".equals(user)){
+				str = "é¡¹ç›®ç»ç†åŒæ„"+user+"èšé¤è´¹ç”¨"+fee+"å…ƒçš„è¯·æ±‚";
 			}else{
-				//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
-				str = "ÏîÄ¿¾­Àí²»Í¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
+				//å…¶ä»–äººä¸€å¾‹ä¸åŒæ„
+				str = "é¡¹ç›®ç»ç†ä¸åŒæ„"+user+"èšé¤è´¹ç”¨"+fee+"å…ƒçš„è¯·æ±‚";
 			}
 			return str;
 		}else{
-			//³¬¹ı500£¬¼ÌĞø´«µİ¸ø¼¶±ğ¸ü¸ßµÄÈË´¦Àí
+			//è¶…è¿‡500ï¼Œç»§ç»­ä¼ é€’ç»™çº§åˆ«æ›´é«˜çš„äººå¤„ç†
 			if(this.successor!=null){
 				return successor.handleFeeRequest(user, fee);
 			}

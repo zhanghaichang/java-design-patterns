@@ -1,39 +1,39 @@
 package cn.javass.dp.command.example4;
 import java.util.*;
 /**
- * ¼ÆËãÆ÷Àà£¬¼ÆËãÆ÷ÉÏÓĞ¼Ó·¨°´Å¥¡¢¼õ·¨°´Å¥
+ * è®¡ç®—å™¨ç±»ï¼Œè®¡ç®—å™¨ä¸Šæœ‰åŠ æ³•æŒ‰é’®ã€å‡æ³•æŒ‰é’®
  */
 public class Calculator2 {
 	/**
-	 * ³ÖÓĞÖ´ĞĞ¼Ó·¨µÄÃüÁî¶ÔÏó
+	 * æŒæœ‰æ‰§è¡ŒåŠ æ³•çš„å‘½ä»¤å¯¹è±¡
 	 */
 	private Command addCmd = null;
 	/**
-	 * ³ÖÓĞÖ´ĞĞ¼õ·¨µÄÃüÁî¶ÔÏó
+	 * æŒæœ‰æ‰§è¡Œå‡æ³•çš„å‘½ä»¤å¯¹è±¡
 	 */
 	private Command substractCmd = null;
 	/**
-	 * ÉèÖÃÖ´ĞĞ¼Ó·¨µÄÃüÁî¶ÔÏó
-	 * @param addCmd Ö´ĞĞ¼Ó·¨µÄÃüÁî¶ÔÏó
+	 * è®¾ç½®æ‰§è¡ŒåŠ æ³•çš„å‘½ä»¤å¯¹è±¡
+	 * @param addCmd æ‰§è¡ŒåŠ æ³•çš„å‘½ä»¤å¯¹è±¡
 	 */
 	public void setAddCmd(Command addCmd) {
 		this.addCmd = addCmd;
 	}
 	/**
-	 * ÉèÖÃÖ´ĞĞ¼õ·¨µÄÃüÁî¶ÔÏó
-	 * @param substractCmd Ö´ĞĞ¼õ·¨µÄÃüÁî¶ÔÏó
+	 * è®¾ç½®æ‰§è¡Œå‡æ³•çš„å‘½ä»¤å¯¹è±¡
+	 * @param substractCmd æ‰§è¡Œå‡æ³•çš„å‘½ä»¤å¯¹è±¡
 	 */
 	public void setSubstractCmd(Command substractCmd) {
 		this.substractCmd = substractCmd;
 	}	
 	/**
-	 * Ìá¹©¸ø¿Í»§Ê¹ÓÃ£¬Ö´ĞĞ¼Ó·¨¹¦ÄÜ
+	 * æä¾›ç»™å®¢æˆ·ä½¿ç”¨ï¼Œæ‰§è¡ŒåŠ æ³•åŠŸèƒ½
 	 */
 	public void addPressed(){
 		this.addCmd.execute();
 	}
 	/**
-	 * Ìá¹©¸ø¿Í»§Ê¹ÓÃ£¬Ö´ĞĞ¼õ·¨¹¦ÄÜ
+	 * æä¾›ç»™å®¢æˆ·ä½¿ç”¨ï¼Œæ‰§è¡Œå‡æ³•åŠŸèƒ½
 	 */
 	public void substractPressed(){
 		this.substractCmd.execute();

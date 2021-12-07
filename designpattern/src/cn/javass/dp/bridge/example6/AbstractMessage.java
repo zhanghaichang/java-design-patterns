@@ -1,25 +1,25 @@
 package cn.javass.dp.bridge.example6;
 
 /**
- * ³éÏóµÄÏûÏ¢¶ÔÏó
+ * æŠ½è±¡çš„æ¶ˆæ¯å¯¹è±¡
  */
 public abstract class AbstractMessage {
 	/**
-	 * ³ÖÓĞÒ»¸öÊµÏÖ²¿·ÖµÄ¶ÔÏó
+	 * æŒæœ‰ä¸€ä¸ªå®ç°éƒ¨åˆ†çš„å¯¹è±¡
 	 */
 	protected MessageImplementor impl;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÊµÏÖ²¿·ÖµÄ¶ÔÏó 
-	 * @param impl ÊµÏÖ²¿·ÖµÄ¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥å®ç°éƒ¨åˆ†çš„å¯¹è±¡ 
+	 * @param impl å®ç°éƒ¨åˆ†çš„å¯¹è±¡
 	 */
 	public AbstractMessage(MessageImplementor impl){
 		this.impl = impl;
 	}
 	
 	/**
-	 * ·¢ËÍÏûÏ¢£¬×ªµ÷ÊµÏÖ²¿·ÖµÄ·½·¨
-	 * @param message Òª·¢ËÍµÄÏûÏ¢ÄÚÈİ
-	 * @param toUser °ÑÏûÏ¢·¢ËÍµÄÄ¿µÄÈËÔ±
+	 * å‘é€æ¶ˆæ¯ï¼Œè½¬è°ƒå®ç°éƒ¨åˆ†çš„æ–¹æ³•
+	 * @param message è¦å‘é€çš„æ¶ˆæ¯å†…å®¹
+	 * @param toUser æŠŠæ¶ˆæ¯å‘é€çš„ç›®çš„äººå‘˜
 	 */
 	public void sendMessage(String message,String toUser){
 		this.impl.send(message, toUser);

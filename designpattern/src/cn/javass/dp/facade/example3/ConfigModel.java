@@ -1,18 +1,18 @@
 package cn.javass.dp.facade.example3;
 /**
- * Ê¾ÒâÅäÖÃÃèÊöµÄÊı¾İModel£¬ÕæÊµµÄÅäÖÃÊı¾İ»áºÜ¶à
+ * ç¤ºæ„é…ç½®æè¿°çš„æ•°æ®Modelï¼ŒçœŸå®çš„é…ç½®æ•°æ®ä¼šå¾ˆå¤š
  */
 public class ConfigModel {
 	/**
-	 * ÊÇ·ñĞèÒªÉú³É±íÏÖ²ã£¬Ä¬ÈÏÊÇtrue
+	 * æ˜¯å¦éœ€è¦ç”Ÿæˆè¡¨ç°å±‚ï¼Œé»˜è®¤æ˜¯true
 	 */
 	private boolean needGenPresentation = true;
 	/**
-	 * ÊÇ·ñĞèÒªÉú³ÉÂß¼­²ã£¬Ä¬ÈÏÊÇtrue
+	 * æ˜¯å¦éœ€è¦ç”Ÿæˆé€»è¾‘å±‚ï¼Œé»˜è®¤æ˜¯true
 	 */
 	private boolean needGenBusiness = true;
 	/**
-	 * ÊÇ·ñĞèÒªÉú³ÉDAO£¬Ä¬ÈÏÊÇtrue
+	 * æ˜¯å¦éœ€è¦ç”ŸæˆDAOï¼Œé»˜è®¤æ˜¯true
 	 */
 	private boolean needGenDAO = true;
 	public boolean isNeedGenPresentation() {

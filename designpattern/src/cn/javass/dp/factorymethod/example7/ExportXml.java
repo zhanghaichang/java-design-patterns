@@ -1,11 +1,11 @@
 package cn.javass.dp.factorymethod.example7;
 /**
- * µ¼³ö³ÉxmlÎÄ¼şµÄ¶ÔÏó
+ * å¯¼å‡ºæˆxmlæ–‡ä»¶çš„å¯¹è±¡
  */
 public class ExportXml implements ExportFileApi{
 	public boolean export(String data) {
-		//¼òµ¥Ê¾ÒâÒ»ÏÂ
-		System.out.println("µ¼³öÊı¾İ"+data+"µ½XMLÎÄ¼ş");
+		//ç®€å•ç¤ºæ„ä¸€ä¸‹
+		System.out.println("å¯¼å‡ºæ•°æ®"+data+"åˆ°XMLæ–‡ä»¶");
 		return true;
 	}
 }

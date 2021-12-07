@@ -1,7 +1,7 @@
 package cn.javass.dp.builder.example2;
 /**
- * ±»¹¹½¨µÄ²úÆ·¶ÔÏóµÄ½Ó¿Ú
+ * è¢«æ„å»ºçš„äº§å“å¯¹è±¡çš„æ¥å£
  */
 public interface Product {
-	//¶¨Òå²úÆ·µÄ²Ù×÷
+	//å®šä¹‰äº§å“çš„æ“ä½œ
 }

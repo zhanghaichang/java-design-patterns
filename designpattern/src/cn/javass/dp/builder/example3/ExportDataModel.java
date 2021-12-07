@@ -1,18 +1,18 @@
 package cn.javass.dp.builder.example3;
 /**
- * ÃèÊöÊä³öÊı¾İµÄ¶ÔÏó
+ * æè¿°è¾“å‡ºæ•°æ®çš„å¯¹è±¡
  */
 public class ExportDataModel {
 	/**
-	 * ²úÆ·±àºÅ
+	 * äº§å“ç¼–å·
 	 */
 	private String productId;
 	/**
-	 * ÏúÊÛ¼Û¸ñ
+	 * é”€å”®ä»·æ ¼
 	 */
 	private double price;
 	/**
-	 * ÏúÊÛÊıÁ¿
+	 * é”€å”®æ•°é‡
 	 */
 	private double amount;
 	

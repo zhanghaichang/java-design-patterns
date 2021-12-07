@@ -1,18 +1,18 @@
 package cn.javass.dp.templatemethod.example3;
 /**
- * ¶¨ÒåÄ£°å·½·¨¡¢Ô­Óï²Ù×÷µÈµÄ³éÏóÀà
+ * å®šä¹‰æ¨¡æ¿æ–¹æ³•ã€åŸè¯­æ“ä½œç­‰çš„æŠ½è±¡ç±»
  */
 public abstract class AbstractClass {
 	/**
-	 * Ô­Óï²Ù×÷1£¬ËùÎ½Ô­Óï²Ù×÷¾ÍÊÇ³éÏóµÄ²Ù×÷£¬±ØĞëÒªÓÉ×ÓÀàÌá¹©ÊµÏÖ
+	 * åŸè¯­æ“ä½œ1ï¼Œæ‰€è°“åŸè¯­æ“ä½œå°±æ˜¯æŠ½è±¡çš„æ“ä½œï¼Œå¿…é¡»è¦ç”±å­ç±»æä¾›å®ç°
 	 */
 	public abstract void doPrimitiveOperation1();
 	/**
-	 * Ô­Óï²Ù×÷2
+	 * åŸè¯­æ“ä½œ2
 	 */
 	public abstract void doPrimitiveOperation2();
 	/**
-	 * Ä£°å·½·¨£¬¶¨ÒåËã·¨¹Ç¼Ü
+	 * æ¨¡æ¿æ–¹æ³•ï¼Œå®šä¹‰ç®—æ³•éª¨æ¶
 	 */
 	public final void templateMethod() {
 		doPrimitiveOperation1();

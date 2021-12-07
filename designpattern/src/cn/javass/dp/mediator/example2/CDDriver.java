@@ -1,29 +1,29 @@
 package cn.javass.dp.mediator.example2;
 /**
- * ¹âÇıÀà£¬Ò»¸öÍ¬ÊÂÀà
+ * å…‰é©±ç±»ï¼Œä¸€ä¸ªåŒäº‹ç±»
  */
 public class CDDriver extends Colleague{
 	public CDDriver(Mediator mediator) {
 		super(mediator);
 	}
 	/**
-	 * ¹âÇı¶ÁÈ¡³öÀ´µÄÊı¾İ
+	 * å…‰é©±è¯»å–å‡ºæ¥çš„æ•°æ®
 	 */
 	private String data = "";
 	/**
-	 * »ñÈ¡¹âÇı¶ÁÈ¡³öÀ´µÄÊı¾İ
-	 * @return ¹âÇı¶ÁÈ¡³öÀ´µÄÊı¾İ
+	 * è·å–å…‰é©±è¯»å–å‡ºæ¥çš„æ•°æ®
+	 * @return å…‰é©±è¯»å–å‡ºæ¥çš„æ•°æ®
 	 */
 	public String getData(){
 		return this.data;
 	}
 	/**
-	 * ¶ÁÈ¡¹âÅÌ
+	 * è¯»å–å…‰ç›˜
 	 */
 	public void readCD(){
-		//¶ººÅÇ°ÊÇÊÓÆµÏÔÊ¾µÄÊı¾İ£¬¶ººÅºóÊÇÉùÒô
-		this.data = "Éè¼ÆÄ£Ê½,ÖµµÃºÃºÃÑĞ¾¿";
-		//Í¨ÖªÖ÷°å£¬×Ô¼ºµÄ×´Ì¬·¢ÉúÁË¸Ä±ä
+		//é€—å·å‰æ˜¯è§†é¢‘æ˜¾ç¤ºçš„æ•°æ®ï¼Œé€—å·åæ˜¯å£°éŸ³
+		this.data = "è®¾è®¡æ¨¡å¼,å€¼å¾—å¥½å¥½ç ”ç©¶";
+		//é€šçŸ¥ä¸»æ¿ï¼Œè‡ªå·±çš„çŠ¶æ€å‘ç”Ÿäº†æ”¹å˜
 		this.getMediator().changed(this);
 	}
 }

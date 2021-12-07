@@ -2,13 +2,13 @@ package cn.javass.dp.strategy.example4;
 
 public class Client2 {
 	public static void main(String[] args) {
-		//1£ºÑ¡Ôñ²¢´´½¨ĞèÒªÊ¹ÓÃµÄ²ßÂÔ¶ÔÏó
+		//1ï¼šé€‰æ‹©å¹¶åˆ›å»ºéœ€è¦ä½¿ç”¨çš„ç­–ç•¥å¯¹è±¡
 		Strategy strategy = new CooperateCustomerStrategy();
-		//2£º´´½¨ÉÏÏÂÎÄ
+		//2ï¼šåˆ›å»ºä¸Šä¸‹æ–‡
 		Price ctx = new Price(strategy);
 		
-		//3£º¼ÆËã±¨¼Û
+		//3ï¼šè®¡ç®—æŠ¥ä»·
 		double quote = ctx.quote(1000);
-		System.out.println("Ïò¿Í»§±¨¼Û£º"+quote);
+		System.out.println("å‘å®¢æˆ·æŠ¥ä»·ï¼š"+quote);
 	}
 }

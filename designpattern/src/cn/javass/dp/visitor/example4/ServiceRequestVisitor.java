@@ -1,14 +1,14 @@
 package cn.javass.dp.visitor.example4;
 /**
- * ¾ßÌåµÄ·ÃÎÊÕß£¬ÊµÏÖ¿Í»§Ìá³ö·şÎñÇëÇóµÄ¹¦ÄÜ
+ * å…·ä½“çš„è®¿é—®è€…ï¼Œå®ç°å®¢æˆ·æå‡ºæœåŠ¡è¯·æ±‚çš„åŠŸèƒ½
  */
 public class ServiceRequestVisitor implements Visitor {
 	public void visitEnterpriseCustomer(EnterpriseCustomer ec){
-		//ÆóÒµ¿Í»§Ìá³öµÄ¾ßÌå·şÎñÇëÇó
-		System.out.println(ec.getName()+"ÆóÒµÌá³ö·şÎñÇëÇó");
+		//ä¼ä¸šå®¢æˆ·æå‡ºçš„å…·ä½“æœåŠ¡è¯·æ±‚
+		System.out.println(ec.getName()+"ä¼ä¸šæå‡ºæœåŠ¡è¯·æ±‚");
 	}
 	public void visitPersonalCustomer(PersonalCustomer pc){
-		//¸öÈË¿Í»§Ìá³öµÄ¾ßÌå·şÎñÇëÇó
-		System.out.println("¿Í»§"+pc.getName()+"Ìá³ö·şÎñÇëÇó");
+		//ä¸ªäººå®¢æˆ·æå‡ºçš„å…·ä½“æœåŠ¡è¯·æ±‚
+		System.out.println("å®¢æˆ·"+pc.getName()+"æå‡ºæœåŠ¡è¯·æ±‚");
 	}
 }

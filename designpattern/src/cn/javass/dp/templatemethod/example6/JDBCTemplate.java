@@ -9,113 +9,113 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 /**
- * Ò»¸ö¼òµ¥µÄÊµÏÖJDBCÔöÉ¾¸Ä²é¹¦ÄÜµÄÄ£°å
+ * ä¸€ä¸ªç®€å•çš„å®ç°JDBCå¢åˆ æ”¹æŸ¥åŠŸèƒ½çš„æ¨¡æ¿
  */
 public abstract class JDBCTemplate {
 	/**
-	 * ¶¨Òåµ±Ç°µÄ²Ù×÷ÀàĞÍÊÇĞÂÔö
+	 * å®šä¹‰å½“å‰çš„æ“ä½œç±»å‹æ˜¯æ–°å¢
 	 */
 	protected final static int TYPE_CREATE = 1;
 	/**
-	 * ¶¨Òåµ±Ç°µÄ²Ù×÷ÀàĞÍÊÇĞŞ¸Ä
+	 * å®šä¹‰å½“å‰çš„æ“ä½œç±»å‹æ˜¯ä¿®æ”¹
 	 */
 	protected final static int TYPE_UPDATE = 2;
 	/**
-	 * ¶¨Òåµ±Ç°µÄ²Ù×÷ÀàĞÍÊÇÉ¾³ı
+	 * å®šä¹‰å½“å‰çš„æ“ä½œç±»å‹æ˜¯åˆ é™¤
 	 */
 	protected final static int TYPE_DELETE = 3;
 	/**
-	 * ¶¨Òåµ±Ç°µÄ²Ù×÷ÀàĞÍÊÇ°´Ìõ¼ş²éÑ¯
+	 * å®šä¹‰å½“å‰çš„æ“ä½œç±»å‹æ˜¯æŒ‰æ¡ä»¶æŸ¥è¯¢
 	 */
 	protected final static int TYPE_CONDITION = 4;
 	
-/*---------------------Ä£°å·½·¨---------------------*/	
+/*---------------------æ¨¡æ¿æ–¹æ³•---------------------*/	
 	/**
-	 * ÊµÏÖĞÂÔöµÄ¹¦ÄÜ
-	 * @param obj ĞèÒª±»ĞÂÔöµÄÊı¾İ¶ÔÏó
+	 * å®ç°æ–°å¢çš„åŠŸèƒ½
+	 * @param obj éœ€è¦è¢«æ–°å¢çš„æ•°æ®å¯¹è±¡
 	 */
 	public final void create(Object obj){
-		//1£º»ñÈ¡ĞÂÔöµÄsql
+		//1ï¼šè·å–æ–°å¢çš„sql
 		String sql = this.getMainSql(TYPE_CREATE);
-		//2£ºµ÷ÓÃÍ¨ÓÃµÄ¸üĞÂÊµÏÖ
+		//2ï¼šè°ƒç”¨é€šç”¨çš„æ›´æ–°å®ç°
 		this.executeUpdate(sql, TYPE_CREATE,obj);
 	}
 	/**
-	 * ÊµÏÖĞŞ¸ÄµÄ¹¦ÄÜ
-	 * @param obj ĞèÒª±»ĞŞ¸ÄµÄÊı¾İ¶ÔÏó
+	 * å®ç°ä¿®æ”¹çš„åŠŸèƒ½
+	 * @param obj éœ€è¦è¢«ä¿®æ”¹çš„æ•°æ®å¯¹è±¡
 	 */
 	public final void update(Object obj){
-		//1£º»ñÈ¡ĞŞ¸ÄµÄsql
+		//1ï¼šè·å–ä¿®æ”¹çš„sql
 		String sql = this.getMainSql(TYPE_UPDATE);
-		//2£ºµ÷ÓÃÍ¨ÓÃµÄ¸üĞÂÊµÏÖ
+		//2ï¼šè°ƒç”¨é€šç”¨çš„æ›´æ–°å®ç°
 		this.executeUpdate(sql, TYPE_UPDATE,obj);
 	}
 	/**
-	 * ÊµÏÖÉ¾³ıµÄ¹¦ÄÜ
-	 * @param obj ĞèÒª±»É¾³ıµÄÊı¾İ¶ÔÏó
+	 * å®ç°åˆ é™¤çš„åŠŸèƒ½
+	 * @param obj éœ€è¦è¢«åˆ é™¤çš„æ•°æ®å¯¹è±¡
 	 */
 	public final void delete(Object obj){
-		//1£º»ñÈ¡É¾³ıµÄsql
+		//1ï¼šè·å–åˆ é™¤çš„sql
 		String sql = this.getMainSql(TYPE_DELETE);
-		//2£ºµ÷ÓÃÍ¨ÓÃµÄ¸üĞÂÊµÏÖ
+		//2ï¼šè°ƒç”¨é€šç”¨çš„æ›´æ–°å®ç°
 		this.executeUpdate(sql, TYPE_DELETE,obj);
 	}
 	/**
-	 * ÊµÏÖ°´ÕÕÌõ¼ş²éÑ¯µÄ¹¦ÄÜ
-	 * @param qm ·â×°²éÑ¯Ìõ¼şµÄÊı¾İ¶ÔÏó
-	 * @return ·ûºÏÌõ¼şµÄÊı¾İ¶ÔÏó¼¯ºÏ
+	 * å®ç°æŒ‰ç…§æ¡ä»¶æŸ¥è¯¢çš„åŠŸèƒ½
+	 * @param qm å°è£…æŸ¥è¯¢æ¡ä»¶çš„æ•°æ®å¯¹è±¡
+	 * @return ç¬¦åˆæ¡ä»¶çš„æ•°æ®å¯¹è±¡é›†åˆ
 	 */
 	public final Collection getByCondition(Object qm){
-		//1£º»ñÈ¡²éÑ¯µÄsql
+		//1ï¼šè·å–æŸ¥è¯¢çš„sql
 		String sql = this.getMainSql(TYPE_CONDITION);
-		//2£ºµ÷ÓÃÍ¨ÓÃµÄ²éÑ¯ÊµÏÖ
+		//2ï¼šè°ƒç”¨é€šç”¨çš„æŸ¥è¯¢å®ç°
 		return this.getByCondition(sql, qm);
 	}
 	
 	
-/*---------------------Ô­Óï²Ù×÷---------------------*/		
+/*---------------------åŸè¯­æ“ä½œ---------------------*/		
 	/**
-	 * »ñÈ¡²Ù×÷ĞèÒªµÄÖ÷¸Ésql
-	 * @param type ²Ù×÷ÀàĞÍ
-	 * @return ²Ù×÷¶ÔÓ¦µÄÖ÷¸Ésql
+	 * è·å–æ“ä½œéœ€è¦çš„ä¸»å¹²sql
+	 * @param type æ“ä½œç±»å‹
+	 * @return æ“ä½œå¯¹åº”çš„ä¸»å¹²sql
 	 */
 	protected abstract String getMainSql(int type);
 	/**
-	 * Îª¸üĞÂ²Ù×÷µÄsqlÖĞµÄ"?"ÉèÖÃÖµ
-	 * @param type ²Ù×÷ÀàĞÍ
-	 * @param pstmt PreparedStatement¶ÔÏó
-	 * @param obj ²Ù×÷µÄÊı¾İ¶ÔÏó
+	 * ä¸ºæ›´æ–°æ“ä½œçš„sqlä¸­çš„"?"è®¾ç½®å€¼
+	 * @param type æ“ä½œç±»å‹
+	 * @param pstmt PreparedStatementå¯¹è±¡
+	 * @param obj æ“ä½œçš„æ•°æ®å¯¹è±¡
 	 * @throws Exception
 	 */
 	protected abstract void setUpdateSqlValue(int type,PreparedStatement pstmt,Object obj) throws Exception;
 	
 	/**
-	 * ÎªÍ¨ÓÃ²éÑ¯¶¯Ì¬µÄÆ´½ÓsqlµÄÌõ¼ş²¿·Ö£¬»ù±¾Ë¼Â·ÊÇ£º
-	 * Ö»ÓĞÓÃ»§ÌîĞ´ÁËÏàÓ¦µÄÌõ¼ş£¬ÄÇÃ´²ÅÔÚsqlÖĞÌí¼Ó¶ÔÓ¦µÄÌõ¼ş
-	 * @param sql sqlµÄÖ÷¸É²¿·Ö
-	 * @param qm ·â×°²éÑ¯Ìõ¼şµÄÊı¾İÄ£ĞÍ
-	 * @return Æ´½ÓºÃµÄsqlÓï¾ä
+	 * ä¸ºé€šç”¨æŸ¥è¯¢åŠ¨æ€çš„æ‹¼æ¥sqlçš„æ¡ä»¶éƒ¨åˆ†ï¼ŒåŸºæœ¬æ€è·¯æ˜¯ï¼š
+	 * åªæœ‰ç”¨æˆ·å¡«å†™äº†ç›¸åº”çš„æ¡ä»¶ï¼Œé‚£ä¹ˆæ‰åœ¨sqlä¸­æ·»åŠ å¯¹åº”çš„æ¡ä»¶
+	 * @param sql sqlçš„ä¸»å¹²éƒ¨åˆ†
+	 * @param qm å°è£…æŸ¥è¯¢æ¡ä»¶çš„æ•°æ®æ¨¡å‹
+	 * @return æ‹¼æ¥å¥½çš„sqlè¯­å¥
 	 */
 	protected abstract String prepareQuerySql(String sql,Object qm);
 	/**
-	 * ÎªÍ¨ÓÃ²éÑ¯µÄsql¶¯Ì¬ÉèÖÃÌõ¼şµÄÖµ
-	 * @param pstmt Ô¤´¦Àí²éÑ¯sqlµÄ¶ÔÏó
-	 * @param qm ·â×°²éÑ¯Ìõ¼şµÄÊı¾İÄ£ĞÍ
+	 * ä¸ºé€šç”¨æŸ¥è¯¢çš„sqlåŠ¨æ€è®¾ç½®æ¡ä»¶çš„å€¼
+	 * @param pstmt é¢„å¤„ç†æŸ¥è¯¢sqlçš„å¯¹è±¡
+	 * @param qm å°è£…æŸ¥è¯¢æ¡ä»¶çš„æ•°æ®æ¨¡å‹
 	 * @throws Exception
 	 */
 	protected abstract void setQuerySqlValue(PreparedStatement pstmt,Object qm)throws Exception;
 	/**
-	 * °Ñ²éÑ¯·µ»ØµÄ½á¹û¼¯×ª»»³ÉÎªÊı¾İ¶ÔÏó
-	 * @param rs ²éÑ¯·µ»ØµÄ½á¹û¼¯
-	 * @return ²éÑ¯·µ»ØµÄ½á¹û¼¯×ª»»³ÉÎªÊı¾İ¶ÔÏó
+	 * æŠŠæŸ¥è¯¢è¿”å›çš„ç»“æœé›†è½¬æ¢æˆä¸ºæ•°æ®å¯¹è±¡
+	 * @param rs æŸ¥è¯¢è¿”å›çš„ç»“æœé›†
+	 * @return æŸ¥è¯¢è¿”å›çš„ç»“æœé›†è½¬æ¢æˆä¸ºæ•°æ®å¯¹è±¡
 	 * @throws Exception
 	 */
 	protected abstract Object rs2Object(ResultSet rs)throws Exception;
 	
-/*---------------------¹³×Ó²Ù×÷---------------------*/		
+/*---------------------é’©å­æ“ä½œ---------------------*/		
 	/**
-	 * Á¬½ÓÊı¾İ¿âµÄÄ¬ÈÏÊµÏÖ£¬¿ÉÒÔ±»×ÓÀà¸²¸Ç
-	 * @return Êı¾İ¿âÁ¬½Ó
+	 * è¿æ¥æ•°æ®åº“çš„é»˜è®¤å®ç°ï¼Œå¯ä»¥è¢«å­ç±»è¦†ç›–
+	 * @return æ•°æ®åº“è¿æ¥
 	 * @throws Exception
 	 */
 	protected Connection getConnection()throws Exception{
@@ -125,25 +125,25 @@ public abstract class JDBCTemplate {
 				"test","test");
 	}
 	/**
-	 * Ö´ĞĞ²éÑ¯
-	 * @param sql ²éÑ¯µÄÖ÷¸ÉsqlÓï¾ä
-	 * @param qm ·â×°²éÑ¯Ìõ¼şµÄÊı¾İÄ£ĞÍ
-	 * @return ²éÑ¯ºóµÄ½á¹û¶ÔÏó¼¯ºÏ
+	 * æ‰§è¡ŒæŸ¥è¯¢
+	 * @param sql æŸ¥è¯¢çš„ä¸»å¹²sqlè¯­å¥
+	 * @param qm å°è£…æŸ¥è¯¢æ¡ä»¶çš„æ•°æ®æ¨¡å‹
+	 * @return æŸ¥è¯¢åçš„ç»“æœå¯¹è±¡é›†åˆ
 	 */
 	protected  Collection getByCondition(String sql,Object qm){
 		Collection col = new ArrayList();
 		Connection conn = null;
 		try{
-			//µ÷ÓÃ¹³×Ó·½·¨
+			//è°ƒç”¨é’©å­æ–¹æ³•
 			conn = this.getConnection();
-			//µ÷ÓÃÔ­Óï²Ù×÷
+			//è°ƒç”¨åŸè¯­æ“ä½œ
 			sql = this.prepareQuerySql(sql, qm);
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			//µ÷ÓÃÔ­Óï²Ù×÷
+			//è°ƒç”¨åŸè¯­æ“ä½œ
 			this.setQuerySqlValue(pstmt, qm);
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()){
-				//µ÷ÓÃÔ­Óï²Ù×÷
+				//è°ƒç”¨åŸè¯­æ“ä½œ
 				col.add(this.rs2Object(rs));
 			}
 			rs.close();
@@ -160,17 +160,17 @@ public abstract class JDBCTemplate {
 		return col;
 	}
 	/**
-	 * Ö´ĞĞ¸ü¸ÄÊı¾İµÄsqlÓï¾ä£¬°üÀ¨ÔöÉ¾¸ÄµÄ¹¦ÄÜ
-	 * @param sql ĞèÒªÖ´ĞĞµÄsqlÓï¾ä
-	 * @param callback »Øµ÷½Ó¿Ú£¬»Øµ÷ÎªsqlÓï¾ä¸³ÖµµÄ·½·¨
+	 * æ‰§è¡Œæ›´æ”¹æ•°æ®çš„sqlè¯­å¥ï¼ŒåŒ…æ‹¬å¢åˆ æ”¹çš„åŠŸèƒ½
+	 * @param sql éœ€è¦æ‰§è¡Œçš„sqlè¯­å¥
+	 * @param callback å›è°ƒæ¥å£ï¼Œå›è°ƒä¸ºsqlè¯­å¥èµ‹å€¼çš„æ–¹æ³•
 	 */
 	protected  void executeUpdate(String sql,int type,Object obj){
 		Connection conn = null;
 		try{
-			//µ÷ÓÃ¹³×Ó·½·¨			
+			//è°ƒç”¨é’©å­æ–¹æ³•			
 			conn = this.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			//µ÷ÓÃÔ­Óï²Ù×÷
+			//è°ƒç”¨åŸè¯­æ“ä½œ
 			this.setUpdateSqlValue(type,pstmt,obj);			
 			pstmt.executeUpdate();			
 			pstmt.close();

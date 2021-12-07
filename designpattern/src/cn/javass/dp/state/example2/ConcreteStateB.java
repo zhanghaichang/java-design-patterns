@@ -2,10 +2,10 @@ package cn.javass.dp.state.example2;
 
 
 /**
- * ÊµÏÖÒ»¸öÓëContextµÄÒ»¸öÌØ¶¨×´Ì¬Ïà¹ØµÄĞĞÎª
+ * å®ç°ä¸€ä¸ªä¸Contextçš„ä¸€ä¸ªç‰¹å®šçŠ¶æ€ç›¸å…³çš„è¡Œä¸º
  */
 public class ConcreteStateB implements State {
 	public void handle(String sampleParameter) {
-		//ÊµÏÖ¾ßÌåµÄ´¦Àí
+		//å®ç°å…·ä½“çš„å¤„ç†
 	}
 }

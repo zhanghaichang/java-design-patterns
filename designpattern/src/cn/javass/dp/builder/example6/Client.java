@@ -2,11 +2,11 @@ package cn.javass.dp.builder.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨¹¹½¨Æ÷
+		//åˆ›å»ºæ„å»ºå™¨
 		InsuranceContract.ConcreteBuilder builder = new InsuranceContract.ConcreteBuilder("001",12345L,67890L);
-		//ÉèÖÃĞèÒªµÄÊı¾İ£¬È»ºó¹¹½¨±£ÏÕºÏÍ¬¶ÔÏó
-		InsuranceContract contract = builder.setPersonName("ÕÅÈı").setOtherData("test").build();
-		//²Ù×÷±£ÏÕºÏÍ¬¶ÔÏóµÄ·½·¨
+		//è®¾ç½®éœ€è¦çš„æ•°æ®ï¼Œç„¶åæ„å»ºä¿é™©åˆåŒå¯¹è±¡
+		InsuranceContract contract = builder.setPersonName("å¼ ä¸‰").setOtherData("test").build();
+		//æ“ä½œä¿é™©åˆåŒå¯¹è±¡çš„æ–¹æ³•
 		contract.someOperation();
 	}
 }

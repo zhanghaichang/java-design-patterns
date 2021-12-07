@@ -1,11 +1,11 @@
 package cn.javass.dp.chainofresponsibility.example6;
 /**
- * ÕæÕı´¦ÀíÏúÊÛµÄÒµÎñ¹¦ÄÜµÄÖ°Ôğ¶ÔÏó
+ * çœŸæ­£å¤„ç†é”€å”®çš„ä¸šåŠ¡åŠŸèƒ½çš„èŒè´£å¯¹è±¡
  */
 public class SaleMgr extends SaleHandler{
 	public boolean sale(String user, String customer, SaleModel saleModel) {
-		//½øĞĞÕæÕıµÄÒµÎñÂß¼­´¦Àí
-		System.out.println(user+"±£´æÁË"+customer+"¹ºÂò "+saleModel+" µÄÏúÊÛÊı¾İ");
+		//è¿›è¡ŒçœŸæ­£çš„ä¸šåŠ¡é€»è¾‘å¤„ç†
+		System.out.println(user+"ä¿å­˜äº†"+customer+"è´­ä¹° "+saleModel+" çš„é”€å”®æ•°æ®");
 		return true;
 	}
 }

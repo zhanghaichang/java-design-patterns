@@ -1,6 +1,6 @@
 package cn.javass.dp.bridge.example6;
 /**
- * ÌØ¼±ÏûÏ¢
+ * ç‰¹æ€¥æ¶ˆæ¯
  */
 public class SpecialUrgencyMessage extends AbstractMessage{
 
@@ -9,12 +9,12 @@ public class SpecialUrgencyMessage extends AbstractMessage{
 	}
 
 	public void hurry(String messageId) {
-		//Ö´ĞĞ´ß´ÙµÄÒµÎñ£¬·¢³ö´ß´ÙµÄĞÅÏ¢
+		//æ‰§è¡Œå‚¬ä¿ƒçš„ä¸šåŠ¡ï¼Œå‘å‡ºå‚¬ä¿ƒçš„ä¿¡æ¯
 	}
 
 	public void sendMessage(String message, String toUser) {
-		message = "ÌØ¼±£º"+message;
+		message = "ç‰¹æ€¥ï¼š"+message;
 		super.sendMessage(message, toUser);
-		//»¹ĞèÒªÔö¼ÓÒ»Ìõ´ı´ß´ÙµÄĞÅÏ¢
+		//è¿˜éœ€è¦å¢åŠ ä¸€æ¡å¾…å‚¬ä¿ƒçš„ä¿¡æ¯
 	}
 }

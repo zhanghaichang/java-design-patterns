@@ -2,14 +2,14 @@ package cn.javass.dp.command.example1;
 
 public class Client {
 	/**
-	 * Ê¾Òâ£¬¸ºÔğ´´½¨ÃüÁî¶ÔÏó£¬²¢Éè¶¨ËüµÄ½ÓÊÜÕß
+	 * ç¤ºæ„ï¼Œè´Ÿè´£åˆ›å»ºå‘½ä»¤å¯¹è±¡ï¼Œå¹¶è®¾å®šå®ƒçš„æ¥å—è€…
 	 */
 	public void assemble(){
-		//´´½¨½ÓÊÜÕß
+		//åˆ›å»ºæ¥å—è€…
 		Receiver receiver = new Receiver();
-		//´´½¨ÃüÁî¶ÔÏó£¬Éè¶¨ËüµÄ½ÓÊÕÕß
+		//åˆ›å»ºå‘½ä»¤å¯¹è±¡ï¼Œè®¾å®šå®ƒçš„æ¥æ”¶è€…
 		Command command = new ConcreteCommand(receiver);
-		//´´½¨Invoker£¬°ÑÃüÁî¶ÔÏóÉèÖÃ½øÈ¥
+		//åˆ›å»ºInvokerï¼ŒæŠŠå‘½ä»¤å¯¹è±¡è®¾ç½®è¿›å»
 		Invoker invoker = new Invoker();
 		invoker.setCommand(command);
 	}

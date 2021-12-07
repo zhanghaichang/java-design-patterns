@@ -1,14 +1,14 @@
 package cn.javass.dp.visitor.example1;
 /**
- * ¸öÈË¿Í»§
+ * ä¸ªäººå®¢æˆ·
  */
 public class PersonalCustomer extends Customer{
 	/**
-	 * ÁªÏµµç»°
+	 * è”ç³»ç”µè¯
 	 */
 	private String telephone;
 	/**
-	 * ÄêÁä
+	 * å¹´é¾„
 	 */
 	private int age;
 	
@@ -30,10 +30,10 @@ public class PersonalCustomer extends Customer{
 
 	
 	/**
-	 * ¸öÈË¿Í»§Ìá³ö·şÎñÇëÇóµÄ·½·¨£¬Ê¾ÒâÒ»ÏÂ
+	 * ä¸ªäººå®¢æˆ·æå‡ºæœåŠ¡è¯·æ±‚çš„æ–¹æ³•ï¼Œç¤ºæ„ä¸€ä¸‹
 	 */
 	public void serviceRequest(){
-		//¸öÈË¿Í»§Ìá³öµÄ¾ßÌå·şÎñÇëÇó
-		System.out.println("¿Í»§"+this.getName()+"Ìá³ö·şÎñÇëÇó");
+		//ä¸ªäººå®¢æˆ·æå‡ºçš„å…·ä½“æœåŠ¡è¯·æ±‚
+		System.out.println("å®¢æˆ·"+this.getName()+"æå‡ºæœåŠ¡è¯·æ±‚");
 	}
 }

@@ -4,32 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Ä¿±ê¶ÔÏó£¬×÷Îª±»¹Û²ìÕß
+ * ç›®æ ‡å¯¹è±¡ï¼Œä½œä¸ºè¢«è§‚å¯Ÿè€…
  */
 public class Subject {
 	/**
-	 * ÓÃÀ´±£´æ×¢²áµÄ¹Û²ìÕß¶ÔÏó£¬Ò²¾ÍÊÇ±¨Ö½µÄ¶©ÔÄÕß
+	 * ç”¨æ¥ä¿å­˜æ³¨å†Œçš„è§‚å¯Ÿè€…å¯¹è±¡ï¼Œä¹Ÿå°±æ˜¯æŠ¥çº¸çš„è®¢é˜…è€…
 	 */
 	private List<Observer> readers = new ArrayList<Observer>();
 	/**
-	 * ±¨Ö½µÄ¶ÁÕßĞèÒªÏÈÏò±¨Éç¶©ÔÄ£¬ÏÈÒª×¢²á
-	 * @param reader ±¨Ö½µÄ¶ÁÕß 
-	 * @return ÊÇ·ñ×¢²á³É¹¦
+	 * æŠ¥çº¸çš„è¯»è€…éœ€è¦å…ˆå‘æŠ¥ç¤¾è®¢é˜…ï¼Œå…ˆè¦æ³¨å†Œ
+	 * @param reader æŠ¥çº¸çš„è¯»è€… 
+	 * @return æ˜¯å¦æ³¨å†ŒæˆåŠŸ
 	 */
 	public void attach(Observer reader) {
 		readers.add(reader);
 	}
 	/**
-	 * ±¨Ö½µÄ¶ÁÕß¿ÉÒÔÈ¡Ïû¶©ÔÄ
-	 * @param reader ±¨Ö½µÄ¶ÁÕß
-	 * @return ÊÇ·ñÈ¡Ïû³É¹¦
+	 * æŠ¥çº¸çš„è¯»è€…å¯ä»¥å–æ¶ˆè®¢é˜…
+	 * @param reader æŠ¥çº¸çš„è¯»è€…
+	 * @return æ˜¯å¦å–æ¶ˆæˆåŠŸ
 	 */
 	public void detach(Observer reader) {
 		readers.remove(reader);
 	}
 	/**
-	 * µ±Ã¿ÆÚ±¨Ö½Ó¡Ë¢³öÀ´ºó£¬¾ÍÒªÑ¸ËÙµÄÖ÷¶¯µÄ±»ËÍµ½¶ÁÕßµÄÊÖÖĞ£¬
-	 * Ïàµ±ÓÚÍ¨Öª¶ÁÕß£¬ÈÃËûÃÇÖªµÀ
+	 * å½“æ¯æœŸæŠ¥çº¸å°åˆ·å‡ºæ¥åï¼Œå°±è¦è¿…é€Ÿçš„ä¸»åŠ¨çš„è¢«é€åˆ°è¯»è€…çš„æ‰‹ä¸­ï¼Œ
+	 * ç›¸å½“äºé€šçŸ¥è¯»è€…ï¼Œè®©ä»–ä»¬çŸ¥é“
 	 */
 	protected void notifyObservers() {
 		for(Observer reader : readers){

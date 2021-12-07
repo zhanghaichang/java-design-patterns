@@ -1,25 +1,25 @@
 package cn.javass.dp.decorator.example3;
 
 /**
- * ×°ÊÎÆ÷½Ó¿Ú£¬Î¬³ÖÒ»¸öÖ¸Ïò×é¼ş¶ÔÏóµÄ½Ó¿Ú¶ÔÏó£¬
- * ²¢¶¨ÒåÒ»¸öÓë×é¼ş½Ó¿ÚÒ»ÖÂµÄ½Ó¿Ú
+ * è£…é¥°å™¨æ¥å£ï¼Œç»´æŒä¸€ä¸ªæŒ‡å‘ç»„ä»¶å¯¹è±¡çš„æ¥å£å¯¹è±¡ï¼Œ
+ * å¹¶å®šä¹‰ä¸€ä¸ªä¸ç»„ä»¶æ¥å£ä¸€è‡´çš„æ¥å£
  */
 public abstract class Decorator extends Component {
 	/**
-	 * ³ÖÓĞ×é¼ş¶ÔÏó
+	 * æŒæœ‰ç»„ä»¶å¯¹è±¡
 	 */
 	protected Component component;
 
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë×é¼ş¶ÔÏó
-	 * @param component ×é¼ş¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥ç»„ä»¶å¯¹è±¡
+	 * @param component ç»„ä»¶å¯¹è±¡
 	 */
 	public Decorator(Component component) {
 		this.component = component;
 	}
 
 	public void operation() {
-		//×ª·¢ÇëÇó¸ø×é¼ş¶ÔÏó£¬¿ÉÒÔÔÚ×ª·¢Ç°ºóÖ´ĞĞÒ»Ğ©¸½¼Ó¶¯×÷
+		//è½¬å‘è¯·æ±‚ç»™ç»„ä»¶å¯¹è±¡ï¼Œå¯ä»¥åœ¨è½¬å‘å‰åæ‰§è¡Œä¸€äº›é™„åŠ åŠ¨ä½œ
 		component.operation();
 	}
 

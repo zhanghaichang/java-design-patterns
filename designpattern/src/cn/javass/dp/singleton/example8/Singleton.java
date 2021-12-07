@@ -1,32 +1,32 @@
 package cn.javass.dp.singleton.example8;
 import java.util.*;
 /**
- * Ê¹ÓÃ»º´æÀ´Ä£ÄâÊµÏÖµ¥Àı
+ * ä½¿ç”¨ç¼“å­˜æ¥æ¨¡æ‹Ÿå®ç°å•ä¾‹
  */
 public class Singleton {
 	/**
-	 * ¶¨ÒåÒ»¸öÈ±Ê¡µÄkeyÖµ£¬ÓÃÀ´±êÊ¶ÔÚ»º´æÖĞµÄ´æ·Å
+	 * å®šä¹‰ä¸€ä¸ªç¼ºçœçš„keyå€¼ï¼Œç”¨æ¥æ ‡è¯†åœ¨ç¼“å­˜ä¸­çš„å­˜æ”¾
 	 */
 	private final static String DEFAULT_KEY = "One";
 	/**
-	 * »º´æÊµÀıµÄÈİÆ÷
+	 * ç¼“å­˜å®ä¾‹çš„å®¹å™¨
 	 */
 	private static Map<String,Singleton> map = new HashMap<String,Singleton>();
 	/**
-	 * Ë½ÓĞ»¯¹¹Ôì·½·¨
+	 * ç§æœ‰åŒ–æ„é€ æ–¹æ³•
 	 */
 	private Singleton(){
 		//
 	}
 	public static Singleton getInstance(){
-		//ÏÈ´Ó»º´æÖĞ»ñÈ¡
+		//å…ˆä»ç¼“å­˜ä¸­è·å–
 		Singleton instance = (Singleton)map.get(DEFAULT_KEY);
-		//Èç¹ûÃ»ÓĞ£¬¾ÍĞÂ½¨Ò»¸ö£¬È»ºóÉèÖÃ»Ø»º´æÖĞ
+		//å¦‚æœæ²¡æœ‰ï¼Œå°±æ–°å»ºä¸€ä¸ªï¼Œç„¶åè®¾ç½®å›ç¼“å­˜ä¸­
 		if(instance==null){
 			instance = new Singleton();
 			map.put(DEFAULT_KEY, instance);
 		}
-		//Èç¹ûÓĞ¾ÍÖ±½ÓÊ¹ÓÃ
+		//å¦‚æœæœ‰å°±ç›´æ¥ä½¿ç”¨
 		return instance;
 	}
 }

@@ -1,7 +1,7 @@
 package cn.javass.dp.factorymethod.example2;
 /**
- * ¾ßÌåµÄProduct¶ÔÏó
+ * å…·ä½“çš„Productå¯¹è±¡
  */
 public class ConcreteProduct implements Product {
-	//ÊµÏÖProductÒªÇóµÄ·½·¨
+	//å®ç°Productè¦æ±‚çš„æ–¹æ³•
 }

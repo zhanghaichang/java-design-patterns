@@ -1,20 +1,20 @@
 package cn.javass.dp.command.example7;
 /**
- * ÃüÁî½Ó¿Ú£¬ÉùÃ÷Ö´ĞĞµÄ²Ù×÷
+ * å‘½ä»¤æ¥å£ï¼Œå£°æ˜æ‰§è¡Œçš„æ“ä½œ
  */
 public interface Command {
 	/**
-	 * Ö´ĞĞÃüÁî¶ÔÓ¦µÄ²Ù×÷
+	 * æ‰§è¡Œå‘½ä»¤å¯¹åº”çš„æ“ä½œ
 	 */
 	public void execute();
 	/**
-	 * ÉèÖÃÃüÁîµÄ½ÓÊÕÕß
-	 * @param cookApi ÃüÁîµÄ½ÓÊÕÕß 
+	 * è®¾ç½®å‘½ä»¤çš„æ¥æ”¶è€…
+	 * @param cookApi å‘½ä»¤çš„æ¥æ”¶è€… 
 	 */
 	public void setCookApi(CookApi cookApi);
 	/**
-	 * ·µ»Ø·¢ÆğÇëÇóµÄ×ÀºÅ£¬¾ÍÊÇµã²ËµÄ×ÀºÅ
-	 * @return ·¢ÆğÇëÇóµÄ×ÀºÅ
+	 * è¿”å›å‘èµ·è¯·æ±‚çš„æ¡Œå·ï¼Œå°±æ˜¯ç‚¹èœçš„æ¡Œå·
+	 * @return å‘èµ·è¯·æ±‚çš„æ¡Œå·
 	 */
 	public int getTableNum();
 }

@@ -1,10 +1,10 @@
 package cn.javass.dp.interpreter.example5;
 /**
- * ÊôĞÔ×÷ÎªÖÕ½á·û¶ÔÓ¦µÄ½âÊÍÆ÷
+ * å±æ€§ä½œä¸ºç»ˆç»“ç¬¦å¯¹åº”çš„è§£é‡Šå™¨
  */
 public class PropertyTerminalExpression extends ReadXmlExpression{
 	/**
-	 * ÊôĞÔµÄÃû×Ö
+	 * å±æ€§çš„åå­—
 	 */
 	private String propName;
 	public PropertyTerminalExpression(String propName){
@@ -12,7 +12,7 @@ public class PropertyTerminalExpression extends ReadXmlExpression{
 	}
 	
 	public String[] interpret(Context c) {
-		//Ö±½Ó»ñÈ¡×îºóµÄÔªËØµÄÊôĞÔµÄÖµ
+		//ç›´æ¥è·å–æœ€åçš„å…ƒç´ çš„å±æ€§çš„å€¼
 		String[] ss = new String[1];
 		ss[0] = c.getPreEles().get(0).getAttribute(this.propName);
 		return ss;

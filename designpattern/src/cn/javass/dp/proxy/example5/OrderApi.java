@@ -1,40 +1,40 @@
 package cn.javass.dp.proxy.example5;
 
 /**
- * ¶©µ¥¶ÔÏóµÄ½Ó¿Ú¶¨Òå
+ * è®¢å•å¯¹è±¡çš„æ¥å£å®šä¹‰
  */
 public interface OrderApi {
 	/**
-	 * »ñÈ¡¶©µ¥¶©¹ºµÄ²úÆ·Ãû³Æ
-	 * @return ¶©µ¥¶©¹ºµÄ²úÆ·Ãû³Æ
+	 * è·å–è®¢å•è®¢è´­çš„äº§å“åç§°
+	 * @return è®¢å•è®¢è´­çš„äº§å“åç§°
 	 */
 	public String getProductName();
 	/**
-	 * ÉèÖÃ¶©µ¥¶©¹ºµÄ²úÆ·Ãû³Æ
-	 * @param productName ¶©µ¥¶©¹ºµÄ²úÆ·Ãû³Æ
-	 * @param user ²Ù×÷ÈËÔ±
+	 * è®¾ç½®è®¢å•è®¢è´­çš„äº§å“åç§°
+	 * @param productName è®¢å•è®¢è´­çš„äº§å“åç§°
+	 * @param user æ“ä½œäººå‘˜
 	 */
 	public void setProductName(String productName,String user);
 	/**
-	 * »ñÈ¡¶©µ¥¶©¹ºµÄÊıÁ¿
-	 * @return ¶©µ¥¶©¹ºµÄÊıÁ¿
+	 * è·å–è®¢å•è®¢è´­çš„æ•°é‡
+	 * @return è®¢å•è®¢è´­çš„æ•°é‡
 	 */
 	public int getOrderNum();
 	/**
-	 * ÉèÖÃ¶©µ¥¶©¹ºµÄÊıÁ¿
-	 * @param orderNum ¶©µ¥¶©¹ºµÄÊıÁ¿
-	 * @param user ²Ù×÷ÈËÔ±
+	 * è®¾ç½®è®¢å•è®¢è´­çš„æ•°é‡
+	 * @param orderNum è®¢å•è®¢è´­çš„æ•°é‡
+	 * @param user æ“ä½œäººå‘˜
 	 */
 	public void setOrderNum(int orderNum,String user);
 	/**
-	 * »ñÈ¡´´½¨¶©µ¥µÄÈËÔ±
-	 * @return ´´½¨¶©µ¥µÄÈËÔ±
+	 * è·å–åˆ›å»ºè®¢å•çš„äººå‘˜
+	 * @return åˆ›å»ºè®¢å•çš„äººå‘˜
 	 */
 	public String getOrderUser();
 	/**
-	 * ÉèÖÃ´´½¨¶©µ¥µÄÈËÔ±
-	 * @param orderUser ´´½¨¶©µ¥µÄÈËÔ±
-	 * @param user ²Ù×÷ÈËÔ±
+	 * è®¾ç½®åˆ›å»ºè®¢å•çš„äººå‘˜
+	 * @param orderUser åˆ›å»ºè®¢å•çš„äººå‘˜
+	 * @param user æ“ä½œäººå‘˜
 	 */
 	public void setOrderUser(String orderUser,String user);
 }

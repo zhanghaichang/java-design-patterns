@@ -1,15 +1,15 @@
 package cn.javass.dp.chainofresponsibility.example5;
 /**
- * Í¨ÓÃµÄÇëÇó¶ÔÏó
+ * é€šç”¨çš„è¯·æ±‚å¯¹è±¡
  */
 public class RequestModel {
 	/**
-	 * ±íÊ¾¾ßÌåµÄÒµÎñÀàĞÍ
+	 * è¡¨ç¤ºå…·ä½“çš„ä¸šåŠ¡ç±»å‹
 	 */
 	private String type;
 	/**
-	 * Í¨¹ı¹¹Ôì·½·¨°Ñ¾ßÌåµÄÒµÎñÀàĞÍ´«µİ½øÀ´
-	 * @param type ¾ßÌåµÄÒµÎñÀàĞÍ
+	 * é€šè¿‡æ„é€ æ–¹æ³•æŠŠå…·ä½“çš„ä¸šåŠ¡ç±»å‹ä¼ é€’è¿›æ¥
+	 * @param type å…·ä½“çš„ä¸šåŠ¡ç±»å‹
 	 */
 	public RequestModel(String type){
 		this.type = type;

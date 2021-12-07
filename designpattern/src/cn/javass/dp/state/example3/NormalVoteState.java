@@ -2,9 +2,9 @@ package cn.javass.dp.state.example3;
 
 public class NormalVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//Õı³£Í¶Æ±
-		//¼ÇÂ¼µ½Í¶Æ±¼ÇÂ¼ÖĞ
+		//æ­£å¸¸æŠ•ç¥¨
+		//è®°å½•åˆ°æŠ•ç¥¨è®°å½•ä¸­
 		voteManager.getMapVote().put(user, voteItem);
-		System.out.println("¹§Ï²ÄãÍ¶Æ±³É¹¦");
+		System.out.println("æ­å–œä½ æŠ•ç¥¨æˆåŠŸ");
 	}
 }

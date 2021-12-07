@@ -1,10 +1,10 @@
 package cn.javass.dp.command.example5;
 /**
- * ³øÊ¦¶ÔÏó£¬×öÈÈ²Ë
+ * å¨å¸ˆå¯¹è±¡ï¼Œåšçƒ­èœ
  */
 public class HotCook implements CookApi{
 	
 	public void cook(String name) {
-		System.out.println("±¾³øÊ¦ÕıÔÚ×ö£º"+name);
+		System.out.println("æœ¬å¨å¸ˆæ­£åœ¨åšï¼š"+name);
 	}
 }

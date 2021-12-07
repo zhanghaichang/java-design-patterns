@@ -1,16 +1,16 @@
 package cn.javass.dp.abstractfactory.example1;
 /**
- * ´´½¨Ö÷°åµÄ¼òµ¥¹¤³§
+ * åˆ›å»ºä¸»æ¿çš„ç®€å•å·¥å‚
  */
 public class MainboardFactory {
 	/**
-	 * ´´½¨Ö÷°å½Ó¿Ú¶ÔÏóµÄ·½·¨
-	 * @param type Ñ¡ÔñÖ÷°åÀàĞÍµÄ²ÎÊı
-	 * @return Ö÷°å½Ó¿Ú¶ÔÏóµÄ·½·¨
+	 * åˆ›å»ºä¸»æ¿æ¥å£å¯¹è±¡çš„æ–¹æ³•
+	 * @param type é€‰æ‹©ä¸»æ¿ç±»å‹çš„å‚æ•°
+	 * @return ä¸»æ¿æ¥å£å¯¹è±¡çš„æ–¹æ³•
 	 */
 	public static MainboardApi createMainboardApi(int type){
 		MainboardApi mainboard = null;
-		//¸ù¾İ²ÎÊıÀ´Ñ¡Ôñ²¢´´½¨ÏàÓ¦µÄÖ÷°å¶ÔÏó
+		//æ ¹æ®å‚æ•°æ¥é€‰æ‹©å¹¶åˆ›å»ºç›¸åº”çš„ä¸»æ¿å¯¹è±¡
 		if(type==1){
 			mainboard = new GAMainboard(1156);
 		}else if(type==2){

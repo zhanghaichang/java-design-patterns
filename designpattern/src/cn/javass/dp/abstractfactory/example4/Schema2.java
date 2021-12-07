@@ -1,13 +1,13 @@
 package cn.javass.dp.abstractfactory.example4;
 
 /**
- * ×°»ú·½°¸¶ş£ºAMDµÄCPU + Î¢ĞÇµÄÖ÷°å
- * ÕâÀï´´½¨CPUºÍÖ÷°å¶ÔÏóµÄÊ±ºò£¬ÊÇ¶ÔÓ¦µÄ£¬ÄÜÆ¥ÅäÉÏµÄ
+ * è£…æœºæ–¹æ¡ˆäºŒï¼šAMDçš„CPU + å¾®æ˜Ÿçš„ä¸»æ¿
+ * è¿™é‡Œåˆ›å»ºCPUå’Œä¸»æ¿å¯¹è±¡çš„æ—¶å€™ï¼Œæ˜¯å¯¹åº”çš„ï¼Œèƒ½åŒ¹é…ä¸Šçš„
  */
 public class Schema2 implements AbstractFactory{
 	public Object createProduct(int type) {
 		Object retObj = null;
-		//typeÎª1±íÊ¾´´½¨CPU£¬typeÎª2±íÊ¾´´½¨Ö÷°å
+		//typeä¸º1è¡¨ç¤ºåˆ›å»ºCPUï¼Œtypeä¸º2è¡¨ç¤ºåˆ›å»ºä¸»æ¿
 		if(type==1){
 			retObj = new AMDCPU(939);
 		}else if(type==2){

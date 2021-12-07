@@ -2,12 +2,12 @@ package cn.javass.dp.iterator.example4;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//·ÃÎÊ¼¯ÍÅµÄ¹¤×ÊÁĞ±í
+		//è®¿é—®é›†å›¢çš„å·¥èµ„åˆ—è¡¨
 		PayManager payManager= new PayManager();
-		//ÏÈ¼ÆËãÔÙ»ñÈ¡
+		//å…ˆè®¡ç®—å†è·å–
 		payManager.calcPay();
 		Collection<PayModel> payList = payManager.getPayList();
-		System.out.println("¼¯ÍÅ¹¤×ÊÁĞ±í£º");
+		System.out.println("é›†å›¢å·¥èµ„åˆ—è¡¨ï¼š");
 //		Iterator it = payList.iterator();
 //		while(it.hasNext()){
 //			PayModel pm = (PayModel)it.next();
@@ -16,12 +16,12 @@ public class Client {
 		for(PayModel pm : payList){
 			System.out.println(pm);
 		}
-		//·ÃÎÊĞÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁĞ±í
+		//è®¿é—®æ–°æ”¶è´­å…¬å¸çš„å·¥èµ„åˆ—è¡¨
 		SalaryManager salaryManager = new SalaryManager();
-		//ÏÈ¼ÆËãÔÙ»ñÈ¡
+		//å…ˆè®¡ç®—å†è·å–
 		salaryManager.calcSalary();
 		PayModel[] pms = salaryManager.getPays();
-		System.out.println("ĞÂÊÕ¹ºµÄ¹«Ë¾¹¤×ÊÁĞ±í£º");
+		System.out.println("æ–°æ”¶è´­çš„å…¬å¸å·¥èµ„åˆ—è¡¨ï¼š");
 //		for(int i=0;i<pms.length;i++){
 //			System.out.println(pms[i]);
 //		}

@@ -1,14 +1,14 @@
 package cn.javass.dp.templatemethod.example3;
 
 /**
- * ¾ßÌåÊµÏÖÀà£¬ÊµÏÖÔ­Óï²Ù×÷
+ * å…·ä½“å®ç°ç±»ï¼Œå®ç°åŸè¯­æ“ä½œ
  */
 public class ConcreteClass extends AbstractClass {
 	public void doPrimitiveOperation1() { 
-		//¾ßÌåµÄÊµÏÖ
+		//å…·ä½“çš„å®ç°
 	}
 	public void doPrimitiveOperation2() { 
-		//¾ßÌåµÄÊµÏÖ
+		//å…·ä½“çš„å®ç°
 	}
 }
 

@@ -4,35 +4,35 @@ import java.util.*;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼±¸²âÊÔÊı¾İ
+		//å‡†å¤‡æµ‹è¯•æ•°æ®
 		ExportHeaderModel ehm = new ExportHeaderModel();
-		ehm.setDepId("Ò»·Ö¹«Ë¾");
+		ehm.setDepId("ä¸€åˆ†å…¬å¸");
 		ehm.setExportDate("2010-05-18");
 		
 		Map<String,Collection<ExportDataModel>> mapData = new HashMap<String,Collection<ExportDataModel>>();
 		Collection<ExportDataModel> col = new ArrayList<ExportDataModel>();
 		
 		ExportDataModel edm1 = new ExportDataModel();
-		edm1.setProductId("²úÆ·001ºÅ");
+		edm1.setProductId("äº§å“001å·");
 		edm1.setPrice(100);
 		edm1.setAmount(80);
 		
 		ExportDataModel edm2 = new ExportDataModel();
-		edm2.setProductId("²úÆ·002ºÅ");
+		edm2.setProductId("äº§å“002å·");
 		edm2.setPrice(99);
 		edm2.setAmount(55);		
-		//°ÑÊı¾İ×é×°ÆğÀ´
+		//æŠŠæ•°æ®ç»„è£…èµ·æ¥
 		col.add(edm1);
 		col.add(edm2);		
-		mapData.put("ÏúÊÛ¼ÇÂ¼±í", col);
+		mapData.put("é”€å”®è®°å½•è¡¨", col);
 		
 		ExportFooterModel efm = new ExportFooterModel();
-		efm.setExportUser("ÕÅÈı");
+		efm.setExportUser("å¼ ä¸‰");
 		
-		//²âÊÔÊä³öµ½ÎÄ±¾ÎÄ¼ş
+		//æµ‹è¯•è¾“å‡ºåˆ°æ–‡æœ¬æ–‡ä»¶
 		ExportToTxt toTxt = new ExportToTxt();
 		toTxt.export(ehm, mapData, efm);
-		//²âÊÔÊä³öµ½xmlÎÄ¼ş
+		//æµ‹è¯•è¾“å‡ºåˆ°xmlæ–‡ä»¶
 		ExportToXml toXml = new ExportToXml();
 		toXml.export(ehm, mapData, efm);
 		

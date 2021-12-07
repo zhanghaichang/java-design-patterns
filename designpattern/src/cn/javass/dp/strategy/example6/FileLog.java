@@ -1,9 +1,9 @@
 package cn.javass.dp.strategy.example6;
 /**
- * °ÑÈÕÖ¾¼ÇÂ¼µ½ÎÄ¼ş
+ * æŠŠæ—¥å¿—è®°å½•åˆ°æ–‡ä»¶
  */
 public class FileLog implements LogStrategy{
 	public void log(String msg) {
-		System.out.println("ÏÖÔÚ°Ñ '"+msg+"' ¼ÇÂ¼µ½ÎÄ¼şÖĞ");
+		System.out.println("ç°åœ¨æŠŠ '"+msg+"' è®°å½•åˆ°æ–‡ä»¶ä¸­");
 	}
 }

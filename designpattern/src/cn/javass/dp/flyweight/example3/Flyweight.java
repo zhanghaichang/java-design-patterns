@@ -1,13 +1,13 @@
 package cn.javass.dp.flyweight.example3;
 /***
- * ÃèÊöÊÚÈ¨Êı¾İµÄÏíÔª½Ó¿Ú
+ * æè¿°æˆæƒæ•°æ®çš„äº«å…ƒæ¥å£
  */
 public interface Flyweight {
 	/**
-	 * ÅĞ¶Ï´«ÈëµÄ°²È«ÊµÌåºÍÈ¨ÏŞ£¬ÊÇ·ñºÍÏíÔª¶ÔÏóÄÚ²¿×´Ì¬Æ¥Åä
-	 * @param securityEntity °²È«ÊµÌå
-	 * @param permit È¨ÏŞ
-	 * @return true±íÊ¾Æ¥Åä£¬false±íÊ¾²»Æ¥Åä
+	 * åˆ¤æ–­ä¼ å…¥çš„å®‰å…¨å®ä½“å’Œæƒé™ï¼Œæ˜¯å¦å’Œäº«å…ƒå¯¹è±¡å†…éƒ¨çŠ¶æ€åŒ¹é…
+	 * @param securityEntity å®‰å…¨å®ä½“
+	 * @param permit æƒé™
+	 * @return trueè¡¨ç¤ºåŒ¹é…ï¼Œfalseè¡¨ç¤ºä¸åŒ¹é…
 	 */
 	public boolean match(String securityEntity,String permit);
 }

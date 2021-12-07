@@ -4,51 +4,51 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Observable;
 /**
- * ¾ßÌåµÄË®ÖÊ¼à²â¶ÔÏó
+ * å…·ä½“çš„æ°´è´¨ç›‘æµ‹å¯¹è±¡
  */
 public class WaterQuality extends WaterQualitySubject{
 	/**
-	 * ÎÛÈ¾µÄ¼¶±ð£¬0±íÊ¾Õý³££¬1±íÊ¾Çá¶ÈÎÛÈ¾£¬2±íÊ¾ÖÐ¶ÈÎÛÈ¾£¬3±íÊ¾¸ß¶ÈÎÛÈ¾
+	 * æ±¡æŸ“çš„çº§åˆ«ï¼Œ0è¡¨ç¤ºæ­£å¸¸ï¼Œ1è¡¨ç¤ºè½»åº¦æ±¡æŸ“ï¼Œ2è¡¨ç¤ºä¸­åº¦æ±¡æŸ“ï¼Œ3è¡¨ç¤ºé«˜åº¦æ±¡æŸ“
 	 */
 	private int polluteLevel = 0;
 	/**
-	 * »ñÈ¡Ë®ÖÊÎÛÈ¾µÄ¼¶±ð
-	 * @return Ë®ÖÊÎÛÈ¾µÄ¼¶±ð
+	 * èŽ·å–æ°´è´¨æ±¡æŸ“çš„çº§åˆ«
+	 * @return æ°´è´¨æ±¡æŸ“çš„çº§åˆ«
 	 */
 	public int getPolluteLevel() {
 		return polluteLevel;
 	}
 	/**
-	 * µ±¼à²âË®ÖÊÇé¿öºó£¬ÉèÖÃË®ÖÊÎÛÈ¾µÄ¼¶±ð
-	 * @param polluteLevel Ë®ÖÊÎÛÈ¾µÄ¼¶±ð
+	 * å½“ç›‘æµ‹æ°´è´¨æƒ…å†µåŽï¼Œè®¾ç½®æ°´è´¨æ±¡æŸ“çš„çº§åˆ«
+	 * @param polluteLevel æ°´è´¨æ±¡æŸ“çš„çº§åˆ«
 	 */
 	public void setPolluteLevel(int polluteLevel) {
 		this.polluteLevel = polluteLevel;
-		//Í¨ÖªÏàÓ¦µÄ¹Û²ìÕß
+		//é€šçŸ¥ç›¸åº”çš„è§‚å¯Ÿè€…
 		this.notifyWatchers();
 	}
 	/**
-	 * Í¨ÖªÏàÓ¦µÄ¹Û²ìÕß¶ÔÏó
+	 * é€šçŸ¥ç›¸åº”çš„è§‚å¯Ÿè€…å¯¹è±¡
 	 */
 	public void notifyWatchers() {
-		//Ñ­»·ËùÓÐ×¢²áµÄ¹Û²ìÕß
+		//å¾ªçŽ¯æ‰€æœ‰æ³¨å†Œçš„è§‚å¯Ÿè€…
 		for(WatcherObserver watcher : observers){
-						//¿ªÊ¼¸ù¾ÝÎÛÈ¾¼¶±ðÅÐ¶ÏÊÇ·ñÐèÒªÍ¨Öª£¬ÓÉÕâÀï×Ü¿Ø
+						//å¼€å§‹æ ¹æ®æ±¡æŸ“çº§åˆ«åˆ¤æ–­æ˜¯å¦éœ€è¦é€šçŸ¥ï¼Œç”±è¿™é‡Œæ€»æŽ§
 						if(this.polluteLevel >= 0){
-							//Í¨Öª¼à²âÔ±×ö¼ÇÂ¼
-							if("¼à²âÈËÔ±".equals(watcher.getJob())){
+							//é€šçŸ¥ç›‘æµ‹å‘˜åšè®°å½•
+							if("ç›‘æµ‹äººå‘˜".equals(watcher.getJob())){
 								watcher.update(this);
 							}
 						}
 						if(this.polluteLevel >= 1){
-							//Í¨ÖªÔ¤¾¯ÈËÔ±
-							if("Ô¤¾¯ÈËÔ±".equals(watcher.getJob())){
+							//é€šçŸ¥é¢„è­¦äººå‘˜
+							if("é¢„è­¦äººå‘˜".equals(watcher.getJob())){
 								watcher.update(this);
 							}
 						}
 						if(this.polluteLevel >= 2){
-							//Í¨Öª¼à²â²¿ÃÅÁìµ¼
-							if("¼à²â²¿ÃÅÁìµ¼".equals(watcher.getJob())){
+							//é€šçŸ¥ç›‘æµ‹éƒ¨é—¨é¢†å¯¼
+							if("ç›‘æµ‹éƒ¨é—¨é¢†å¯¼".equals(watcher.getJob())){
 								watcher.update(this);
 							}
 						}

@@ -1,16 +1,16 @@
 package cn.javass.dp.visitor.example6;
 /**
- * ·ÃÎÊ×éºÏ¶ÔÏó½á¹¹µÄ·ÃÎÊÕß½Ó¿Ú
+ * è®¿é—®ç»„åˆå¯¹è±¡ç»“æ„çš„è®¿é—®è€…æ¥å£
  */
 public interface Visitor {
 	/**
-	 * ·ÃÎÊ×éºÏ¶ÔÏó£¬Ïàµ±ÓÚ¸ø×éºÏ¶ÔÏóÌí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
-	 * @param composite ×éºÏ¶ÔÏó
+	 * è®¿é—®ç»„åˆå¯¹è±¡ï¼Œç›¸å½“äºç»™ç»„åˆå¯¹è±¡æ·»åŠ è®¿é—®è€…çš„åŠŸèƒ½
+	 * @param composite ç»„åˆå¯¹è±¡
 	 */
 	public void visitComposite(Composite composite);
 	/**
-	 * ·ÃÎÊÒ¶×Ó¶ÔÏó£¬Ïàµ±ÓÚ¸øÒ¶×Ó¶ÔÏóÌí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
-	 * @param leaf Ò¶×Ó¶ÔÏó
+	 * è®¿é—®å¶å­å¯¹è±¡ï¼Œç›¸å½“äºç»™å¶å­å¯¹è±¡æ·»åŠ è®¿é—®è€…çš„åŠŸèƒ½
+	 * @param leaf å¶å­å¯¹è±¡
 	 */
 	public void visitLeaf(Leaf leaf);
 }

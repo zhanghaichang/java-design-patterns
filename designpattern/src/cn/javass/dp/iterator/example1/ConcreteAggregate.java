@@ -1,30 +1,30 @@
 package cn.javass.dp.iterator.example1;
 
 /**
- * ¾ßÌåµÄ¾ÛºÏ¶ÔÏó£¬ÊµÏÖ´´½¨ÏàÓ¦µü´úÆ÷¶ÔÏóµÄ¹¦ÄÜ
+ * å…·ä½“çš„èšåˆå¯¹è±¡ï¼Œå®ç°åˆ›å»ºç›¸åº”è¿­ä»£å™¨å¯¹è±¡çš„åŠŸèƒ½
  */
 public class ConcreteAggregate extends Aggregate {
 	/**
-	 * Ê¾Òâ£¬±íÊ¾¾ÛºÏ¶ÔÏó¾ßÌåµÄÄÚÈİ
+	 * ç¤ºæ„ï¼Œè¡¨ç¤ºèšåˆå¯¹è±¡å…·ä½“çš„å†…å®¹
 	 */
 	private String[] ss = null;
 	
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë¾ÛºÏ¶ÔÏó¾ßÌåµÄÄÚÈİ
-	 * @param ss ¾ÛºÏ¶ÔÏó¾ßÌåµÄÄÚÈİ
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥èšåˆå¯¹è±¡å…·ä½“çš„å†…å®¹
+	 * @param ss èšåˆå¯¹è±¡å…·ä½“çš„å†…å®¹
 	 */
 	public ConcreteAggregate(String[] ss){
 		this.ss = ss;
 	}
 	
 	public Iterator createIterator() {
-		//ÊµÏÖ´´½¨IteratorµÄ¹¤³§·½·¨
+		//å®ç°åˆ›å»ºIteratorçš„å·¥å‚æ–¹æ³•
 		return new ConcreteIterator(this);
 	}
 	/**
-	 * »ñÈ¡Ë÷ÒıËù¶ÔÓ¦µÄÔªËØ
-	 * @param index Ë÷Òı
-	 * @return Ë÷ÒıËù¶ÔÓ¦µÄÔªËØ
+	 * è·å–ç´¢å¼•æ‰€å¯¹åº”çš„å…ƒç´ 
+	 * @param index ç´¢å¼•
+	 * @return ç´¢å¼•æ‰€å¯¹åº”çš„å…ƒç´ 
 	 */
 	public Object get(int index){
 		Object retObj = null;
@@ -34,8 +34,8 @@ public class ConcreteAggregate extends Aggregate {
 		return retObj;
 	}
 	/**
-	 * »ñÈ¡¾ÛºÏ¶ÔÏóµÄ´óĞ¡
-	 * @return ¾ÛºÏ¶ÔÏóµÄ´óĞ¡
+	 * è·å–èšåˆå¯¹è±¡çš„å¤§å°
+	 * @return èšåˆå¯¹è±¡çš„å¤§å°
 	 */
 	public int size(){
 		return this.ss.length;

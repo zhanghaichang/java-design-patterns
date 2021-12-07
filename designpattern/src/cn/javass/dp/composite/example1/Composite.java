@@ -2,57 +2,57 @@ package cn.javass.dp.composite.example1;
 import java.util.*;
 
 /**
- * ×éºÏ¶ÔÏó£¬¿ÉÒÔ°üº¬ÆäËü×éºÏ¶ÔÏó»òÕßÒ¶×Ó¶ÔÏó
+ * ç»„åˆå¯¹è±¡ï¼Œå¯ä»¥åŒ…å«å…¶å®ƒç»„åˆå¯¹è±¡æˆ–è€…å¶å­å¯¹è±¡
  */
 public class Composite {
 	/**
-	 * ÓÃÀ´¼ÇÂ¼°üº¬µÄÆäËü×éºÏ¶ÔÏó
+	 * ç”¨æ¥è®°å½•åŒ…å«çš„å…¶å®ƒç»„åˆå¯¹è±¡
 	 */
 	private Collection<Composite> childComposite = new ArrayList<Composite>();
 	/**
-	 * ÓÃÀ´¼ÇÂ¼°üº¬µÄÆäËüÒ¶×Ó¶ÔÏó
+	 * ç”¨æ¥è®°å½•åŒ…å«çš„å…¶å®ƒå¶å­å¯¹è±¡
 	 */
 	private Collection<Leaf> childLeaf = new ArrayList<Leaf>();
 	/**
-	 * ×éºÏ¶ÔÏóµÄÃû×Ö
+	 * ç»„åˆå¯¹è±¡çš„åå­—
 	 */
 	private String name = "";
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë×éºÏ¶ÔÏóµÄÃû×Ö
-	 * @param name ×éºÏ¶ÔÏóµÄÃû×Ö
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥ç»„åˆå¯¹è±¡çš„åå­—
+	 * @param name ç»„åˆå¯¹è±¡çš„åå­—
 	 */
 	public Composite(String name){
 		this.name = name;
 	}
 	/**
-	 * Ïò×éºÏ¶ÔÏó¼ÓÈë±»Ëü°üº¬µÄÆäËü×éºÏ¶ÔÏó
-	 * @param c ±»Ëü°üº¬µÄÆäËü×éºÏ¶ÔÏó
+	 * å‘ç»„åˆå¯¹è±¡åŠ å…¥è¢«å®ƒåŒ…å«çš„å…¶å®ƒç»„åˆå¯¹è±¡
+	 * @param c è¢«å®ƒåŒ…å«çš„å…¶å®ƒç»„åˆå¯¹è±¡
 	 */
 	public void addComposite(Composite c){
 		this.childComposite.add(c);
 	}
 	/**
-	 * Ïò×éºÏ¶ÔÏó¼ÓÈë±»Ëü°üº¬µÄÒ¶×Ó¶ÔÏó
-	 * @param leaf ±»Ëü°üº¬µÄÒ¶×Ó¶ÔÏó
+	 * å‘ç»„åˆå¯¹è±¡åŠ å…¥è¢«å®ƒåŒ…å«çš„å¶å­å¯¹è±¡
+	 * @param leaf è¢«å®ƒåŒ…å«çš„å¶å­å¯¹è±¡
 	 */
 	public void addLeaf(Leaf leaf){
 		this.childLeaf.add(leaf);
 	}
 	/**
-	 * Êä³ö×éºÏ¶ÔÏó×ÔÉíµÄ½á¹¹
-	 * @param preStr Ç°×º£¬Ö÷ÒªÊÇ°´ÕÕ²ã¼¶Æ´½ÓµÄ¿Õ¸ñ£¬ÊµÏÖÏòºóËõ½ø
+	 * è¾“å‡ºç»„åˆå¯¹è±¡è‡ªèº«çš„ç»“æ„
+	 * @param preStr å‰ç¼€ï¼Œä¸»è¦æ˜¯æŒ‰ç…§å±‚çº§æ‹¼æ¥çš„ç©ºæ ¼ï¼Œå®ç°å‘åç¼©è¿›
 	 */
 	public void printStruct(String preStr){
-		//ÏÈ°Ñ×Ô¼ºÊä³öÈ¥
+		//å…ˆæŠŠè‡ªå·±è¾“å‡ºå»
 		System.out.println(preStr+"+"+this.name);
-		//È»ºóÌí¼ÓÒ»¸ö¿Õ¸ñ£¬±íÊ¾ÏòºóËõ½øÒ»¸ö¿Õ¸ñ£¬Êä³ö×Ô¼º°üº¬µÄÒ¶×Ó¶ÔÏó
+		//ç„¶åæ·»åŠ ä¸€ä¸ªç©ºæ ¼ï¼Œè¡¨ç¤ºå‘åç¼©è¿›ä¸€ä¸ªç©ºæ ¼ï¼Œè¾“å‡ºè‡ªå·±åŒ…å«çš„å¶å­å¯¹è±¡
 		preStr+=" ";
 		for(Leaf leaf : childLeaf){
 			leaf.printStruct(preStr);
 		}
-		//Êä³öµ±Ç°¶ÔÏóµÄ×Ó¶ÔÏóÁË
+		//è¾“å‡ºå½“å‰å¯¹è±¡çš„å­å¯¹è±¡äº†
 		for(Composite c : childComposite){
-			//µİ¹éÊä³öÃ¿¸ö×Ó¶ÔÏó
+			//é€’å½’è¾“å‡ºæ¯ä¸ªå­å¯¹è±¡
 			c.printStruct(preStr);
 		}
 	}

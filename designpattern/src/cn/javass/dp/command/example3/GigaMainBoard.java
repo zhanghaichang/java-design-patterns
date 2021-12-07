@@ -1,24 +1,24 @@
 package cn.javass.dp.command.example3;
 /**
- * ¼¼¼ÎÖ÷°åÀà£¬ÃüÁîµÄÕæÕıÊµÏÖÕß£¬ÔÚCommandÄ£Ê½ÖĞ³äµ±Receiver
+ * æŠ€å˜‰ä¸»æ¿ç±»ï¼Œå‘½ä»¤çš„çœŸæ­£å®ç°è€…ï¼Œåœ¨Commandæ¨¡å¼ä¸­å……å½“Receiver
  */
 public class GigaMainBoard implements MainBoardApi{
 	/**
-	 * ÕæÕıµÄ¿ª»úÃüÁîµÄÊµÏÖ
+	 * çœŸæ­£çš„å¼€æœºå‘½ä»¤çš„å®ç°
 	 */
 	public void open(){
-		System.out.println("¼¼¼ÎÖ÷°åÏÖÔÚÕıÔÚ¿ª»ú£¬ÇëµÈºò");
-		System.out.println("½ÓÍ¨µçÔ´......");
-		System.out.println("Éè±¸¼ì²é......");
-		System.out.println("×°ÔØÏµÍ³......");
-		System.out.println("»úÆ÷Õı³£ÔË×ªÆğÀ´......");
-		System.out.println("»úÆ÷ÒÑ¾­Õı³£´ò¿ª£¬Çë²Ù×÷");
+		System.out.println("æŠ€å˜‰ä¸»æ¿ç°åœ¨æ­£åœ¨å¼€æœºï¼Œè¯·ç­‰å€™");
+		System.out.println("æ¥é€šç”µæº......");
+		System.out.println("è®¾å¤‡æ£€æŸ¥......");
+		System.out.println("è£…è½½ç³»ç»Ÿ......");
+		System.out.println("æœºå™¨æ­£å¸¸è¿è½¬èµ·æ¥......");
+		System.out.println("æœºå™¨å·²ç»æ­£å¸¸æ‰“å¼€ï¼Œè¯·æ“ä½œ");
 	}
 	/**
-	 * ÕæÕıµÄÖØĞÂÆô¶¯»úÆ÷ÃüÁîµÄÊµÏÖ
+	 * çœŸæ­£çš„é‡æ–°å¯åŠ¨æœºå™¨å‘½ä»¤çš„å®ç°
 	 */
 	public void reset(){
-		System.out.println("¼¼¼ÎÖ÷°åÏÖÔÚÕıÔÚÖØĞÂÆô¶¯»úÆ÷£¬ÇëµÈºò");
-		System.out.println("»úÆ÷ÒÑ¾­Õı³£´ò¿ª£¬Çë²Ù×÷");
+		System.out.println("æŠ€å˜‰ä¸»æ¿ç°åœ¨æ­£åœ¨é‡æ–°å¯åŠ¨æœºå™¨ï¼Œè¯·ç­‰å€™");
+		System.out.println("æœºå™¨å·²ç»æ­£å¸¸æ‰“å¼€ï¼Œè¯·æ“ä½œ");
 	}
 }

@@ -1,6 +1,6 @@
 package cn.javass.dp.bridge.example3;
 /**
- * 特急消息的抽象接口
+ * 鐗规�ユ秷鎭殑鎶借薄鎺ュ彛
  */
 public interface SpecialUrgencyMessage extends Message{
 	public void hurry(String messageId);

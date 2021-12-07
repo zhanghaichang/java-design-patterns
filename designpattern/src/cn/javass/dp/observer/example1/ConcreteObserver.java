@@ -1,17 +1,17 @@
 package cn.javass.dp.observer.example1;
 
 /**
- * ¾ßÌå¹Û²ìÕß¶ÔÏó£¬ÊµÏÖ¸üĞÂµÄ·½·¨£¬Ê¹×ÔÉíµÄ×´Ì¬ºÍÄ¿±êµÄ×´Ì¬±£³ÖÒ»ÖÂ
+ * å…·ä½“è§‚å¯Ÿè€…å¯¹è±¡ï¼Œå®ç°æ›´æ–°çš„æ–¹æ³•ï¼Œä½¿è‡ªèº«çš„çŠ¶æ€å’Œç›®æ ‡çš„çŠ¶æ€ä¿æŒä¸€è‡´
  */
 public class ConcreteObserver implements Observer {
 	/**
-	 * Ê¾Òâ£¬¹ÛÕßÕßµÄ×´Ì¬
+	 * ç¤ºæ„ï¼Œè§‚è€…è€…çš„çŠ¶æ€
 	 */
 	private String observerState;
 	
 	public void update(Subject subject) {
-		// ¾ßÌåµÄ¸üĞÂÊµÏÖ
-		//ÕâÀï¿ÉÄÜĞèÒª¸üĞÂ¹Û²ìÕßµÄ×´Ì¬£¬Ê¹ÆäÓëÄ¿±êµÄ×´Ì¬±£³ÖÒ»ÖÂ
+		// å…·ä½“çš„æ›´æ–°å®ç°
+		//è¿™é‡Œå¯èƒ½éœ€è¦æ›´æ–°è§‚å¯Ÿè€…çš„çŠ¶æ€ï¼Œä½¿å…¶ä¸ç›®æ ‡çš„çŠ¶æ€ä¿æŒä¸€è‡´
 		observerState = ((ConcreteSubject)subject).getSubjectState();
 	}
 }

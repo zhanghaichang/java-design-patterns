@@ -1,14 +1,14 @@
 package cn.javass.dp.chainofresponsibility.example6;
 /**
- * ½øĞĞÈ¨ÏŞ¼ì²éµÄÖ°Ôğ¶ÔÏó
+ * è¿›è¡Œæƒé™æ£€æŸ¥çš„èŒè´£å¯¹è±¡
  */
 public class SaleSecurityCheck extends SaleHandler{
 	public boolean sale(String user, String customer, SaleModel saleModel) {
-		//½øĞĞÈ¨ÏŞ¼ì²é£¬¼òµ¥µã£¬¾ÍĞ¡ÀîÄÜÍ¨¹ı
-		if("Ğ¡Àî".equals(user)){
+		//è¿›è¡Œæƒé™æ£€æŸ¥ï¼Œç®€å•ç‚¹ï¼Œå°±å°æèƒ½é€šè¿‡
+		if("å°æ".equals(user)){
 			return this.successor.sale(user, customer, saleModel);
 		}else{
-			System.out.println("¶Ô²»Æğ"+user+"£¬ÄãÃ»ÓĞ±£´æÏúÊÛĞÅÏ¢µÄÈ¨ÏŞ");
+			System.out.println("å¯¹ä¸èµ·"+user+"ï¼Œä½ æ²¡æœ‰ä¿å­˜é”€å”®ä¿¡æ¯çš„æƒé™");
 			return false;
 		}		
 	}

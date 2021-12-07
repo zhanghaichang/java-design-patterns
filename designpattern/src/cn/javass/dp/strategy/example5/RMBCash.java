@@ -1,11 +1,11 @@
 package cn.javass.dp.strategy.example5;
 /**
- * ÈËÃñ±ÒÏÖ½ğÖ§¸¶
+ * äººæ°‘å¸ç°é‡‘æ”¯ä»˜
  */
 public class RMBCash implements PaymentStrategy{
 	
 	public void pay(PaymentContext ctx) {
-		System.out.println("ÏÖÔÚ¸ø"+ctx.getUserName()+"ÈËÃñ±ÒÏÖ½ğÖ§¸¶"+ctx.getMoney()+"Ôª");
+		System.out.println("ç°åœ¨ç»™"+ctx.getUserName()+"äººæ°‘å¸ç°é‡‘æ”¯ä»˜"+ctx.getMoney()+"å…ƒ");
 	}
 
 }

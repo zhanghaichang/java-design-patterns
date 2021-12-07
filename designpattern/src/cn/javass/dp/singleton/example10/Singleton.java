@@ -2,18 +2,18 @@ package cn.javass.dp.singleton.example10;
 
 public class Singleton {
 	/**
-	 * ¶Ô±£´æÊµÀıµÄ±äÁ¿Ìí¼ÓvolatileµÄĞŞÊÎ
+	 * å¯¹ä¿å­˜å®ä¾‹çš„å˜é‡æ·»åŠ volatileçš„ä¿®é¥°
 	 */
 	private volatile static Singleton instance = null;
 	private Singleton(){
 		
 	}
 	public static  Singleton getInstance(){
-		//ÏÈ¼ì²éÊµÀıÊÇ·ñ´æÔÚ£¬Èç¹û²»´æÔÚ²Å½øÈëÏÂÃæµÄÍ¬²½¿é
+		//å…ˆæ£€æŸ¥å®ä¾‹æ˜¯å¦å­˜åœ¨ï¼Œå¦‚æœä¸å­˜åœ¨æ‰è¿›å…¥ä¸‹é¢çš„åŒæ­¥å—
 		if(instance == null){
-			//Í¬²½¿é£¬Ïß³Ì°²È«µÄ´´½¨ÊµÀı
+			//åŒæ­¥å—ï¼Œçº¿ç¨‹å®‰å…¨çš„åˆ›å»ºå®ä¾‹
 			synchronized(Singleton.class){
-				//ÔÙ´Î¼ì²éÊµÀıÊÇ·ñ´æÔÚ£¬Èç¹û²»´æÔÚ²ÅÕæµÄ´´½¨ÊµÀı
+				//å†æ¬¡æ£€æŸ¥å®ä¾‹æ˜¯å¦å­˜åœ¨ï¼Œå¦‚æœä¸å­˜åœ¨æ‰çœŸçš„åˆ›å»ºå®ä¾‹
 				if(instance == null){
 					instance = new Singleton();
 				}

@@ -2,27 +2,27 @@ package cn.javass.dp.strategy.example5;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨ÏàÓ¦µÄÖ§¸¶²ßÂÔ
+		//åˆ›å»ºç›¸åº”çš„æ”¯ä»˜ç­–ç•¥
 		PaymentStrategy strategyRMB = new RMBCash();
 		PaymentStrategy strategyDollar = new DollarCash();
 		
-		//×¼±¸Ğ¡ÀîµÄÖ§¸¶¹¤×ÊÉÏÏÂÎÄ
-		PaymentContext ctx1 = new PaymentContext("Ğ¡Àî",5000,strategyRMB);
-		//ÏòĞ¡ÀîÖ§¸¶¹¤×Ê
+		//å‡†å¤‡å°æçš„æ”¯ä»˜å·¥èµ„ä¸Šä¸‹æ–‡
+		PaymentContext ctx1 = new PaymentContext("å°æ",5000,strategyRMB);
+		//å‘å°ææ”¯ä»˜å·¥èµ„
 		ctx1.payNow();
 		
-		//ÇĞ»»Ò»¸öÈË£¬¸øpetterÖ§¸¶¹¤×Ê
+		//åˆ‡æ¢ä¸€ä¸ªäººï¼Œç»™petteræ”¯ä»˜å·¥èµ„
 		PaymentContext ctx2 = new PaymentContext("Petter",8000,strategyDollar);
 		ctx2.payNow();
 		
-		//²âÊÔĞÂÌí¼ÓµÄÖ§¸¶·½Ê½
+		//æµ‹è¯•æ–°æ·»åŠ çš„æ”¯ä»˜æ–¹å¼
 		PaymentStrategy strategyCard = new Card();
-		PaymentContext ctx3 = new PaymentContext2("Ğ¡Íõ",9000,"010998877656",strategyCard);
+		PaymentContext ctx3 = new PaymentContext2("å°ç‹",9000,"010998877656",strategyCard);
 		ctx3.payNow();
 		
-		//²âÊÔĞÂÌí¼ÓµÄÖ§¸¶·½Ê½
+		//æµ‹è¯•æ–°æ·»åŠ çš„æ”¯ä»˜æ–¹å¼
 		PaymentStrategy strategyCard2 = new Card2("010998877656");
-		PaymentContext ctx4 = new PaymentContext("Ğ¡ÕÅ",9000,strategyCard2);
+		PaymentContext ctx4 = new PaymentContext("å°å¼ ",9000,strategyCard2);
 		ctx4.payNow();
 	}
 }

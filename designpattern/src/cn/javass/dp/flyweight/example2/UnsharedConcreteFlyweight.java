@@ -1,16 +1,16 @@
 package cn.javass.dp.flyweight.example2;
 
 /**
- * ²»ĞèÒª¹²ÏíµÄFlyweight¶ÔÏó£¬
- * Í¨³£ÊÇ½«±»¹²ÏíµÄÏíÔª¶ÔÏó×÷Îª×Ó½Úµã£¬×éºÏ³öÀ´µÄ¶ÔÏó
+ * ä¸éœ€è¦å…±äº«çš„Flyweightå¯¹è±¡ï¼Œ
+ * é€šå¸¸æ˜¯å°†è¢«å…±äº«çš„äº«å…ƒå¯¹è±¡ä½œä¸ºå­èŠ‚ç‚¹ï¼Œç»„åˆå‡ºæ¥çš„å¯¹è±¡
  */
 public class UnsharedConcreteFlyweight implements Flyweight{
 	/**
-	 * Ê¾Àı£¬ÃèÊö¶ÔÏóµÄ×´Ì¬
+	 * ç¤ºä¾‹ï¼Œæè¿°å¯¹è±¡çš„çŠ¶æ€
 	 */
 	private String allState;
 	
 	public void operation(String extrinsicState) {
-		// ¾ßÌåµÄ¹¦ÄÜ´¦Àí
+		// å…·ä½“çš„åŠŸèƒ½å¤„ç†
 	}
 }

@@ -1,11 +1,11 @@
 package cn.javass.dp.bridge.example3;
 /**
- * ÒÔEmailµÄ·½Ê½·¢ËÍÆÕÍ¨ÏûÏ¢
+ * ä»¥Emailçš„æ–¹å¼å‘é€æ™®é€šæ¶ˆæ¯
  */
 public class CommonMessageEmail implements Message{
 
 	public void send(String message, String toUser) {
-		System.out.println("Ê¹ÓÃEmailµÄ·½Ê½£¬·¢ËÍÏûÏ¢'"+message+"'¸ø"+toUser);
+		System.out.println("ä½¿ç”¨Emailçš„æ–¹å¼ï¼Œå‘é€æ¶ˆæ¯'"+message+"'ç»™"+toUser);
 	}
 
 }

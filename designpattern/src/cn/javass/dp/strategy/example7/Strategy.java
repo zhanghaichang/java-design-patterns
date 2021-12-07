@@ -1,11 +1,11 @@
 package cn.javass.dp.strategy.example7;
 
 /**
- * ¶¨ÒåËã·¨µÄ½Ó¿Ú
+ * å®šä¹‰ç®—æ³•çš„æ¥å£
  */
 public interface Strategy {
 	/**
-	 * Ä³¸öËã·¨µÄ½Ó¿Ú£¬¿ÉÒÔÓĞ´«Èë²ÎÊı£¬Ò²¿ÉÒÔÓĞ·µ»ØÖµ
+	 * æŸä¸ªç®—æ³•çš„æ¥å£ï¼Œå¯ä»¥æœ‰ä¼ å…¥å‚æ•°ï¼Œä¹Ÿå¯ä»¥æœ‰è¿”å›å€¼
 	 */
 	public void algorithmInterface();
 }

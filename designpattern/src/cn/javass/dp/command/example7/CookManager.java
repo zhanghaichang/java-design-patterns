@@ -1,20 +1,20 @@
 package cn.javass.dp.command.example7;
 /**
- * ºó³øµÄ¹ÜÀíÀà£¬Í¨¹ı´ËÀàÈÃºó³øµÄ³øÊ¦½øĞĞÔËĞĞ×´Ì¬
+ * åå¨çš„ç®¡ç†ç±»ï¼Œé€šè¿‡æ­¤ç±»è®©åå¨çš„å¨å¸ˆè¿›è¡Œè¿è¡ŒçŠ¶æ€
  */
 public class CookManager {
 	/**
-	 * ÓÃÀ´¿ØÖÆÊÇ·ñĞèÒª´´½¨³øÊ¦£¬Èç¹ûÒÑ¾­´´½¨¹ıÁË¾Í²»ÒªÔÙÖ´ĞĞÁË
+	 * ç”¨æ¥æ§åˆ¶æ˜¯å¦éœ€è¦åˆ›å»ºå¨å¸ˆï¼Œå¦‚æœå·²ç»åˆ›å»ºè¿‡äº†å°±ä¸è¦å†æ‰§è¡Œäº†
 	 */
 	private static boolean runFlag = false;
 	public static void runCookManager(){
 		if(!runFlag){
 			runFlag = true;
-			//´´½¨ÈıÎ»³øÊ¦
-			HotCook cook1 = new HotCook("ÕÅÈı");
-			HotCook cook2 = new HotCook("ÀîËÄ");
-			HotCook cook3 = new HotCook("ÍõÎå");
-			//Æô¶¯ËûÃÇµÄÏß³Ì
+			//åˆ›å»ºä¸‰ä½å¨å¸ˆ
+			HotCook cook1 = new HotCook("å¼ ä¸‰");
+			HotCook cook2 = new HotCook("æå››");
+			HotCook cook3 = new HotCook("ç‹äº”");
+			//å¯åŠ¨ä»–ä»¬çš„çº¿ç¨‹
 			Thread t1 = new Thread(cook1);
 			t1.start();
 			Thread t2 = new Thread(cook2);

@@ -1,6 +1,6 @@
 package cn.javass.dp.mediator.example2;
 /**
- * Éù¿¨Àà£¬Ò»¸öÍ¬ÊÂÀà
+ * å£°å¡ç±»ï¼Œä¸€ä¸ªåŒäº‹ç±»
  */
 public class SoundCard extends Colleague{
 	public SoundCard(Mediator mediator) {
@@ -8,11 +8,11 @@ public class SoundCard extends Colleague{
 	}
 	
 	/**
-	 * °´ÕÕÉùÆµÊı¾İ·¢³öÉùÒô
-	 * @param data ·¢³öÉùÒôµÄÊı¾İ
+	 * æŒ‰ç…§å£°é¢‘æ•°æ®å‘å‡ºå£°éŸ³
+	 * @param data å‘å‡ºå£°éŸ³çš„æ•°æ®
 	 */
 	public void soundData(String data){
-		System.out.println("»­ÍâÒô£º"+data);
+		System.out.println("ç”»å¤–éŸ³ï¼š"+data);
 	}
 	
 }

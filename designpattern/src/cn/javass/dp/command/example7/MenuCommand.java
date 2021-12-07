@@ -1,38 +1,38 @@
 package cn.javass.dp.command.example7;
 import java.util.*;
 /**
- * ²Ëµ¥¶ÔÏó£¬ÊÇ¸öºêÃüÁî¶ÔÏó
+ * èœå•å¯¹è±¡ï¼Œæ˜¯ä¸ªå®å‘½ä»¤å¯¹è±¡
  */
 public class MenuCommand implements Command {
 	
 	/**
-	 * ÓÃÀ´¼ÇÂ¼×éºÏ±¾²Ëµ¥µÄ¶àµÀ²ËÆ·£¬Ò²¾ÍÊÇ¶à¸öÃüÁî¶ÔÏó
+	 * ç”¨æ¥è®°å½•ç»„åˆæœ¬èœå•çš„å¤šé“èœå“ï¼Œä¹Ÿå°±æ˜¯å¤šä¸ªå‘½ä»¤å¯¹è±¡
 	 */
 	private Collection<Command> col = new ArrayList<Command>();
 	/**
-	 * µã²Ë£¬°Ñ²ËÆ·¼ÓÈëµ½²Ëµ¥ÖĞ
-	 * @param cmd ¿Í»§µãµÄ²Ë
+	 * ç‚¹èœï¼ŒæŠŠèœå“åŠ å…¥åˆ°èœå•ä¸­
+	 * @param cmd å®¢æˆ·ç‚¹çš„èœ
 	 */
 	public void addCommand(Command cmd){
 		col.add(cmd);
 	}
 	public void setCookApi(CookApi cookApi){
-		//Ê²Ã´¶¼²»ÓÃ×ö
+		//ä»€ä¹ˆéƒ½ä¸ç”¨åš
 	}
 	public int getTableNum(){
-		//Ê²Ã´¶¼²»ÓÃ×ö
+		//ä»€ä¹ˆéƒ½ä¸ç”¨åš
 		return 0;
 	}
 	/**
-	 * »ñÈ¡²Ëµ¥ÖĞµÄ¶à¸öÃüÁî¶ÔÏó
-	 * @return ²Ëµ¥ÖĞµÄ¶à¸öÃüÁî¶ÔÏó
+	 * è·å–èœå•ä¸­çš„å¤šä¸ªå‘½ä»¤å¯¹è±¡
+	 * @return èœå•ä¸­çš„å¤šä¸ªå‘½ä»¤å¯¹è±¡
 	 */
 	public Collection<Command> getCommands(){
 		return this.col;
 	}	
 	
 	public void execute() {
-		//Ö´ĞĞ²Ëµ¥¾ÍÊÇ°Ñ²Ëµ¥´«µİ¸øºó³ø
+		//æ‰§è¡Œèœå•å°±æ˜¯æŠŠèœå•ä¼ é€’ç»™åå¨
 		CommandQueue.addMenu(this);
 	}
 }

@@ -1,19 +1,19 @@
 package cn.javass.dp.decorator.example1;
 import java.util.*;
 /**
- * ÔÚÄÚ´æÖĞÄ£ÄâÊı¾İ¿â£¬×¼±¸µã²âÊÔÊı¾İ£¬ºÃ¼ÆËã½±½ğ
+ * åœ¨å†…å­˜ä¸­æ¨¡æ‹Ÿæ•°æ®åº“ï¼Œå‡†å¤‡ç‚¹æµ‹è¯•æ•°æ®ï¼Œå¥½è®¡ç®—å¥–é‡‘
  */
 public class TempDB {
 	private TempDB(){}
 	/**
-	 * ¼ÇÂ¼Ã¿¸öÈËµÄÔÂ¶ÈÏúÊÛ¶î£¬Ö»ÓÃÁËÈËÔ±£¬ÔÂ·İÃ»ÓĞÓÃ
+	 * è®°å½•æ¯ä¸ªäººçš„æœˆåº¦é”€å”®é¢ï¼Œåªç”¨äº†äººå‘˜ï¼Œæœˆä»½æ²¡æœ‰ç”¨
 	 */
 	public static Map<String,Double> mapMonthSaleMoney = new HashMap<String,Double>();
 	
 	static{
-		//Ìî³ä²âÊÔÊı¾İ
-		mapMonthSaleMoney.put("ÕÅÈı",10000.0);
-		mapMonthSaleMoney.put("ÀîËÄ",20000.0);
-		mapMonthSaleMoney.put("ÍõÎå",30000.0);
+		//å¡«å……æµ‹è¯•æ•°æ®
+		mapMonthSaleMoney.put("å¼ ä¸‰",10000.0);
+		mapMonthSaleMoney.put("æå››",20000.0);
+		mapMonthSaleMoney.put("ç‹äº”",30000.0);
 	}
 }

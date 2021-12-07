@@ -1,11 +1,11 @@
 package cn.javass.dp.observer.example3;
 /**
- * ¹Û²ìÕß£¬±ÈÈç±¨Ö½µÄ¶ÁÕß
+ * è§‚å¯Ÿè€…ï¼Œæ¯”å¦‚æŠ¥çº¸çš„è¯»è€…
  */
 public interface Observer {
 	/**
-	 * ±»Í¨ÖªµÄ·½·¨£¬Ö±½Ó°Ñ±¨Ö½µÄÄÚÈİÍÆËÍ¹ıÀ´
-	 * @param content ±¨Ö½µÄÄÚÈİ
+	 * è¢«é€šçŸ¥çš„æ–¹æ³•ï¼Œç›´æ¥æŠŠæŠ¥çº¸çš„å†…å®¹æ¨é€è¿‡æ¥
+	 * @param content æŠ¥çº¸çš„å†…å®¹
 	 */
 	public void update(String content);
 }

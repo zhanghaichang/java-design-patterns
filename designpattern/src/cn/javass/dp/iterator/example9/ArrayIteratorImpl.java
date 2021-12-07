@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * ÓÃÀ´ÊµÏÖËæ»ú·­Ò³·ÃÎÊ¾ÛºÏÔªËØµÄµü´ú½Ó¿Ú
+ * ç”¨æ¥å®ç°éšæœºç¿»é¡µè®¿é—®èšåˆå…ƒç´ çš„è¿­ä»£æ¥å£
  */
 public class ArrayIteratorImpl implements AggregationIterator{
 	/**
-	 * ÓÃÀ´´æ·Å±»µü´úµÄÊı×é
+	 * ç”¨æ¥å­˜æ”¾è¢«è¿­ä»£çš„æ•°ç»„
 	 */
 	private PayModel[] pms = null;
 	/**
-	 * ÓÃÀ´¼ÇÂ¼µ±Ç°µü´úµ½µÄÎ»ÖÃË÷Òı
+	 * ç”¨æ¥è®°å½•å½“å‰è¿­ä»£åˆ°çš„ä½ç½®ç´¢å¼•
 	 */
 	private int index = 0;
 	
@@ -22,7 +22,7 @@ public class ArrayIteratorImpl implements AggregationIterator{
 	
 	
 	public boolean hasNext() {
-		//ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÔªËØ
+		//åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä¸ªå…ƒç´ 
 		if(pms!=null && index<=(pms.length-1)){
 			return true;
 		}
@@ -38,24 +38,24 @@ public class ArrayIteratorImpl implements AggregationIterator{
 	
 	public Collection getPage(int pageNum,int pageShow){
 		Collection col = new ArrayList();
-		//ĞèÒªÔÚÕâÀïÏÈ¼ÆËãĞèÒª»ñÈ¡µÄÊı¾İµÄ¿ªÊ¼ÌõÊıºÍ½áÊøÌõÊı
+		//éœ€è¦åœ¨è¿™é‡Œå…ˆè®¡ç®—éœ€è¦è·å–çš„æ•°æ®çš„å¼€å§‹æ¡æ•°å’Œç»“æŸæ¡æ•°
 		int start = (pageNum-1)*pageShow;
 		int end = start + pageShow-1;
-		//¿ØÖÆstartµÄ±ß½ç£¬×îĞ¡ÊÇ0
+		//æ§åˆ¶startçš„è¾¹ç•Œï¼Œæœ€å°æ˜¯0
 		if(start < 0){
 			start = 0;
 		}
-		//¿ØÖÆendµÄ±ß½ç£¬×î´óÊÇÊı×éµÄ×î´óË÷Òı
+		//æ§åˆ¶endçš„è¾¹ç•Œï¼Œæœ€å¤§æ˜¯æ•°ç»„çš„æœ€å¤§ç´¢å¼•
 		if(end > this.pms.length-1){
 			end = this.pms.length - 1;
 		}
-		//Ã¿´ÎÈ¡Öµ¶¼ÊÇ´ÓÍ·¿ªÊ¼Ñ­»·£¬ËùÒÔÉèÖÃindexÎª0
+		//æ¯æ¬¡å–å€¼éƒ½æ˜¯ä»å¤´å¼€å§‹å¾ªç¯ï¼Œæ‰€ä»¥è®¾ç½®indexä¸º0
 		index = 0;
 		while(hasNext()  && index<=end){
 			if(index >= start){
 				col.add(pms[index]);
 			}
-			//°ÑÒÑ·ÃÎÊË÷Òı¼Ó1
+			//æŠŠå·²è®¿é—®ç´¢å¼•åŠ 1
 			index++;
 		}
 		return col;

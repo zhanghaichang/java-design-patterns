@@ -1,26 +1,26 @@
 package cn.javass.dp.proxy.example4;
 /**
- * ¶©µ¥¶ÔÏó
+ * è®¢å•å¯¹è±¡
  */
 public class Order implements OrderApi{
 	/**
-	 * ¶©µ¥¶©¹ºµÄ²úÆ·Ãû³Æ
+	 * è®¢å•è®¢è´­çš„äº§å“åç§°
 	 */
 	private String productName;
 	/**
-	 * ¶©µ¥¶©¹ºµÄÊıÁ¿
+	 * è®¢å•è®¢è´­çš„æ•°é‡
 	 */
 	private int orderNum;
 	/**
-	 * ´´½¨¶©µ¥µÄÈËÔ±
+	 * åˆ›å»ºè®¢å•çš„äººå‘˜
 	 */
 	private String orderUser;
 	
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë¹¹½¨ĞèÒªµÄÊı¾İ
-	 * @param productName ¶©µ¥¶©¹ºµÄ²úÆ·Ãû³Æ
-	 * @param orderNum ¶©µ¥¶©¹ºµÄÊıÁ¿
-	 * @param orderUser ´´½¨¶©µ¥µÄÈËÔ±
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥æ„å»ºéœ€è¦çš„æ•°æ®
+	 * @param productName è®¢å•è®¢è´­çš„äº§å“åç§°
+	 * @param orderNum è®¢å•è®¢è´­çš„æ•°é‡
+	 * @param orderUser åˆ›å»ºè®¢å•çš„äººå‘˜
 	 */
 	public Order(String productName,int orderNum,String orderUser){
 		this.productName = productName;

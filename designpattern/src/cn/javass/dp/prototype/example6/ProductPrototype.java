@@ -1,12 +1,12 @@
 package cn.javass.dp.prototype.example6;
 /**
- * ÉùÃ÷Ò»¸ö¿ËÂ¡²úÆ·×ÔÉíµÄ½Ó¿Ú
+ * å£°æ˜ä¸€ä¸ªå…‹éš†äº§å“è‡ªèº«çš„æ¥å£
  *
  */
 public interface ProductPrototype {
 	/**
-	 * ¿ËÂ¡²úÆ·×ÔÉíµÄ·½·¨
-	 * @return Ò»¸ö´Ó×ÔÉí¿ËÂ¡³öÀ´µÄ²úÆ·¶ÔÏó
+	 * å…‹éš†äº§å“è‡ªèº«çš„æ–¹æ³•
+	 * @return ä¸€ä¸ªä»è‡ªèº«å…‹éš†å‡ºæ¥çš„äº§å“å¯¹è±¡
 	 */
 	public ProductPrototype cloneProduct(); 
 }

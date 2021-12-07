@@ -1,11 +1,11 @@
 package cn.javass.dp.strategy.example6;
 /**
- * ÈÕÖ¾¼ÇÂ¼²ßÂÔµÄ½Ó¿Ú
+ * æ—¥å¿—è®°å½•ç­–ç•¥çš„æ¥å£
  */
 public interface LogStrategy {
 	/**
-	 * ¼ÇÂ¼ÈÕÖ¾
-	 * @param msg Ğè¼ÇÂ¼µÄÈÕÖ¾ĞÅÏ¢
+	 * è®°å½•æ—¥å¿—
+	 * @param msg éœ€è®°å½•çš„æ—¥å¿—ä¿¡æ¯
 	 */
 	public void log(String msg);
 }

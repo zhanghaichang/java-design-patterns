@@ -1,10 +1,10 @@
 package cn.javass.dp.strategy.example4;
 /**
- * ¾ßÌåËã·¨ÊµÏÖ£¬ÎªÕ½ÂÔºÏ×÷¿Í»§¿Í»§¼ÆËãÓ¦±¨µÄ¼Û¸ñ
+ * å…·ä½“ç®—æ³•å®ç°ï¼Œä¸ºæˆ˜ç•¥åˆä½œå®¢æˆ·å®¢æˆ·è®¡ç®—åº”æŠ¥çš„ä»·æ ¼
  */
 public class CooperateCustomerStrategy implements Strategy{
 	public double calcPrice(double goodsPrice) {
-		System.out.println("¶ÔÓÚÕ½ÂÔºÏ×÷¿Í»§£¬Í³Ò»8ÕÛ");
+		System.out.println("å¯¹äºæˆ˜ç•¥åˆä½œå®¢æˆ·ï¼Œç»Ÿä¸€8æŠ˜");
 		return goodsPrice*0.8;
 	}
 }

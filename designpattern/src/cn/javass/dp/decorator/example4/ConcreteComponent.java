@@ -3,12 +3,12 @@ package cn.javass.dp.decorator.example4;
 import java.util.Date;
 
 /**
- * »ù±¾µÄÊµÏÖ¼ÆËã½±½ğµÄÀà£¬Ò²ÊÇ±»×°ÊÎÆ÷×°ÊÎµÄ¶ÔÏó
+ * åŸºæœ¬çš„å®ç°è®¡ç®—å¥–é‡‘çš„ç±»ï¼Œä¹Ÿæ˜¯è¢«è£…é¥°å™¨è£…é¥°çš„å¯¹è±¡
  */
 public class ConcreteComponent extends Component{
 	
 	public double calcPrize(String user, Date begin, Date end) {
-		//Ö»ÊÇÒ»¸öÄ¬ÈÏµÄÊµÏÖ£¬Ä¬ÈÏÃ»ÓĞ½±½ğ
+		//åªæ˜¯ä¸€ä¸ªé»˜è®¤çš„å®ç°ï¼Œé»˜è®¤æ²¡æœ‰å¥–é‡‘
 		return 0;
 	}
 }

@@ -1,12 +1,12 @@
 package cn.javass.dp.factorymethod.example3;
 /**
- * 导出的文件对象的接口
+ * 瀵煎嚭鐨勬枃浠跺璞＄殑鎺ュ彛
  */
 public interface ExportFileApi {
 	/**
-	 * 导出内容成为文件
-	 * @param data 示意：需要保存的数据
-	 * @return 是否导出成功
+	 * 瀵煎嚭鍐呭鎴愪负鏂囦欢
+	 * @param data 绀烘剰锛氶渶瑕佷繚瀛樼殑鏁版嵁
+	 * @return 鏄惁瀵煎嚭鎴愬姛
 	 */
 	public boolean export(String data);
 }

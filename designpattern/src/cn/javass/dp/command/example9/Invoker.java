@@ -2,8 +2,8 @@ package cn.javass.dp.command.example9;
 
 public class Invoker {
 	public void startPrint(Command cmd){	
-		System.out.println("ÔÚInvokerÖĞ£¬Êä³ö·şÎñÇ°");
+		System.out.println("åœ¨Invokerä¸­ï¼Œè¾“å‡ºæœåŠ¡å‰");
 		cmd.execute();
-		System.out.println("Êä³ö·şÎñ½áÊø");
+		System.out.println("è¾“å‡ºæœåŠ¡ç»“æŸ");
 	}
 }

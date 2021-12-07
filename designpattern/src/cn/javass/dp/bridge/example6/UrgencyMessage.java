@@ -1,22 +1,22 @@
 package cn.javass.dp.bridge.example6;
 /**
- * ¼Ó¼±ÏûÏ¢
+ * åŠ æ€¥æ¶ˆæ¯
  */
 public class UrgencyMessage extends AbstractMessage{
 	public UrgencyMessage(MessageImplementor impl) {
 		super(impl);
 	}
 	public void sendMessage(String message, String toUser) {
-		message = "¼Ó¼±£º"+message;
+		message = "åŠ æ€¥ï¼š"+message;
 		super.sendMessage(message, toUser);
 	}
 	/**
-	 * ¼à¿ØÄ³ÏûÏ¢µÄ´¦Àí¹ı³Ì
-	 * @param messageId ±»¼à¿ØµÄÏûÏ¢µÄ±àºÅ
-	 * @return °üº¬¼à¿Øµ½µÄÊı¾İ¶ÔÏó£¬ÕâÀïÊ¾ÒâÒ»ÏÂ£¬ËùÒÔÓÃÁËObject
+	 * ç›‘æ§æŸæ¶ˆæ¯çš„å¤„ç†è¿‡ç¨‹
+	 * @param messageId è¢«ç›‘æ§çš„æ¶ˆæ¯çš„ç¼–å·
+	 * @return åŒ…å«ç›‘æ§åˆ°çš„æ•°æ®å¯¹è±¡ï¼Œè¿™é‡Œç¤ºæ„ä¸€ä¸‹ï¼Œæ‰€ä»¥ç”¨äº†Object
 	 */
 	public Object watch(String messageId) {
-		//»ñÈ¡ÏàÓ¦µÄÊı¾İ£¬×éÖ¯³É¼à¿ØµÄÊı¾İ¶ÔÏó£¬È»ºó·µ»Ø		
+		//è·å–ç›¸åº”çš„æ•°æ®ï¼Œç»„ç»‡æˆç›‘æ§çš„æ•°æ®å¯¹è±¡ï¼Œç„¶åè¿”å›		
 		return null;
 	}	
 }

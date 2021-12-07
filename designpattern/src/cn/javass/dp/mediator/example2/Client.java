@@ -2,20 +2,20 @@ package cn.javass.dp.mediator.example2;
 
 public class Client {
 	public static void main(String[] args) {
-		//1£º´´½¨ÖĞ½éÕß¡ª¡ªÖ÷°å¶ÔÏó
+		//1ï¼šåˆ›å»ºä¸­ä»‹è€…â€”â€”ä¸»æ¿å¯¹è±¡
 		MotherBoard mediator = new MotherBoard();
-		//2£º´´½¨Í¬ÊÂÀà
+		//2ï¼šåˆ›å»ºåŒäº‹ç±»
 		CDDriver cd = new CDDriver(mediator);
 		CPU cpu = new CPU(mediator);
 		VideoCard vc = new VideoCard(mediator);
 		SoundCard sc = new SoundCard(mediator);
-		//3£ºÈÃÖĞ½éÕßÖªµÀËùÓĞµÄÍ¬ÊÂ
+		//3ï¼šè®©ä¸­ä»‹è€…çŸ¥é“æ‰€æœ‰çš„åŒäº‹
 		mediator.setCdDriver(cd);
 		mediator.setCpu(cpu);
 		mediator.setVideoCard(vc);
 		mediator.setSoundCard(sc);
 		
-		//4£º¿ªÊ¼¿´µçÓ°£¬°Ñ¹âÅÌ·ÅÈë¹âÇı£¬¹âÇı¿ªÊ¼¶ÁÅÌ
+		//4ï¼šå¼€å§‹çœ‹ç”µå½±ï¼ŒæŠŠå…‰ç›˜æ”¾å…¥å…‰é©±ï¼Œå…‰é©±å¼€å§‹è¯»ç›˜
 		cd.readCD();
 	}
 }

@@ -2,19 +2,19 @@ package cn.javass.dp.visitor.example4;
 
 
 /**
- * ÆóÒµ¿Í»§
+ * ä¼ä¸šå®¢æˆ·
  */
 public class EnterpriseCustomer extends Customer{
 	/**
-	 * ÁªÏµÈË
+	 * è”ç³»äºº
 	 */
 	private String linkman;
 	/**
-	 * ÁªÏµµç»°
+	 * è”ç³»ç”µè¯
 	 */
 	private String linkTelephone;
 	/**
-	 * ÆóÒµ×¢²áµØÖ·
+	 * ä¼ä¸šæ³¨å†Œåœ°å€
 	 */
 	private String registerAddress;
 	
@@ -44,7 +44,7 @@ public class EnterpriseCustomer extends Customer{
 	}
 	
 	public void accept(Visitor visitor) {
-		//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
+		//å›è°ƒè®¿é—®è€…å¯¹è±¡çš„ç›¸åº”æ–¹æ³•
 		visitor.visitEnterpriseCustomer(this);
 	}
 }

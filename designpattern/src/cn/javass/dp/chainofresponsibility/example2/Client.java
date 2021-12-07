@@ -1,15 +1,15 @@
 package cn.javass.dp.chainofresponsibility.example2;
 /**
- * Ö°ÔğÁ´µÄ¿Í»§¶Ë£¬ÕâÀïÖ»ÊÇ¸öÊ¾Òâ
+ * èŒè´£é“¾çš„å®¢æˆ·ç«¯ï¼Œè¿™é‡Œåªæ˜¯ä¸ªç¤ºæ„
  */
 public class Client {
 	public static void main(String[] args) {
-		//ÏÈÒª×é×°Ö°ÔğÁ´
+		//å…ˆè¦ç»„è£…èŒè´£é“¾
 		Handler h1 = new ConcreteHandler1();
 		Handler h2 = new ConcreteHandler2();
 		
 		h1.setSuccessor(h2);		
-		//È»ºóÌá½»ÇëÇó
+		//ç„¶åæäº¤è¯·æ±‚
 		h1.handleRequest();
 	}
 }

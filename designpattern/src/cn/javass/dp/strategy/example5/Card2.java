@@ -1,21 +1,21 @@
 package cn.javass.dp.strategy.example5;
 /**
- * Ö§¸¶µ½ÒøĞĞ¿¨
+ * æ”¯ä»˜åˆ°é“¶è¡Œå¡
  */
 public class Card2 implements PaymentStrategy{
 	/**
-	 * ÕÊºÅĞÅÏ¢
+	 * å¸å·ä¿¡æ¯
 	 */
 	private String account = "";
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÕÊºÅĞÅÏ¢
-	 * @param account ÕÊºÅĞÅÏ¢
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥å¸å·ä¿¡æ¯
+	 * @param account å¸å·ä¿¡æ¯
 	 */
 	public Card2(String account){
 		this.account = account;
 	}
 	public void pay(PaymentContext ctx) {
-		System.out.println("ÏÖÔÚ¸ø"+ctx.getUserName()+"µÄ"+this.account+"ÕÊºÅÖ§¸¶ÁË"+ctx.getMoney()+"Ôª");
-		//Á¬½ÓÒøĞĞ£¬½øĞĞ×ªÕÊ£¬¾Í²»È¥¹ÜÁË
+		System.out.println("ç°åœ¨ç»™"+ctx.getUserName()+"çš„"+this.account+"å¸å·æ”¯ä»˜äº†"+ctx.getMoney()+"å…ƒ");
+		//è¿æ¥é“¶è¡Œï¼Œè¿›è¡Œè½¬å¸ï¼Œå°±ä¸å»ç®¡äº†
 	}
 }

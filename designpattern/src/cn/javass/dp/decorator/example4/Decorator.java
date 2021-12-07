@@ -3,23 +3,23 @@ package cn.javass.dp.decorator.example4;
 import java.util.Date;
 
 /**
- * ×°ÊÎÆ÷µÄ½Ó¿Ú£¬ĞèÒª¸ú±»×°ÊÎµÄ¶ÔÏóÊµÏÖÍ¬ÑùµÄ½Ó¿Ú
+ * è£…é¥°å™¨çš„æ¥å£ï¼Œéœ€è¦è·Ÿè¢«è£…é¥°çš„å¯¹è±¡å®ç°åŒæ ·çš„æ¥å£
  */
 public abstract class Decorator extends Component{
 	/**
-	 * ³ÖÓĞ±»×°ÊÎµÄ×é¼ş¶ÔÏó
+	 * æŒæœ‰è¢«è£…é¥°çš„ç»„ä»¶å¯¹è±¡
 	 */
 	protected Component c;
 	/**
-	 * Í¨¹ı¹¹Ôì·½·¨´«Èë±»×°ÊÎµÄ¶ÔÏó
-	 * @param c±»×°ÊÎµÄ¶ÔÏó
+	 * é€šè¿‡æ„é€ æ–¹æ³•ä¼ å…¥è¢«è£…é¥°çš„å¯¹è±¡
+	 * @param cè¢«è£…é¥°çš„å¯¹è±¡
 	 */
 	public Decorator(Component c){
 		this.c = c;
 	}
 
 	public double calcPrize(String user, Date begin, Date end) {
-		//×ªµ÷×é¼ş¶ÔÏóµÄ·½·¨
+		//è½¬è°ƒç»„ä»¶å¯¹è±¡çš„æ–¹æ³•
 		return c.calcPrize(user, begin, end);
 	}
 }

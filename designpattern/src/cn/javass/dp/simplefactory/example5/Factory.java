@@ -2,24 +2,24 @@ package cn.javass.dp.simplefactory.example5;
 import java.util.*;
 import java.io.*;
 /**
- * ¹¤³§Àà£¬ÓÃÀ´´´ÔìApi¶ÔÏó
+ * å·¥å‚ç±»ï¼Œç”¨æ¥åˆ›é€ Apiå¯¹è±¡
  */
 public class Factory {
 	/**
-	 * ¾ßÌåµÄ´´ÔìApiµÄ·½·¨£¬¸ù¾İÅäÖÃÎÄ¼şµÄ²ÎÊıÀ´´´½¨½Ó¿Ú
-	 * @return ´´ÔìºÃµÄApi¶ÔÏó
+	 * å…·ä½“çš„åˆ›é€ Apiçš„æ–¹æ³•ï¼Œæ ¹æ®é…ç½®æ–‡ä»¶çš„å‚æ•°æ¥åˆ›å»ºæ¥å£
+	 * @return åˆ›é€ å¥½çš„Apiå¯¹è±¡
 	 */
 	public static Api createApi(){
-		//Ö±½Ó¶ÁÈ¡ÅäÖÃÎÄ¼şÀ´»ñÈ¡ĞèÒª´´½¨ÊµÀıµÄÀà
+		//ç›´æ¥è¯»å–é…ç½®æ–‡ä»¶æ¥è·å–éœ€è¦åˆ›å»ºå®ä¾‹çš„ç±»
 		
-		//ÖÁÓÚÈçºÎ¶ÁÈ¡Properties»¹ÓĞÈçºÎ·´ÉäÕâÀï¾Í²»½âÊÍÁË
+		//è‡³äºå¦‚ä½•è¯»å–Propertiesè¿˜æœ‰å¦‚ä½•åå°„è¿™é‡Œå°±ä¸è§£é‡Šäº†
 		Properties p = new Properties(); 
 		InputStream in = null;
 		try {
 			in = Factory.class.getResourceAsStream("FactoryTest.properties");
 			p.load(in);
 		} catch (IOException e) {
-			System.out.println("×°ÔØ¹¤³§ÅäÖÃÎÄ¼ş³ö´íÁË£¬¾ßÌåµÄ¶ÑÕ»ĞÅÏ¢ÈçÏÂ£º");
+			System.out.println("è£…è½½å·¥å‚é…ç½®æ–‡ä»¶å‡ºé”™äº†ï¼Œå…·ä½“çš„å †æ ˆä¿¡æ¯å¦‚ä¸‹ï¼š");
 			e.printStackTrace();
 		}finally{
 			try {
@@ -28,7 +28,7 @@ public class Factory {
 				e.printStackTrace();
 			}
 		}
-		//ÓÃ·´ÉäÈ¥´´½¨£¬ÄÇĞ©ÀıÍâ´¦ÀíµÈÍêÉÆµÄ¹¤×÷ÕâÀï¾Í²»×öÁË
+		//ç”¨åå°„å»åˆ›å»ºï¼Œé‚£äº›ä¾‹å¤–å¤„ç†ç­‰å®Œå–„çš„å·¥ä½œè¿™é‡Œå°±ä¸åšäº†
 		Api api = null;
 		try {
 			api = (Api)Class.forName(p.getProperty("ImplClass")).newInstance();

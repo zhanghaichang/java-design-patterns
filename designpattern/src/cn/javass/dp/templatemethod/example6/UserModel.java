@@ -1,6 +1,6 @@
 package cn.javass.dp.templatemethod.example6;
 /**
- * ÃèÊöÓÃ»§µÄÊı¾İÄ£ĞÍ
+ * æè¿°ç”¨æˆ·çš„æ•°æ®æ¨¡å‹
  */
 public class UserModel {
 	private String uuid;

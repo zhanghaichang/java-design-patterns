@@ -1,10 +1,10 @@
 package cn.javass.dp.strategy.example4;
 /**
- * 具体算法实现，为大客户计算应报的价格
+ * 鍏蜂綋绠楁硶瀹炵幇锛屼负澶у鎴疯绠楀簲鎶ョ殑浠锋牸
  */
 public class LargeCustomerStrategy implements Strategy{
 	public double calcPrice(double goodsPrice) {
-		System.out.println("对于大客户，统一折扣10%");
+		System.out.println("瀵逛簬澶у鎴凤紝缁熶竴鎶樻墸10%");
 		return goodsPrice*(1-0.1);
 	}
 }

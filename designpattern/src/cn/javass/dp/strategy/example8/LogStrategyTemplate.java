@@ -1,20 +1,20 @@
 package cn.javass.dp.strategy.example8;
 import java.text.*;
 /**
- * ÊµÏÖÈÕÖ¾²ßÂÔµÄ³éÏóÄ£°å£¬ÊµÏÖ¸øÏûÏ¢Ìí¼ÓÊ±¼ä
+ * å®ç°æ—¥å¿—ç­–ç•¥çš„æŠ½è±¡æ¨¡æ¿ï¼Œå®ç°ç»™æ¶ˆæ¯æ·»åŠ æ—¶é—´
  */
 public abstract class LogStrategyTemplate implements LogStrategy{
 	
 	public final void log(String msg) {
-		//µÚÒ»²½£º¸øÏûÏ¢Ìí¼Ó¼ÇÂ¼ÈÕÖ¾µÄÊ±¼ä
+		//ç¬¬ä¸€æ­¥ï¼šç»™æ¶ˆæ¯æ·»åŠ è®°å½•æ—¥å¿—çš„æ—¶é—´
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
-		msg = df.format(new java.util.Date())+" ÄÚÈİÊÇ£º"+ msg;
-		//µÚ¶ş²½£ºÕæÕıÖ´ĞĞÈÕÖ¾¼ÇÂ¼
+		msg = df.format(new java.util.Date())+" å†…å®¹æ˜¯ï¼š"+ msg;
+		//ç¬¬äºŒæ­¥ï¼šçœŸæ­£æ‰§è¡Œæ—¥å¿—è®°å½•
 		doLog(msg);
 	}
 	/**
-	 * ÕæÕıÖ´ĞĞÈÕÖ¾¼ÇÂ¼£¬ÈÃ×ÓÀàÈ¥¾ßÌåÊµÏÖ
-	 * @param msg Ğè¼ÇÂ¼µÄÈÕÖ¾ĞÅÏ¢
+	 * çœŸæ­£æ‰§è¡Œæ—¥å¿—è®°å½•ï¼Œè®©å­ç±»å»å…·ä½“å®ç°
+	 * @param msg éœ€è®°å½•çš„æ—¥å¿—ä¿¡æ¯
 	 */
 	protected abstract void doLog(String msg);
 }

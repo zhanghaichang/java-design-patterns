@@ -2,11 +2,11 @@ package cn.javass.dp.abstractfactory.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨×°»ú¹¤³ÌÊ¦¶ÔÏó
+		//åˆ›å»ºè£…æœºå·¥ç¨‹å¸ˆå¯¹è±¡
 		ComputerEngineer engineer = new ComputerEngineer();
-		//¿Í»§Ñ¡Ôñ²¢´´½¨ĞèÒªÊ¹ÓÃµÄ×°»ú·½°¸¶ÔÏó
+		//å®¢æˆ·é€‰æ‹©å¹¶åˆ›å»ºéœ€è¦ä½¿ç”¨çš„è£…æœºæ–¹æ¡ˆå¯¹è±¡
 		AbstractFactory schema = new Schema3();
-		//¸æËß×°»ú¹¤³ÌÊ¦×Ô¼ºÑ¡ÔñµÄ×°»ú·½°¸£¬ÈÃ×°»ú¹¤³ÌÊ¦×é×°µçÄÔ
+		//å‘Šè¯‰è£…æœºå·¥ç¨‹å¸ˆè‡ªå·±é€‰æ‹©çš„è£…æœºæ–¹æ¡ˆï¼Œè®©è£…æœºå·¥ç¨‹å¸ˆç»„è£…ç”µè„‘
 		engineer.makeComputer(schema);
 	}
 }

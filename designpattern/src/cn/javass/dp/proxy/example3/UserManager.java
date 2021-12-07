@@ -3,20 +3,20 @@ import java.util.*;
 import java.sql.*;
 
 /**
- * ÊµÏÖÊ¾ÀıÒªÇóµÄ¹¦ÄÜ
+ * å®ç°ç¤ºä¾‹è¦æ±‚çš„åŠŸèƒ½
  */
 public class UserManager {	
 	/**
-	 * ¸ù¾İ²¿ÃÅ±àºÅÀ´»ñÈ¡¸Ã²¿ÃÅÏÂµÄËùÓĞÈËÔ±
-	 * @param depId ²¿ÃÅ±àºÅ
-	 * @return ¸Ã²¿ÃÅÏÂµÄËùÓĞÈËÔ±
+	 * æ ¹æ®éƒ¨é—¨ç¼–å·æ¥è·å–è¯¥éƒ¨é—¨ä¸‹çš„æ‰€æœ‰äººå‘˜
+	 * @param depId éƒ¨é—¨ç¼–å·
+	 * @return è¯¥éƒ¨é—¨ä¸‹çš„æ‰€æœ‰äººå‘˜
 	 */
 	public Collection<UserModelApi> getUserByDepId(String depId)throws Exception{
 		Collection<UserModelApi> col = new ArrayList<UserModelApi>();
 		Connection conn = null;
 		try{
 			conn = this.getConnection();
-			//Ö»ĞèÒª²éÑ¯userIdºÍnameÁ½¸öÖµ¾Í¿ÉÒÔÁË
+			//åªéœ€è¦æŸ¥è¯¢userIdå’Œnameä¸¤ä¸ªå€¼å°±å¯ä»¥äº†
 			String sql = "select u.userId,u.name "
 				+"from tbl_user u,tbl_dep d "
 				+"where u.depId=d.depId and d.depId like ?";
@@ -26,9 +26,9 @@ public class UserManager {
 			
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()){
-				//ÕâÀïÊÇ´´½¨µÄ´úÀí¶ÔÏó£¬¶ø²»ÊÇÖ±½Ó´´½¨UserModelµÄ¶ÔÏó
+				//è¿™é‡Œæ˜¯åˆ›å»ºçš„ä»£ç†å¯¹è±¡ï¼Œè€Œä¸æ˜¯ç›´æ¥åˆ›å»ºUserModelçš„å¯¹è±¡
 				Proxy proxy = new Proxy(new UserModel());
-				//Ö»ÊÇÉèÖÃuserIdºÍnameÁ½¸öÖµ¾Í¿ÉÒÔÁË
+				//åªæ˜¯è®¾ç½®userIdå’Œnameä¸¤ä¸ªå€¼å°±å¯ä»¥äº†
 				proxy.setUserId(rs.getString("userId"));
 				proxy.setName(rs.getString("name"));
 				
@@ -43,8 +43,8 @@ public class UserManager {
 		return col;
 	}
 	/**
-	 * »ñÈ¡ÓëÊı¾İ¿âµÄÁ¬½Ó
-	 * @return Êı¾İ¿âÁ¬½Ó
+	 * è·å–ä¸æ•°æ®åº“çš„è¿æ¥
+	 * @return æ•°æ®åº“è¿æ¥
 	 */
 	private Connection getConnection() throws Exception {
 		Class.forName("oracle.jdbc.driver.OracleDriver");

@@ -2,7 +2,7 @@ package cn.javass.dp.command.example9;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼±¸Òª·¢³öµÄÃüÁî£¬Ã»ÓĞ¾ßÌåÊµÏÖÀàÁË
+		//å‡†å¤‡è¦å‘å‡ºçš„å‘½ä»¤ï¼Œæ²¡æœ‰å…·ä½“å®ç°ç±»äº†
 		Command cmd = new Command(){
 			private String str = "";
 			public void setStr(String s){
@@ -10,14 +10,14 @@ public class Client {
 			}
 			
 			public void execute() {
-				System.out.println("´òÓ¡µÄÄÚÈİÎª="+str);
+				System.out.println("æ‰“å°çš„å†…å®¹ä¸º="+str);
 			}
 		};
-		cmd.setStr("ÍË»¯µÄÃüÁîÄ£Ê½ÀàËÆÓÚJava»Øµ÷µÄÊ¾Àı");
+		cmd.setStr("é€€åŒ–çš„å‘½ä»¤æ¨¡å¼ç±»ä¼¼äºJavaå›è°ƒçš„ç¤ºä¾‹");
 		
-		//Õâ¸öÊ±ºòµÄInvoker»òĞí¸Ã³ÆÎª·şÎñÁË
+		//è¿™ä¸ªæ—¶å€™çš„Invokeræˆ–è®¸è¯¥ç§°ä¸ºæœåŠ¡äº†
 		Invoker invoker = new Invoker();
-		//°´ÏÂ°´Å¥£¬ÕæÕıÆô¶¯Ö´ĞĞÃüÁî
+		//æŒ‰ä¸‹æŒ‰é’®ï¼ŒçœŸæ­£å¯åŠ¨æ‰§è¡Œå‘½ä»¤
 		invoker.startPrint(cmd);
 	}
 }

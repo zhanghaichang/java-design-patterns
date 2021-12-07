@@ -1,10 +1,10 @@
 package cn.javass.dp.abstractfactory.example5;
 /**
- * 订单子记录对应的DAO操作接口
+ * 璁㈠崟瀛愯褰曞搴旂殑DAO鎿嶄綔鎺ュ彛
  */
 public interface OrderDetailDAO {
 	/**
-	 * 示意方法，保存订单子记录
+	 * 绀烘剰鏂规硶锛屼繚瀛樿鍗曞瓙璁板綍
 	 */
 	public void saveOrderDetail();
 }

@@ -2,25 +2,25 @@ package cn.javass.dp.memento.example3;
 
 public class Client {
 	public static void main(String[] args) {
-		// ´´½¨Ä£ÄâÔËĞĞÁ÷³ÌµÄ¶ÔÏó
+		// åˆ›å»ºæ¨¡æ‹Ÿè¿è¡Œæµç¨‹çš„å¯¹è±¡
 		FlowAMock mock = new FlowAMock("TestFlow");
-		//ÔËĞĞÁ÷³ÌµÄµÚÒ»¸ö½×¶Î
+		//è¿è¡Œæµç¨‹çš„ç¬¬ä¸€ä¸ªé˜¶æ®µ
 		mock.runPhaseOne();
 		
-		//´´½¨Ò»¸ö¹ÜÀíÕß
+		//åˆ›å»ºä¸€ä¸ªç®¡ç†è€…
 		FlowAMementoCareTaker careTaker = new FlowAMementoCareTaker();
-		//´´½¨´ËÊ±¶ÔÏóµÄ±¸ÍüÂ¼¶ÔÏó£¬²¢±£´æµ½¹ÜÀíÕß¶ÔÏóÄÇÀï£¬ºóÃæÒªÓÃ
+		//åˆ›å»ºæ­¤æ—¶å¯¹è±¡çš„å¤‡å¿˜å½•å¯¹è±¡ï¼Œå¹¶ä¿å­˜åˆ°ç®¡ç†è€…å¯¹è±¡é‚£é‡Œï¼Œåé¢è¦ç”¨
 		FlowAMockMemento memento = mock.createMemento();
 		careTaker.saveMemento(memento);
 		
-		//°´ÕÕ·½°¸Ò»À´ÔËĞĞÁ÷³Ìºó°ë²¿·Ö
+		//æŒ‰ç…§æ–¹æ¡ˆä¸€æ¥è¿è¡Œæµç¨‹ååŠéƒ¨åˆ†
 		mock.schema1();
 		
-		//´Ó¹ÜÀíÕß»ñÈ¡±¸ÍüÂ¼¶ÔÏó£¬È»ºóÉèÖÃ»ØÈ¥£¬
-		//ÈÃÄ£ÄâÔËĞĞÁ÷³ÌµÄ¶ÔÏó×Ô¼º»Ö¸´×Ô¼ºµÄÄÚ²¿×´Ì¬
+		//ä»ç®¡ç†è€…è·å–å¤‡å¿˜å½•å¯¹è±¡ï¼Œç„¶åè®¾ç½®å›å»ï¼Œ
+		//è®©æ¨¡æ‹Ÿè¿è¡Œæµç¨‹çš„å¯¹è±¡è‡ªå·±æ¢å¤è‡ªå·±çš„å†…éƒ¨çŠ¶æ€
 		mock.setMemento(careTaker.retriveMemento());
 		
-		//°´ÕÕ·½°¸¶şÀ´ÔËĞĞÁ÷³Ìºó°ë²¿·Ö
+		//æŒ‰ç…§æ–¹æ¡ˆäºŒæ¥è¿è¡Œæµç¨‹ååŠéƒ¨åˆ†
 		mock.schema2();
 	}
 }

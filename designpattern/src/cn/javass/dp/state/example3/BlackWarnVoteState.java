@@ -2,7 +2,7 @@ package cn.javass.dp.state.example3;
 
 public class BlackWarnVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//´ı½øºÚÃûµ¥¾¯¸æ×´Ì¬
-		System.out.println("½ûÖ¹µÇÂ¼ºÍÊ¹ÓÃÏµÍ³3Ìì");
+		//å¾…è¿›é»‘åå•è­¦å‘ŠçŠ¶æ€
+		System.out.println("ç¦æ­¢ç™»å½•å’Œä½¿ç”¨ç³»ç»Ÿ3å¤©");
 	}
 }

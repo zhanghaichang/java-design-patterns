@@ -2,27 +2,27 @@ package cn.javass.dp.iterator.example1;
 
 public class Client {
 	/**
-	 * Ê¾Òâ·½·¨£¬Ê¹ÓÃµü´úÆ÷µÄ¹¦ÄÜ¡£
-	 * ÕâÀïÊ¾ÒâÊ¹ÓÃµü´úÆ÷À´µü´ú¾ÛºÏ¶ÔÏó
+	 * ç¤ºæ„æ–¹æ³•ï¼Œä½¿ç”¨è¿­ä»£å™¨çš„åŠŸèƒ½ã€‚
+	 * è¿™é‡Œç¤ºæ„ä½¿ç”¨è¿­ä»£å™¨æ¥è¿­ä»£èšåˆå¯¹è±¡
 	 */
 	public void someOperation(){
-		String[] names = {"ÕÅÈı","ÀîËÄ","ÍõÎå"};
-		//´´½¨¾ÛºÏ¶ÔÏó
+		String[] names = {"å¼ ä¸‰","æå››","ç‹äº”"};
+		//åˆ›å»ºèšåˆå¯¹è±¡
 		Aggregate aggregate = new ConcreteAggregate(names);
-		//Ñ­»·Êä³ö¾ÛºÏ¶ÔÏóÖĞµÄÖµ
+		//å¾ªç¯è¾“å‡ºèšåˆå¯¹è±¡ä¸­çš„å€¼
 		Iterator it = aggregate.createIterator();
-		//Ê×ÏÈÉèÖÃµü´úÆ÷µ½µÚÒ»¸öÔªËØ
+		//é¦–å…ˆè®¾ç½®è¿­ä»£å™¨åˆ°ç¬¬ä¸€ä¸ªå…ƒç´ 
 		it.first();
 		while(!it.isDone()){
-			//È¡³öµ±Ç°µÄÔªËØÀ´
+			//å–å‡ºå½“å‰çš„å…ƒç´ æ¥
 			Object obj = it.currentItem();
 			System.out.println("the obj=="+obj);
-			//Èç¹û»¹Ã»ÓĞµü´úµ½×îºó£¬ÄÇÃ´¾ÍÏòÏÂµü´úÒ»¸ö
+			//å¦‚æœè¿˜æ²¡æœ‰è¿­ä»£åˆ°æœ€åï¼Œé‚£ä¹ˆå°±å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 			it.next();
 		}
 	}	
 	public static void main(String[] args) {
-		//¿ÉÒÔ¼òµ¥µÄ²âÊÔÒ»ÏÂ
+		//å¯ä»¥ç®€å•çš„æµ‹è¯•ä¸€ä¸‹
 		Client client = new Client();
 		client.someOperation();
 	}

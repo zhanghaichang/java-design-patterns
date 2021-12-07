@@ -1,6 +1,6 @@
 package cn.javass.dp.interpreter.example2;
 /**
- * 上下文，包换解释器之外的一些全局信息
+ * 涓婁笅鏂囷紝鍖呮崲瑙ｉ噴鍣ㄤ箣澶栫殑涓�浜涘叏灞�淇℃伅
  */
 public class Context {
 }

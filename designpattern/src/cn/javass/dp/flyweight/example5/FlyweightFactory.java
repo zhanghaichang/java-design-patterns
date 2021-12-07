@@ -4,13 +4,13 @@ import java.util.*;
 
 
 /**
- * ÏíÔª¹¤³§£¬Í¨³£ÊµÏÖ³ÉÎªµ¥Àı
- * ¼ÓÈëÊµÏÖÀ¬»ø»ØÊÕºÍÒıÓÃ¼ÆÊıµÄ¹¦ÄÜ
+ * äº«å…ƒå·¥å‚ï¼Œé€šå¸¸å®ç°æˆä¸ºå•ä¾‹
+ * åŠ å…¥å®ç°åƒåœ¾å›æ”¶å’Œå¼•ç”¨è®¡æ•°çš„åŠŸèƒ½
  */
 public class FlyweightFactory {
 	private static FlyweightFactory factory = new FlyweightFactory();
 	private FlyweightFactory(){
-		//Æô¶¯Çå³ı»º´æÖµµÄÏß³Ì
+		//å¯åŠ¨æ¸…é™¤ç¼“å­˜å€¼çš„çº¿ç¨‹
 		Thread t = new ClearCache();
 		t.start();
 	}
@@ -18,26 +18,26 @@ public class FlyweightFactory {
 		return factory;
 	}
 	/**
-	 * »º´æ¶à¸öflyweight¶ÔÏó
+	 * ç¼“å­˜å¤šä¸ªflyweightå¯¹è±¡
 	 */
 	private Map<String,Flyweight> fsMap = new HashMap<String,Flyweight>();
 	/**
-	 * ÓÃÀ´»º´æ±»¹²Ïí¶ÔÏóµÄ»º´æÅäÖÃ£¬keyÖµºÍÉÏÃæmapµÄÒ»Ñù
+	 * ç”¨æ¥ç¼“å­˜è¢«å…±äº«å¯¹è±¡çš„ç¼“å­˜é…ç½®ï¼Œkeyå€¼å’Œä¸Šé¢mapçš„ä¸€æ ·
 	 */
 	private  Map<String,CacheConfModel> cacheConfMap = new HashMap<String,CacheConfModel>();
 	/**
-	 * ÓÃÀ´¼ÇÂ¼»º´æ¶ÔÏó±»ÒıÓÃµÄ´ÎÊı£¬keyÖµºÍÉÏÃæmapµÄÒ»Ñù
+	 * ç”¨æ¥è®°å½•ç¼“å­˜å¯¹è±¡è¢«å¼•ç”¨çš„æ¬¡æ•°ï¼Œkeyå€¼å’Œä¸Šé¢mapçš„ä¸€æ ·
 	 */
 	private  Map<String,Integer> countMap = new HashMap<String,Integer>();
 	/**
-	 * Ä¬ÈÏ±£´æ6ÃëÖÓ£¬Ö÷ÒªÎªÁË²âÊÔ·½±ã£¬Õâ¸öÊ±¼ä¿ÉÒÔ¸ù¾İÓ¦ÓÃµÄÒªÇóÉèÖÃ£¬±ÈÈç30·ÖÖÓ
+	 * é»˜è®¤ä¿å­˜6ç§’é’Ÿï¼Œä¸»è¦ä¸ºäº†æµ‹è¯•æ–¹ä¾¿ï¼Œè¿™ä¸ªæ—¶é—´å¯ä»¥æ ¹æ®åº”ç”¨çš„è¦æ±‚è®¾ç½®ï¼Œæ¯”å¦‚30åˆ†é’Ÿ
 	 */
 	private final  long DURABLE_TIME = 6*1000L; 
 	
 	/**
-	 * »ñÈ¡Ä³¸öÏíÔª±»Ê¹ÓÃµÄ´ÎÊı
-	 * @param key ÏíÔªµÄkey
-	 * @return ±»Ê¹ÓÃµÄ´ÎÊı
+	 * è·å–æŸä¸ªäº«å…ƒè¢«ä½¿ç”¨çš„æ¬¡æ•°
+	 * @param key äº«å…ƒçš„key
+	 * @return è¢«ä½¿ç”¨çš„æ¬¡æ•°
 	 */
 	public synchronized int getUseTimes(String key){
 		Integer count = countMap.get(key);
@@ -48,19 +48,19 @@ public class FlyweightFactory {
 	}
 	
 	/**
-	 * »ñÈ¡key¶ÔÓ¦µÄÏíÔª¶ÔÏó
-	 * @param key »ñÈ¡ÏíÔª¶ÔÏóµÄkey
-	 * @return key¶ÔÓ¦µÄÏíÔª¶ÔÏó
+	 * è·å–keyå¯¹åº”çš„äº«å…ƒå¯¹è±¡
+	 * @param key è·å–äº«å…ƒå¯¹è±¡çš„key
+	 * @return keyå¯¹åº”çš„äº«å…ƒå¯¹è±¡
 	 */
 	public synchronized Flyweight getFlyweight(String key) {
 		Flyweight f = fsMap.get(key);
-		//»»Ò»¸ö¸ü¼òµ¥µãµÄĞ´·¨
+		//æ¢ä¸€ä¸ªæ›´ç®€å•ç‚¹çš„å†™æ³•
 		if(f==null){
 			f = new AuthorizationFlyweight(key);
 			fsMap.put(key,f);
-			//Í¬Ê±ÉèÖÃÒıÓÃ¼ÆÊı
+			//åŒæ—¶è®¾ç½®å¼•ç”¨è®¡æ•°
 			countMap.put(key, 1);
-			//Í¬Ê±ÉèÖÃ»º´æÅäÖÃÊı¾İ
+			//åŒæ—¶è®¾ç½®ç¼“å­˜é…ç½®æ•°æ®
 			CacheConfModel cm = new CacheConfModel();
 			cm.setBeginTime(System.currentTimeMillis());
 			cm.setForever(false);
@@ -68,12 +68,12 @@ public class FlyweightFactory {
 			
 			cacheConfMap.put(key, cm);
 		}else{
-			//±íÊ¾»¹ÔÚÊ¹ÓÃ£¬ÄÇÃ´Ó¦¸ÃÖØĞÂÉèÖÃ»º´æÅäÖÃ
+			//è¡¨ç¤ºè¿˜åœ¨ä½¿ç”¨ï¼Œé‚£ä¹ˆåº”è¯¥é‡æ–°è®¾ç½®ç¼“å­˜é…ç½®
 			CacheConfModel cm = cacheConfMap.get(key);
 			cm.setBeginTime(System.currentTimeMillis());
-			//ÉèÖÃ»ØÈ¥
+			//è®¾ç½®å›å»
 			this.cacheConfMap.put(key, cm);
-			//Í¬Ê±¼ÆÊı¼Ó1
+			//åŒæ—¶è®¡æ•°åŠ 1
 			Integer count = countMap.get(key);
 			count++;
 			countMap.put(key, count);
@@ -81,8 +81,8 @@ public class FlyweightFactory {
 		return f;
 	}
 	/**
-	 * É¾³ıkey¶ÔÓ¦µÄÏíÔª¶ÔÏó£¬Á¬´øÇå³ı¶ÔÓ¦µÄ»º´æÅäÖÃºÍÒıÓÃ´ÎÊıµÄ¼ÇÂ¼£¬²»¶ÔÍâ
-	 * @param key ÒªÉ¾³ıµÄÏíÔª¶ÔÏóµÄkey
+	 * åˆ é™¤keyå¯¹åº”çš„äº«å…ƒå¯¹è±¡ï¼Œè¿å¸¦æ¸…é™¤å¯¹åº”çš„ç¼“å­˜é…ç½®å’Œå¼•ç”¨æ¬¡æ•°çš„è®°å½•ï¼Œä¸å¯¹å¤–
+	 * @param key è¦åˆ é™¤çš„äº«å…ƒå¯¹è±¡çš„key
 	 */
 	private synchronized void removeFlyweight(String key){
 		this.fsMap.remove(key);
@@ -90,7 +90,7 @@ public class FlyweightFactory {
 		this.countMap.remove(key);
 	}
 	/**
-	 * Î¬»¤Çå³ı»º´æµÄÏß³Ì£¬ÄÚ²¿Ê¹ÓÃ
+	 * ç»´æŠ¤æ¸…é™¤ç¼“å­˜çš„çº¿ç¨‹ï¼Œå†…éƒ¨ä½¿ç”¨
 	 */
 	private  class ClearCache extends Thread{
 		public void run(){
@@ -99,18 +99,18 @@ public class FlyweightFactory {
 				Set<String> set = cacheConfMap.keySet();
 				for(String key : set){
 					CacheConfModel ccm = cacheConfMap.get(key);
-					//±È½ÏÊÇ·ñĞèÒªÇå³ı
+					//æ¯”è¾ƒæ˜¯å¦éœ€è¦æ¸…é™¤
 					if((System.currentTimeMillis()-ccm.getBeginTime())>= ccm.getDurableTime()){
-						//¿ÉÒÔÇå³ı£¬ÏÈ¼ÇÂ¼ÏÂÀ´
+						//å¯ä»¥æ¸…é™¤ï¼Œå…ˆè®°å½•ä¸‹æ¥
 						tempSet.add(key);
 					}
 				}
-				//ÕæÕıÇå³ı
+				//çœŸæ­£æ¸…é™¤
 				for(String key : tempSet){
 					FlyweightFactory.getInstance().removeFlyweight(key);					
 				}
 				System.out.println("now thread="+fsMap.size()+",fsMap=="+fsMap.keySet());
-				//ĞİÏ¢1ÃëÔÙÖØĞÂÅĞ¶Ï
+				//ä¼‘æ¯1ç§’å†é‡æ–°åˆ¤æ–­
 				try {
 					Thread.sleep(1000L);
 				} catch (InterruptedException e) {

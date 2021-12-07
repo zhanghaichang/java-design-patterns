@@ -2,13 +2,13 @@ package cn.javass.dp.state.example7;
 
 import java.util.Scanner;
 /**
- * 处理审核结束的类
+ * 澶勭悊瀹℃牳缁撴潫鐨勭被
  */
 public class AuditOverState implements LeaveRequestState{
 	public void doWork(StateMachine request) {
-		//先把业务对象造型回来
+		//鍏堟妸涓氬姟瀵硅薄閫犲瀷鍥炴潵
 		LeaveRequestModel lrm = (LeaveRequestModel)request.getBusinessVO();
 
-		//业务处理，在数据里面记录整个流程结束		
+		//涓氬姟澶勭悊锛屽湪鏁版嵁閲岄潰璁板綍鏁翠釜娴佺▼缁撴潫		
 	}
 }

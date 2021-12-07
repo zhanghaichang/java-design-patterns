@@ -3,19 +3,19 @@ package cn.javass.dp.command.example7;
 import java.io.*;
 import java.util.*;
 /**
- * ¶ÁĞ´ÎÄ¼şµÄ¸¨Öú¹¤¾ßÀà
+ * è¯»å†™æ–‡ä»¶çš„è¾…åŠ©å·¥å…·ç±»
  */
 public class FileOpeUtil {
 	/**
-	 * Ë½ÓĞ»¯¹¹Ôì·½·¨£¬±ÜÃâÍâ²¿ÎŞÎ½µÄ´´½¨ÀàÊµÀı
-	 * Õâ¸ö¹¤¾ßÀà²»ĞèÒª´´½¨ÀàÊµÀı
+	 * ç§æœ‰åŒ–æ„é€ æ–¹æ³•ï¼Œé¿å…å¤–éƒ¨æ— è°“çš„åˆ›å»ºç±»å®ä¾‹
+	 * è¿™ä¸ªå·¥å…·ç±»ä¸éœ€è¦åˆ›å»ºç±»å®ä¾‹
 	 */
 	private FileOpeUtil() {
 	}
 	/**
-	 * ¶ÁÎÄ¼ş£¬´ÓÎÄ¼şÀïÃæ»ñÈ¡´æ´¢µÄList¶ÔÏó
-	 * @param pathName ÎÄ¼şÂ·¾¶ºÍÎÄ¼şÃû
-	 * @return ´æ´¢µÄList¶ÔÏó
+	 * è¯»æ–‡ä»¶ï¼Œä»æ–‡ä»¶é‡Œé¢è·å–å­˜å‚¨çš„Listå¯¹è±¡
+	 * @param pathName æ–‡ä»¶è·¯å¾„å’Œæ–‡ä»¶å
+	 * @return å­˜å‚¨çš„Listå¯¹è±¡
 	 */
 	public static List readFile(String pathName) {
 		List list = new ArrayList();
@@ -42,9 +42,9 @@ public class FileOpeUtil {
 		return list;
 	}
 	/**
-	 * Ğ´ÎÄ¼ş£¬°Ñlist¶ÔÏóĞ´³öµ½ÎÄ¼şÖĞÈ¥
-	 * @param pathName ÎÄ¼şÂ·¾¶ºÍÎÄ¼şÃû
-	 * @param list ÒªĞ´µ½ÎÄ¼şµÄlist¶ÔÏó
+	 * å†™æ–‡ä»¶ï¼ŒæŠŠlistå¯¹è±¡å†™å‡ºåˆ°æ–‡ä»¶ä¸­å»
+	 * @param pathName æ–‡ä»¶è·¯å¾„å’Œæ–‡ä»¶å
+	 * @param list è¦å†™åˆ°æ–‡ä»¶çš„listå¯¹è±¡
 	 */
 	public static void writeFile(String pathName,List list){
 		File f = new File(pathName);

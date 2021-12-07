@@ -1,42 +1,42 @@
 package cn.javass.dp.proxy.example4;
 
 /**
- * ¶©µ¥µÄ´úÀí¶ÔÏó
+ * è®¢å•çš„ä»£ç†å¯¹è±¡
  */
 public class OrderProxy implements OrderApi{
 	/**
-	 * ³ÖÓĞ±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
+	 * æŒæœ‰è¢«ä»£ç†çš„å…·ä½“çš„ç›®æ ‡å¯¹è±¡
 	 */
 	private Order order=null;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
-	 * @param realSubject ±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥è¢«ä»£ç†çš„å…·ä½“çš„ç›®æ ‡å¯¹è±¡
+	 * @param realSubject è¢«ä»£ç†çš„å…·ä½“çš„ç›®æ ‡å¯¹è±¡
 	 */
 	public OrderProxy(Order realSubject){
 		this.order = realSubject;
 	}
 	public void setProductName(String productName,String user) {
-		//¿ØÖÆ·ÃÎÊÈ¨ÏŞ£¬Ö»ÓĞ´´½¨¶©µ¥µÄÈËÔ±²ÅÄÜ¹»ĞŞ¸Ä
+		//æ§åˆ¶è®¿é—®æƒé™ï¼Œåªæœ‰åˆ›å»ºè®¢å•çš„äººå‘˜æ‰èƒ½å¤Ÿä¿®æ”¹
 		if(user!=null && user.equals(this.getOrderUser())){
 			order.setProductName(productName, user);
 		}else{
-			System.out.println("¶Ô²»Æğ"+user+"£¬ÄúÎŞÈ¨ĞŞ¸Ä¶©µ¥ÖĞµÄ²úÆ·Ãû³Æ¡£");
+			System.out.println("å¯¹ä¸èµ·"+user+"ï¼Œæ‚¨æ— æƒä¿®æ”¹è®¢å•ä¸­çš„äº§å“åç§°ã€‚");
 		}
 	}
 	public void setOrderNum(int orderNum,String user) {
-		//¿ØÖÆ·ÃÎÊÈ¨ÏŞ£¬Ö»ÓĞ´´½¨¶©µ¥µÄÈËÔ±²ÅÄÜ¹»ĞŞ¸Ä
+		//æ§åˆ¶è®¿é—®æƒé™ï¼Œåªæœ‰åˆ›å»ºè®¢å•çš„äººå‘˜æ‰èƒ½å¤Ÿä¿®æ”¹
 		if(user!=null && user.equals(this.getOrderUser())){
 			order.setOrderNum(orderNum, user);
 		}else{
-			System.out.println("¶Ô²»Æğ"+user+"£¬ÄúÎŞÈ¨ĞŞ¸Ä¶©µ¥ÖĞµÄ¶©¹ºÊıÁ¿¡£");
+			System.out.println("å¯¹ä¸èµ·"+user+"ï¼Œæ‚¨æ— æƒä¿®æ”¹è®¢å•ä¸­çš„è®¢è´­æ•°é‡ã€‚");
 		}
 	}
 	public void setOrderUser(String orderUser,String user) {
-		//¿ØÖÆ·ÃÎÊÈ¨ÏŞ£¬Ö»ÓĞ´´½¨¶©µ¥µÄÈËÔ±²ÅÄÜ¹»ĞŞ¸Ä
+		//æ§åˆ¶è®¿é—®æƒé™ï¼Œåªæœ‰åˆ›å»ºè®¢å•çš„äººå‘˜æ‰èƒ½å¤Ÿä¿®æ”¹
 		if(user!=null && user.equals(this.getOrderUser())){
 			order.setOrderUser(orderUser, user);
 		}else{
-			System.out.println("¶Ô²»Æğ"+user+"£¬ÄúÎŞÈ¨ĞŞ¸Ä¶©µ¥ÖĞµÄ¶©¹ºÈË¡£");
+			System.out.println("å¯¹ä¸èµ·"+user+"ï¼Œæ‚¨æ— æƒä¿®æ”¹è®¢å•ä¸­çš„è®¢è´­äººã€‚");
 		}
 	}
 	public int getOrderNum() {

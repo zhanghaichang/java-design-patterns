@@ -5,27 +5,27 @@ import java.sql.DriverManager;
 
 public class JDBCTest {
 	public static void main(String[] args) throws Exception {
-		String sql = "¾ßÌåÒª²Ù×÷µÄsqlÓï¾ä";
-		// 1£º×°ÔØÇı¶¯
-		Class.forName("Çı¶¯µÄÃû×Ö");
-		// 2£º´´½¨Á¬½Ó
-		Connection conn = DriverManager.getConnection("Á¬½ÓÊı¾İ¿â·şÎñµÄURL", "ÓÃ»§Ãû",
-				"ÃÜÂë");
+		String sql = "å…·ä½“è¦æ“ä½œçš„sqlè¯­å¥";
+		// 1ï¼šè£…è½½é©±åŠ¨
+		Class.forName("é©±åŠ¨çš„åå­—");
+		// 2ï¼šåˆ›å»ºè¿æ¥
+		Connection conn = DriverManager.getConnection("è¿æ¥æ•°æ®åº“æœåŠ¡çš„URL", "ç”¨æˆ·å",
+				"å¯†ç ");
 
-		// 3£º´´½¨statement»òÕßÊÇpreparedStatement
+		// 3ï¼šåˆ›å»ºstatementæˆ–è€…æ˜¯preparedStatement
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 
-		// 4£ºÖ´ĞĞsql£¬Èç¹ûÊÇ²éÑ¯£¬ÔÙ»ñÈ¡ResultSet
+		// 4ï¼šæ‰§è¡Œsqlï¼Œå¦‚æœæ˜¯æŸ¥è¯¢ï¼Œå†è·å–ResultSet
 		ResultSet rs = pstmt.executeQuery(sql);
 
-		// 5£ºÑ­»·´ÓResultSetÖĞ°ÑÖµÈ¡³öÀ´£¬·â×°µ½Êı¾İ¶ÔÏóÖĞÈ¥
+		// 5ï¼šå¾ªç¯ä»ResultSetä¸­æŠŠå€¼å–å‡ºæ¥ï¼Œå°è£…åˆ°æ•°æ®å¯¹è±¡ä¸­å»
 		while (rs.next()) {
-			// È¡ÖµÊ¾Òâ£¬°´Ãû³ÆÈ¡Öµ
+			// å–å€¼ç¤ºæ„ï¼ŒæŒ‰åç§°å–å€¼
 			String uuid = rs.getString("uuid");
-			// È¡ÖµÊ¾Òâ£¬°´Ë÷ÒıÈ¡Öµ
+			// å–å€¼ç¤ºæ„ï¼ŒæŒ‰ç´¢å¼•å–å€¼
 			int age = rs.getInt(2);
 		}
-		//6£º¹Ø±Õ
+		//6ï¼šå…³é—­
 		rs.close();
 		pstmt.close();
 		conn.close();

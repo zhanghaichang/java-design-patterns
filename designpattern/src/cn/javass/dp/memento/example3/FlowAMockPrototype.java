@@ -3,57 +3,57 @@ package cn.javass.dp.memento.example3;
 import java.io.Serializable;
 
 /**
- * Ä£ÄâÔËĞĞÁ÷³ÌA£¬Ö»ÊÇÒ»¸öÊ¾Òâ£¬´úÖ¸Ä³¸ö¾ßÌåÁ÷³Ì
+ * æ¨¡æ‹Ÿè¿è¡Œæµç¨‹Aï¼Œåªæ˜¯ä¸€ä¸ªç¤ºæ„ï¼Œä»£æŒ‡æŸä¸ªå…·ä½“æµç¨‹
  */
 public class FlowAMockPrototype implements Cloneable {
 	/**
-	 * Á÷³ÌÃû³Æ£¬²»ĞèÒªÍâ²¿´æ´¢µÄ×´Ì¬Êı¾İ
+	 * æµç¨‹åç§°ï¼Œä¸éœ€è¦å¤–éƒ¨å­˜å‚¨çš„çŠ¶æ€æ•°æ®
 	 */
 	private String flowName;
 	/**
-	 * Ê¾Òâ£¬´úÖ¸Ä³¸öÖĞ¼ä½á¹û£¬ĞèÒªÍâ²¿´æ´¢µÄ×´Ì¬Êı¾İ
+	 * ç¤ºæ„ï¼Œä»£æŒ‡æŸä¸ªä¸­é—´ç»“æœï¼Œéœ€è¦å¤–éƒ¨å­˜å‚¨çš„çŠ¶æ€æ•°æ®
 	 */
 	private int tempResult;
 	/**
-	 * Ê¾Òâ£¬´úÖ¸Ä³¸öÖĞ¼ä½á¹û£¬ĞèÒªÍâ²¿´æ´¢µÄ×´Ì¬Êı¾İ
+	 * ç¤ºæ„ï¼Œä»£æŒ‡æŸä¸ªä¸­é—´ç»“æœï¼Œéœ€è¦å¤–éƒ¨å­˜å‚¨çš„çŠ¶æ€æ•°æ®
 	 */
 	private String tempState;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÁ÷³ÌÃû³Æ
-	 * @param flowName Á÷³ÌÃû³Æ
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥æµç¨‹åç§°
+	 * @param flowName æµç¨‹åç§°
 	 */
 	public FlowAMockPrototype(String flowName){
 		this.flowName = flowName;
 	}
 	/**
-	 * Ê¾Òâ£¬ÔËĞĞÁ÷³ÌµÄµÚÒ»¸ö½×¶Î
+	 * ç¤ºæ„ï¼Œè¿è¡Œæµç¨‹çš„ç¬¬ä¸€ä¸ªé˜¶æ®µ
 	 */
 	public void runPhaseOne(){
-		//ÔÚÕâ¸ö½×¶Î£¬¿ÉÄÜ²úÉúÁËÖĞ¼ä½á¹û£¬Ê¾ÒâÒ»ÏÂ
+		//åœ¨è¿™ä¸ªé˜¶æ®µï¼Œå¯èƒ½äº§ç”Ÿäº†ä¸­é—´ç»“æœï¼Œç¤ºæ„ä¸€ä¸‹
 		tempResult = 3;
 		tempState = "PhaseOne";
 	}
 	/**
-	 * Ê¾Òâ£¬°´ÕÕ·½°¸Ò»À´ÔËĞĞÁ÷³Ìºó°ë²¿·Ö
+	 * ç¤ºæ„ï¼ŒæŒ‰ç…§æ–¹æ¡ˆä¸€æ¥è¿è¡Œæµç¨‹ååŠéƒ¨åˆ†
 	 */
 	public void schema1(){
-		//Ê¾Òâ£¬ĞèÒªÊ¹ÓÃµÚÒ»¸ö½×¶Î²úÉúµÄÊı¾İ
+		//ç¤ºæ„ï¼Œéœ€è¦ä½¿ç”¨ç¬¬ä¸€ä¸ªé˜¶æ®µäº§ç”Ÿçš„æ•°æ®
 		this.tempState += ",Schema1";
 		System.out.println(this.tempState + " : now run "+tempResult);
 		this.tempResult += 11;
 	}
 	/**
-	 * Ê¾Òâ£¬°´ÕÕ·½°¸¶şÀ´ÔËĞĞÁ÷³Ìºó°ë²¿·Ö
+	 * ç¤ºæ„ï¼ŒæŒ‰ç…§æ–¹æ¡ˆäºŒæ¥è¿è¡Œæµç¨‹ååŠéƒ¨åˆ†
 	 */
 	public void schema2(){
-		//Ê¾Òâ£¬ĞèÒªÊ¹ÓÃµÚÒ»¸ö½×¶Î²úÉúµÄÊı¾İ
+		//ç¤ºæ„ï¼Œéœ€è¦ä½¿ç”¨ç¬¬ä¸€ä¸ªé˜¶æ®µäº§ç”Ÿçš„æ•°æ®
 		this.tempState += ",Schema2";
 		System.out.println(this.tempState + " : now run "+tempResult);
 		this.tempResult += 22;
 	}	
 	/**
-	 * ´´½¨±£´æÔ­·¢Æ÷¶ÔÏóµÄ×´Ì¬µÄ±¸ÍüÂ¼¶ÔÏó
-	 * @return ´´½¨ºÃµÄ±¸ÍüÂ¼¶ÔÏó
+	 * åˆ›å»ºä¿å­˜åŸå‘å™¨å¯¹è±¡çš„çŠ¶æ€çš„å¤‡å¿˜å½•å¯¹è±¡
+	 * @return åˆ›å»ºå¥½çš„å¤‡å¿˜å½•å¯¹è±¡
 	 */
 	public FlowAMockMemento createMemento() {
 		try {
@@ -64,8 +64,8 @@ public class FlowAMockPrototype implements Cloneable {
 		return null;
 	}
 	/**
-	 * ÖØĞÂÉèÖÃÔ­·¢Æ÷¶ÔÏóµÄ×´Ì¬£¬ÈÃÆä»Øµ½±¸ÍüÂ¼¶ÔÏó¼ÇÂ¼µÄ×´Ì¬
-	 * @param memento ¼ÇÂ¼ÓĞÔ­·¢Æ÷×´Ì¬µÄ±¸ÍüÂ¼¶ÔÏó
+	 * é‡æ–°è®¾ç½®åŸå‘å™¨å¯¹è±¡çš„çŠ¶æ€ï¼Œè®©å…¶å›åˆ°å¤‡å¿˜å½•å¯¹è±¡è®°å½•çš„çŠ¶æ€
+	 * @param memento è®°å½•æœ‰åŸå‘å™¨çŠ¶æ€çš„å¤‡å¿˜å½•å¯¹è±¡
 	 */
 	public void setMemento(FlowAMockMemento memento) {
 		MementoImplPrototype mementoImpl = (MementoImplPrototype)memento;
@@ -73,8 +73,8 @@ public class FlowAMockPrototype implements Cloneable {
 		this.tempState = mementoImpl.getFlowAMock().tempState;
 	}
 	/**
-	 * ÕæÕıµÄ±¸ÍüÂ¼¶ÔÏó£¬ÊµÏÖ±¸ÍüÂ¼Õ­½Ó¿Ú
-	 * ÊµÏÖ³ÉË½ÓĞµÄÄÚ²¿Àà£¬²»ÈÃÍâ²¿·ÃÎÊ
+	 * çœŸæ­£çš„å¤‡å¿˜å½•å¯¹è±¡ï¼Œå®ç°å¤‡å¿˜å½•çª„æ¥å£
+	 * å®ç°æˆç§æœ‰çš„å†…éƒ¨ç±»ï¼Œä¸è®©å¤–éƒ¨è®¿é—®
 	 */
 	private static class MementoImplPrototype implements FlowAMockMemento{
 		private FlowAMockPrototype flowAMock = null;

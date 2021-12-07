@@ -1,27 +1,27 @@
 package cn.javass.dp.factorymethod.example7;
 /**
- * ÊµÏÖµ¼³öÊı¾İµÄÒµÎñ¹¦ÄÜ¶ÔÏó
+ * å®ç°å¯¼å‡ºæ•°æ®çš„ä¸šåŠ¡åŠŸèƒ½å¯¹è±¡
  */
 public class ExportOperate {
 	/**
-	 * µ¼³öÎÄ¼ş
-	 * @param type ÓÃ»§Ñ¡ÔñµÄµ¼³öÀàĞÍ
-	 * @param data ĞèÒª±£´æµÄÊı¾İ
-	 * @return ÊÇ·ñ³É¹¦µ¼³öÎÄ¼ş
+	 * å¯¼å‡ºæ–‡ä»¶
+	 * @param type ç”¨æˆ·é€‰æ‹©çš„å¯¼å‡ºç±»å‹
+	 * @param data éœ€è¦ä¿å­˜çš„æ•°æ®
+	 * @return æ˜¯å¦æˆåŠŸå¯¼å‡ºæ–‡ä»¶
 	 */
 	public boolean export(int type,String data){
-		//Ê¹ÓÃ¹¤³§·½·¨
+		//ä½¿ç”¨å·¥å‚æ–¹æ³•
 		ExportFileApi api = factoryMethod(type);
 		return api.export(data);
 	}
 	/**
-	 * ¹¤³§·½·¨£¬´´½¨µ¼³öµÄÎÄ¼ş¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
-	 * @param type ÓÃ»§Ñ¡ÔñµÄµ¼³öÀàĞÍ
-	 * @return µ¼³öµÄÎÄ¼ş¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
+	 * å·¥å‚æ–¹æ³•ï¼Œåˆ›å»ºå¯¼å‡ºçš„æ–‡ä»¶å¯¹è±¡çš„æ¥å£å¯¹è±¡
+	 * @param type ç”¨æˆ·é€‰æ‹©çš„å¯¼å‡ºç±»å‹
+	 * @return å¯¼å‡ºçš„æ–‡ä»¶å¯¹è±¡çš„æ¥å£å¯¹è±¡
 	 */
 	protected ExportFileApi factoryMethod(int type){
 		ExportFileApi api = null;
-		//¸ù¾İÀàĞÍÀ´Ñ¡Ôñ¾¿¾¹Òª´´½¨ÄÄÒ»ÖÖµ¼³öÎÄ¼ş¶ÔÏó
+		//æ ¹æ®ç±»å‹æ¥é€‰æ‹©ç©¶ç«Ÿè¦åˆ›å»ºå“ªä¸€ç§å¯¼å‡ºæ–‡ä»¶å¯¹è±¡
 		if(type==1){
 			api = new ExportTxtFile();
 		}else if(type==2){

@@ -1,25 +1,25 @@
 package cn.javass.dp.chainofresponsibility.example6;
 
 /**
- * ÉÌÆ·ÏúÊÛ¹ÜÀíÄ£¿éµÄÒµÎñ´¦Àí
+ * å•†å“é”€å”®ç®¡ç†æ¨¡å—çš„ä¸šåŠ¡å¤„ç†
  */
 public class GoodsSaleEbo {
 	/**
-	 * ±£´æÏúÊÛĞÅÏ¢£¬±¾À´ÏúÊÛÊı¾İÓ¦¸ÃÊÇ¶àÌõ£¬Ì«Âé·³ÁË£¬ÎªÁËÑİÊ¾£¬¼òµ¥µã
-	 * @param user ²Ù×÷ÈËÔ±
-	 * @param customer ¿Í»§
-	 * @param saleModel ÏúÊÛÊı¾İ
-	 * @return ÊÇ·ñ±£´æ³É¹¦
+	 * ä¿å­˜é”€å”®ä¿¡æ¯ï¼Œæœ¬æ¥é”€å”®æ•°æ®åº”è¯¥æ˜¯å¤šæ¡ï¼Œå¤ªéº»çƒ¦äº†ï¼Œä¸ºäº†æ¼”ç¤ºï¼Œç®€å•ç‚¹
+	 * @param user æ“ä½œäººå‘˜
+	 * @param customer å®¢æˆ·
+	 * @param saleModel é”€å”®æ•°æ®
+	 * @return æ˜¯å¦ä¿å­˜æˆåŠŸ
 	 */
 	public boolean sale(String user,String customer,SaleModel saleModel){
-		//Èç¹ûÈ«²¿ÔÚÕâÀï´¦Àí£¬»ù±¾µÄË³ĞòÊÇ
-		//1£ºÈ¨ÏŞ¼ì²é
-		//2£ºÍ¨ÓÃÊı¾İ¼ì²é£¨Õâ¸öÒ²¿ÉÄÜÔÚ±íÏÖ²ãÒÑ¾­×÷¹ıÁË£©
-		//3£ºÊı¾İÂß¼­Ğ£Ñé
+		//å¦‚æœå…¨éƒ¨åœ¨è¿™é‡Œå¤„ç†ï¼ŒåŸºæœ¬çš„é¡ºåºæ˜¯
+		//1ï¼šæƒé™æ£€æŸ¥
+		//2ï¼šé€šç”¨æ•°æ®æ£€æŸ¥ï¼ˆè¿™ä¸ªä¹Ÿå¯èƒ½åœ¨è¡¨ç°å±‚å·²ç»ä½œè¿‡äº†ï¼‰
+		//3ï¼šæ•°æ®é€»è¾‘æ ¡éªŒ
 		
-		//4£ºÕæÕıµÄÒµÎñ´¦Àí
+		//4ï¼šçœŸæ­£çš„ä¸šåŠ¡å¤„ç†
 		
-		//µ«ÊÇÏÖÔÚÍ¨¹ı¹¦ÄÜÁ´À´×ö£¬ÕâÀï¾ÍÖ÷Òª¸ºÔğ¹¹½¨Á´
+		//ä½†æ˜¯ç°åœ¨é€šè¿‡åŠŸèƒ½é“¾æ¥åšï¼Œè¿™é‡Œå°±ä¸»è¦è´Ÿè´£æ„å»ºé“¾
 		SaleSecurityCheck ssc = new SaleSecurityCheck();
 		SaleDataCheck sdc = new SaleDataCheck();
 		SaleLogicCheck slc = new SaleLogicCheck();
@@ -27,7 +27,7 @@ public class GoodsSaleEbo {
 		ssc.setSuccessor(sdc);
 		sdc.setSuccessor(slc);
 		slc.setSuccessor(sd);
-		//ÏòÁ´ÉÏµÄµÚÒ»¸ö¶ÔÏó·¢³ö´¦ÀíµÄÇëÇó
+		//å‘é“¾ä¸Šçš„ç¬¬ä¸€ä¸ªå¯¹è±¡å‘å‡ºå¤„ç†çš„è¯·æ±‚
 		return ssc.sale(user, customer, saleModel);
 	}
 }

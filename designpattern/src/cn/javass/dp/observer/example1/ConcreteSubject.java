@@ -1,12 +1,12 @@
 package cn.javass.dp.observer.example1;
 
 /**
- * ¾ßÌåµÄÄ¿±ê¶ÔÏó£¬¸ºÔğ°ÑÓĞ¹Ø×´Ì¬´æÈëµ½ÏàÓ¦µÄ¹Û²ìÕß¶ÔÏó£¬
- * ²¢ÔÚ×Ô¼º×´Ì¬·¢Éú¸Ä±äÊ±£¬Í¨Öª¸÷¸ö¹Û²ìÕß
+ * å…·ä½“çš„ç›®æ ‡å¯¹è±¡ï¼Œè´Ÿè´£æŠŠæœ‰å…³çŠ¶æ€å­˜å…¥åˆ°ç›¸åº”çš„è§‚å¯Ÿè€…å¯¹è±¡ï¼Œ
+ * å¹¶åœ¨è‡ªå·±çŠ¶æ€å‘ç”Ÿæ”¹å˜æ—¶ï¼Œé€šçŸ¥å„ä¸ªè§‚å¯Ÿè€…
  */
 public class ConcreteSubject extends Subject {
 	/**
-	 * Ê¾Òâ£¬Ä¿±ê¶ÔÏóµÄ×´Ì¬
+	 * ç¤ºæ„ï¼Œç›®æ ‡å¯¹è±¡çš„çŠ¶æ€
 	 */
 	private String subjectState;
 	public String getSubjectState() {
@@ -14,7 +14,7 @@ public class ConcreteSubject extends Subject {
 	}
 	public void setSubjectState(String subjectState) {
 		this.subjectState = subjectState;
-		//×´Ì¬·¢ÉúÁË¸Ä±ä£¬Í¨Öª¸÷¸ö¹Û²ìÕß
+		//çŠ¶æ€å‘ç”Ÿäº†æ”¹å˜ï¼Œé€šçŸ¥å„ä¸ªè§‚å¯Ÿè€…
 		this.notifyObservers();
 	}
 }

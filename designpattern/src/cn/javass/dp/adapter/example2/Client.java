@@ -2,22 +2,22 @@ package cn.javass.dp.adapter.example2;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//×¼±¸ÈÕÖ¾ÄÚÈİ£¬Ò²¾ÍÊÇ²âÊÔµÄÊı¾İ
+		//å‡†å¤‡æ—¥å¿—å†…å®¹ï¼Œä¹Ÿå°±æ˜¯æµ‹è¯•çš„æ•°æ®
 		LogModel lm1 = new LogModel();
 		lm1.setLogId("001");
 		lm1.setOperateUser("admin");
 		lm1.setOperateTime("2010-03-02 10:08:18");
-		lm1.setLogContent("ÕâÊÇÒ»¸ö²âÊÔ");
+		lm1.setLogContent("è¿™æ˜¯ä¸€ä¸ªæµ‹è¯•");
 		
 		List<LogModel> list = new ArrayList<LogModel>();
 		list.add(lm1);
 
-		//´´½¨²Ù×÷ÈÕÖ¾ÎÄ¼şµÄ¶ÔÏó
+		//åˆ›å»ºæ“ä½œæ—¥å¿—æ–‡ä»¶çš„å¯¹è±¡
 		LogFileOperateApi api = new LogFileOperate(""); 
-		//±£´æÈÕÖ¾ÎÄ¼ş
+		//ä¿å­˜æ—¥å¿—æ–‡ä»¶
 		api.writeLogFile(list);
 		
-		//¶ÁÈ¡ÈÕÖ¾ÎÄ¼şµÄÄÚÈİ
+		//è¯»å–æ—¥å¿—æ–‡ä»¶çš„å†…å®¹
 		List<LogModel> readLog = api.readLogFile();
 		System.out.println("readLog="+readLog);
 	}

@@ -60,24 +60,24 @@ public class JDBCTest {
 		return col;
 	}
 	/**
-	 * ÎªÍ¨ÓÃ²éÑ¯¶¯Ì¬µÄÆ´½ÓsqlµÄÌõ¼ş²¿·Ö£¬»ù±¾Ë¼Â·ÊÇ£º
-	 * Èç¹ûÓÃ»§ÌîĞ´ÁËÏàÓ¦µÄÌõ¼ş£¬ÄÇÃ´²ÅÔÚsqlÖĞÌí¼Ó¶ÔÓ¦µÄÌõ¼ş
-	 * @param sql sqlµÄÖ÷¸É²¿·Ö
-	 * @param uqm ·â×°²éÑ¯Ìõ¼şµÄÊı¾İÄ£ĞÍ
-	 * @return Æ´½ÓºÃµÄsqlÓï¾ä
+	 * ä¸ºé€šç”¨æŸ¥è¯¢åŠ¨æ€çš„æ‹¼æ¥sqlçš„æ¡ä»¶éƒ¨åˆ†ï¼ŒåŸºæœ¬æ€è·¯æ˜¯ï¼š
+	 * å¦‚æœç”¨æˆ·å¡«å†™äº†ç›¸åº”çš„æ¡ä»¶ï¼Œé‚£ä¹ˆæ‰åœ¨sqlä¸­æ·»åŠ å¯¹åº”çš„æ¡ä»¶
+	 * @param sql sqlçš„ä¸»å¹²éƒ¨åˆ†
+	 * @param uqm å°è£…æŸ¥è¯¢æ¡ä»¶çš„æ•°æ®æ¨¡å‹
+	 * @return æ‹¼æ¥å¥½çš„sqlè¯­å¥
 	 */
 	private String prepareSql(String sql,UserQueryModel uqm){
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(sql);
-		//¾ø¶ÔÆ¥Åä
+		//ç»å¯¹åŒ¹é…
 		if(uqm.getUuid()!=null && uqm.getUuid().trim().length()>0){
 			buffer.append(" and uuid=? ");
 		}
-		//Ä£ºıÆ¥Åä
+		//æ¨¡ç³ŠåŒ¹é…
 		if(uqm.getName()!=null && uqm.getName().trim().length()>0){
 			buffer.append(" and name like ? ");
 		}
-		//Çø¼äÆ¥Åä
+		//åŒºé—´åŒ¹é…
 		if(uqm.getAge() > 0){
 			buffer.append(" and age >=? ");
 		}
@@ -87,9 +87,9 @@ public class JDBCTest {
 		return buffer.toString();
 	}
 	/**
-	 * ÎªÍ¨ÓÃ²éÑ¯µÄsql¶¯Ì¬ÉèÖÃÌõ¼şµÄÖµ
-	 * @param pstmt Ô¤´¦Àí²éÑ¯sqlµÄ¶ÔÏó
-	 * @param uqm ·â×°²éÑ¯Ìõ¼şµÄÊı¾İÄ£ĞÍ
+	 * ä¸ºé€šç”¨æŸ¥è¯¢çš„sqlåŠ¨æ€è®¾ç½®æ¡ä»¶çš„å€¼
+	 * @param pstmt é¢„å¤„ç†æŸ¥è¯¢sqlçš„å¯¹è±¡
+	 * @param uqm å°è£…æŸ¥è¯¢æ¡ä»¶çš„æ•°æ®æ¨¡å‹
 	 * @throws Exception
 	 */
 	private void setValue(PreparedStatement pstmt,UserQueryModel uqm)throws Exception{
@@ -112,9 +112,9 @@ public class JDBCTest {
 		}
 	}
 	/**
-	 * °Ñ²éÑ¯·µ»ØµÄ½á¹û¼¯×ª»»³ÉÎª¶ÔÏó
-	 * @param rs ²éÑ¯·µ»ØµÄ½á¹û¼¯
-	 * @return ²éÑ¯·µ»ØµÄ½á¹û¼¯×ª»»³ÉÎª¶ÔÏó
+	 * æŠŠæŸ¥è¯¢è¿”å›çš„ç»“æœé›†è½¬æ¢æˆä¸ºå¯¹è±¡
+	 * @param rs æŸ¥è¯¢è¿”å›çš„ç»“æœé›†
+	 * @return æŸ¥è¯¢è¿”å›çš„ç»“æœé›†è½¬æ¢æˆä¸ºå¯¹è±¡
 	 * @throws Exception
 	 */
 	private UserModel rs2Object(ResultSet rs)throws Exception{
@@ -132,27 +132,27 @@ public class JDBCTest {
 	
 	public static void main(String[] args) {
 		JDBCTest uj = new JDBCTest();
-		//ÏÈĞÂÔö¼¸Ìõ
+		//å…ˆæ–°å¢å‡ æ¡
 		UserModel um1 = new UserModel();
 		um1.setUuid("u1");
-		um1.setName("ÕÅÈı");
+		um1.setName("å¼ ä¸‰");
 		um1.setAge(22);		
 		uj.create(um1);		
 		
 		UserModel um2 = new UserModel();
 		um2.setUuid("u2");
-		um2.setName("ÀîËÄ");
+		um2.setName("æå››");
 		um2.setAge(25);		
 		uj.create(um2);
 		
 		UserModel um3 = new UserModel();
 		um3.setUuid("u3");
-		um3.setName("ÍõÎå");
+		um3.setName("ç‹äº”");
 		um3.setAge(32);		
 		uj.create(um3);
 		
 		
-		//²âÊÔ²éÑ¯
+		//æµ‹è¯•æŸ¥è¯¢
 		UserQueryModel uqm = new UserQueryModel();
 		uqm.setAge(25);
 		uqm.setAge2(36);

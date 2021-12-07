@@ -1,10 +1,10 @@
 package cn.javass.dp.abstractfactory.example1;
 /**
- * Ö÷°åµÄ½Ó¿Ú
+ * ä¸»æ¿çš„æ¥å£
  */
 public interface MainboardApi {
 	/**
-	 * Ê¾Òâ·½·¨£¬Ö÷°å¶¼¾ßÓĞ°²×°CPUµÄ¹¦ÄÜ
+	 * ç¤ºæ„æ–¹æ³•ï¼Œä¸»æ¿éƒ½å…·æœ‰å®‰è£…CPUçš„åŠŸèƒ½
 	 */
 	public void installCPU();	
 }

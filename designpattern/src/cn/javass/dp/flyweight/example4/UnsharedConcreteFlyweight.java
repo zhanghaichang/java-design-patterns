@@ -3,11 +3,11 @@ package cn.javass.dp.flyweight.example4;
 import java.util.*;
 
 /**
- * 不需要共享的享元对象的实现，也是组合模式中的组合对象
+ * 涓嶉渶瑕佸叡浜殑浜厓瀵硅薄鐨勫疄鐜帮紝涔熸槸缁勫悎妯″紡涓殑缁勫悎瀵硅薄
  */
 public class UnsharedConcreteFlyweight implements Flyweight{
 	/**
-	 * 记录每个组合对象所包含的子组件
+	 * 璁板綍姣忎釜缁勫悎瀵硅薄鎵�鍖呭惈鐨勫瓙缁勪欢
 	 */
 	private List<Flyweight> list = new ArrayList<Flyweight>();
 	
@@ -17,7 +17,7 @@ public class UnsharedConcreteFlyweight implements Flyweight{
 	
 	public boolean match(String securityEntity, String permit) {
 		for(Flyweight f : list){
-			//递归调用
+			//閫掑綊璋冪敤
 			if(f.match(securityEntity, permit)){
 				return true;
 			}

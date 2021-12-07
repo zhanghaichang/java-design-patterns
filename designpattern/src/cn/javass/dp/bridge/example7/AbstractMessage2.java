@@ -1,43 +1,43 @@
 package cn.javass.dp.bridge.example7;
 
 /**
- * ³éÏóµÄÏûÏ¢¶ÔÏó
+ * æŠ½è±¡çš„æ¶ˆæ¯å¯¹è±¡
  */
 public abstract class AbstractMessage2 {
 	/**
-	 * ¸ù¾İÏûÏ¢µÄ³¤¶ÈÀ´Ñ¡ÔñºÏÊÊµÄÊµÏÖ
-	 * @param message Òª·¢ËÍµÄÏûÏ¢
-	 * @return ºÏÊÊµÄÊµÏÖ¶ÔÏó
+	 * æ ¹æ®æ¶ˆæ¯çš„é•¿åº¦æ¥é€‰æ‹©åˆé€‚çš„å®ç°
+	 * @param message è¦å‘é€çš„æ¶ˆæ¯
+	 * @return åˆé€‚çš„å®ç°å¯¹è±¡
 	 */
 	protected MessageImplementor getImpl(String message) {
 		MessageImplementor impl = null;
 		if(message == null){
-			//Èç¹ûÃ»ÓĞÏûÏ¢£¬Ä¬ÈÏÊ¹ÓÃÕ¾ÄÚ¶ÌÏûÏ¢
+			//å¦‚æœæ²¡æœ‰æ¶ˆæ¯ï¼Œé»˜è®¤ä½¿ç”¨ç«™å†…çŸ­æ¶ˆæ¯
 			impl = new MessageSMS();
 		}else if(message.length()< 100){
-			//Èç¹ûÏûÏ¢³¤¶ÈÔÚ100ÒÔÄÚ£¬Ê¹ÓÃÊÖ»ú¶ÌÏûÏ¢
+			//å¦‚æœæ¶ˆæ¯é•¿åº¦åœ¨100ä»¥å†…ï¼Œä½¿ç”¨æ‰‹æœºçŸ­æ¶ˆæ¯
 			impl = new MessageMobile();
 		}else if(message.length()<1000){
-			//Èç¹ûÏûÏ¢³¤¶ÈÔÚ100-1000ÒÔÄÚ£¬Ê¹ÓÃÕ¾ÄÚ¶ÌÏûÏ¢
+			//å¦‚æœæ¶ˆæ¯é•¿åº¦åœ¨100-1000ä»¥å†…ï¼Œä½¿ç”¨ç«™å†…çŸ­æ¶ˆæ¯
 			impl = new MessageSMS();
 		}else{
-			//Èç¹ûÏûÏ¢³¤¶ÈÔÚ1000ÒÔÉÏ
+			//å¦‚æœæ¶ˆæ¯é•¿åº¦åœ¨1000ä»¥ä¸Š
 			impl = new MessageEmail();
 		}
 		return impl;
 	}
 
 	/**
-	 * ¹¹Ôì·½·¨
+	 * æ„é€ æ–¹æ³•
 	 */
 	public AbstractMessage2(){
-		//ÏÖÔÚÊ²Ã´¶¼²»×öÁË
+		//ç°åœ¨ä»€ä¹ˆéƒ½ä¸åšäº†
 	}
 	
 	/**
-	 * ·¢ËÍÏûÏ¢£¬×ªµ÷ÊµÏÖ²¿·ÖµÄ·½·¨
-	 * @param message Òª·¢ËÍµÄÏûÏ¢ÄÚÈİ
-	 * @param toUser °ÑÏûÏ¢·¢ËÍµÄÄ¿µÄÈËÔ±
+	 * å‘é€æ¶ˆæ¯ï¼Œè½¬è°ƒå®ç°éƒ¨åˆ†çš„æ–¹æ³•
+	 * @param message è¦å‘é€çš„æ¶ˆæ¯å†…å®¹
+	 * @param toUser æŠŠæ¶ˆæ¯å‘é€çš„ç›®çš„äººå‘˜
 	 */
 	public void sendMessage(String message,String toUser){		
 		this.getImpl(message).send(message, toUser);

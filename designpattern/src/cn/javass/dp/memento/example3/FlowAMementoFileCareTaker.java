@@ -2,16 +2,16 @@ package cn.javass.dp.memento.example3;
 
 import java.io.*;
 /**
- * ¸ºÔğÔÚÎÄ¼şÖĞ±£´æÄ£ÄâÔËĞĞÁ÷³ÌAµÄ¶ÔÏóµÄ±¸ÍüÂ¼¶ÔÏó
+ * è´Ÿè´£åœ¨æ–‡ä»¶ä¸­ä¿å­˜æ¨¡æ‹Ÿè¿è¡Œæµç¨‹Açš„å¯¹è±¡çš„å¤‡å¿˜å½•å¯¹è±¡
  */
 public class FlowAMementoFileCareTaker {
 
 	/**
-	 * ±£´æ±¸ÍüÂ¼¶ÔÏó
-	 * @param memento ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
+	 * ä¿å­˜å¤‡å¿˜å½•å¯¹è±¡
+	 * @param memento è¢«ä¿å­˜çš„å¤‡å¿˜å½•å¯¹è±¡
 	 */
 	public void saveMemento(FlowAMockMemento memento){
-		//Ğ´µ½ÎÄ¼şÖĞ
+		//å†™åˆ°æ–‡ä»¶ä¸­
 		ObjectOutputStream out = null;
 		try{
 			out = new ObjectOutputStream(
@@ -31,12 +31,12 @@ public class FlowAMementoFileCareTaker {
 		}
 	}
 	/**
-	 * »ñÈ¡±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
-	 * @return ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
+	 * è·å–è¢«ä¿å­˜çš„å¤‡å¿˜å½•å¯¹è±¡
+	 * @return è¢«ä¿å­˜çš„å¤‡å¿˜å½•å¯¹è±¡
 	 */
 	public FlowAMockMemento retriveMemento(){
 		FlowAMockMemento memento = null;
-		//´ÓÎÄ¼şÖĞ»ñÈ¡±¸ÍüÂ¼Êı¾İ
+		//ä»æ–‡ä»¶ä¸­è·å–å¤‡å¿˜å½•æ•°æ®
 		ObjectInputStream in = null;
 		try{
 			in = new ObjectInputStream(

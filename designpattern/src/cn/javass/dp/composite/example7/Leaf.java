@@ -1,15 +1,15 @@
 package cn.javass.dp.composite.example7;
 /**
- * Ò¶×Ó¶ÔÏó
+ * å¶å­å¯¹è±¡
  */
 public class Leaf extends Component{
 	/**
-	 * Ò¶×Ó¶ÔÏóµÄÃû×Ö
+	 * å¶å­å¯¹è±¡çš„åå­—
 	 */
 	private String name = "";
 	/**
-	 * ¹¹Ôì·½·¨£¬´«ÈëÒ¶×Ó¶ÔÏóµÄÃû×Ö
-	 * @param name Ò¶×Ó¶ÔÏóµÄÃû×Ö
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥å¶å­å¯¹è±¡çš„åå­—
+	 * @param name å¶å­å¯¹è±¡çš„åå­—
 	 */
 	public Leaf(String name){
 		this.name = name;
@@ -18,8 +18,8 @@ public class Leaf extends Component{
 		return this.name;
 	}
 	/**
-	 * Êä³öÒ¶×Ó¶ÔÏóµÄ½á¹¹£¬Ò¶×Ó¶ÔÏóÃ»ÓĞ×Ó¶ÔÏó£¬Ò²¾ÍÊÇÊä³öÒ¶×Ó¶ÔÏóµÄÃû×Ö
-	 * @param preStr Ç°×º£¬Ö÷ÒªÊÇ°´ÕÕ²ã¼¶Æ´½ÓµÄ¿Õ¸ñ£¬ÊµÏÖÏòºóËõ½ø
+	 * è¾“å‡ºå¶å­å¯¹è±¡çš„ç»“æ„ï¼Œå¶å­å¯¹è±¡æ²¡æœ‰å­å¯¹è±¡ï¼Œä¹Ÿå°±æ˜¯è¾“å‡ºå¶å­å¯¹è±¡çš„åå­—
+	 * @param preStr å‰ç¼€ï¼Œä¸»è¦æ˜¯æŒ‰ç…§å±‚çº§æ‹¼æ¥çš„ç©ºæ ¼ï¼Œå®ç°å‘åç¼©è¿›
 	 */
 	public void printStruct(String preStr){
 		System.out.println(preStr+"-"+name);

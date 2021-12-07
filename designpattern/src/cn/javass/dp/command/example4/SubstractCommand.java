@@ -1,20 +1,20 @@
 package cn.javass.dp.command.example4;
 /**
- * ¾ßÌåµÄ¼õ·¨ÃüÁîÊµÏÖ¶ÔÏó
+ * å…·ä½“çš„å‡æ³•å‘½ä»¤å®ç°å¯¹è±¡
  */
 public class SubstractCommand implements Command{
 	/**
-	 * ³ÖÓĞ¾ßÌåÖ´ĞĞ¼ÆËãµÄ¶ÔÏó
+	 * æŒæœ‰å…·ä½“æ‰§è¡Œè®¡ç®—çš„å¯¹è±¡
 	 */
 	private OperationApi operation = null;
 	/**
-	 * ²Ù×÷µÄÊı¾İ£¬Ò²¾ÍÊÇÒª¼õÈ¥µÄÊı¾İ
+	 * æ“ä½œçš„æ•°æ®ï¼Œä¹Ÿå°±æ˜¯è¦å‡å»çš„æ•°æ®
 	 */
 	private int opeNum;
 	/**
-	 * ¹¹Ôì·½·¨£¬´«Èë¾ßÌåÖ´ĞĞ¼ÆËãµÄ¶ÔÏó
-	 * @param operation ¾ßÌåÖ´ĞĞ¼ÆËãµÄ¶ÔÏó
-	 * @param opeNum Òª¼õÈ¥µÄÊı¾İ
+	 * æ„é€ æ–¹æ³•ï¼Œä¼ å…¥å…·ä½“æ‰§è¡Œè®¡ç®—çš„å¯¹è±¡
+	 * @param operation å…·ä½“æ‰§è¡Œè®¡ç®—çš„å¯¹è±¡
+	 * @param opeNum è¦å‡å»çš„æ•°æ®
 	 */
 	public SubstractCommand(OperationApi operation,int opeNum){
 		this.operation = operation;
@@ -22,13 +22,13 @@ public class SubstractCommand implements Command{
 	}	
 	
 	public void execute() {
-		//×ªµ÷½ÓÊÕÕßÈ¥ÕæÕıÖ´ĞĞ¹¦ÄÜ£¬Õâ¸öÃüÁîÊÇ×ö¼õ·¨
+		//è½¬è°ƒæ¥æ”¶è€…å»çœŸæ­£æ‰§è¡ŒåŠŸèƒ½ï¼Œè¿™ä¸ªå‘½ä»¤æ˜¯åšå‡æ³•
 		this.operation.substract(opeNum);
 	}
 	
 	public void undo() {
-		//×ªµ÷½ÓÊÕÕßÈ¥ÕæÕıÖ´ĞĞ¹¦ÄÜ
-		//ÃüÁî±¾ÉíÊÇ×ö¼õ·¨£¬ÄÇÃ´³·ÏúµÄÊ±ºò¾ÍÊÇ×ö¼Ó·¨ÁË
+		//è½¬è°ƒæ¥æ”¶è€…å»çœŸæ­£æ‰§è¡ŒåŠŸèƒ½
+		//å‘½ä»¤æœ¬èº«æ˜¯åšå‡æ³•ï¼Œé‚£ä¹ˆæ’¤é”€çš„æ—¶å€™å°±æ˜¯åšåŠ æ³•äº†
 		this.operation.add(opeNum);
 	}
 }

@@ -4,20 +4,20 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * ÊµÏÖµ¼³öÊı¾İµ½XMLÎÄ¼şµÄµÄ¹¹½¨Æ÷¶ÔÏó
+ * å®ç°å¯¼å‡ºæ•°æ®åˆ°XMLæ–‡ä»¶çš„çš„æ„å»ºå™¨å¯¹è±¡
  */
 public class XmlBuilder implements Builder {
 	/**
-	 * ÓÃÀ´¼ÇÂ¼¹¹½¨µÄÎÄ¼şµÄÄÚÈİ£¬Ïàµ±ÓÚ²úÆ·
+	 * ç”¨æ¥è®°å½•æ„å»ºçš„æ–‡ä»¶çš„å†…å®¹ï¼Œç›¸å½“äºäº§å“
 	 */
 	private StringBuffer buffer = new StringBuffer();
 	public void buildBody(
 			Map<String, Collection<ExportDataModel>> mapData) {
 		buffer.append("  <Body>\n");
 		for(String tblName : mapData.keySet()){
-			//ÏÈÆ´½Ó±íÃû³Æ
+			//å…ˆæ‹¼æ¥è¡¨åç§°
 			buffer.append("    <Datas TableName=\""+tblName+"\">\n");
-			//È»ºóÑ­»·Æ´½Ó¾ßÌåÊı¾İ
+			//ç„¶åå¾ªç¯æ‹¼æ¥å…·ä½“æ•°æ®
 			for(ExportDataModel edm : mapData.get(tblName)){
 				buffer.append("      <Data>\n");
 				buffer.append("        <ProductId>"+edm.getProductId()+"</ProductId>\n");

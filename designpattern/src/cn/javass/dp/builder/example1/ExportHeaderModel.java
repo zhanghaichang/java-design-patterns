@@ -1,14 +1,14 @@
 package cn.javass.dp.builder.example1;
 /**
- * ÃèÊöÊä³öµ½ÎÄ¼şÍ·µÄÄÚÈİµÄ¶ÔÏó
+ * æè¿°è¾“å‡ºåˆ°æ–‡ä»¶å¤´çš„å†…å®¹çš„å¯¹è±¡
  */
 public class ExportHeaderModel {
 	/**
-	 * ·Ö¹«Ë¾»òÃÅÊĞµã±àºÅ
+	 * åˆ†å…¬å¸æˆ–é—¨å¸‚ç‚¹ç¼–å·
 	 */
 	private String depId;
 	/**
-	 * µ¼³öÊı¾İµÄÈÕÆÚ
+	 * å¯¼å‡ºæ•°æ®çš„æ—¥æœŸ
 	 */
 	private String exportDate;
 	public String getDepId() {
